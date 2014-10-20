@@ -11,7 +11,7 @@
 
 @interface STModelViewController : STViewController <STModelDelegate>
 /// 返回Model的类名
-+ (Class) modelClass;
-@property (nonatomic, strong) STModel       * model;
++ (Class)modelClass;
+@property(nonatomic, strong) STModel *model;
 
 @end

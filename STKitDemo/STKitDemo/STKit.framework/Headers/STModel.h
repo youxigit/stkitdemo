@@ -21,41 +21,40 @@ typedef enum STModelDataSourceType {
 @class STModel;
 @protocol STModelDelegate <NSObject>
 
-- (void) modelWillStartLoadData:(STModel *) model;
-- (void) modelDidFinishLoadData:(STModel *) model;
+- (void)modelWillStartLoadData:(STModel *)model;
+- (void)modelDidFinishLoadData:(STModel *)model;
 /// 当加载失败是，error不为nil。
-- (void) modelDidFailedLoadData:(STModel *) model;
+- (void)modelDidFailedLoadData:(STModel *)model;
 /// 如果正在加载更多，但是又触发了下拉刷新，则取消加载更多
-- (void) modelDidCancelLoadData:(STModel *) model;
+- (void)modelDidCancelLoadData:(STModel *)model;
 
 @end
 
-
 @interface STModel : NSObject
 /// 如果有更多，则展示 加载更多，否则，则为空
-- (BOOL) hasNextPage;
-@property (nonatomic, weak)   id<STModelDelegate>   delegate;
-@property (nonatomic, assign) STModelDataSourceType sourceType;
+- (BOOL)hasNextPage;
+@property(nonatomic, weak) id<STModelDelegate> delegate;
+@property(nonatomic, assign) STModelDataSourceType sourceType;
 
-@property (nonatomic, strong) NSError             * error;
+@property(nonatomic, strong) NSError *error;
 /// 注意。 当pagination的时候去操作下拉刷新，会取消当前的pagination操作。每一次加载更多，需要生成一个新的Operation
-@property (nonatomic, weak) STNetworkOperation    * paginationOperation;
+@property(nonatomic, weak) STNetworkOperation *paginationOperation;
 
 /// 每次加载完毕后，会调用此方法，判断是否需要显示空数据
-- (NSInteger) numberOfDataItems;
+- (NSInteger)numberOfDataItems;
 /// 从Cache加载
-- (void) loadDataFromCache;
+- (void)loadDataFromCache;
 
-- (void) loadDataFromRemote;
-- (void) loadDataFromPagination;
+- (void)loadDataFromRemote;
+- (void)loadDataFromPagination;
 
-- (void) saveDataToCache;
+- (void)saveDataToCache;
 /// 清除缓存
-- (void) invalidateData;
+- (void)invalidateData;
 
 /// when subclass finish network , must call these method
-- (void) requestDidFinishWithObject:(id) object;
-- (void) requestDidCancelWithObject:(id) object;
-- (void) requestDidFailedWithObject:(id) object error:(NSError *) error;
+- (void)requestDidFinishWithObject:(id)object;
+- (void)requestDidCancelWithObject:(id)object;
+- (void)requestDidFailedWithObject:(id)object error:(NSError *)error;
 
 @end

@@ -9,54 +9,53 @@
 #import <Foundation/Foundation.h>
 #import <STKit/STNetwork.h>
 
-/// 如果有file，会强制使用mutilpart/form-data 否则服务端不能接收数据,一般没有特殊需求就不要乱搞
+/// 如果有file，会强制使用mutilpart/form-data
+/// 否则服务端不能接收数据,一般没有特殊需求就不要乱搞
 typedef NS_ENUM(NSInteger, STNetworkFormEnctype) {
-    STNetworkFormEnctypeURLEncoded,     /// Default
-    STNetworkFormEnctypeMultipartData,  /// 如果有文件/图片,会使用此格式
-    STNetworkFormEnctypeTextPlain,      /// 慎用。如果你不知道什么意思,你就不要用这个,一般服务器都不支持。
+    STNetworkFormEnctypeURLEncoded,    /// Default
+    STNetworkFormEnctypeMultipartData, /// 如果有文件/图片,会使用此格式
+    STNetworkFormEnctypeTextPlain,     /// 慎用。如果你不知道什么意思,你就不要用这个,一般服务器都不支持。
 };
 
 @interface STNetworkOperation : NSOperation
 
-@property (atomic, readonly) NSInteger          identifier;
+@property(atomic, readonly) NSInteger identifier;
 
-@property (nonatomic, copy, readonly)  NSString * URLString;
+@property(nonatomic, copy, readonly) NSString *URLString;
 // GET/POST/PUT/DELETE/PATCH
-@property (nonatomic, copy, readonly)  NSString * HTTPMethod; // default GET
+@property(nonatomic, copy, readonly) NSString *HTTPMethod; // default GET
 
-@property (nonatomic, assign, readonly) NSInteger HTTPStatusCode;
+@property(nonatomic, assign, readonly) NSInteger HTTPStatusCode;
 
-@property (nonatomic, strong, readonly) NSURLRequest        * URLRequest;
-@property (nonatomic, strong, readonly) NSHTTPURLResponse   * URLResponse;
+@property(nonatomic, strong, readonly) NSURLRequest *URLRequest;
+@property(nonatomic, strong, readonly) NSHTTPURLResponse *URLResponse;
 /// 表单提交是，格式化内容的方式，GET请求请忽略此项
-@property (nonatomic, assign) STNetworkFormEnctype            enctype;
+@property(nonatomic, assign) STNetworkFormEnctype enctype;
 /// 超时时间 default 120s
-@property (nonatomic, assign) NSTimeInterval  timeoutInterval;
+@property(nonatomic, assign) NSTimeInterval timeoutInterval;
 /// 收到请求应答回调
-- (void) addResponseHandler:(STNetworkResponseHandler) responseHandler;
+- (void)addResponseHandler:(STNetworkResponseHandler)responseHandler;
 /// 当Response比较大时，比如图片，音频，文件等会分批次接受，该回调为每次接收到的%比。参考Content-Length
-- (void) addProgressHanlder:(STNetworkProgressHandler) progressHandler;
+- (void)addProgressHanlder:(STNetworkProgressHandler)progressHandler;
 /// 请求结束时的回调
-- (void) addFinishedHandler:(STNetworkFinishedHandler) finishedHandler;
+- (void)addFinishedHandler:(STNetworkFinishedHandler)finishedHandler;
 
-@property (nonatomic, strong) STNetworkWillStartHandler willStartHandler;
+@property(nonatomic, strong) STNetworkWillStartHandler willStartHandler;
 /// 请求过程回调
-@property (nonatomic, strong) STNetworkProgressHandler  requestProgressHandler;
+@property(nonatomic, strong) STNetworkProgressHandler requestProgressHandler;
 
 /// 服务端返回字符串的编码，默认UTF-8
-@property (nonatomic, assign) NSStringEncoding         stringEncoding;
+@property(nonatomic, assign) NSStringEncoding stringEncoding;
 /// 每一个请求均有唯一的signature
-@property (nonatomic, readonly, strong) NSString     * signature;
+@property(nonatomic, readonly, strong) NSString *signature;
 /// ready to request
-- (void) prepareToRequest;
+- (void)prepareToRequest;
 
-- (instancetype) initWithURLString:(NSString *) URLString
-                        parameters:(NSDictionary *) parameters
-                        HTTPMethod:(NSString *) HTTPMethod;
+- (instancetype)initWithURLString:(NSString *)URLString parameters:(NSDictionary *)parameters HTTPMethod:(NSString *)HTTPMethod;
 
 /// 比较两个请求是否为同一个，如果为同一个请求，可能会和并请求。
-- (BOOL) isEqualToNetworkOperation:(STNetworkOperation *) networkOperation;
-- (BOOL) isEqualWithURLString:(NSString *) URLString HTTPMethod:(NSString *) HTTPMethod parameters:(NSDictionary *) params;
+- (BOOL)isEqualToNetworkOperation:(STNetworkOperation *)networkOperation;
+- (BOOL)isEqualWithURLString:(NSString *)URLString HTTPMethod:(NSString *)HTTPMethod parameters:(NSDictionary *)params;
 
 @end
 

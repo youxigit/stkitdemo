@@ -21,15 +21,15 @@
 @end
 
 @interface STImagePickerController : STNavigationController {
-//    UIImagePickerController
+    //    UIImagePickerController
 }
 
-@property (nonatomic, assign) BOOL allowsMultipleSelection;
-@property (nonatomic, assign) NSInteger maximumNumberOfSelection; // default 20
+@property(nonatomic, assign) BOOL allowsMultipleSelection;
+@property(nonatomic, assign) NSInteger maximumNumberOfSelection; // default 20
 
-@property (nonatomic, weak)   id<UINavigationControllerDelegate, STImagePickerControllerDelegate> delegate;
+@property(nonatomic, weak) id<UINavigationControllerDelegate, STImagePickerControllerDelegate> delegate;
 
 @end
 
-extern NSString * const STImagePickerControllerOriginalImagePath;   // an path of image in temp
-extern NSString * const STImagePickerControllerThumbImage;
+extern NSString *const STImagePickerControllerOriginalImagePath; // an path of image in temp
+extern NSString *const STImagePickerControllerThumbImage;

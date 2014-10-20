@@ -17,17 +17,17 @@
  * @param    image 下载完成之后的image
  * @param    error 文件下载失败的错误
  */
-typedef void (^ STImageLoaderHandler)(UIImage * image, NSString * URLString, BOOL usingCache, NSError * error);
+typedef void (^STImageLoaderHandler)(UIImage *image, NSString *URLString, BOOL usingCache, NSError *error);
 
 /**
  * @abstract 图片下载完成度回调
  *
  * @param    completion 完成百分比
  */
-typedef void (^ STImageProgressHandler) (CGFloat completion);
+typedef void (^STImageProgressHandler)(CGFloat completion);
 /**
  * @abstract 图片下载顺序
- * 
+ *
  * STImageDownloadOrderForward 遵循FIFO，先请求，优先下载
  * STImageDownloadOrderBackward 遵循LIFO, 后请求，先下载
  */
@@ -41,11 +41,11 @@ typedef NS_ENUM(NSInteger, STImageDownloadOrder) {
  */
 @interface STImageLoader : NSObject
 /// 默认的图片下载器
-+ (instancetype) imageLoader;
++ (instancetype)imageLoader;
 /// 图片下载queue
-@property (nonatomic, strong, readonly) NSOperationQueue     * downloadQueue;
+@property(nonatomic, strong, readonly) NSOperationQueue *downloadQueue;
 /// 图片下载顺序
-@property (nonatomic, assign) STImageDownloadOrder             downloadOrder;
+@property(nonatomic, assign) STImageDownloadOrder downloadOrder;
 
 /**
  * @abstract 根据URLString 去下载图片,并且根据回调通知给调用方
@@ -55,14 +55,13 @@ typedef NS_ENUM(NSInteger, STImageDownloadOrder) {
  * @param   finishedHandler 图片下载完成的回调,会返回图片/错误 @see STImageLoaderHandler
  */
 /// 以下两个方法为去服务端下载图片。
-- (NSInteger) loadImageWithURLString:(NSString *) URLString
-                finishedHandler:(STImageLoaderHandler) finishedHandler;
+- (NSInteger)loadImageWithURLString:(NSString *)URLString finishedHandler:(STImageLoaderHandler)finishedHandler;
 
-- (NSInteger) loadImageWithURLString:(NSString *) URLString
-                progressHandler:(STImageProgressHandler) progressHandler
-                finishedHandler:(STImageLoaderHandler) finishedHandler;
+- (NSInteger)loadImageWithURLString:(NSString *)URLString
+                    progressHandler:(STImageProgressHandler)progressHandler
+                    finishedHandler:(STImageLoaderHandler)finishedHandler;
 
-- (void) cancelLoadImageWithURLString:(NSString *) URLString;
+- (void)cancelLoadImageWithURLString:(NSString *)URLString;
 /// 每个request都会有唯一的identifier，可以根据id去获取operation
-- (void) cancelLoadImageRequestWithIdentifier:(NSInteger) identifier;
+- (void)cancelLoadImageRequestWithIdentifier:(NSInteger)identifier;
 @end

@@ -11,7 +11,7 @@
 @class STTheme;
 @interface STThemeManager : NSObject
 
-+ (instancetype) sharedThemeManager;
++ (instancetype)sharedThemeManager;
 
-+ (STTheme *) currentTheme;
++ (STTheme *)currentTheme;
 @end

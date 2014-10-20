@@ -14,25 +14,24 @@
  */
 @interface STApplicationContext : NSObject
 
-+ (STApplicationContext *) sharedContext;
++ (STApplicationContext *)sharedContext;
 
-@property (nonatomic, assign, readonly) NSString * name;
-@property (nonatomic, assign, readonly) NSString * bundleIdentifier;
-@property (nonatomic, assign, readonly) NSString * bundleVersion;
+@property(nonatomic, assign, readonly) NSString *name;
+@property(nonatomic, assign, readonly) NSString *bundleIdentifier;
+@property(nonatomic, assign, readonly) NSString *bundleVersion;
 
 /// 目前存在的所有UIAlertView
-@property (nonatomic, copy, readonly) NSArray * availableAlertViews;
+@property(nonatomic, copy, readonly) NSArray *availableAlertViews;
 
 /// 界面主window，默认去从appdelegate中读取，如果没有读取到则返回占屏幕面积最大的window
-@property (nonatomic, assign, readonly) UIWindow * mainWindow;
+@property(nonatomic, assign, readonly) UIWindow *mainWindow;
 
 /// 目前显示的最顶端的ViewController
-@property (nonatomic, assign, readonly) UIViewController * topmostViewController;
+@property(nonatomic, assign, readonly) UIViewController *topmostViewController;
 
+- (BOOL)openURL:(NSURL *)URL;
+- (BOOL)canOpenURL:(NSURL *)URL;
 
-- (BOOL) openURL:(NSURL *) URL;
-- (BOOL) canOpenURL:(NSURL *) URL;
-
-- (BOOL) registerClass:(Class) class forURLString:(NSString *) URLString;
+- (BOOL)registerClass:(Class) class forURLString:(NSString *)URLString;
 
 @end

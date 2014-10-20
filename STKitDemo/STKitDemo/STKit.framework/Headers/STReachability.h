@@ -10,9 +10,9 @@
 #import <SystemConfiguration/SCNetworkReachability.h>
 
 typedef enum {
-    STNetworkStatusReachNone,   // 网络不通
-    STNetworkStatusReachWIFI,   // WIFI
-    STNetworkStatusReachWWAN,   // GPRS,E等
+    STNetworkStatusReachNone, // 网络不通
+    STNetworkStatusReachWIFI, // WIFI
+    STNetworkStatusReachWWAN, // GPRS,E等
 } STNetworkStatus;
 
 /**
@@ -21,33 +21,34 @@ typedef enum {
 @interface STReachability : NSObject
 
 /// 是否能够ping通host
-+ (instancetype) reachabilityWithHost:(NSString *) host;
++ (instancetype)reachabilityWithHost:(NSString *)host;
 
 /// designed initializer
-- (instancetype) initWithHost:(NSString *) host;
+- (instancetype)initWithHost:(NSString *)host;
 
-- (STNetworkStatus) reachabilityStatus;
-- (SCNetworkReachabilityFlags) reachabilityFlags;
+- (STNetworkStatus)reachabilityStatus;
+- (SCNetworkReachabilityFlags)reachabilityFlags;
 
 @end
 
 @interface STReachability (STNotification)
 
 /**
- * @abstract 开启/关闭网络状态改变的通知 @see STReachabilityDidChangedNotification
+ * @abstract 开启/关闭网络状态改变的通知 @see
+ *STReachabilityDidChangedNotification
  *
  * @discussion 该通知肯定在主线程发送。
  */
--(BOOL) startNotification;
--(void) stopNotification;
+- (BOOL)startNotification;
+- (void)stopNotification;
 
 @end
 
 @interface STReachability (STAccessor)
 
-- (BOOL) reachable;
-- (BOOL) reachWWAN;
-- (BOOL) reachWIFI;
+- (BOOL)reachable;
+- (BOOL)reachWWAN;
+- (BOOL)reachWIFI;
 
 @end
-extern NSString * const STReachabilityDidChangedNotification;
+extern NSString *const STReachabilityDidChangedNotification;

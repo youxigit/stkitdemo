@@ -10,5 +10,5 @@
 
 @interface STTableView : UITableView
 //// 该TableView是为了兼容iOS6.0以下
-- (void) registerClass:(Class)cellClass forCellReuseIdentifier:(NSString *)identifier;
+- (void)registerClass:(Class)cellClass forCellReuseIdentifier:(NSString *)identifier;
 @end

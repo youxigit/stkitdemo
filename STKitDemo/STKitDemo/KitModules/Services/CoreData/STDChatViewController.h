@@ -12,12 +12,12 @@
 #import <STDTableViewController.h>
 @interface STDChatViewController : STDTableViewController
 
-- (id) initWithPageInfo:(NSDictionary *) pageInfo;
+- (id)initWithPageInfo:(NSDictionary *)pageInfo;
 
 @end
 
 @interface UITableView (STScrollToBottom)
 
-- (void) scrollToBottomAnimated:(BOOL)animated;
+- (void)scrollToBottomAnimated:(BOOL)animated;
 
 @end

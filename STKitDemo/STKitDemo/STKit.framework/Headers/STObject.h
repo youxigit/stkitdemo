@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 #ifdef ST_IMPLEMENTION_FILE
-    #define ST_EXTERN
+#define ST_EXTERN
 #else
-    #define ST_EXTERN extern
+#define ST_EXTERN extern
 #endif
 
 /**
@@ -20,65 +20,68 @@
  * @param  objectClass  需要创建对象的ClassName。
  * @param  dictionary   需要构建的一系列参数 @see relationship
  *
- * @discussion 传入的不一定必须是STObject， 理论上任何类型都可以，但是必须有relationship方法的实现, relationship 不必列出所有的属性-key映射，只需要列出 属性和key不同的地方即可，如果全部相同，返回nil就可以, 也无需调用父类的relationship，key相同的relationship会覆盖父类的relationship。
+ * @discussion 传入的不一定必须是STObject， 理论上任何类型都可以，但是必须有relationship方法的实现, relationship
+ *不必列出所有的属性-key映射，只需要列出 属性和key不同的地方即可，如果全部相同，返回nil就可以,
+ *也无需调用父类的relationship，key相同的relationship会覆盖父类的relationship。
  */
-ST_EXTERN id STObjectCreate(Class objectClass, NSDictionary * dictionary);
+ST_EXTERN id STObjectCreate(Class objectClass, NSDictionary *dictionary);
 
 /**
  * @abstract 将当前的对象属性映射到dictionary中。
  */
-ST_EXTERN NSDictionary * STObjectToDictionary(NSObject * object);
+ST_EXTERN NSDictionary *STObjectToDictionary(NSObject *object);
 
 /**
  * @abstract 为某个对象进行重新赋值
  *
  * @discussion 传入的不一定必须是STObject， 理论上任何类型都可以, 将会把所有dictionary中未包含的值都置为空，剩下的都是用dictionary中的值
  */
-ST_EXTERN void STObjectResetValue(NSObject * object, NSDictionary * dictionary);
+ST_EXTERN void STObjectResetValue(NSObject *object, NSDictionary *dictionary);
 
 /**
  * @abstract 更新Object中的某些字段的值
  *
  * @discussion 注意，更新只是字典中包含的，就会取重新赋值，其余的不会改变. @see STObjectResetValue
  */
-ST_EXTERN void STObjectUpdateValue(NSObject * object, NSDictionary * dictionary);
+ST_EXTERN void STObjectUpdateValue(NSObject *object, NSDictionary *dictionary);
 
 /// Copy Object
-ST_EXTERN id STObjectCreateCopy(NSObject * object);
+ST_EXTERN id STObjectCreateCopy(NSObject *object);
 
 /// 得到这个类下的所有属性关系映射
-ST_EXTERN NSDictionary * STClassGetPropertyRelationship(Class class);
+ST_EXTERN NSDictionary *STClassGetPropertyRelationship(Class class);
 
 /*
 
  @interface STTestObject : STObject
- 
+
  @property (nonatomic, copy) NSString * name;
- 
+
  @property (nonatomic, strong) STTestObject * friendObject;
- 
+
  @property (nonatomic, copy)   NSArray * otherObjects;
 
  @property (nonatomic, copy)   NSArray * descriptions;
- 
+
  @end
- 
+
  @implementation STTestObject
- 
+
  + (Class) otherObjectsClass {
     return [STTestObject class];
  }
- 
+
  + (Class) descriptionsClass {
     return [NSString class];
  }
- 
- @end
- 
- // use dictionary
- @{@"name":@"name", @"friendObject":@{@"name":@"xxx", ...}, @"otherObjects":@[@{@"name":@"name", ...}, @"descriptions":@[@"description1", @"description2", ...]]}
 
- 
+ @end
+
+ // use dictionary
+ @{@"name":@"name", @"friendObject":@{@"name":@"xxx", ...}, @"otherObjects":@[@{@"name":@"name", ...}, @"descriptions":@[@"description1",
+ @"description2", ...]]}
+
+
  */
 /**
  * @abstract 根据Dictionary自动对象映射。
@@ -90,25 +93,25 @@ ST_EXTERN NSDictionary * STClassGetPropertyRelationship(Class class);
  */
 @interface STObject : NSObject
 
-+ (instancetype) objectWithDictionary:(NSDictionary *) dictionary;
++ (instancetype)objectWithDictionary:(NSDictionary *)dictionary;
 
-- (instancetype) initWithDictinoary:(NSDictionary *) dictionary;
+- (instancetype)initWithDictinoary:(NSDictionary *)dictionary;
 
 /**
  * @abstract 根据dict更新Object中对应的属性
  *
  * @param dictionary 需要更新的字段值，需要与relationship对应。
  */
-- (void) updateValueWithDictionary:(NSDictionary *) dictionary;
+- (void)updateValueWithDictionary:(NSDictionary *)dictionary;
 
 /**
  * @abstract 重置Object变量值，如果字段没有传值，则初始化为原始值，比如 0 nil 等
  *
  * @param dictionary 字段对应的值，需要与relationship对应。
  */
-- (void) resetValueWithDictionary:(NSDictionary *) dictionary;
+- (void)resetValueWithDictionary:(NSDictionary *)dictionary;
 
-- (NSDictionary *) toDictionary;
+- (NSDictionary *)toDictionary;
 
 /**
  * @abstract relationship 为 property --->  dictionary key的对应。
@@ -120,6 +123,6 @@ ST_EXTERN NSDictionary * STClassGetPropertyRelationship(Class class);
  *
  * @attention  dictionary的key为property, value 为dict's key
  */
-+ (NSDictionary *) relationship;
++ (NSDictionary *)relationship;
 
 @end

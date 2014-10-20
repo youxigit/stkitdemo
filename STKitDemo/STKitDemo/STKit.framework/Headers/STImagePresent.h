@@ -17,27 +17,24 @@
  *
  * @param imageView 需要展示的imageView。
  */
-+ (void) presentImageView:(UIImageView *) imageView;
++ (void)presentImageView:(UIImageView *)imageView;
 
-+ (void) presentImageView:(UIImageView *) imageView hdImage:(UIImage *) hdImage;
-+ (void) presentImageView:(UIImageView *) imageView hdImageURL:(NSString *) hdImageURL;
++ (void)presentImageView:(UIImageView *)imageView hdImage:(UIImage *)hdImage;
++ (void)presentImageView:(UIImageView *)imageView hdImageURL:(NSString *)hdImageURL;
 
-- (instancetype) initWithImages:(NSArray *) images;
-@property (nonatomic, weak) id<STImagePresentDelegate> delegate;
-- (void) presentImageAtIndex:(NSInteger) index animated:(BOOL) animated;
-@property (nonatomic, readonly) NSInteger   presentedIndex;
-- (void) dismissAnimated:(BOOL) animated;
+- (instancetype)initWithImages:(NSArray *)images;
+@property(nonatomic, weak) id<STImagePresentDelegate> delegate;
+- (void)presentImageAtIndex:(NSInteger)index animated:(BOOL)animated;
+@property(nonatomic, readonly) NSInteger presentedIndex;
+- (void)dismissAnimated:(BOOL)animated;
 @end
 
 @protocol STImagePresentDelegate <NSObject>
 @optional
-- (void) imagePresent:(STImagePresent *) imagePresent didPresentImageAtIndex:(NSInteger) index;
+- (void)imagePresent:(STImagePresent *)imagePresent didPresentImageAtIndex:(NSInteger)index;
 
-- (UIImageView *) imagePresent:(STImagePresent *) imagePresent
-      imageViewForImageAtIndex:(NSInteger) index;
+- (UIImageView *)imagePresent:(STImagePresent *)imagePresent imageViewForImageAtIndex:(NSInteger)index;
 
-- (void) imagePresent:(STImagePresent *)imagePresent
-    didLongPressImage:(UIImage *) image
-              atIndex:(NSInteger)index;
+- (void)imagePresent:(STImagePresent *)imagePresent didLongPressImage:(UIImage *)image atIndex:(NSInteger)index;
 
 @end

@@ -21,7 +21,8 @@ ST_INLINE BOOL STLocationInRange(NSRange range, NSUInteger location) {
  */
 ST_INLINE BOOL STRangeContainsRange(NSRange range1, NSRange range2) {
     BOOL startContains = (range2.location >= range1.location) && (range2.location <= (range1.location + range1.length));
-    BOOL endContains = ((range2.location + range2.length) >= range1.location) && ((range2.location + range2.length) <= (range1.location + range1.length));
+    BOOL endContains =
+        ((range2.location + range2.length) >= range1.location) && ((range2.location + range2.length) <= (range1.location + range1.length));
     return startContains && endContains;
 }
 /// 自定义Link标签<link value="xxxx" color="0xFFFFFF" highlightedColor="0xFF0000" highlightedBackgroundColor="">display</link>
@@ -32,9 +33,9 @@ static u_int64_t STTextCheckingTypeCustomLink = (1ULL << 33);
  */
 @interface STLinkObject : NSObject
 /// 该对象包含的URL，如果没有URL
-@property (nonatomic, readonly, strong) NSURL     * URL;
-@property (nonatomic, readonly, strong) NSString  * value;
-@property (nonatomic, readonly, assign) NSRange     range;
+@property(nonatomic, readonly, strong) NSURL *URL;
+@property(nonatomic, readonly, strong) NSString *value;
+@property(nonatomic, readonly, assign) NSRange range;
 
 @end
 
@@ -53,7 +54,7 @@ static u_int64_t STTextCheckingTypeCustomLink = (1ULL << 33);
  * @param    linkLabel 点击事件的label
  * @param    linkObject 点击到的超链接对象
  */
-- (void) linkLabel:(STLinkLabel *) linkLabel didSelectLinkObject:(STLinkObject *) linkObject;
+- (void)linkLabel:(STLinkLabel *)linkLabel didSelectLinkObject:(STLinkObject *)linkObject;
 @optional
 /**
  * @abstract 超链接是否可以被点击
@@ -63,9 +64,8 @@ static u_int64_t STTextCheckingTypeCustomLink = (1ULL << 33);
  * @return   YES 则会出发linkLabel:didSelectLinkObject: 回调
  *
  */
-- (BOOL) linkLabel:(STLinkLabel *) linkLabel shouldSelectLinkObject:(STLinkObject *) linkObject;
+- (BOOL)linkLabel:(STLinkLabel *)linkLabel shouldSelectLinkObject:(STLinkObject *)linkObject;
 @end
-
 
 /**
  * @abstract 此Label为可以带链接的Label。其中会自动解析文本中包含的链接 @see NSDataDetector, 并为其添加点击事件@see STLinkLabelDelegate。
@@ -75,44 +75,44 @@ static u_int64_t STTextCheckingTypeCustomLink = (1ULL << 33);
  */
 @interface STLinkLabel : UIView
 /// 是否自动解析超链接
-@property (nonatomic, assign) BOOL autoHyperlink;
+@property(nonatomic, assign) BOOL autoHyperlink;
 /// 点击对象的事件委托
-@property (nonatomic, weak) id<STLinkLabelDelegate> delegate;
+@property(nonatomic, weak) id<STLinkLabelDelegate> delegate;
 /// 文本内容
-@property (nonatomic, copy)   NSString * text;
+@property(nonatomic, copy) NSString *text;
 /// 文本字体
-@property (nonatomic, strong) UIFont   * font;
+@property(nonatomic, strong) UIFont *font;
 /// 对其方式 default is NSTextAlignmentLeft
-@property (nonatomic, assign) NSTextAlignment textAlignment;
+@property(nonatomic, assign) NSTextAlignment textAlignment;
 /// 换行模式 default is NSLineBreakByWordWrapping
-@property (nonatomic, assign) NSLineBreakMode lineBreakMode;
+@property(nonatomic, assign) NSLineBreakMode lineBreakMode;
 /// 暂时未用到
-@property (nonatomic, assign) NSInteger       numberOfLines;
+@property(nonatomic, assign) NSInteger numberOfLines;
 /// 文本颜色
-@property (nonatomic, strong) UIColor  * textColor;
+@property(nonatomic, strong) UIColor *textColor;
 /// 超链接颜色， 默认blue
-@property (nonatomic, strong) UIColor  * linkColor;
+@property(nonatomic, strong) UIColor *linkColor;
 /// 文本高亮的颜色
-@property (nonatomic, strong) UIColor  * highlightedTextColor;
+@property(nonatomic, strong) UIColor *highlightedTextColor;
 /// 超链接高亮的颜色
-@property (nonatomic, strong) UIColor  * highlightedLinkColor;
+@property(nonatomic, strong) UIColor *highlightedLinkColor;
 /// 超链接高亮时的背景颜色，默认gray
-@property (nonatomic, strong) UIColor  * linkBackgroundColor;
+@property(nonatomic, strong) UIColor *linkBackgroundColor;
 
-@property (nonatomic, assign, getter = isHighlighted) BOOL highlighted; // default is  NO
+@property(nonatomic, assign, getter=isHighlighted) BOOL highlighted; // default is  NO
 
-@property (nonatomic, assign) UIBaselineAdjustment   baselineAdjustment; // default is UIBaselineAdjustmentAlignBaselines
+@property(nonatomic, assign) UIBaselineAdjustment baselineAdjustment; // default is UIBaselineAdjustmentAlignBaselines
 /// @see STTextCheckingTypeCustomLink
-@property (nonatomic, assign) NSTextCheckingTypes textCheckingTypes;    // default is NSTextCheckingTypeLink
+@property(nonatomic, assign) NSTextCheckingTypes textCheckingTypes; // default is NSTextCheckingTypeLink
 
-@property (nonatomic, assign) CGFloat verticalTouchAreaFactor;  // default is 1.0
+@property(nonatomic, assign) CGFloat verticalTouchAreaFactor; // default is 1.0
 
-+ (NSString *) displayTextWithTextCheckingType:(NSTextCheckingType) textCheckingTypes text:(NSString *) text;
++ (NSString *)displayTextWithTextCheckingType:(NSTextCheckingType)textCheckingTypes text:(NSString *)text;
 
 @end
 
 @interface NSString (STLinkLabel)
 
-- (CGSize) sizeWithFont:(UIFont *) font constrainedToSize:(CGSize) constrainedSize paragraphStyle:(NSParagraphStyle *) paragraphStyle;
+- (CGSize)sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)constrainedSize paragraphStyle:(NSParagraphStyle *)paragraphStyle;
 
 @end

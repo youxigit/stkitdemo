@@ -11,8 +11,8 @@
 
 @interface STPayViewController : STViewController
 
-- (instancetype) initWithPayItem:(STPayItem *) payItem handler:(STPayHandler) payHandler;
+- (instancetype)initWithPayItem:(STPayItem *)payItem handler:(STPayHandler)payHandler;
 
-@property (nonatomic, readonly) STPayPlatform payPlatforms;
+@property(nonatomic, readonly) STPayPlatform payPlatforms;
 
 @end

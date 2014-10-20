@@ -10,7 +10,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @class UIImage;
-typedef void (^STAlbumSaveHandler) (UIImage * image, NSError * error);
+typedef void (^STAlbumSaveHandler)(UIImage *image, NSError *error);
 
 /**
  * @brief 将图片写入相册,使用ALAssetLibrary
@@ -19,11 +19,11 @@ typedef void (^STAlbumSaveHandler) (UIImage * image, NSError * error);
  * @param  album    相册名称，如果相册不存在，则新建相册
  * @param  completionHandler 回调
  */
-extern void STImageWriteToPhotosAlbum(UIImage * image, NSString * album, STAlbumSaveHandler completionHandler);
+extern void STImageWriteToPhotosAlbum(UIImage *image, NSString *album, STAlbumSaveHandler completionHandler);
 
 @interface STAlbumManager : NSObject
 
-+ (instancetype) sharedManager;
++ (instancetype)sharedManager;
 
 /**
  * @brief 将图片写入相册,使用ALAssetLibrary
@@ -32,13 +32,12 @@ extern void STImageWriteToPhotosAlbum(UIImage * image, NSString * album, STAlbum
  * @param  album    相册名称，如果相册不存在，则新建相册
  * @param  completionHandler 回调
  */
-- (void) saveImage:(UIImage *) image toAlbum:(NSString *) album completionHandler:(STAlbumSaveHandler) completionHandler;
+- (void)saveImage:(UIImage *)image toAlbum:(NSString *)album completionHandler:(STAlbumSaveHandler)completionHandler;
 
 @end
 
-
 @interface ALAssetsLibrary (STAssetsLibrary)
 
--(void) writeImage:(UIImage*)image toAlbum:(NSString*) album completionHandler:(STAlbumSaveHandler) completionHandler;
+- (void)writeImage:(UIImage *)image toAlbum:(NSString *)album completionHandler:(STAlbumSaveHandler)completionHandler;
 
 @end

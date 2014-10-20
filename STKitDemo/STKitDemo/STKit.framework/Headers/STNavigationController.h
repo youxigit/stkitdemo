@@ -27,16 +27,18 @@ typedef enum STViewControllerTransitionType {
 - (NSArray *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated; // Pops view controllers until the one specified is on top. Returns the popped controllers.
 - (NSArray *)popToRootViewControllerAnimated:(BOOL)animated; // Pops until there's only a single view controller left on the stack. Returns the popped controllers.
 
-@property(nonatomic,readonly,strong) UIViewController *topViewController; // The top view controller on the stack.
-@property(nonatomic,readonly,strong) UIViewController *visibleViewController; // Return modal view controller if it exists. Otherwise the top view controller.
+@property(nonatomic, readonly, strong) UIViewController *topViewController; // The top view controller on the stack.
+@property(nonatomic, readonly, strong) UIViewController *visibleViewController; // Return modal view controller if it exists. Otherwise the top view controller.
 
-@property(nonatomic,copy) NSArray *viewControllers; // The current view controller stack.
-- (void)setViewControllers:(NSArray *)viewControllers animated:(BOOL)animated; // If animated is YES, then simulate a push or pop depending on whether the new top view controller was previously in the stack.
-@property(nonatomic,readonly) STNavigationBar *navigationBar; // The navigation bar managed by the controller. Pushing, popping or setting navigation items on a managed navigation bar is not supported.
+@property(nonatomic, copy) NSArray *viewControllers; // The current view controller stack.
+- (void)setViewControllers:(NSArray *)viewControllers animated:(BOOL)animated; // If animated is YES, then simulate a push or pop depending on whether the new top view controller was
+                                           // previously in the stack.
+@property(nonatomic, readonly) STNavigationBar *navigationBar; // The navigation bar managed by the controller. Pushing, popping or setting navigation
+                                                               // items on a managed navigation bar is not supported.
 
-@property(nonatomic, weak)     id<UINavigationControllerDelegate> delegate;
+@property(nonatomic, weak) id<UINavigationControllerDelegate> delegate;
 ///
-@property(nonatomic, readonly) UIGestureRecognizer * interactivePopGestureRecognizer;
+@property(nonatomic, readonly) UIGestureRecognizer *interactivePopGestureRecognizer;
 @end
 
 /// NavigationController Push/Pop时间
@@ -44,18 +46,18 @@ extern CGFloat const STTransitionViewControllerAnimationDuration;
 
 @interface UIViewController (STNavigationController)
 
-@property (nonatomic, assign) BOOL navigationBarHidden;
+@property(nonatomic, assign) BOOL navigationBarHidden;
 
-@property (nonatomic, readonly, strong) STNavigationBar        * customNavigationBar;
-@property (nonatomic, readonly, strong) STNavigationController * customNavigationController;
+@property(nonatomic, readonly, strong) STNavigationBar *customNavigationBar;
+@property(nonatomic, readonly, strong) STNavigationController *customNavigationController;
 
 /// @li 从最左侧开始生效返回手势，这个变量决定距离左侧多少可以激活手势，设置为0，则禁止左滑跟随返回
 /// @li 有些套了手机壳的手机，壳边缘比较厚，设置比较小的话，影响操作，很难触发。
-@property(nonatomic, assign)   CGFloat               maximumInteractivePopEdgeDistance; // 默认 30pt,系统默认13。
+@property(nonatomic, assign) CGFloat maximumInteractivePopEdgeDistance; // 默认 30pt,系统默认13。
 
 /// Pop/Push ViewController时，前一个ViewController's view的偏移量（iOS7的返回效果）。
 /// 变量应该为Unsigned
-@property(nonatomic, assign)   CGFloat               interactivePopTransitionOffset; // default 80pt
+@property(nonatomic, assign) CGFloat interactivePopTransitionOffset; // default 80pt
 
 @end
 /// 30pt

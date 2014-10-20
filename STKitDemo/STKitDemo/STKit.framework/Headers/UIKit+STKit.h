@@ -11,7 +11,7 @@
 #import "Foundation+STKit.h"
 
 #define STLogPoint(point) NSLog(@"Point (%f, %f)", point.x, point.y);
-#define STLogRect(rect) NSLog(@"Rect (%f,%f,%f,%f)", rect.origin.x,rect.origin.y,rect.size.width,rect.size.height);
+#define STLogRect(rect) NSLog(@"Rect (%f,%f,%f,%f)", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
 #define STLogEdgeInsets(insets) NSLog(@"EdgeInsets (%f,%f,%f,%f)", insets.top, insets.left, insets.bottom, insets.right);
 
 extern CGFloat STOnePixel();
@@ -19,20 +19,19 @@ extern CGFloat STGetScreenWidth();
 extern CGFloat STGetScreenHeight();
 
 extern CGFloat STGetSystemVersion();
-extern NSString * STGetSystemVersionString();
+extern NSString *STGetSystemVersionString();
 
 #pragma mark - UIColor Extension
 /// 给UIColor增加rgb的构造方法
 @interface UIColor (STExtension)
 /// 使用rgbValue构造UIColor [UIColor colorWithRGB:0xCB553B];
-+ (UIColor *) colorWithRGB:(NSInteger) rgb;
++ (UIColor *)colorWithRGB:(NSInteger)rgb;
 /// 使用rgbValue构造UIColor [UIColor colorWithRGB:0xCB553B alpha:0.3];
-+ (UIColor *) colorWithRGB:(NSInteger) rgb alpha:(CGFloat) alpha;
++ (UIColor *)colorWithRGB:(NSInteger)rgb alpha:(CGFloat)alpha;
 /// 使用rgb 16进制String构造UIColor [UIColor colorWithHexString:@"0xFFFFFF"];
-+ (UIColor *) colorWithHexString:(NSString *) hexString;
-+ (UIColor *) colorWithHexString:(NSString *) hexString alpha:(CGFloat) alpha;
++ (UIColor *)colorWithHexString:(NSString *)hexString;
++ (UIColor *)colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 @end
-
 
 #pragma mark - UIView Extension
 
@@ -42,63 +41,63 @@ extern NSString * STGetSystemVersionString();
 /**
  * @abstract getter CGRectGetMinY(self.frame) setter frame.origin.y = top;
  */
-@property (nonatomic) CGFloat top;
+@property(nonatomic) CGFloat top;
 /**
  * @abstract getter CGRectGetMaxY(self.frame) setter frame.origin.y = bottom - height;
  */
-@property (nonatomic) CGFloat bottom;
+@property(nonatomic) CGFloat bottom;
 /**
  * @abstract getter CGRectGetMinX(self.frame) setter frame.origin.x = left;
  */
-@property (nonatomic) CGFloat left;
+@property(nonatomic) CGFloat left;
 /**
  * @abstract getter CGRectGetMaxX(self.frame) setter frame.origin.x = right - width;
  */
-@property (nonatomic) CGFloat right;
+@property(nonatomic) CGFloat right;
 /**
  * @abstract getter CGRectGetWidth(self.frame) setter frame.size.width = width;
  */
-@property (nonatomic) CGFloat width;
+@property(nonatomic) CGFloat width;
 /**
  * @abstract getter CGRectGetHeight(self.frame) setter frame.size.height = height;
  */
-@property (nonatomic) CGFloat height;
+@property(nonatomic) CGFloat height;
 /**
  * @abstract getter frame.origin setter frame.origin = origin;
  */
-@property (nonatomic) CGPoint origin;
+@property(nonatomic) CGPoint origin;
 /**
  * @abstract getter frame.size setter frame.size = size;
  */
-@property (nonatomic) CGSize  size;
+@property(nonatomic) CGSize size;
 /**
  * @abstract getter self.center.x setter center.x = centerX;
  */
-@property (nonatomic) CGFloat centerX;
+@property(nonatomic) CGFloat centerX;
 /**
  * @abstract getter self.center.y setter center.y = centerY;
  */
-@property (nonatomic) CGFloat centerY;
+@property(nonatomic) CGFloat centerY;
 /**
  * @abstract getter CGRectGetWidth(frame) / 2
  */
-@property (nonatomic, readonly) CGFloat inCenterX;
+@property(nonatomic, readonly) CGFloat inCenterX;
 /**
  * @abstract getter CGRectGetHeight(frame) / 2
  */
-@property (nonatomic, readonly) CGFloat inCenterY;
+@property(nonatomic, readonly) CGFloat inCenterY;
 /**
  * @abstract getter (inCenterX, inCenterY)
  */
-@property (nonatomic, readonly) CGPoint inCenter;
+@property(nonatomic, readonly) CGPoint inCenter;
 /**
  * @abstract location in screen
  */
-@property (nonatomic, readonly) CGFloat screenX;
+@property(nonatomic, readonly) CGFloat screenX;
 /**
  * @abstract location in screen
  */
-@property (nonatomic, readonly) CGFloat screenY;
+@property(nonatomic, readonly) CGFloat screenY;
 /**
  * @abstract removeAllSubviews
  */
@@ -106,10 +105,10 @@ extern NSString * STGetSystemVersionString();
 /**
  * @abstract view's viewController if the view has one
  */
-- (UIViewController*)viewController;
+- (UIViewController *)viewController;
 
 /// 查找firstResponder
-- (UIResponder *) findFirstResponder;
+- (UIResponder *)findFirstResponder;
 
 /**
  * @abstract 递归查找view的nextResponder，直到找到类型为class的Responder
@@ -117,7 +116,7 @@ extern NSString * STGetSystemVersionString();
  * @param class  nextResponder 的 class
  * @return       第一个满足类型为class的UIResponder
  */
-- (UIResponder *) nextResponderWithClass:(Class) class;
+- (UIResponder *)nextResponderWithClass:(Class) class;
 
 /**
  * @abstract view的superview中，是否包含某一类的view
@@ -125,7 +124,7 @@ extern NSString * STGetSystemVersionString();
  * @param viewClass  superview 的 class
  * @return           view是否被添加到 类型为viewClass的superview上面
  */
-- (BOOL)isDescendantOfClass:(Class) viewClass;
+- (BOOL)isDescendantOfClass:(Class)viewClass;
 
 /**
  * @abstract    递归查找view的superview，直到找到类型为viewClass的view
@@ -133,7 +132,7 @@ extern NSString * STGetSystemVersionString();
  * @param viewClass  superview 的 class
  * @return           第一个满足类型为viewClass的superview
  */
-- (UIView *) superviewWithClass:(Class) viewClass;
+- (UIView *)superviewWithClass:(Class)viewClass;
 
 /**
  * @abstract 递归遍历该view，找到该view中的所有subview类型为class的view
@@ -141,7 +140,7 @@ extern NSString * STGetSystemVersionString();
  * @param viewClass  subview 的 class
  * @return           所有类型为class的subview
  */
-- (NSArray *) viewWithClass:(Class) class;
+- (NSArray *)viewWithClass:(Class) class;
 
 /**
  * @abstract 为该View添加轻拍手势
@@ -149,49 +148,49 @@ extern NSString * STGetSystemVersionString();
  * @param target 接受手势通知的对象
  * @param action 回调方法
  */
-- (void) addTouchTarget:(id)target action:(SEL)action;
-- (void) removeTouchTarget:(id)target action:(SEL)action;
+- (void)addTouchTarget:(id)target action:(SEL)action;
+- (void)removeTouchTarget:(id)target action:(SEL)action;
 
 /**
  * Return the x coordinate on the screen, taking into account scroll views.
  */
-@property (nonatomic, readonly) CGFloat screenViewX;
+@property(nonatomic, readonly) CGFloat screenViewX;
 
 /**
  * Return the y coordinate on the screen, taking into account scroll views.
  */
-@property (nonatomic, readonly) CGFloat screenViewY;
+@property(nonatomic, readonly) CGFloat screenViewY;
 
 /**
  * Return the view frame on the screen, taking into account scroll views.
  */
-@property (nonatomic, readonly) CGRect screenFrame;
+@property(nonatomic, readonly) CGRect screenFrame;
 
 /**
  * Return the width in portrait or the height in landscape.
  */
-@property (nonatomic, readonly) CGFloat orientationWidth;
+@property(nonatomic, readonly) CGFloat orientationWidth;
 
 /**
  * Return the height in portrait or the width in landscape.
  */
-@property (nonatomic, readonly) CGFloat orientationHeight;
+@property(nonatomic, readonly) CGFloat orientationHeight;
 /**
  * Calculates the offset of this view from another view in screen coordinates.
  *
  * otherView should be a parent view of this view.
  */
-- (CGPoint)offsetFromView:(UIView*)otherView;
+- (CGPoint)offsetFromView:(UIView *)otherView;
 
 @end
 
-typedef UIView * (^STHitTestViewBlock)(CGPoint point, UIEvent * event, UIView * defaultView);
-typedef BOOL (^STPointInsideBlock)(CGPoint point, UIEvent * event, BOOL defaultInside);
+typedef UIView * (^STHitTestViewBlock)(CGPoint point, UIEvent *event, UIView *defaultView);
+typedef BOOL (^STPointInsideBlock)(CGPoint point, UIEvent *event, BOOL defaultInside);
 
 @interface UIView (STHitTest)
 /// althought this is strong ,but i deal it with copy
-@property (nonatomic, strong) STHitTestViewBlock hitTestBlock;
-@property (nonatomic, strong) STPointInsideBlock pointInsideBlock;
+@property(nonatomic, strong) STHitTestViewBlock hitTestBlock;
+@property(nonatomic, strong) STPointInsideBlock pointInsideBlock;
 
 @end
 
@@ -199,7 +198,7 @@ typedef BOOL (^STPointInsideBlock)(CGPoint point, UIEvent * event, BOOL defaultI
 @interface UITextField (STMenuController)
 
 /// default YES.
-@property (nonatomic, assign, getter = isMenuEnabled) BOOL   menuEnabled;
+@property(nonatomic, assign, getter=isMenuEnabled) BOOL menuEnabled;
 
 @end
 
@@ -207,7 +206,7 @@ typedef BOOL (^STPointInsideBlock)(CGPoint point, UIEvent * event, BOOL defaultI
 @interface UITextView (STMenuController)
 
 /// default YES.
-@property (nonatomic, assign, getter = isMenuEnabled) BOOL   menuEnabled;
+@property(nonatomic, assign, getter=isMenuEnabled) BOOL menuEnabled;
 
 @end
 
@@ -218,11 +217,11 @@ typedef BOOL (^STPointInsideBlock)(CGPoint point, UIEvent * event, BOOL defaultI
  */
 typedef enum {
     STImageDataTypeUnknown,
-    STImageDataTypePCX,     // 文件头  共1字节  0A
-    STImageDataTypeBMP,     // 文件头  共2字节  42 4d
-    STImageDataTypeJPEG,    // 文件头  共2字节  ff d8 文件尾 ff d9
-    STImageDataTypePNG,     // 文件头  共8字节  89 50 4e 47 0d 0a 1a 0a
-    STImageDataTypeGIF,     // 文件头  共6字节  47 49 46 38 39/37 61
+    STImageDataTypePCX,  // 文件头  共1字节  0A
+    STImageDataTypeBMP,  // 文件头  共2字节  42 4d
+    STImageDataTypeJPEG, // 文件头  共2字节  ff d8 文件尾 ff d9
+    STImageDataTypePNG,  // 文件头  共8字节  89 50 4e 47 0d 0a 1a 0a
+    STImageDataTypeGIF,  // 文件头  共6字节  47 49 46 38 39/37 61
 } STImageDataType;
 
 /**
@@ -230,7 +229,7 @@ typedef enum {
  */
 @interface NSData (STImage)
 /// 根据data前8字节解析图片类型。@see STImageDataType
-- (STImageDataType) imageType;
+- (STImageDataType)imageType;
 
 @end
 
@@ -239,7 +238,7 @@ typedef enum {
  */
 @interface UIImage (STImage)
 /// 判断图片类型，支持GIF解析
-+ (UIImage *) imageWithSTData:(NSData *) data;
++ (UIImage *)imageWithSTData:(NSData *)data;
 
 @end
 
@@ -248,7 +247,6 @@ typedef enum {
 @interface UIImage (STImageNamed)
 
 @end
-
 
 /**
  * @abstract!
@@ -267,67 +265,69 @@ typedef enum STBlurEffectStyle {
 /// 给图片添加毛玻璃效果
 @interface UIImage (STBlurImage)
 
-- (UIImage *) blurImageWithStyle:(STBlurEffectStyle) style;
+- (UIImage *)blurImageWithStyle:(STBlurEffectStyle)style;
 
-- (UIImage *) blurImageWithTintColor:(UIColor *) tintColor;
+- (UIImage *)blurImageWithTintColor:(UIColor *)tintColor;
 
-- (UIImage *) blurImageWithRadius:(CGFloat) blurRadius
-                        tintColor:(UIColor *) tintColor
-            saturationDeltaFactor:(CGFloat) saturationDeltaFactor;
+- (UIImage *)blurImageWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor;
 
-- (UIImage *) blurImageWithRadius:(CGFloat) blurRadius
-                        tintColor:(UIColor *) tintColor
-            saturationDeltaFactor:(CGFloat) saturationDeltaFactor
-                        maskImage:(UIImage *) maskImage;
+- (UIImage *)blurImageWithRadius:(CGFloat)blurRadius
+                       tintColor:(UIColor *)tintColor
+           saturationDeltaFactor:(CGFloat)saturationDeltaFactor
+                       maskImage:(UIImage *)maskImage;
 @end
 
 /// UIView 截图
 @interface UIView (STSnapshot)
 /// 截图后的image
-- (UIImage *) snapshotImage;
+- (UIImage *)snapshotImage;
 /// 截取View中的某一小块
-- (UIImage *) snapshotImageInRect:(CGRect) rect;
+- (UIImage *)snapshotImageInRect:(CGRect)rect;
 /// 把 UIView的transform也放进截图中
-- (UIImage *) transformedSnapshotImage;
+- (UIImage *)transformedSnapshotImage;
 
 @end
 
 @interface UIView (STBlur)
 
-- (UIImage *) blurImage;
+- (UIImage *)blurImage;
 
-- (UIView *) statusBarWindow;
+- (UIView *)statusBarWindow;
 
 @end
 
-typedef void (^ STInvokeHandler)(void);
+typedef void (^STInvokeHandler)(void);
 
 @interface UICollectionView (STReloadData)
-@property (nonatomic, strong) STInvokeHandler willReloadData;
-@property (nonatomic, strong) STInvokeHandler didReloadData;
+@property(nonatomic, strong) STInvokeHandler willReloadData;
+@property(nonatomic, strong) STInvokeHandler didReloadData;
 
 @end
 
-typedef void (^ STAlertViewDismissBlock)(UIAlertView * alertView, NSUInteger dismissIndex);
+typedef void (^STAlertViewDismissBlock)(UIAlertView *alertView, NSUInteger dismissIndex);
 @interface UIAlertView (STKit)
 
-- (void) showWithDismissBlock:(STAlertViewDismissBlock) block;
+- (void)showWithDismissBlock:(STAlertViewDismissBlock)block;
 
 @end
 
 @interface UIActionSheet (STKit)
 
-- (instancetype) initWithTitle:(NSString *)title delegate:(id<UIActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitleArray:(NSArray *)otherButtonTitleArray;
+- (instancetype)initWithTitle:(NSString *)title
+                     delegate:(id<UIActionSheetDelegate>)delegate
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+       destructiveButtonTitle:(NSString *)destructiveButtonTitle
+        otherButtonTitleArray:(NSArray *)otherButtonTitleArray;
 
 @end
 
 @interface UIImage (STSubimage)
-+ (UIImage *) imageWithColor:(UIColor *) color;
-+ (UIImage *) imageWithColor:(UIColor *) color size:(CGSize) size;
++ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
 /// 某个rect下的子图像
-- (UIImage*) subimageInRect:(CGRect)rect;
+- (UIImage *)subimageInRect:(CGRect)rect;
 
-- (UIImage *) imageWithTransform:(CGAffineTransform) transform;
+- (UIImage *)imageWithTransform:(CGAffineTransform)transform;
 
 @end
 
@@ -338,9 +338,8 @@ typedef enum STBarButtonCustomItem {
 } STBarButtonCustomItem;
 @interface UIBarButtonItem (STKit)
 
-+ (instancetype) backBarButtonItemWithTarget:(id) target action:(SEL) action;
-- (instancetype) initWithBarButtonCustomItem:(STBarButtonCustomItem) customItem target:(id) target action:(SEL) action;
++ (instancetype)backBarButtonItemWithTarget:(id)target action:(SEL)action;
+- (instancetype)initWithBarButtonCustomItem:(STBarButtonCustomItem)customItem target:(id)target action:(SEL)action;
 
-- (instancetype) initWithTitle:(NSString *)title target:(id)target action:(SEL)action;
+- (instancetype)initWithTitle:(NSString *)title target:(id)target action:(SEL)action;
 @end
-

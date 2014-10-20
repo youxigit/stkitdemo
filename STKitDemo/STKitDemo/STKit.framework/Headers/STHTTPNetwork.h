@@ -11,41 +11,39 @@
 #import <STKit/STNetwork.h>
 
 @class STNetworkOperation;
-typedef void (^ STHTTPNetworkHandler) (STNetworkOperation * operation, id response, NSError * error);
-typedef void (^ STHTTPSynchronousNetworkHandler) (NSURLResponse * response, id data, NSError * error);
+typedef void (^STHTTPNetworkHandler)(STNetworkOperation *operation, id response, NSError *error);
+typedef void (^STHTTPSynchronousNetworkHandler)(NSURLResponse *response, id data, NSError *error);
 
 /// default text/json
 typedef NS_ENUM(NSInteger, STHTTPResponseDataType) {
-    STHTTPResponseDataTypeTextHTML       = 0,      // 返回类型位HTML text/html
-    STHTTPResponseDataTypeTextJSON       = 1,      // 返回类型位JSON text/json
-    STHTTPResponseDataTypeTextXML        = 2       // 返回类型位XML  text/xml
+    STHTTPResponseDataTypeTextHTML = 0, // 返回类型位HTML text/html
+    STHTTPResponseDataTypeTextJSON = 1, // 返回类型位JSON text/json
+    STHTTPResponseDataTypeTextXML = 2   // 返回类型位XML  text/xml
 };
 
-typedef NS_OPTIONS(NSInteger, STXMLParseOptions) {
-    STXMLParseOptionsProcessNamespaces       = 1 << 0,
-    STXMLParseOptionsReportNamespacePrefixes = 1 << 1,
-    STXMLParseOptionsResolveExternalEntities = 1 << 2,
+typedef NS_OPTIONS(NSInteger, STXMLParseOptions){
+    STXMLParseOptionsProcessNamespaces = 1 << 0, STXMLParseOptionsReportNamespacePrefixes = 1 << 1, STXMLParseOptionsResolveExternalEntities = 1 << 2,
 };
 /// HTTP类型的网络请求
 @interface STHTTPNetwork : NSObject
 
-@property (nonatomic, copy) NSString            * HTTPMethod;
+@property(nonatomic, copy) NSString *HTTPMethod;
 /// 基本参数，最后请求时，会带上这些基本参数，如果key重复，则以后面的为准
-@property (nonatomic, copy) NSDictionary        * basicParameters;
+@property(nonatomic, copy) NSDictionary *basicParameters;
 /// 超时时间
-@property (nonatomic, assign) NSTimeInterval      timeoutInterval;
-@property (nonatomic, assign) NSStringEncoding    dataEncoding;
+@property(nonatomic, assign) NSTimeInterval timeoutInterval;
+@property(nonatomic, assign) NSStringEncoding dataEncoding;
 // default text/json
-@property (nonatomic, assign) STHTTPResponseDataType dataType;
+@property(nonatomic, assign) STHTTPResponseDataType dataType;
 /// used when dataType is text/json
-@property (nonatomic, assign) NSJSONReadingOptions   JSONReadingOptions;
+@property(nonatomic, assign) NSJSONReadingOptions JSONReadingOptions;
 /// used when dataType is text/xml
-@property (nonatomic, assign) STXMLParseOptions      XMLParseOptions;
+@property(nonatomic, assign) STXMLParseOptions XMLParseOptions;
 /// 元素内容的key.默认content
-@property (nonatomic, copy)   NSString             * XMLElementContextKey;
+@property(nonatomic, copy) NSString *XMLElementContextKey;
 
 /// url prefix  host/path/method?parameters
-- (instancetype) initWithHost:(NSString *) host path:(NSString *) path;
+- (instancetype)initWithHost:(NSString *)host path:(NSString *)path;
 
 /**
  * @abstract 发送异步网络请求
@@ -57,15 +55,14 @@ typedef NS_OPTIONS(NSInteger, STXMLParseOptions) {
  *
  * @attention  所有handlers 均会在主线程 回调
  */
-- (STNetworkOperation *) sendAsynchronousRequestWithMethod:(NSString *) method
-                                                parameters:(NSDictionary *) parameters
-                                                   handler:(STHTTPNetworkHandler) handler;
+- (STNetworkOperation *)sendAsynchronousRequestWithMethod:(NSString *)method
+                                               parameters:(NSDictionary *)parameters
+                                                  handler:(STHTTPNetworkHandler)handler;
 
-- (STNetworkOperation *) sendAsynchronousRequestWithMethod:(NSString *) method
-                                                HTTPMethod:(NSString *) HTTPMethod
-                                                parameters:(NSDictionary *) parameters
-                                                   handler:(STHTTPNetworkHandler) handler;
-
+- (STNetworkOperation *)sendAsynchronousRequestWithMethod:(NSString *)method
+                                               HTTPMethod:(NSString *)HTTPMethod
+                                               parameters:(NSDictionary *)parameters
+                                                  handler:(STHTTPNetworkHandler)handler;
 
 /**
  * @abstract 发送同步网络请求
@@ -75,14 +72,13 @@ typedef NS_OPTIONS(NSInteger, STXMLParseOptions) {
  * @param    parameters 请求的参数，如果有文件资源，请参考 @see STPostDataItem
  * @param    handler    请求结束时的回掉
  *
- * @attention  同步请求会阻塞当前线程，请谨慎使用.@see sendAsynchronousRequestWithURLString:
+ * @attention  同步请求会阻塞当前线程，请谨慎使用.@see
+ *sendAsynchronousRequestWithURLString:
  */
-- (void) sendSynchronousRequestWithMethod:(NSString *) method
-                               parameters:(NSDictionary *) params
-                                  handler:(STHTTPSynchronousNetworkHandler) handler;
+- (void)sendSynchronousRequestWithMethod:(NSString *)method parameters:(NSDictionary *)params handler:(STHTTPSynchronousNetworkHandler)handler;
 
-- (void) sendSynchronousRequestWithMethod:(NSString *) method
-                               HTTPMethod:(NSString *) HTTPMethod
-                               parameters:(NSDictionary *) parameters
-                                  handler:(STHTTPSynchronousNetworkHandler) handler;
+- (void)sendSynchronousRequestWithMethod:(NSString *)method
+                              HTTPMethod:(NSString *)HTTPMethod
+                              parameters:(NSDictionary *)parameters
+                                 handler:(STHTTPSynchronousNetworkHandler)handler;
 @end

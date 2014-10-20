@@ -10,33 +10,30 @@
 #import <STKit/Foundation+STKit.h>
 
 typedef enum {
-    STPersistenceDirectoryDocument,     // document 目录
-    STPersistenceDirectoryLibiary,      // Libiary  目录
-    STPersistenceDirectoryTemporary,    // 临时目录
+    STPersistenceDirectoryDocument,  // document 目录
+    STPersistenceDirectoryLibiary,   // Libiary  目录
+    STPersistenceDirectoryTemporary, // 临时目录
 } STPersistenceDirectory;
 
-extern NSString * STPersistDocumentDirectory();
-extern NSString * STPersistLibiaryDirectory();
-extern NSString * STPersistTemporyDirectory();
+extern NSString *STPersistDocumentDirectory();
+extern NSString *STPersistLibiaryDirectory();
+extern NSString *STPersistTemporyDirectory();
 
 @interface STPersistence : NSObject
 
-+ (BOOL) persistValue:(id) value
-        intoDirectory:(STPersistenceDirectory) directory
-               forKey:(NSString *) key;
++ (BOOL)persistValue:(id)value intoDirectory:(STPersistenceDirectory)directory forKey:(NSString *)key;
 
-+ (id) valueForPersistKey:(NSString *) key
-              inDirectory:(STPersistenceDirectory) directory;
++ (id)valueForPersistKey:(NSString *)key inDirectory:(STPersistenceDirectory)directory;
 
 @end
 
 /// 调用 setValue:forKey 就可以 存储了, valueForKey可以取
 @interface STPersistence (STUserDefault)
 
-+ (instancetype) standardPerstence;
++ (instancetype)standardPerstence;
 
-+ (void) resetStandardPerstence;
++ (void)resetStandardPerstence;
 /// 删除key
-- (id) removeValueForKey:(NSString *) key;
+- (id)removeValueForKey:(NSString *)key;
 
 @end

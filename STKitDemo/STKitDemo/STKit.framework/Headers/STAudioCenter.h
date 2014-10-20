@@ -13,26 +13,24 @@
 
 @interface STAudioCenter : NSObject
 
-+ (instancetype) sharedAudioCenter;
++ (instancetype)sharedAudioCenter;
 
-+ (void) setAudioSessionEnabled:(BOOL) audioSessionEnabled wantRecording:(BOOL) wantRecording;
++ (void)setAudioSessionEnabled:(BOOL)audioSessionEnabled wantRecording:(BOOL)wantRecording;
 /// 播放震动
-- (void) playVibrations;
+- (void)playVibrations;
 
 @end
 
-@interface STAudioCenter(STAudioRecorder)
+@interface STAudioCenter (STAudioRecorder)
 
-@property (nonatomic, readonly, strong) STAudioRecorder * audioRecorder;
+@property(nonatomic, readonly, strong) STAudioRecorder *audioRecorder;
 
-- (void) startRecordWithPath:(NSString *) path handler:(STAudioRecordHandler) audioHandler;
-- (void) startRecordWithPath:(NSString *) path
-                     handler:(STAudioRecordHandler) audioHandler
-                 dataHandler:(STAudioDataHandler) dataHandler;
-- (void) finishRecord;
+- (void)startRecordWithPath:(NSString *)path handler:(STAudioRecordHandler)audioHandler;
+- (void)startRecordWithPath:(NSString *)path handler:(STAudioRecordHandler)audioHandler dataHandler:(STAudioDataHandler)dataHandler;
+- (void)finishRecord;
 @end
 
-extern NSString * const STAudioSessionOutputVolumeDidChangeNotification;
+extern NSString *const STAudioSessionOutputVolumeDidChangeNotification;
 
-extern NSString * const STAudioSessionOutputVolumeNewValueKey;
-extern NSString * const STAudioSessionOutputVolumeOldValueKey;
+extern NSString *const STAudioSessionOutputVolumeNewValueKey;
+extern NSString *const STAudioSessionOutputVolumeOldValueKey;

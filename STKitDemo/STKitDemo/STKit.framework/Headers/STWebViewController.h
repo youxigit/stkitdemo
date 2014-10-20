@@ -15,16 +15,16 @@
 @interface STWebViewController : STViewController
 
 /// UIWebView。
-@property (nonatomic, readonly, strong) UIWebView * webView;
+@property(nonatomic, readonly, strong) UIWebView *webView;
 /// 底部导航栏是否hidden，包含网页的前进，后退，刷新等按钮。
-@property (nonatomic, assign) BOOL webViewBarHidden;
-- (void) setWebViewBarHidden:(BOOL) webViewBarHidden animated:(BOOL) animated;
+@property(nonatomic, assign) BOOL webViewBarHidden;
+- (void)setWebViewBarHidden:(BOOL)webViewBarHidden animated:(BOOL)animated;
 
 /// 加载是是否需要菊花
-@property (nonatomic, assign) BOOL showIndicatorWhenLoading;
+@property(nonatomic, assign) BOOL showIndicatorWhenLoading;
 
 /// designed initializer
-- (instancetype) initWithURL:(NSURL *) URL;
-- (instancetype) initWithURLString:(NSString *) URLString;
+- (instancetype)initWithURL:(NSURL *)URL;
+- (instancetype)initWithURLString:(NSString *)URLString;
 
 @end

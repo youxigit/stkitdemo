@@ -10,18 +10,17 @@
 // UINavigationBar
 @interface STNavigationBar : UIView
 
-@property (nonatomic, copy)   NSString      * title;
+@property(nonatomic, copy) NSString           *title;
+@property(nonatomic, strong) UIView           *leftBarView;
+@property(nonatomic, strong) UIView           *titleView;
+@property(nonatomic, strong) UIView           *rightBarView;
 
-@property (nonatomic, strong) UIView        * leftBarView;
-@property (nonatomic, strong) UIView        * titleView;
-@property (nonatomic, strong) UIView        * rightBarView;
+@property(nonatomic, strong, readonly) UIView *backgroundView;
+@property(nonatomic, strong, readonly) UIView *transitionView;
 
-@property (nonatomic, strong, readonly) UIView        * backgroundView;
-@property (nonatomic, strong, readonly) UIView        * transitionView;
+@property(nonatomic, strong, readonly) UIView *separatorView;
 
-@property (nonatomic, strong, readonly) UIView        * separatorView;
+@property(nonatomic, strong) UIColor          *barTintColor;
 
-@property (nonatomic, strong) UIColor       * barTintColor;
-
-@property(nonatomic,copy) NSDictionary *titleTextAttributes;
+@property(nonatomic, copy) NSDictionary       *titleTextAttributes;
 @end

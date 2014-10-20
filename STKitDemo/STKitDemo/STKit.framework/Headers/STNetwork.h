@@ -10,19 +10,18 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-
-typedef enum STNetworkErrorCode : NSInteger {
-    STNetworkErrorCodeUserCancelled = 11,         // 用户手动取消
-} STNetworkErrorCode;
+typedef NS_ENUM(NSInteger, STNetworkErrorCode) {
+    STNetworkErrorCodeUserCancelled = 11, // 用户手动取消
+};
 
 @interface STPostDataItem : NSObject
 
-@property (nonatomic, copy) NSString * name;
+@property(nonatomic, copy) NSString *name;
 /// 如果传送文件
-@property (nonatomic, copy) NSString * path;
+@property(nonatomic, copy) NSString *path;
 /// 发送图片或者data
-@property (nonatomic, strong) UIImage * image;
-@property (nonatomic, strong) NSData  * data;
+@property(nonatomic, strong) UIImage *image;
+@property(nonatomic, strong) NSData *data;
 @end
 
 @class STNetworkOperation;
@@ -32,29 +31,30 @@ typedef enum STNetworkErrorCode : NSInteger {
  *
  * @param response 包含网络返回的数据
  */
-typedef void (^STNetworkResponseHandler) (STNetworkOperation * operation, id response, NSError * error);
+typedef void (^STNetworkResponseHandler)(STNetworkOperation *operation, id response, NSError *error);
 
 // 请求时时相应，下载资源等
 /**
- * @abstract 网络请求时，服务器应答的回调，服务器有时候可能不是一次接受到所有数据，所以会分几次接受
+ * @abstract
+ *网络请求时，服务器应答的回调，服务器有时候可能不是一次接受到所有数据，所以会分几次接受
  *
  * @param    data 服务端返回的数据
  * @param    completion 完成度，完成的百分比
  */
-typedef void (^STNetworkProgressHandler)(STNetworkOperation * operation, NSData * data, CGFloat completion);
+typedef void (^STNetworkProgressHandler)(STNetworkOperation *operation, NSData *data, CGFloat completion);
 
-typedef void (^STNetworkFinishedHandler)(STNetworkOperation * operation, NSData * data, NSError * error);
+typedef void (^STNetworkFinishedHandler)(STNetworkOperation *operation, NSData *data, NSError *error);
 
 /// 即将开始网络请求，可以配置一些参数（cookies，headerfields等等）
-typedef void (^STNetworkWillStartHandler)(STNetworkOperation * operation);
+typedef void (^STNetworkWillStartHandler)(STNetworkOperation *operation);
 
 @class STNetworkOperation;
 @interface STNetwork : NSObject
 /// 回调Queue
-@property (nonatomic, strong) NSOperationQueue * networkQueue;
+@property(nonatomic, strong) NSOperationQueue *networkQueue;
 /// 是否把同样的请求merge在一起
-@property (nonatomic, assign) BOOL  automaticallyMergeRequest;
-@property (nonatomic, assign) NSTimeInterval     timeoutInterval;
+@property(nonatomic, assign) BOOL automaticallyMergeRequest;
+@property(nonatomic, assign) NSTimeInterval timeoutInterval;
 
 /**
  * @abstract 发送异步网络请求
@@ -63,15 +63,15 @@ typedef void (^STNetworkWillStartHandler)(STNetworkOperation * operation);
  * @param    HTTPMethod   请求的方式，有POST/GET/PUT/DELETE 等，默认为GET
  * @param    parameters   请求的参数，如果有文件资源，请参考 @see STPostDataItem
  * @param    handlers     请求各个阶段的回调
- * 
+ *
  * @attention  所有handlers 均会在defaultQueue 回调
  */
-- (STNetworkOperation *) sendAsynchronousRequestWithURLString:(NSString *) URLString
-                                                   HTTPMethod:(NSString *) HTTPMethod
-                                                   parameters:(NSDictionary *) parameters
-                                              responseHandler:(STNetworkResponseHandler) responseHandler
-                                              progressHandler:(STNetworkProgressHandler) progressHandler
-                                              finishedHandler:(STNetworkFinishedHandler) finishedHandler;
+- (STNetworkOperation *)sendAsynchronousRequestWithURLString:(NSString *)URLString
+                                                  HTTPMethod:(NSString *)HTTPMethod
+                                                  parameters:(NSDictionary *)parameters
+                                             responseHandler:(STNetworkResponseHandler)responseHandler
+                                             progressHandler:(STNetworkProgressHandler)progressHandler
+                                             finishedHandler:(STNetworkFinishedHandler)finishedHandler;
 
 /**
  * @abstract 取消异步请求
@@ -82,18 +82,16 @@ typedef void (^STNetworkWillStartHandler)(STNetworkOperation * operation);
  *
  * @attention
  */
-- (void) cancelAsynchronousRequestWithURLString:(NSString *) URLString
-                                     HTTPMethod:(NSString *) HTTPMethod
-                                     parameters:(NSDictionary *) parameters;
+- (void)cancelAsynchronousRequestWithURLString:(NSString *)URLString HTTPMethod:(NSString *)HTTPMethod parameters:(NSDictionary *)parameters;
 
-- (void) cancelAsynchronousRequestWithIdentifier:(NSInteger) identifier;
+- (void)cancelAsynchronousRequestWithIdentifier:(NSInteger)identifier;
 
-+ (NSThread *) standardNetworkThread;
++ (NSThread *)standardNetworkThread;
 
 /// 是否为Https的请求方式
-@property (nonatomic, assign) BOOL       allowHTTPSRequest;
+@property(nonatomic, assign) BOOL allowHTTPSRequest;
 /// https 证书路径
-@property (nonatomic, copy)   NSString * certificatePath;
+@property(nonatomic, copy) NSString *certificatePath;
 
 @end
 
@@ -107,30 +105,29 @@ typedef void (^STNetworkWillStartHandler)(STNetworkOperation * operation);
  * @param    parameters 请求的参数，如果有文件资源，请参考 @see STPostDataItem
  * @param    error      请求失败的error
  *
- * @attention  同步请求会阻塞当前线程，请谨慎使用.@see sendAsynchronousRequestWithURLString:
+ * @attention  同步请求会阻塞当前线程，请谨慎使用.@see
+ *sendAsynchronousRequestWithURLString:
  */
-- (NSData *) sendSynchronousRequestWithURLString:(NSString *) URLString
-                                      HTTPMethod:(NSString *) HTTPMethod
-                                      parameters:(NSDictionary *) parameters
-                                           error:(NSError **) error;
+- (NSData *)sendSynchronousRequestWithURLString:(NSString *)URLString
+                                     HTTPMethod:(NSString *)HTTPMethod
+                                     parameters:(NSDictionary *)parameters
+                                          error:(NSError **)error;
 
-
-- (NSData *) sendSynchronousRequestWithURLString:(NSString *) URLString
-                                      HTTPMethod:(NSString *) HTTPMethod
-                                      parameters:(NSDictionary *) params
-                                        response:(NSURLResponse **) response
-                                           error:(NSError **) error;
+- (NSData *)sendSynchronousRequestWithURLString:(NSString *)URLString
+                                     HTTPMethod:(NSString *)HTTPMethod
+                                     parameters:(NSDictionary *)params
+                                       response:(NSURLResponse **)response
+                                          error:(NSError **)error;
 
 @end
 
 @interface NSString (STNetwork)
-- (NSString*) stringByURLEncoded;
-- (NSString*) stringByURLDecoded;
+- (NSString *)stringByURLEncoded;
+- (NSString *)stringByURLDecoded;
 @end
 
 @interface NSDictionary (STNetwork)
-- (NSString *) componentsJoinedUsingURLEncode;
+- (NSString *)componentsJoinedUsingURLEncode;
 @end
 /// 默认超时时间，default 60s
 extern NSTimeInterval const STRequestTimeoutInterval;
-

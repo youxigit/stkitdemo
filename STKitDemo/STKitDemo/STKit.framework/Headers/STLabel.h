@@ -20,7 +20,7 @@ typedef enum {
  */
 @interface STLabel : UILabel
 /// 垂直方向上的对其方式
-@property (nonatomic, assign) STVerticalAlignment verticalAlignment;
+@property(nonatomic, assign) STVerticalAlignment verticalAlignment;
 /// 内容间距
-@property (nonatomic, assign) UIEdgeInsets        contentInsets;
+@property(nonatomic, assign) UIEdgeInsets contentInsets;
 @end

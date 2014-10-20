@@ -10,15 +10,15 @@
 #define STKit_STDefines_h
 
 #if !defined(ST_INLINE)
-# if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
-#  define ST_INLINE static inline
-# elif defined(__cplusplus)
-#  define ST_INLINE static inline
-# elif defined(__GNUC__)
-#  define ST_INLINE static __inline__
-# else
-#  define ST_INLINE static
-# endif
+#if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
+#define ST_INLINE static inline
+#elif defined(__cplusplus)
+#define ST_INLINE static inline
+#elif defined(__GNUC__)
+#define ST_INLINE static __inline__
+#else
+#define ST_INLINE static
+#endif
 #endif
 
 #if !defined(ST_EXTERN)
@@ -31,14 +31,13 @@
 #import <Foundation/Foundation.h>
 
 /// 定义一种结构体，用来表示区间。表示一个 从 几到几 的概念
-typedef struct _STRange{
+typedef struct _STRange {
     NSInteger start;
     NSInteger end;
 } STRange;
 
-
 ST_INLINE CGFloat STDistanceBetweenPoints(CGPoint point1, CGPoint point2) {
-    CGFloat distance2 = ABS((point1.x - point2.x) * (point1.x - point2.x) + (point1.y - point2.y)* (point1.y - point2.y));
+    CGFloat distance2 = ABS((point1.x - point2.x) * (point1.x - point2.x) + (point1.y - point2.y) * (point1.y - point2.y));
     return sqrtf(distance2);
 }
 
@@ -62,14 +61,12 @@ ST_INLINE STRange STRangeMake(NSInteger start, NSInteger end) {
  * @param i 要比较的数
  * @return i在区间 r内，返回YES；否则，返回NO
  */
-ST_INLINE BOOL InRange(STRange r,NSInteger i) {
-    return (r.start <= i) && (r.end >= i);
-}
+ST_INLINE BOOL InRange(STRange r, NSInteger i) { return (r.start <= i) && (r.end >= i); }
 /**
  * @brief 该点是否在某一rect区间内
  * @param p 点
  * @param r 矩形
  */
-ST_INLINE BOOL CGPointInRect(CGPoint p,CGRect r) {
+ST_INLINE BOOL CGPointInRect(CGPoint p, CGRect r) {
     return p.x > r.origin.x && p.x < (r.origin.x + r.size.width) && p.y > r.origin.y && p.y < (r.origin.y + r.size.height);
 }

@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-
 typedef long long STIdentifier;
 
-extern NSString * STImageCacheDirectory();
+extern NSString *STImageCacheDirectory();
 
 extern STIdentifier STImageCacheBeginContext();
 extern void STImageCachePushContext(STIdentifier contextId);
@@ -26,19 +25,19 @@ extern void STImageCachePopContext(STIdentifier contextId);
  * @param     image     需要缓存的图片
  * @param     key       一般为图片的URL
  */
-+ (void) cacheImage:(UIImage *) image forKey:(NSString *) key;
-+ (void) removeCacheImageForKey:(NSString *) key;
++ (void)cacheImage:(UIImage *)image forKey:(NSString *)key;
++ (void)removeCacheImageForKey:(NSString *)key;
 
-+ (void) removeMemoryCacheForKey:(NSString *) key;
-+ (BOOL) hasMemoryCacheForKey:(NSString *) key;
++ (void)removeMemoryCacheForKey:(NSString *)key;
++ (BOOL)hasMemoryCacheForKey:(NSString *)key;
 
 /**
  * @abstract 得到该key的图片缓存目录
  */
-+ (NSString *) cachedPathForKey:(NSString *) key;
++ (NSString *)cachedPathForKey:(NSString *)key;
 /// 是否有缓存该图片
-+ (BOOL) hasCachedImageForKey:(NSString *) key;
-+ (UIImage *) cachedImageForKey:(NSString *) key;
-+ (void) cacheData:(NSData *) data forKey:(NSString *) key;
++ (BOOL)hasCachedImageForKey:(NSString *)key;
++ (UIImage *)cachedImageForKey:(NSString *)key;
++ (void)cacheData:(NSData *)data forKey:(NSString *)key;
 
 @end

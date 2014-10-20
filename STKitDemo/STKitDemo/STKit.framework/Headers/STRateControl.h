@@ -11,16 +11,15 @@
 
 /// 几颗星 打分组件
 @interface STRateControl : UIControl
-
 //- (instancetype) initWithStaredImage:(UIImage *) staredImage unstaredImage:(UIImage *) unstaredImage;
 /// 填充满的星星
-@property (nonatomic, strong) UIImage       * staredImage;
+@property(nonatomic, strong) UIImage    *staredImage;
 /// 未填充满的星星
-@property (nonatomic, strong) UIImage       * unstaredImage;
+@property(nonatomic, strong) UIImage    *unstaredImage;
 /// 每个星星之间的间隔
-@property (nonatomic, assign) CGFloat         verticalMargin;
+@property(nonatomic, assign) CGFloat     verticalMargin;
 /// 最多的value, 默认 5
-@property (nonatomic, assign) CGFloat         maximumValue;
+@property(nonatomic, assign) CGFloat     maximumValue;
 /// 当前value
-@property (nonatomic, assign) CGFloat         value;
+@property(nonatomic, assign) CGFloat     value;
 @end

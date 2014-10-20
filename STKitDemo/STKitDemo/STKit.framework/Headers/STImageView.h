@@ -18,9 +18,9 @@ typedef enum STImageViewState {
 @class STRoundProgressView;
 @interface STImageView : UIImageView
 
-@property (nonatomic, readonly) STRoundProgressView * progressView;
+@property(nonatomic, readonly) STRoundProgressView *progressView;
 
-@property (nonatomic, copy)     NSString            * URLString;
-@property (nonatomic, assign)   BOOL                  showProgressWhenLoading;
+@property(nonatomic, copy) NSString *URLString;
+@property(nonatomic, assign) BOOL showProgressWhenLoading;
 
 @end

@@ -13,16 +13,16 @@
 /// 3、此按钮为了避免系统按钮上的image和title无法设置frame问题，申明了ButtonImageView和buttonTitleLabel。
 @interface STButton : UIButton
 
-@property (nonatomic, assign) BOOL        usingSystemLayout;
+@property(nonatomic, assign) BOOL usingSystemLayout;
 
-@property (nonatomic, strong) UIColor   * highlightedBackgroundColor;
-@property (nonatomic, strong) UIColor   * selectedBackgroundColor;
+@property(nonatomic, strong) UIColor *highlightedBackgroundColor;
+@property(nonatomic, strong) UIColor *selectedBackgroundColor;
 
 @end
 
 @interface STButton (STKit)
 
-@property (nonatomic, assign) NSString    * normalTitle;
-@property (nonatomic, assign) NSString    * highlightedTItle;
+@property(nonatomic, assign) NSString *normalTitle;
+@property(nonatomic, assign) NSString *highlightedTItle;
 
 @end

@@ -12,32 +12,33 @@
 
 @protocol STNotificationWindowDelegate <NSObject>
 
-- (void) allNoticationViewDismissed;
+- (void)allNoticationViewDismissed;
 
 @end
 
 typedef void (^Completion)(BOOL completion);
 
-@class STNotificationWindow, STImageView, STLabel;;
+@class STNotificationWindow, STImageView, STLabel;
+;
 @interface STNotificationView : UIView
 
-@property (nonatomic, readonly, strong) STImageView * imageView;
-@property (nonatomic, readonly, strong) STLabel     * textLabel;
-@property (nonatomic, readonly, strong) STLabel     * detailLabel;
+@property(nonatomic, readonly, strong) STImageView *imageView;
+@property(nonatomic, readonly, strong) STLabel *textLabel;
+@property(nonatomic, readonly, strong) STLabel *detailLabel;
 
-- (instancetype) initWithFrame:(CGRect)frame;      /// do not use this initializer
+- (instancetype)initWithFrame:(CGRect)frame; /// do not use this initializer
 
 @end
 
 @interface STNotificationWindow : UIWindow
 
-@property (nonatomic, weak)   id <STNotificationWindowDelegate> notificationWindowDelegate;
+@property(nonatomic, weak) id<STNotificationWindowDelegate> notificationWindowDelegate;
 /// max message the window can show.
-@property (nonatomic, assign) NSInteger         maximumNumberOfWindows;
-@property (nonatomic, assign) NSTimeInterval    displayDuration;
+@property(nonatomic, assign) NSInteger maximumNumberOfWindows;
+@property(nonatomic, assign) NSTimeInterval displayDuration;
 
-- (void) pushNotificationView:(STNotificationView *) notificationView animated:(BOOL) animated;
-- (void) popNotificationViewAnimated:(BOOL) animated;
+- (void)pushNotificationView:(STNotificationView *)notificationView animated:(BOOL)animated;
+- (void)popNotificationViewAnimated:(BOOL)animated;
 
 @end
 
@@ -46,9 +47,9 @@ typedef void (^Completion)(BOOL completion);
 @end
 
 @interface STNotificationWindow (STNotificationView)
-+ (STNotificationView *) notificationViewWithInfo:(NSDictionary *) notificationInfo;
++ (STNotificationView *)notificationViewWithInfo:(NSDictionary *)notificationInfo;
 @end
 
-extern NSString * const STNotificationViewImageNameKey;
-extern NSString * const STNotificationViewTitleTextKey;
-extern NSString * const STNotificationViewDetailTextKey;
+extern NSString *const STNotificationViewImageNameKey;
+extern NSString *const STNotificationViewTitleTextKey;
+extern NSString *const STNotificationViewDetailTextKey;
