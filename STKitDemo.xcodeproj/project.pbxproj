@@ -260,99 +260,6 @@
 		06A4D58B19EA1A81007D332D /* STDTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D58A19EA1A81007D332D /* STDTextTableViewController.m */; };
 		06A4D58C19EA1A81007D332D /* STDTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D58A19EA1A81007D332D /* STDTextTableViewController.m */; };
 		06A4D58D19EA1A81007D332D /* STDTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D58A19EA1A81007D332D /* STDTextTableViewController.m */; };
-		06A4D66519EA263B007D332D /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A019EA263B007D332D /* DDData.m */; };
-		06A4D66619EA263B007D332D /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A019EA263B007D332D /* DDData.m */; };
-		06A4D66719EA263B007D332D /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A019EA263B007D332D /* DDData.m */; };
-		06A4D66819EA263B007D332D /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A219EA263B007D332D /* DDNumber.m */; };
-		06A4D66919EA263B007D332D /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A219EA263B007D332D /* DDNumber.m */; };
-		06A4D66A19EA263B007D332D /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A219EA263B007D332D /* DDNumber.m */; };
-		06A4D66B19EA263B007D332D /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A419EA263B007D332D /* DDRange.m */; };
-		06A4D66C19EA263B007D332D /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A419EA263B007D332D /* DDRange.m */; };
-		06A4D66D19EA263B007D332D /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A419EA263B007D332D /* DDRange.m */; };
-		06A4D66E19EA263B007D332D /* HTTPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A619EA263B007D332D /* HTTPAuthenticationRequest.m */; };
-		06A4D66F19EA263B007D332D /* HTTPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A619EA263B007D332D /* HTTPAuthenticationRequest.m */; };
-		06A4D67019EA263B007D332D /* HTTPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A619EA263B007D332D /* HTTPAuthenticationRequest.m */; };
-		06A4D67119EA263B007D332D /* HTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A819EA263B007D332D /* HTTPConnection.m */; };
-		06A4D67219EA263B007D332D /* HTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A819EA263B007D332D /* HTTPConnection.m */; };
-		06A4D67319EA263B007D332D /* HTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5A819EA263B007D332D /* HTTPConnection.m */; };
-		06A4D67419EA263B007D332D /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5AB19EA263B007D332D /* HTTPMessage.m */; };
-		06A4D67519EA263B007D332D /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5AB19EA263B007D332D /* HTTPMessage.m */; };
-		06A4D67619EA263B007D332D /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5AB19EA263B007D332D /* HTTPMessage.m */; };
-		06A4D67719EA263B007D332D /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5AE19EA263B007D332D /* HTTPServer.m */; };
-		06A4D67819EA263B007D332D /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5AE19EA263B007D332D /* HTTPServer.m */; };
-		06A4D67919EA263B007D332D /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5AE19EA263B007D332D /* HTTPServer.m */; };
-		06A4D67A19EA263B007D332D /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B119EA263B007D332D /* MultipartFormDataParser.m */; };
-		06A4D67B19EA263B007D332D /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B119EA263B007D332D /* MultipartFormDataParser.m */; };
-		06A4D67C19EA263B007D332D /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B119EA263B007D332D /* MultipartFormDataParser.m */; };
-		06A4D67D19EA263B007D332D /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B319EA263B007D332D /* MultipartMessageHeader.m */; };
-		06A4D67E19EA263B007D332D /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B319EA263B007D332D /* MultipartMessageHeader.m */; };
-		06A4D67F19EA263B007D332D /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B319EA263B007D332D /* MultipartMessageHeader.m */; };
-		06A4D68019EA263B007D332D /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B519EA263B007D332D /* MultipartMessageHeaderField.m */; };
-		06A4D68119EA263B007D332D /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B519EA263B007D332D /* MultipartMessageHeaderField.m */; };
-		06A4D68219EA263B007D332D /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B519EA263B007D332D /* MultipartMessageHeaderField.m */; };
-		06A4D68319EA263B007D332D /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B819EA263B007D332D /* HTTPAsyncFileResponse.m */; };
-		06A4D68419EA263B007D332D /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B819EA263B007D332D /* HTTPAsyncFileResponse.m */; };
-		06A4D68519EA263B007D332D /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5B819EA263B007D332D /* HTTPAsyncFileResponse.m */; };
-		06A4D68619EA263B007D332D /* HTTPDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BA19EA263B007D332D /* HTTPDataResponse.m */; };
-		06A4D68719EA263B007D332D /* HTTPDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BA19EA263B007D332D /* HTTPDataResponse.m */; };
-		06A4D68819EA263B007D332D /* HTTPDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BA19EA263B007D332D /* HTTPDataResponse.m */; };
-		06A4D68919EA263B007D332D /* HTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BC19EA263B007D332D /* HTTPDynamicFileResponse.m */; };
-		06A4D68A19EA263B007D332D /* HTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BC19EA263B007D332D /* HTTPDynamicFileResponse.m */; };
-		06A4D68B19EA263B007D332D /* HTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BC19EA263B007D332D /* HTTPDynamicFileResponse.m */; };
-		06A4D68C19EA263B007D332D /* HTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BE19EA263B007D332D /* HTTPFileResponse.m */; };
-		06A4D68D19EA263B007D332D /* HTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BE19EA263B007D332D /* HTTPFileResponse.m */; };
-		06A4D68E19EA263B007D332D /* HTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5BE19EA263B007D332D /* HTTPFileResponse.m */; };
-		06A4D68F19EA263B007D332D /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C019EA263B007D332D /* HTTPRedirectResponse.m */; };
-		06A4D69019EA263B007D332D /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C019EA263B007D332D /* HTTPRedirectResponse.m */; };
-		06A4D69119EA263B007D332D /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C019EA263B007D332D /* HTTPRedirectResponse.m */; };
-		06A4D69219EA263B007D332D /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C219EA263B007D332D /* WebSocket.m */; };
-		06A4D69319EA263B007D332D /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C219EA263B007D332D /* WebSocket.m */; };
-		06A4D69419EA263B007D332D /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C219EA263B007D332D /* WebSocket.m */; };
-		06A4D69519EA263B007D332D /* DAVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C619EA263B007D332D /* DAVConnection.m */; };
-		06A4D69619EA263B007D332D /* DAVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C619EA263B007D332D /* DAVConnection.m */; };
-		06A4D69719EA263B007D332D /* DAVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C619EA263B007D332D /* DAVConnection.m */; };
-		06A4D69819EA263B007D332D /* DAVResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C819EA263B007D332D /* DAVResponse.m */; };
-		06A4D69919EA263B007D332D /* DAVResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C819EA263B007D332D /* DAVResponse.m */; };
-		06A4D69A19EA263B007D332D /* DAVResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5C819EA263B007D332D /* DAVResponse.m */; };
-		06A4D69B19EA263B007D332D /* DELETEResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CA19EA263B007D332D /* DELETEResponse.m */; };
-		06A4D69C19EA263B007D332D /* DELETEResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CA19EA263B007D332D /* DELETEResponse.m */; };
-		06A4D69D19EA263B007D332D /* DELETEResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CA19EA263B007D332D /* DELETEResponse.m */; };
-		06A4D69E19EA263B007D332D /* PUTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CC19EA263B007D332D /* PUTResponse.m */; };
-		06A4D69F19EA263B007D332D /* PUTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CC19EA263B007D332D /* PUTResponse.m */; };
-		06A4D6A019EA263B007D332D /* PUTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CC19EA263B007D332D /* PUTResponse.m */; };
-		06A4D6A119EA263B007D332D /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06A4D5CD19EA263B007D332D /* LICENSE.txt */; };
-		06A4D6A219EA263B007D332D /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06A4D5CD19EA263B007D332D /* LICENSE.txt */; };
-		06A4D6A319EA263B007D332D /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06A4D5CD19EA263B007D332D /* LICENSE.txt */; };
-		06A4D6A419EA263B007D332D /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CE19EA263B007D332D /* README.markdown */; };
-		06A4D6A519EA263B007D332D /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CE19EA263B007D332D /* README.markdown */; };
-		06A4D6A619EA263B007D332D /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5CE19EA263B007D332D /* README.markdown */; };
-		06A4D6A719EA263B007D332D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D219EA263B007D332D /* GCDAsyncSocket.m */; };
-		06A4D6A819EA263B007D332D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D219EA263B007D332D /* GCDAsyncSocket.m */; };
-		06A4D6A919EA263B007D332D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D219EA263B007D332D /* GCDAsyncSocket.m */; };
-		06A4D6AA19EA263B007D332D /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D519EA263B007D332D /* DDAbstractDatabaseLogger.m */; };
-		06A4D6AB19EA263B007D332D /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D519EA263B007D332D /* DDAbstractDatabaseLogger.m */; };
-		06A4D6AC19EA263B007D332D /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D519EA263B007D332D /* DDAbstractDatabaseLogger.m */; };
-		06A4D6AD19EA263B007D332D /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D719EA263B007D332D /* DDASLLogger.m */; };
-		06A4D6AE19EA263B007D332D /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D719EA263B007D332D /* DDASLLogger.m */; };
-		06A4D6AF19EA263B007D332D /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D719EA263B007D332D /* DDASLLogger.m */; };
-		06A4D6B019EA263B007D332D /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D919EA263B007D332D /* DDFileLogger.m */; };
-		06A4D6B119EA263B007D332D /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D919EA263B007D332D /* DDFileLogger.m */; };
-		06A4D6B219EA263B007D332D /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5D919EA263B007D332D /* DDFileLogger.m */; };
-		06A4D6B319EA263B007D332D /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5DB19EA263B007D332D /* DDLog.m */; };
-		06A4D6B419EA263B007D332D /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5DB19EA263B007D332D /* DDLog.m */; };
-		06A4D6B519EA263B007D332D /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5DB19EA263B007D332D /* DDLog.m */; };
-		06A4D6B619EA263B007D332D /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5DD19EA263B007D332D /* DDTTYLogger.m */; };
-		06A4D6B719EA263B007D332D /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5DD19EA263B007D332D /* DDTTYLogger.m */; };
-		06A4D6B819EA263B007D332D /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5DD19EA263B007D332D /* DDTTYLogger.m */; };
-		06A4D6B919EA263B007D332D /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E019EA263B007D332D /* ContextFilterLogFormatter.m */; };
-		06A4D6BA19EA263B007D332D /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E019EA263B007D332D /* ContextFilterLogFormatter.m */; };
-		06A4D6BB19EA263B007D332D /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E019EA263B007D332D /* ContextFilterLogFormatter.m */; };
-		06A4D6BC19EA263B007D332D /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E219EA263B007D332D /* DispatchQueueLogFormatter.m */; };
-		06A4D6BD19EA263B007D332D /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E219EA263B007D332D /* DispatchQueueLogFormatter.m */; };
-		06A4D6BE19EA263B007D332D /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E219EA263B007D332D /* DispatchQueueLogFormatter.m */; };
-		06A4D6BF19EA263B007D332D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06A4D5E319EA263B007D332D /* README.txt */; };
-		06A4D6C019EA263B007D332D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06A4D5E319EA263B007D332D /* README.txt */; };
-		06A4D6C119EA263B007D332D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 06A4D5E319EA263B007D332D /* README.txt */; };
 		06A4D6C219EA263B007D332D /* FLEXArgumentInputColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E819EA263B007D332D /* FLEXArgumentInputColorView.m */; };
 		06A4D6C319EA263B007D332D /* FLEXArgumentInputColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E819EA263B007D332D /* FLEXArgumentInputColorView.m */; };
 		06A4D6C419EA263B007D332D /* FLEXArgumentInputColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D5E819EA263B007D332D /* FLEXArgumentInputColorView.m */; };
@@ -746,67 +653,6 @@
 		06A4D46719E80498007D332D /* STKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = STKitDemo.entitlements; sourceTree = "<group>"; };
 		06A4D58919EA1A81007D332D /* STDTextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDTextTableViewController.h; sourceTree = "<group>"; };
 		06A4D58A19EA1A81007D332D /* STDTextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDTextTableViewController.m; sourceTree = "<group>"; };
-		06A4D59F19EA263B007D332D /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
-		06A4D5A019EA263B007D332D /* DDData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDData.m; sourceTree = "<group>"; };
-		06A4D5A119EA263B007D332D /* DDNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNumber.h; sourceTree = "<group>"; };
-		06A4D5A219EA263B007D332D /* DDNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNumber.m; sourceTree = "<group>"; };
-		06A4D5A319EA263B007D332D /* DDRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRange.h; sourceTree = "<group>"; };
-		06A4D5A419EA263B007D332D /* DDRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRange.m; sourceTree = "<group>"; };
-		06A4D5A519EA263B007D332D /* HTTPAuthenticationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPAuthenticationRequest.h; sourceTree = "<group>"; };
-		06A4D5A619EA263B007D332D /* HTTPAuthenticationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPAuthenticationRequest.m; sourceTree = "<group>"; };
-		06A4D5A719EA263B007D332D /* HTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConnection.h; sourceTree = "<group>"; };
-		06A4D5A819EA263B007D332D /* HTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPConnection.m; sourceTree = "<group>"; };
-		06A4D5A919EA263B007D332D /* HTTPLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPLogging.h; sourceTree = "<group>"; };
-		06A4D5AA19EA263B007D332D /* HTTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPMessage.h; sourceTree = "<group>"; };
-		06A4D5AB19EA263B007D332D /* HTTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPMessage.m; sourceTree = "<group>"; };
-		06A4D5AC19EA263B007D332D /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponse.h; sourceTree = "<group>"; };
-		06A4D5AD19EA263B007D332D /* HTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPServer.h; sourceTree = "<group>"; };
-		06A4D5AE19EA263B007D332D /* HTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPServer.m; sourceTree = "<group>"; };
-		06A4D5B019EA263B007D332D /* MultipartFormDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartFormDataParser.h; sourceTree = "<group>"; };
-		06A4D5B119EA263B007D332D /* MultipartFormDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartFormDataParser.m; sourceTree = "<group>"; };
-		06A4D5B219EA263B007D332D /* MultipartMessageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeader.h; sourceTree = "<group>"; };
-		06A4D5B319EA263B007D332D /* MultipartMessageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeader.m; sourceTree = "<group>"; };
-		06A4D5B419EA263B007D332D /* MultipartMessageHeaderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeaderField.h; sourceTree = "<group>"; };
-		06A4D5B519EA263B007D332D /* MultipartMessageHeaderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeaderField.m; sourceTree = "<group>"; };
-		06A4D5B719EA263B007D332D /* HTTPAsyncFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPAsyncFileResponse.h; sourceTree = "<group>"; };
-		06A4D5B819EA263B007D332D /* HTTPAsyncFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPAsyncFileResponse.m; sourceTree = "<group>"; };
-		06A4D5B919EA263B007D332D /* HTTPDataResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPDataResponse.h; sourceTree = "<group>"; };
-		06A4D5BA19EA263B007D332D /* HTTPDataResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPDataResponse.m; sourceTree = "<group>"; };
-		06A4D5BB19EA263B007D332D /* HTTPDynamicFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPDynamicFileResponse.h; sourceTree = "<group>"; };
-		06A4D5BC19EA263B007D332D /* HTTPDynamicFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPDynamicFileResponse.m; sourceTree = "<group>"; };
-		06A4D5BD19EA263B007D332D /* HTTPFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPFileResponse.h; sourceTree = "<group>"; };
-		06A4D5BE19EA263B007D332D /* HTTPFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPFileResponse.m; sourceTree = "<group>"; };
-		06A4D5BF19EA263B007D332D /* HTTPRedirectResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRedirectResponse.h; sourceTree = "<group>"; };
-		06A4D5C019EA263B007D332D /* HTTPRedirectResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRedirectResponse.m; sourceTree = "<group>"; };
-		06A4D5C119EA263B007D332D /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
-		06A4D5C219EA263B007D332D /* WebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocket.m; sourceTree = "<group>"; };
-		06A4D5C519EA263B007D332D /* DAVConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAVConnection.h; sourceTree = "<group>"; };
-		06A4D5C619EA263B007D332D /* DAVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAVConnection.m; sourceTree = "<group>"; };
-		06A4D5C719EA263B007D332D /* DAVResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAVResponse.h; sourceTree = "<group>"; };
-		06A4D5C819EA263B007D332D /* DAVResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAVResponse.m; sourceTree = "<group>"; };
-		06A4D5C919EA263B007D332D /* DELETEResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DELETEResponse.h; sourceTree = "<group>"; };
-		06A4D5CA19EA263B007D332D /* DELETEResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DELETEResponse.m; sourceTree = "<group>"; };
-		06A4D5CB19EA263B007D332D /* PUTResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUTResponse.h; sourceTree = "<group>"; };
-		06A4D5CC19EA263B007D332D /* PUTResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUTResponse.m; sourceTree = "<group>"; };
-		06A4D5CD19EA263B007D332D /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		06A4D5CE19EA263B007D332D /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
-		06A4D5D119EA263B007D332D /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		06A4D5D219EA263B007D332D /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
-		06A4D5D419EA263B007D332D /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		06A4D5D519EA263B007D332D /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
-		06A4D5D619EA263B007D332D /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		06A4D5D719EA263B007D332D /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
-		06A4D5D819EA263B007D332D /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
-		06A4D5D919EA263B007D332D /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
-		06A4D5DA19EA263B007D332D /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
-		06A4D5DB19EA263B007D332D /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
-		06A4D5DC19EA263B007D332D /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
-		06A4D5DD19EA263B007D332D /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
-		06A4D5DF19EA263B007D332D /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
-		06A4D5E019EA263B007D332D /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
-		06A4D5E119EA263B007D332D /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		06A4D5E219EA263B007D332D /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		06A4D5E319EA263B007D332D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		06A4D5E719EA263B007D332D /* FLEXArgumentInputColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXArgumentInputColorView.h; sourceTree = "<group>"; };
 		06A4D5E819EA263B007D332D /* FLEXArgumentInputColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLEXArgumentInputColorView.m; sourceTree = "<group>"; };
 		06A4D5E919EA263B007D332D /* FLEXArgumentInputFontView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLEXArgumentInputFontView.h; sourceTree = "<group>"; };
@@ -909,13 +755,8 @@
 		06A4D65219EA263B007D332D /* Matrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		06A4D65319EA263B007D332D /* PointTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointTransforms.h; sourceTree = "<group>"; };
 		06A4D65419EA263B007D332D /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
-		06A4D65619EA263B007D332D /* PFAxisDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFAxisDirection.h; sourceTree = "<group>"; };
 		06A4D65719EA263B007D332D /* PFGoldenSectionSpiral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFGoldenSectionSpiral.h; sourceTree = "<group>"; };
 		06A4D65819EA263B007D332D /* PFGoldenSectionSpiral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFGoldenSectionSpiral.m; sourceTree = "<group>"; };
-		06A4D65919EA263B007D332D /* PFMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMatrix.h; sourceTree = "<group>"; };
-		06A4D65A19EA263B007D332D /* PFMatrixTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFMatrixTransform.h; sourceTree = "<group>"; };
-		06A4D65B19EA263B007D332D /* PFPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFPoint.h; sourceTree = "<group>"; };
-		06A4D65C19EA263B007D332D /* PFRadian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFRadian.h; sourceTree = "<group>"; };
 		06A4D65D19EA263B007D332D /* ZYQSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQSphereView.h; sourceTree = "<group>"; };
 		06A4D65E19EA263B007D332D /* ZYQSphereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQSphereView.m; sourceTree = "<group>"; };
 		06A4D66019EA263B007D332D /* libWXVoiceSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWXVoiceSDK.a; sourceTree = "<group>"; };
@@ -1231,7 +1072,6 @@
 			children = (
 				069BC12E19EFD8F8005906BF /* GesturePassword */,
 				06A4D76F19EA373D007D332D /* MZCroppableView */,
-				06A4D59C19EA263B007D332D /* CocoaHTTPServer */,
 				06A4D5E419EA263B007D332D /* Flex */,
 				06A4D64B19EA263B007D332D /* libMobClickLibrary.a */,
 				06A4D64C19EA263B007D332D /* libMobClickLibrary_armv6.a */,
@@ -1241,154 +1081,6 @@
 				06A4D65F19EA263B007D332D /* WXVoiceSDK */,
 			);
 			path = 3rdLibs;
-			sourceTree = "<group>";
-		};
-		06A4D59C19EA263B007D332D /* CocoaHTTPServer */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D59D19EA263B007D332D /* Core */,
-				06A4D5C319EA263B007D332D /* Extensions */,
-				06A4D5CD19EA263B007D332D /* LICENSE.txt */,
-				06A4D5CE19EA263B007D332D /* README.markdown */,
-				06A4D5CF19EA263B007D332D /* Vendor */,
-			);
-			path = CocoaHTTPServer;
-			sourceTree = "<group>";
-		};
-		06A4D59D19EA263B007D332D /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D59E19EA263B007D332D /* Categories */,
-				06A4D5A519EA263B007D332D /* HTTPAuthenticationRequest.h */,
-				06A4D5A619EA263B007D332D /* HTTPAuthenticationRequest.m */,
-				06A4D5A719EA263B007D332D /* HTTPConnection.h */,
-				06A4D5A819EA263B007D332D /* HTTPConnection.m */,
-				06A4D5A919EA263B007D332D /* HTTPLogging.h */,
-				06A4D5AA19EA263B007D332D /* HTTPMessage.h */,
-				06A4D5AB19EA263B007D332D /* HTTPMessage.m */,
-				06A4D5AC19EA263B007D332D /* HTTPResponse.h */,
-				06A4D5AD19EA263B007D332D /* HTTPServer.h */,
-				06A4D5AE19EA263B007D332D /* HTTPServer.m */,
-				06A4D5AF19EA263B007D332D /* Mime */,
-				06A4D5B619EA263B007D332D /* Responses */,
-				06A4D5C119EA263B007D332D /* WebSocket.h */,
-				06A4D5C219EA263B007D332D /* WebSocket.m */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		06A4D59E19EA263B007D332D /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D59F19EA263B007D332D /* DDData.h */,
-				06A4D5A019EA263B007D332D /* DDData.m */,
-				06A4D5A119EA263B007D332D /* DDNumber.h */,
-				06A4D5A219EA263B007D332D /* DDNumber.m */,
-				06A4D5A319EA263B007D332D /* DDRange.h */,
-				06A4D5A419EA263B007D332D /* DDRange.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		06A4D5AF19EA263B007D332D /* Mime */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D5B019EA263B007D332D /* MultipartFormDataParser.h */,
-				06A4D5B119EA263B007D332D /* MultipartFormDataParser.m */,
-				06A4D5B219EA263B007D332D /* MultipartMessageHeader.h */,
-				06A4D5B319EA263B007D332D /* MultipartMessageHeader.m */,
-				06A4D5B419EA263B007D332D /* MultipartMessageHeaderField.h */,
-				06A4D5B519EA263B007D332D /* MultipartMessageHeaderField.m */,
-			);
-			path = Mime;
-			sourceTree = "<group>";
-		};
-		06A4D5B619EA263B007D332D /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D5B719EA263B007D332D /* HTTPAsyncFileResponse.h */,
-				06A4D5B819EA263B007D332D /* HTTPAsyncFileResponse.m */,
-				06A4D5B919EA263B007D332D /* HTTPDataResponse.h */,
-				06A4D5BA19EA263B007D332D /* HTTPDataResponse.m */,
-				06A4D5BB19EA263B007D332D /* HTTPDynamicFileResponse.h */,
-				06A4D5BC19EA263B007D332D /* HTTPDynamicFileResponse.m */,
-				06A4D5BD19EA263B007D332D /* HTTPFileResponse.h */,
-				06A4D5BE19EA263B007D332D /* HTTPFileResponse.m */,
-				06A4D5BF19EA263B007D332D /* HTTPRedirectResponse.h */,
-				06A4D5C019EA263B007D332D /* HTTPRedirectResponse.m */,
-			);
-			path = Responses;
-			sourceTree = "<group>";
-		};
-		06A4D5C319EA263B007D332D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D5C419EA263B007D332D /* WebDAV */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		06A4D5C419EA263B007D332D /* WebDAV */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D5C519EA263B007D332D /* DAVConnection.h */,
-				06A4D5C619EA263B007D332D /* DAVConnection.m */,
-				06A4D5C719EA263B007D332D /* DAVResponse.h */,
-				06A4D5C819EA263B007D332D /* DAVResponse.m */,
-				06A4D5C919EA263B007D332D /* DELETEResponse.h */,
-				06A4D5CA19EA263B007D332D /* DELETEResponse.m */,
-				06A4D5CB19EA263B007D332D /* PUTResponse.h */,
-				06A4D5CC19EA263B007D332D /* PUTResponse.m */,
-			);
-			path = WebDAV;
-			sourceTree = "<group>";
-		};
-		06A4D5CF19EA263B007D332D /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D5D019EA263B007D332D /* CocoaAsyncSocket */,
-				06A4D5D319EA263B007D332D /* CocoaLumberjack */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
-		06A4D5D019EA263B007D332D /* CocoaAsyncSocket */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D5D119EA263B007D332D /* GCDAsyncSocket.h */,
-				06A4D5D219EA263B007D332D /* GCDAsyncSocket.m */,
-			);
-			path = CocoaAsyncSocket;
-			sourceTree = "<group>";
-		};
-		06A4D5D319EA263B007D332D /* CocoaLumberjack */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D5D419EA263B007D332D /* DDAbstractDatabaseLogger.h */,
-				06A4D5D519EA263B007D332D /* DDAbstractDatabaseLogger.m */,
-				06A4D5D619EA263B007D332D /* DDASLLogger.h */,
-				06A4D5D719EA263B007D332D /* DDASLLogger.m */,
-				06A4D5D819EA263B007D332D /* DDFileLogger.h */,
-				06A4D5D919EA263B007D332D /* DDFileLogger.m */,
-				06A4D5DA19EA263B007D332D /* DDLog.h */,
-				06A4D5DB19EA263B007D332D /* DDLog.m */,
-				06A4D5DC19EA263B007D332D /* DDTTYLogger.h */,
-				06A4D5DD19EA263B007D332D /* DDTTYLogger.m */,
-				06A4D5DE19EA263B007D332D /* Extensions */,
-			);
-			path = CocoaLumberjack;
-			sourceTree = "<group>";
-		};
-		06A4D5DE19EA263B007D332D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				06A4D5DF19EA263B007D332D /* ContextFilterLogFormatter.h */,
-				06A4D5E019EA263B007D332D /* ContextFilterLogFormatter.m */,
-				06A4D5E119EA263B007D332D /* DispatchQueueLogFormatter.h */,
-				06A4D5E219EA263B007D332D /* DispatchQueueLogFormatter.m */,
-				06A4D5E319EA263B007D332D /* README.txt */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		06A4D5E419EA263B007D332D /* Flex */ = {
@@ -1571,13 +1263,8 @@
 		06A4D65519EA263B007D332D /* SphereView */ = {
 			isa = PBXGroup;
 			children = (
-				06A4D65619EA263B007D332D /* PFAxisDirection.h */,
 				06A4D65719EA263B007D332D /* PFGoldenSectionSpiral.h */,
 				06A4D65819EA263B007D332D /* PFGoldenSectionSpiral.m */,
-				06A4D65919EA263B007D332D /* PFMatrix.h */,
-				06A4D65A19EA263B007D332D /* PFMatrixTransform.h */,
-				06A4D65B19EA263B007D332D /* PFPoint.h */,
-				06A4D65C19EA263B007D332D /* PFRadian.h */,
 				06A4D65D19EA263B007D332D /* ZYQSphereView.h */,
 				06A4D65E19EA263B007D332D /* ZYQSphereView.m */,
 			);
@@ -2109,13 +1796,11 @@
 				0602B511196974150004ACBB /* chat_image_4.jpg in Resources */,
 				0634101B19C9EBE3003BC34E /* LaunchScreen.xib in Resources */,
 				0602B512196974150004ACBB /* InfoPlist.strings in Resources */,
-				06A4D6A119EA263B007D332D /* LICENSE.txt in Resources */,
 				063FBBD4197E56AB0031B14E /* STKitDemoInHouse-Info.plist in Resources */,
 				0602B514196974150004ACBB /* chat_image_2.jpg in Resources */,
 				0602B516196974150004ACBB /* STChatImages.xcassets in Resources */,
 				0643F6EB198659C8007FE304 /* Settings.bundle in Resources */,
 				0602B517196974150004ACBB /* chat_image_8.jpg in Resources */,
-				06A4D6BF19EA263B007D332D /* README.txt in Resources */,
 				065E74CA19A3A7D200A74DE4 /* red_line_and_shadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2141,13 +1826,11 @@
 				0675CFD619A85FD100AD8B32 /* chat_image_4.jpg in Resources */,
 				0634101D19C9EBE3003BC34E /* LaunchScreen.xib in Resources */,
 				0675CFD719A85FD100AD8B32 /* InfoPlist.strings in Resources */,
-				06A4D6A319EA263B007D332D /* LICENSE.txt in Resources */,
 				0675CFD819A85FD100AD8B32 /* STKitDemoInHouse-Info.plist in Resources */,
 				0675CFDA19A85FD100AD8B32 /* chat_image_2.jpg in Resources */,
 				0675CFDB19A85FD100AD8B32 /* STChatImages.xcassets in Resources */,
 				0675CFDC19A85FD100AD8B32 /* Settings.bundle in Resources */,
 				0675CFDD19A85FD100AD8B32 /* chat_image_8.jpg in Resources */,
-				06A4D6C119EA263B007D332D /* README.txt in Resources */,
 				0675CFDE19A85FD100AD8B32 /* red_line_and_shadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2172,14 +1855,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A4D6A219EA263B007D332D /* LICENSE.txt in Resources */,
 				F6A1ACCC18CC2DD100669C97 /* STDMapViewController.xib in Resources */,
 				F6584757188D236200335781 /* shangxin_292182@2x.jpg in Resources */,
 				06A4D77D19EA539B007D332D /* STDemoImages.xcassets in Resources */,
 				F6A1ACE918CC471300669C97 /* chat_image_7.jpg in Resources */,
 				065E74C919A3A7D200A74DE4 /* icon_rightarrow@2x.png in Resources */,
 				F6A1ACE518CC471300669C97 /* chat_image_5.jpg in Resources */,
-				06A4D6C019EA263B007D332D /* README.txt in Resources */,
 				F6A1ACDD18CC471300669C97 /* chat_image_1.jpg in Resources */,
 				06680AF119A08BC700F66A4A /* STDNavigationSettingViewController.xib in Resources */,
 				F6A1ACE718CC471300669C97 /* chat_image_6.jpg in Resources */,
@@ -2209,33 +1890,23 @@
 				06A4D72819EA263B007D332D /* FLEXImageExplorerViewController.m in Sources */,
 				06A4D6EC19EA263B007D332D /* FLEXIvarEditorViewController.m in Sources */,
 				06A4D6D119EA263B007D332D /* FLEXArgumentInputStringView.m in Sources */,
-				06A4D6B319EA263B007D332D /* DDLog.m in Sources */,
 				06A4D6C819EA263B007D332D /* FLEXArgumentInputJSONObjectView.m in Sources */,
 				06A4D73719EA263B007D332D /* FLEXViewExplorerViewController.m in Sources */,
-				06A4D6B019EA263B007D332D /* DDFileLogger.m in Sources */,
-				06A4D69B19EA263B007D332D /* DELETEResponse.m in Sources */,
 				0602B495196974150004ACBB /* STDRecordViewController.m in Sources */,
 				06A4D74C19EA263B007D332D /* FLEXImagePreviewViewController.m in Sources */,
 				06E783D919AEE6DE00D29B11 /* STAlertView.m in Sources */,
-				06A4D68919EA263B007D332D /* HTTPDynamicFileResponse.m in Sources */,
 				069BC13E19EFD8F8005906BF /* GesturePasswordController.m in Sources */,
 				06A4D6E319EA263B007D332D /* FLEXDefaultEditorViewController.m in Sources */,
-				06A4D66E19EA263B007D332D /* HTTPAuthenticationRequest.m in Sources */,
 				06A4D71C19EA263B007D332D /* FLEXClassExplorerViewController.m in Sources */,
 				0602B498196974150004ACBB /* STRichView.m in Sources */,
-				06A4D67719EA263B007D332D /* HTTPServer.m in Sources */,
 				0602B499196974150004ACBB /* STDAppDelegate.m in Sources */,
 				06A4D75819EA263C007D332D /* ImageMaskView.m in Sources */,
-				06A4D67119EA263B007D332D /* HTTPConnection.m in Sources */,
 				0602B49B196974150004ACBB /* STDTextChatCell.m in Sources */,
 				06A4D6FB19EA263B007D332D /* FLEXManager.m in Sources */,
-				06A4D69219EA263B007D332D /* WebSocket.m in Sources */,
 				06A4D6FE19EA263B007D332D /* FLEXToolbarItem.m in Sources */,
 				0602B49C196974150004ACBB /* STDBaseChatCell.m in Sources */,
 				0602B49D196974150004ACBB /* main.m in Sources */,
-				06A4D6A719EA263B007D332D /* GCDAsyncSocket.m in Sources */,
 				06A4D74019EA263B007D332D /* FLEXRuntimeUtility.m in Sources */,
-				06A4D68C19EA263B007D332D /* HTTPFileResponse.m in Sources */,
 				06A4D75E19EA263C007D332D /* PFGoldenSectionSpiral.m in Sources */,
 				06A4D6F819EA263B007D332D /* FLEXExplorerViewController.m in Sources */,
 				0602B49E196974150004ACBB /* STARootViewController.m in Sources */,
@@ -2247,40 +1918,32 @@
 				0602B4A4196974150004ACBB /* STDServiceViewController.m in Sources */,
 				0602B4A5196974150004ACBB /* STDSession.m in Sources */,
 				0602B4A6196974150004ACBB /* STMenuView.m in Sources */,
-				06A4D68F19EA263B007D332D /* HTTPRedirectResponse.m in Sources */,
 				06A4D6E619EA263B007D332D /* FLEXFieldEditorView.m in Sources */,
 				0602B4AC196974150004ACBB /* STDChatInputView.m in Sources */,
 				06A4D6EF19EA263B007D332D /* FLEXMethodCallingViewController.m in Sources */,
 				06A4D6CE19EA263B007D332D /* FLEXArgumentInputNumberView.m in Sources */,
 				06A4D6E919EA263B007D332D /* FLEXFieldEditorViewController.m in Sources */,
-				06A4D6A419EA263B007D332D /* README.markdown in Sources */,
 				06A4D6DA19EA263B007D332D /* FLEXArgumentInputTextView.m in Sources */,
 				06A4D76C19EA3574007D332D /* STDImageBlurViewController.m in Sources */,
 				0602B4AE196974150004ACBB /* STDMoreViewController.m in Sources */,
 				062ECFC61994AFD200D71A32 /* STDLeftViewController.m in Sources */,
-				06A4D6AA19EA263B007D332D /* DDAbstractDatabaseLogger.m in Sources */,
 				06A4D73119EA263B007D332D /* FLEXSetExplorerViewController.m in Sources */,
 				06A4D71F19EA263B007D332D /* FLEXDefaultsExplorerViewController.m in Sources */,
 				06A4D70419EA263B007D332D /* FLEXClassesTableViewController.m in Sources */,
 				0602B4B4196974150004ACBB /* STDAboutAudioViewController.m in Sources */,
 				0602B4B6196974150004ACBB /* STDChat.m in Sources */,
-				06A4D69819EA263B007D332D /* DAVResponse.m in Sources */,
 				06A4D75B19EA263C007D332D /* Matrix.m in Sources */,
 				06355C4819D281AF00EBF738 /* STLocalServer.m in Sources */,
 				06A4D6F519EA263B007D332D /* FLEXExplorerToolbar.m in Sources */,
 				0672CD1D19D553F40055189C /* STDFeedItem.m in Sources */,
 				0602B4B7196974150004ACBB /* STDImageChatCell.m in Sources */,
 				0602B4B8196974150004ACBB /* STDViewController.m in Sources */,
-				06A4D68019EA263B007D332D /* MultipartMessageHeaderField.m in Sources */,
 				062ECFBF1994AFB500D71A32 /* STDTabBarController.m in Sources */,
-				06A4D68319EA263B007D332D /* HTTPAsyncFileResponse.m in Sources */,
 				06A4D77719EA373D007D332D /* UIBezierPath-Points.m in Sources */,
 				06A4D58B19EA1A81007D332D /* STDTextTableViewController.m in Sources */,
 				0602B4BB196974150004ACBB /* STDTableViewController.m in Sources */,
-				06A4D6BC19EA263B007D332D /* DispatchQueueLogFormatter.m in Sources */,
 				0672CD4E19D5B7E80055189C /* STDBeautyViewController.m in Sources */,
 				0675CFE619AADBF900AD8B32 /* STDNavigationTestViewController.m in Sources */,
-				06A4D67419EA263B007D332D /* HTTPMessage.m in Sources */,
 				0602B4BF196974150004ACBB /* STDChatViewController.m in Sources */,
 				069BC14A19EFD8F8005906BF /* TentacleView.m in Sources */,
 				0602B4C1196974150004ACBB /* STDemoViewController.m in Sources */,
@@ -2295,23 +1958,17 @@
 				06A4D72219EA263B007D332D /* FLEXDescriptionTableViewCell.m in Sources */,
 				06A4D6C519EA263B007D332D /* FLEXArgumentInputFontView.m in Sources */,
 				06A4D71319EA263B007D332D /* FLEXLiveObjectsTableViewController.m in Sources */,
-				06A4D69519EA263B007D332D /* DAVConnection.m in Sources */,
-				06A4D69E19EA263B007D332D /* PUTResponse.m in Sources */,
 				0602B4CC196974150004ACBB /* STDMapViewController.m in Sources */,
-				06A4D6B619EA263B007D332D /* DDTTYLogger.m in Sources */,
 				0602B4CF196974150004ACBB /* STASortView.m in Sources */,
-				06A4D67A19EA263B007D332D /* MultipartFormDataParser.m in Sources */,
 				0602B4D0196974150004ACBB /* STAHanoiViewController.m in Sources */,
 				06A75909199CDE7C00AE98A2 /* STDropMenuView.m in Sources */,
 				065E74AA19A3A7C000A74DE4 /* STDBigViewController.m in Sources */,
 				06A4E3F3197787BA00E7936A /* STDVoiceWindow.m in Sources */,
 				0602B4D4196974150004ACBB /* STDBookViewController.m in Sources */,
 				0602B4D5196974150004ACBB /* STDTextViewController.m in Sources */,
-				06A4D66519EA263B007D332D /* DDData.m in Sources */,
 				0602B4D6196974150004ACBB /* STASortOperation.m in Sources */,
 				0602B4D7196974150004ACBB /* STDownloadViewController.m in Sources */,
 				06A4D72B19EA263B007D332D /* FLEXObjectExplorerFactory.m in Sources */,
-				06A4D66819EA263B007D332D /* DDNumber.m in Sources */,
 				06A4D77419EA373D007D332D /* MZCroppableView.m in Sources */,
 				06A4D70719EA263B007D332D /* FLEXFileBrowserTableViewController.m in Sources */,
 				06A4D71019EA263B007D332D /* FLEXLibrariesTableViewController.m in Sources */,
@@ -2329,19 +1986,14 @@
 				0602B4DE196974150004ACBB /* STASortViewController.m in Sources */,
 				0602B4E1196974150004ACBB /* STAHanoiView.m in Sources */,
 				06A1CD271978DAFB00F68F35 /* STDWXVoiceRecognizer.m in Sources */,
-				06A4D68619EA263B007D332D /* HTTPDataResponse.m in Sources */,
 				0602B4E6196974150004ACBB /* STDStartViewController.m in Sources */,
-				06A4D67D19EA263B007D332D /* MultipartMessageHeader.m in Sources */,
 				06A4D70A19EA263B007D332D /* FLEXGlobalsTableViewController.m in Sources */,
-				06A4D6AD19EA263B007D332D /* DDASLLogger.m in Sources */,
 				06A4D6CB19EA263B007D332D /* FLEXArgumentInputNotSupportedView.m in Sources */,
 				06A4D73A19EA263B007D332D /* FLEXHeapEnumerator.m in Sources */,
-				06A4D6B919EA263B007D332D /* ContextFilterLogFormatter.m in Sources */,
 				069BC13A19EFD8F8005906BF /* GesturePasswordButton.m in Sources */,
 				06A1CD231978D72F00F68F35 /* STVoiceRecognizer.m in Sources */,
 				06A4D72519EA263B007D332D /* FLEXDictionaryExplorerViewController.m in Sources */,
 				06A4D70D19EA263B007D332D /* FLEXInstancesTableViewController.m in Sources */,
-				06A4D66B19EA263B007D332D /* DDRange.m in Sources */,
 				062ECFC81994AFD200D71A32 /* STDSideBarController.m in Sources */,
 				06152DD11969793100CA0894 /* STDBlurSettingViewController.m in Sources */,
 				065E74CC19A3A7D200A74DE4 /* SUNSlideSwitchView.m in Sources */,
@@ -2365,33 +2017,23 @@
 				06A4D72A19EA263B007D332D /* FLEXImageExplorerViewController.m in Sources */,
 				06A4D6EE19EA263B007D332D /* FLEXIvarEditorViewController.m in Sources */,
 				06A4D6D319EA263B007D332D /* FLEXArgumentInputStringView.m in Sources */,
-				06A4D6B519EA263B007D332D /* DDLog.m in Sources */,
 				06A4D6CA19EA263B007D332D /* FLEXArgumentInputJSONObjectView.m in Sources */,
 				06A4D73919EA263B007D332D /* FLEXViewExplorerViewController.m in Sources */,
-				06A4D6B219EA263B007D332D /* DDFileLogger.m in Sources */,
-				06A4D69D19EA263B007D332D /* DELETEResponse.m in Sources */,
 				0675CF3F19A85FD100AD8B32 /* STDRecordViewController.m in Sources */,
 				06A4D74E19EA263B007D332D /* FLEXImagePreviewViewController.m in Sources */,
 				06E783DB19AEE6DE00D29B11 /* STAlertView.m in Sources */,
-				06A4D68B19EA263B007D332D /* HTTPDynamicFileResponse.m in Sources */,
 				069BC14019EFD8F8005906BF /* GesturePasswordController.m in Sources */,
 				06A4D6E519EA263B007D332D /* FLEXDefaultEditorViewController.m in Sources */,
-				06A4D67019EA263B007D332D /* HTTPAuthenticationRequest.m in Sources */,
 				06A4D71E19EA263B007D332D /* FLEXClassExplorerViewController.m in Sources */,
 				0675CF4119A85FD100AD8B32 /* STRichView.m in Sources */,
-				06A4D67919EA263B007D332D /* HTTPServer.m in Sources */,
 				0675CF4219A85FD100AD8B32 /* STDAppDelegate.m in Sources */,
 				06A4D75A19EA263C007D332D /* ImageMaskView.m in Sources */,
-				06A4D67319EA263B007D332D /* HTTPConnection.m in Sources */,
 				0675CF4619A85FD100AD8B32 /* STDTextChatCell.m in Sources */,
 				06A4D6FD19EA263B007D332D /* FLEXManager.m in Sources */,
-				06A4D69419EA263B007D332D /* WebSocket.m in Sources */,
 				06A4D70019EA263B007D332D /* FLEXToolbarItem.m in Sources */,
 				0675CF4719A85FD100AD8B32 /* STDBaseChatCell.m in Sources */,
 				0675CF4819A85FD100AD8B32 /* main.m in Sources */,
-				06A4D6A919EA263B007D332D /* GCDAsyncSocket.m in Sources */,
 				06A4D74219EA263B007D332D /* FLEXRuntimeUtility.m in Sources */,
-				06A4D68E19EA263B007D332D /* HTTPFileResponse.m in Sources */,
 				06A4D76019EA263C007D332D /* PFGoldenSectionSpiral.m in Sources */,
 				06A4D6FA19EA263B007D332D /* FLEXExplorerViewController.m in Sources */,
 				0675CF4A19A85FD100AD8B32 /* STARootViewController.m in Sources */,
@@ -2403,40 +2045,32 @@
 				0675CF5119A85FD100AD8B32 /* STDServiceViewController.m in Sources */,
 				0675CF5219A85FD100AD8B32 /* STDSession.m in Sources */,
 				0675CF5319A85FD100AD8B32 /* STMenuView.m in Sources */,
-				06A4D69119EA263B007D332D /* HTTPRedirectResponse.m in Sources */,
 				06A4D6E819EA263B007D332D /* FLEXFieldEditorView.m in Sources */,
 				0675CF5A19A85FD100AD8B32 /* STDChatInputView.m in Sources */,
 				06A4D6F119EA263B007D332D /* FLEXMethodCallingViewController.m in Sources */,
 				06A4D6D019EA263B007D332D /* FLEXArgumentInputNumberView.m in Sources */,
 				06A4D6EB19EA263B007D332D /* FLEXFieldEditorViewController.m in Sources */,
-				06A4D6A619EA263B007D332D /* README.markdown in Sources */,
 				06A4D6DC19EA263B007D332D /* FLEXArgumentInputTextView.m in Sources */,
 				06A4D76E19EA3574007D332D /* STDImageBlurViewController.m in Sources */,
 				0675CF5C19A85FD100AD8B32 /* STDMoreViewController.m in Sources */,
 				0675CF6119A85FD100AD8B32 /* STDLeftViewController.m in Sources */,
-				06A4D6AC19EA263B007D332D /* DDAbstractDatabaseLogger.m in Sources */,
 				06A4D73319EA263B007D332D /* FLEXSetExplorerViewController.m in Sources */,
 				06A4D72119EA263B007D332D /* FLEXDefaultsExplorerViewController.m in Sources */,
 				06A4D70619EA263B007D332D /* FLEXClassesTableViewController.m in Sources */,
 				0675CF6419A85FD100AD8B32 /* STDAboutAudioViewController.m in Sources */,
 				0675CF6619A85FD100AD8B32 /* STDChat.m in Sources */,
-				06A4D69A19EA263B007D332D /* DAVResponse.m in Sources */,
 				06A4D75D19EA263C007D332D /* Matrix.m in Sources */,
 				06355C4A19D281AF00EBF738 /* STLocalServer.m in Sources */,
 				06A4D6F719EA263B007D332D /* FLEXExplorerToolbar.m in Sources */,
 				0672CD1F19D553F40055189C /* STDFeedItem.m in Sources */,
 				0675CF6819A85FD100AD8B32 /* STDImageChatCell.m in Sources */,
 				0675CF6919A85FD100AD8B32 /* STDViewController.m in Sources */,
-				06A4D68219EA263B007D332D /* MultipartMessageHeaderField.m in Sources */,
 				0675CF6A19A85FD100AD8B32 /* STDTabBarController.m in Sources */,
-				06A4D68519EA263B007D332D /* HTTPAsyncFileResponse.m in Sources */,
 				06A4D77919EA373D007D332D /* UIBezierPath-Points.m in Sources */,
 				06A4D58D19EA1A81007D332D /* STDTextTableViewController.m in Sources */,
 				0675CF7019A85FD100AD8B32 /* STDTableViewController.m in Sources */,
-				06A4D6BE19EA263B007D332D /* DispatchQueueLogFormatter.m in Sources */,
 				0672CD5019D5B7E80055189C /* STDBeautyViewController.m in Sources */,
 				0675CFE819AADBF900AD8B32 /* STDNavigationTestViewController.m in Sources */,
-				06A4D67619EA263B007D332D /* HTTPMessage.m in Sources */,
 				0675CF7419A85FD100AD8B32 /* STDChatViewController.m in Sources */,
 				069BC14C19EFD8F8005906BF /* TentacleView.m in Sources */,
 				0675CF7619A85FD100AD8B32 /* STDemoViewController.m in Sources */,
@@ -2451,23 +2085,17 @@
 				06A4D72419EA263B007D332D /* FLEXDescriptionTableViewCell.m in Sources */,
 				06A4D6C719EA263B007D332D /* FLEXArgumentInputFontView.m in Sources */,
 				06A4D71519EA263B007D332D /* FLEXLiveObjectsTableViewController.m in Sources */,
-				06A4D69719EA263B007D332D /* DAVConnection.m in Sources */,
-				06A4D6A019EA263B007D332D /* PUTResponse.m in Sources */,
 				0675CF8419A85FD100AD8B32 /* STDMapViewController.m in Sources */,
-				06A4D6B819EA263B007D332D /* DDTTYLogger.m in Sources */,
 				0675CF8519A85FD100AD8B32 /* STASortView.m in Sources */,
-				06A4D67C19EA263B007D332D /* MultipartFormDataParser.m in Sources */,
 				0675CF8619A85FD100AD8B32 /* STAHanoiViewController.m in Sources */,
 				0675CF8819A85FD100AD8B32 /* STDropMenuView.m in Sources */,
 				0675CF8A19A85FD100AD8B32 /* STDBigViewController.m in Sources */,
 				0675CF8C19A85FD100AD8B32 /* STDVoiceWindow.m in Sources */,
 				0675CF8E19A85FD100AD8B32 /* STDBookViewController.m in Sources */,
 				0675CF8F19A85FD100AD8B32 /* STDTextViewController.m in Sources */,
-				06A4D66719EA263B007D332D /* DDData.m in Sources */,
 				0675CF9019A85FD100AD8B32 /* STASortOperation.m in Sources */,
 				0675CF9119A85FD100AD8B32 /* STDownloadViewController.m in Sources */,
 				06A4D72D19EA263B007D332D /* FLEXObjectExplorerFactory.m in Sources */,
-				06A4D66A19EA263B007D332D /* DDNumber.m in Sources */,
 				06A4D77619EA373D007D332D /* MZCroppableView.m in Sources */,
 				06A4D70919EA263B007D332D /* FLEXFileBrowserTableViewController.m in Sources */,
 				06A4D71219EA263B007D332D /* FLEXLibrariesTableViewController.m in Sources */,
@@ -2485,19 +2113,14 @@
 				0675CF9919A85FD100AD8B32 /* STASortViewController.m in Sources */,
 				0675CF9B19A85FD100AD8B32 /* STAHanoiView.m in Sources */,
 				0675CF9E19A85FD100AD8B32 /* STDWXVoiceRecognizer.m in Sources */,
-				06A4D68819EA263B007D332D /* HTTPDataResponse.m in Sources */,
 				0675CFA219A85FD100AD8B32 /* STDStartViewController.m in Sources */,
-				06A4D67F19EA263B007D332D /* MultipartMessageHeader.m in Sources */,
 				06A4D70C19EA263B007D332D /* FLEXGlobalsTableViewController.m in Sources */,
-				06A4D6AF19EA263B007D332D /* DDASLLogger.m in Sources */,
 				06A4D6CD19EA263B007D332D /* FLEXArgumentInputNotSupportedView.m in Sources */,
 				06A4D73C19EA263B007D332D /* FLEXHeapEnumerator.m in Sources */,
-				06A4D6BB19EA263B007D332D /* ContextFilterLogFormatter.m in Sources */,
 				069BC13C19EFD8F8005906BF /* GesturePasswordButton.m in Sources */,
 				0675CFA819A85FD100AD8B32 /* STVoiceRecognizer.m in Sources */,
 				06A4D72719EA263B007D332D /* FLEXDictionaryExplorerViewController.m in Sources */,
 				06A4D70F19EA263B007D332D /* FLEXInstancesTableViewController.m in Sources */,
-				06A4D66D19EA263B007D332D /* DDRange.m in Sources */,
 				0675CFA919A85FD100AD8B32 /* STDSideBarController.m in Sources */,
 				0675CFAD19A85FD100AD8B32 /* STDBlurSettingViewController.m in Sources */,
 				0675CFAE19A85FD100AD8B32 /* SUNSlideSwitchView.m in Sources */,
@@ -2543,33 +2166,23 @@
 				06A4D72919EA263B007D332D /* FLEXImageExplorerViewController.m in Sources */,
 				06A4D6ED19EA263B007D332D /* FLEXIvarEditorViewController.m in Sources */,
 				06A4D6D219EA263B007D332D /* FLEXArgumentInputStringView.m in Sources */,
-				06A4D6B419EA263B007D332D /* DDLog.m in Sources */,
 				06A4D6C919EA263B007D332D /* FLEXArgumentInputJSONObjectView.m in Sources */,
 				06A4D73819EA263B007D332D /* FLEXViewExplorerViewController.m in Sources */,
-				06A4D6B119EA263B007D332D /* DDFileLogger.m in Sources */,
-				06A4D69C19EA263B007D332D /* DELETEResponse.m in Sources */,
 				F6A1ACAB18CAFBA700669C97 /* STDRecordViewController.m in Sources */,
 				06A4D74D19EA263B007D332D /* FLEXImagePreviewViewController.m in Sources */,
 				06E783DA19AEE6DE00D29B11 /* STAlertView.m in Sources */,
-				06A4D68A19EA263B007D332D /* HTTPDynamicFileResponse.m in Sources */,
 				069BC13F19EFD8F8005906BF /* GesturePasswordController.m in Sources */,
 				06A4D6E419EA263B007D332D /* FLEXDefaultEditorViewController.m in Sources */,
-				06A4D66F19EA263B007D332D /* HTTPAuthenticationRequest.m in Sources */,
 				06A4D71D19EA263B007D332D /* FLEXClassExplorerViewController.m in Sources */,
 				F6A1AC3F18CAFBA700669C97 /* STRichView.m in Sources */,
-				06A4D67819EA263B007D332D /* HTTPServer.m in Sources */,
 				F61DD34D186ED713008D0268 /* STDAppDelegate.m in Sources */,
 				06A4D75919EA263C007D332D /* ImageMaskView.m in Sources */,
-				06A4D67219EA263B007D332D /* HTTPConnection.m in Sources */,
 				F6A1AC5718CAFBA700669C97 /* STDTextChatCell.m in Sources */,
 				06A4D6FC19EA263B007D332D /* FLEXManager.m in Sources */,
-				06A4D69319EA263B007D332D /* WebSocket.m in Sources */,
 				06A4D6FF19EA263B007D332D /* FLEXToolbarItem.m in Sources */,
 				F6A1AC4B18CAFBA700669C97 /* STDBaseChatCell.m in Sources */,
 				F61DD353186ED713008D0268 /* main.m in Sources */,
-				06A4D6A819EA263B007D332D /* GCDAsyncSocket.m in Sources */,
 				06A4D74119EA263B007D332D /* FLEXRuntimeUtility.m in Sources */,
-				06A4D68D19EA263B007D332D /* HTTPFileResponse.m in Sources */,
 				06A4D75F19EA263C007D332D /* PFGoldenSectionSpiral.m in Sources */,
 				06A4D6F919EA263B007D332D /* FLEXExplorerViewController.m in Sources */,
 				F6A1AC7718CAFBA700669C97 /* STARootViewController.m in Sources */,
@@ -2581,40 +2194,32 @@
 				F6A1ACB118CAFBBF00669C97 /* STDServiceViewController.m in Sources */,
 				F6A1AC4518CAFBA700669C97 /* STDSession.m in Sources */,
 				F6135B8018E0185E0074583A /* STMenuView.m in Sources */,
-				06A4D69019EA263B007D332D /* HTTPRedirectResponse.m in Sources */,
 				06A4D6E719EA263B007D332D /* FLEXFieldEditorView.m in Sources */,
 				F6A1AC4F18CAFBA700669C97 /* STDChatInputView.m in Sources */,
 				06A4D6F019EA263B007D332D /* FLEXMethodCallingViewController.m in Sources */,
 				06A4D6CF19EA263B007D332D /* FLEXArgumentInputNumberView.m in Sources */,
 				06A4D6EA19EA263B007D332D /* FLEXFieldEditorViewController.m in Sources */,
-				06A4D6A519EA263B007D332D /* README.markdown in Sources */,
 				06A4D6DB19EA263B007D332D /* FLEXArgumentInputTextView.m in Sources */,
 				06A4D76D19EA3574007D332D /* STDImageBlurViewController.m in Sources */,
 				F6A1AC8518CAFBA700669C97 /* STDMoreViewController.m in Sources */,
 				062ECFC71994AFD200D71A32 /* STDLeftViewController.m in Sources */,
-				06A4D6AB19EA263B007D332D /* DDAbstractDatabaseLogger.m in Sources */,
 				06A4D73219EA263B007D332D /* FLEXSetExplorerViewController.m in Sources */,
 				06A4D72019EA263B007D332D /* FLEXDefaultsExplorerViewController.m in Sources */,
 				06A4D70519EA263B007D332D /* FLEXClassesTableViewController.m in Sources */,
 				063DF327191DF4F20009B947 /* STDAboutAudioViewController.m in Sources */,
 				F6A1AC4D18CAFBA700669C97 /* STDChat.m in Sources */,
-				06A4D69919EA263B007D332D /* DAVResponse.m in Sources */,
 				06A4D75C19EA263C007D332D /* Matrix.m in Sources */,
 				06355C4919D281AF00EBF738 /* STLocalServer.m in Sources */,
 				06A4D6F619EA263B007D332D /* FLEXExplorerToolbar.m in Sources */,
 				0672CD1E19D553F40055189C /* STDFeedItem.m in Sources */,
 				F6A1AC5318CAFBA700669C97 /* STDImageChatCell.m in Sources */,
 				F61DD35E186ED713008D0268 /* STDViewController.m in Sources */,
-				06A4D68119EA263B007D332D /* MultipartMessageHeaderField.m in Sources */,
 				062ECFC01994AFB500D71A32 /* STDTabBarController.m in Sources */,
-				06A4D68419EA263B007D332D /* HTTPAsyncFileResponse.m in Sources */,
 				06A4D77819EA373D007D332D /* UIBezierPath-Points.m in Sources */,
 				06A4D58C19EA1A81007D332D /* STDTextTableViewController.m in Sources */,
 				F61DD35F186ED713008D0268 /* STDTableViewController.m in Sources */,
-				06A4D6BD19EA263B007D332D /* DispatchQueueLogFormatter.m in Sources */,
 				0672CD4F19D5B7E80055189C /* STDBeautyViewController.m in Sources */,
 				0675CFE719AADBF900AD8B32 /* STDNavigationTestViewController.m in Sources */,
-				06A4D67519EA263B007D332D /* HTTPMessage.m in Sources */,
 				F6A1AC5118CAFBA700669C97 /* STDChatViewController.m in Sources */,
 				069BC14B19EFD8F8005906BF /* TentacleView.m in Sources */,
 				F6B2F4EE18B64F7A005CB4C1 /* STDemoViewController.m in Sources */,
@@ -2629,23 +2234,17 @@
 				06A4D72319EA263B007D332D /* FLEXDescriptionTableViewCell.m in Sources */,
 				06A4D6C619EA263B007D332D /* FLEXArgumentInputFontView.m in Sources */,
 				06A4D71419EA263B007D332D /* FLEXLiveObjectsTableViewController.m in Sources */,
-				06A4D69619EA263B007D332D /* DAVConnection.m in Sources */,
-				06A4D69F19EA263B007D332D /* PUTResponse.m in Sources */,
 				F6A1ACCA18CC2DD100669C97 /* STDMapViewController.m in Sources */,
-				06A4D6B719EA263B007D332D /* DDTTYLogger.m in Sources */,
 				F6A1AC7B18CAFBA700669C97 /* STASortView.m in Sources */,
-				06A4D67B19EA263B007D332D /* MultipartFormDataParser.m in Sources */,
 				F6A1AC7518CAFBA700669C97 /* STAHanoiViewController.m in Sources */,
 				06A7590A199CDE7C00AE98A2 /* STDropMenuView.m in Sources */,
 				065E74AB19A3A7C000A74DE4 /* STDBigViewController.m in Sources */,
 				06A4E3F4197787BA00E7936A /* STDVoiceWindow.m in Sources */,
 				F6A1AC3B18CAFBA700669C97 /* STDBookViewController.m in Sources */,
 				06C6F9CC1920ABDA0028B2B3 /* STDTextViewController.m in Sources */,
-				06A4D66619EA263B007D332D /* DDData.m in Sources */,
 				F6A1AC7918CAFBA700669C97 /* STASortOperation.m in Sources */,
 				F6A1ACBE18CC225000669C97 /* STDownloadViewController.m in Sources */,
 				06A4D72C19EA263B007D332D /* FLEXObjectExplorerFactory.m in Sources */,
-				06A4D66919EA263B007D332D /* DDNumber.m in Sources */,
 				06A4D77519EA373D007D332D /* MZCroppableView.m in Sources */,
 				06A4D70819EA263B007D332D /* FLEXFileBrowserTableViewController.m in Sources */,
 				06A4D71119EA263B007D332D /* FLEXLibrariesTableViewController.m in Sources */,
@@ -2663,19 +2262,14 @@
 				F6A1AC7D18CAFBA700669C97 /* STASortViewController.m in Sources */,
 				F6A1AC7318CAFBA700669C97 /* STAHanoiView.m in Sources */,
 				06A1CD281978DAFB00F68F35 /* STDWXVoiceRecognizer.m in Sources */,
-				06A4D68719EA263B007D332D /* HTTPDataResponse.m in Sources */,
 				F6B2F4DC18B5EFA0005CB4C1 /* STDStartViewController.m in Sources */,
-				06A4D67E19EA263B007D332D /* MultipartMessageHeader.m in Sources */,
 				06A4D70B19EA263B007D332D /* FLEXGlobalsTableViewController.m in Sources */,
-				06A4D6AE19EA263B007D332D /* DDASLLogger.m in Sources */,
 				06A4D6CC19EA263B007D332D /* FLEXArgumentInputNotSupportedView.m in Sources */,
 				06A4D73B19EA263B007D332D /* FLEXHeapEnumerator.m in Sources */,
-				06A4D6BA19EA263B007D332D /* ContextFilterLogFormatter.m in Sources */,
 				069BC13B19EFD8F8005906BF /* GesturePasswordButton.m in Sources */,
 				06A1CD241978D72F00F68F35 /* STVoiceRecognizer.m in Sources */,
 				06A4D72619EA263B007D332D /* FLEXDictionaryExplorerViewController.m in Sources */,
 				06A4D70E19EA263B007D332D /* FLEXInstancesTableViewController.m in Sources */,
-				06A4D66C19EA263B007D332D /* DDRange.m in Sources */,
 				062ECFC91994AFD200D71A32 /* STDSideBarController.m in Sources */,
 				06152DD21969793100CA0894 /* STDBlurSettingViewController.m in Sources */,
 				065E74CD19A3A7D200A74DE4 /* SUNSlideSwitchView.m in Sources */,
@@ -2752,17 +2346,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jianbin Gong (MH8Q662G73)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-hazpdnkopnbmhkawhnerzyokfgtd/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitWorkSpace-funamnockqadlwatgfyhhedxtwod/Build/Products/Debug-iphonesimulator",
-					/Users/sunjiangting/Desktop/STKitWorkSpace/STKitDemo,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-atuyyssuepeeuyhiawxqsseizadm/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Release-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-fmfghjdxzdiloiejyyynfpbhhkzb/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-ejbarafuivubmnhehthtyprfglqf/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)",
@@ -2779,12 +2362,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Suen/Desktop/stkitdemo/STKitDemo/STKitDemo/Libs,
-					/Users/Suen/Desktop/STKitWorkSpace/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STWorkSpace/stkitdemo/STKitDemo/STKitDemo/Libs,
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs/WXVoiceSDK",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs/WXVoiceSDK",
@@ -2810,17 +2387,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jianbin Gong (MH8Q662G73)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-hazpdnkopnbmhkawhnerzyokfgtd/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitWorkSpace-funamnockqadlwatgfyhhedxtwod/Build/Products/Debug-iphonesimulator",
-					/Users/sunjiangting/Desktop/STKitWorkSpace/STKitDemo,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-atuyyssuepeeuyhiawxqsseizadm/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Release-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-fmfghjdxzdiloiejyyynfpbhhkzb/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-ejbarafuivubmnhehthtyprfglqf/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)",
@@ -2837,12 +2403,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Suen/Desktop/stkitdemo/STKitDemo/STKitDemo/Libs,
-					/Users/Suen/Desktop/STKitWorkSpace/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STWorkSpace/stkitdemo/STKitDemo/STKitDemo/Libs,
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs/WXVoiceSDK",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs/WXVoiceSDK",
@@ -2867,17 +2427,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Wanglu Technology Co., Ltd.";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-hazpdnkopnbmhkawhnerzyokfgtd/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitWorkSpace-funamnockqadlwatgfyhhedxtwod/Build/Products/Debug-iphonesimulator",
-					/Users/sunjiangting/Desktop/STKitWorkSpace/STKitDemo,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-atuyyssuepeeuyhiawxqsseizadm/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Release-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-fmfghjdxzdiloiejyyynfpbhhkzb/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-ejbarafuivubmnhehthtyprfglqf/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
@@ -2893,12 +2442,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Suen/Desktop/stkitdemo/STKitDemo/STKitDemo/Libs,
-					/Users/Suen/Desktop/STKitWorkSpace/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STWorkSpace/stkitdemo/STKitDemo/STKitDemo/Libs,
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs/WXVoiceSDK",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs/WXVoiceSDK",
@@ -2924,17 +2467,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Wanglu Technology Co., Ltd.";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-hazpdnkopnbmhkawhnerzyokfgtd/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitWorkSpace-funamnockqadlwatgfyhhedxtwod/Build/Products/Debug-iphonesimulator",
-					/Users/sunjiangting/Desktop/STKitWorkSpace/STKitDemo,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-atuyyssuepeeuyhiawxqsseizadm/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Release-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-fmfghjdxzdiloiejyyynfpbhhkzb/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-ejbarafuivubmnhehthtyprfglqf/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
@@ -2950,12 +2482,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Suen/Desktop/stkitdemo/STKitDemo/STKitDemo/Libs,
-					/Users/Suen/Desktop/STKitWorkSpace/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STWorkSpace/stkitdemo/STKitDemo/STKitDemo/Libs,
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs/WXVoiceSDK",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs/WXVoiceSDK",
@@ -3078,17 +2604,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jianbin Gong (UE64J7G4XG)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-hazpdnkopnbmhkawhnerzyokfgtd/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitWorkSpace-funamnockqadlwatgfyhhedxtwod/Build/Products/Debug-iphonesimulator",
-					/Users/sunjiangting/Desktop/STKitWorkSpace/STKitDemo,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-atuyyssuepeeuyhiawxqsseizadm/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Release-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-fmfghjdxzdiloiejyyynfpbhhkzb/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-ejbarafuivubmnhehthtyprfglqf/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
@@ -3104,11 +2619,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Suen/Desktop/stkitdemo/STKitDemo/STKitDemo/Libs,
-					/Users/Suen/Desktop/STKitWorkSpace/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STWorkSpace/stkitdemo/STKitDemo/STKitDemo/Libs,
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs/WXVoiceSDK",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
@@ -3136,17 +2646,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jianbin Gong (UE64J7G4XG)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-hazpdnkopnbmhkawhnerzyokfgtd/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitWorkSpace-funamnockqadlwatgfyhhedxtwod/Build/Products/Debug-iphonesimulator",
-					/Users/sunjiangting/Desktop/STKitWorkSpace/STKitDemo,
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-atuyyssuepeeuyhiawxqsseizadm/Build/Products/Debug-iphoneos",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STKitDemo-gctojlrlwdopzwazbjtdebcwxhir/Build/Products/Release-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-fmfghjdxzdiloiejyyynfpbhhkzb/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-ejbarafuivubmnhehthtyprfglqf/Build/Products/Debug-iphonesimulator",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
@@ -3162,11 +2661,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Suen/Desktop/stkitdemo/STKitDemo/STKitDemo/Libs,
-					/Users/Suen/Desktop/STKitWorkSpace/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STKitDemo/STKitDemo/STKitDemo/Libs,
-					/Users/sunjiangting/Desktop/STWorkSpace/stkitdemo/STKitDemo/STKitDemo/Libs,
-					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/Libs/WXVoiceSDK",
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",

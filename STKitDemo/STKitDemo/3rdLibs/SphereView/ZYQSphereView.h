@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 Zhao Yiqi. All rights reserved.
 //
 
-#import "PFAxisDirection.h"
+#import "PFGoldenSectionSpiral.h"
 
 @interface ZYQSphereView : UIView {
 	NSMutableDictionary *pointMap; 
