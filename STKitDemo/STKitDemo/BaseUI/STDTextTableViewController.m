@@ -46,6 +46,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.delaysContentTouches = YES;
+    self.tableView.canCancelContentTouches = YES;
 }
 
 - (void)didReceiveMemoryWarning {

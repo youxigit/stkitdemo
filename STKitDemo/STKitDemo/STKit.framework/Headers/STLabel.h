@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    STVerticalAlignmentTop,
-    STVerticalAlignmentMiddle, // default
+    STVerticalAlignmentTop,  // default
+    STVerticalAlignmentMiddle,
     STVerticalAlignmentBottom,
 } STVerticalAlignment;
 

@@ -87,6 +87,10 @@
     return YES;
 }
 
+- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    NSLog(@"%@'s%@'s=%@", [object class], keyPath, change);
+}
+
 - (void) addLaunchView {
     UIImage * launchImage = [UIImage imageNamed:@"LaunchImage"];
     UIImageView * launchView = [[UIImageView alloc] initWithFrame:self.window.bounds];

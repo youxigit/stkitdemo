@@ -73,6 +73,10 @@
 		0602B517196974150004ACBB /* chat_image_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6A1ACDB18CC471300669C97 /* chat_image_8.jpg */; };
 		06152DD11969793100CA0894 /* STDBlurSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06152DCF1969793100CA0894 /* STDBlurSettingViewController.m */; };
 		06152DD21969793100CA0894 /* STDBlurSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06152DCF1969793100CA0894 /* STDBlurSettingViewController.m */; };
+		0619A2D119F914D3006F873A /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0619A2D019F914D3006F873A /* STKit.framework */; };
+		0619A2D219F914D3006F873A /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0619A2D019F914D3006F873A /* STKit.framework */; };
+		0619A2D319F914D3006F873A /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0619A2D019F914D3006F873A /* STKit.framework */; };
+		0619A2D419F914D3006F873A /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0619A2D019F914D3006F873A /* STKit.framework */; };
 		06291AE5191F314700EDBD35 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06291AE4191F314700EDBD35 /* libxml2.dylib */; };
 		062ECFBF1994AFB500D71A32 /* STDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 062ECFBE1994AFB500D71A32 /* STDTabBarController.m */; };
 		062ECFC01994AFB500D71A32 /* STDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 062ECFBE1994AFB500D71A32 /* STDTabBarController.m */; };
@@ -233,10 +237,6 @@
 		069BC14B19EFD8F8005906BF /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BC13919EFD8F8005906BF /* TentacleView.m */; };
 		069BC14C19EFD8F8005906BF /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BC13919EFD8F8005906BF /* TentacleView.m */; };
 		069BC14D19EFD8F8005906BF /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069BC13919EFD8F8005906BF /* TentacleView.m */; };
-		069BC14F19F0EEBC005906BF /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069BC14E19F0EEBC005906BF /* STKit.framework */; };
-		069BC15019F0EEBC005906BF /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069BC14E19F0EEBC005906BF /* STKit.framework */; };
-		069BC15119F0EEBC005906BF /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069BC14E19F0EEBC005906BF /* STKit.framework */; };
-		069BC15219F0EEBC005906BF /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069BC14E19F0EEBC005906BF /* STKit.framework */; };
 		06A1CD231978D72F00F68F35 /* STVoiceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A1CD221978D72F00F68F35 /* STVoiceRecognizer.m */; };
 		06A1CD241978D72F00F68F35 /* STVoiceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A1CD221978D72F00F68F35 /* STVoiceRecognizer.m */; };
 		06A1CD271978DAFB00F68F35 /* STDWXVoiceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A1CD261978DAFB00F68F35 /* STDWXVoiceRecognizer.m */; };
@@ -443,6 +443,7 @@
 		06A7590A199CDE7C00AE98A2 /* STDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A75908199CDE7C00AE98A2 /* STDropMenuView.m */; };
 		06C6F9CC1920ABDA0028B2B3 /* STDTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C6F9CA1920ABDA0028B2B3 /* STDTextViewController.m */; };
 		06C6F9CE1920F0C10028B2B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C6F9CD1920F0C10028B2B3 /* CoreLocation.framework */; };
+		06DBF9E119F8CFBB009ECABA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DBF9E019F8CFBB009ECABA /* Social.framework */; };
 		06E783D919AEE6DE00D29B11 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E783D819AEE6DE00D29B11 /* STAlertView.m */; };
 		06E783DA19AEE6DE00D29B11 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E783D819AEE6DE00D29B11 /* STAlertView.m */; };
 		06E783DB19AEE6DE00D29B11 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E783D819AEE6DE00D29B11 /* STAlertView.m */; };
@@ -573,6 +574,7 @@
 		0602B51B196974150004ACBB /* STKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06152DCE1969793100CA0894 /* STDBlurSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBlurSettingViewController.h; sourceTree = "<group>"; };
 		06152DCF1969793100CA0894 /* STDBlurSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBlurSettingViewController.m; sourceTree = "<group>"; };
+		0619A2D019F914D3006F873A /* STKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STKit.framework; sourceTree = "<group>"; };
 		06291AE4191F314700EDBD35 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		062ECFBD1994AFB500D71A32 /* STDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDTabBarController.h; sourceTree = "<group>"; };
 		062ECFBE1994AFB500D71A32 /* STDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDTabBarController.m; sourceTree = "<group>"; };
@@ -630,7 +632,6 @@
 		069BC13419EFD8F8005906BF /* GesturePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePasswordView.m; sourceTree = "<group>"; };
 		069BC13819EFD8F8005906BF /* TentacleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TentacleView.h; sourceTree = "<group>"; };
 		069BC13919EFD8F8005906BF /* TentacleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TentacleView.m; sourceTree = "<group>"; };
-		069BC14E19F0EEBC005906BF /* STKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STKit.framework; sourceTree = "<group>"; };
 		06A1CD211978D72F00F68F35 /* STVoiceRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STVoiceRecognizer.h; sourceTree = "<group>"; };
 		06A1CD221978D72F00F68F35 /* STVoiceRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STVoiceRecognizer.m; sourceTree = "<group>"; };
 		06A1CD251978DAFB00F68F35 /* STDWXVoiceRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDWXVoiceRecognizer.h; sourceTree = "<group>"; };
@@ -778,6 +779,7 @@
 		06C6F9C91920ABDA0028B2B3 /* STDTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDTextViewController.h; sourceTree = "<group>"; };
 		06C6F9CA1920ABDA0028B2B3 /* STDTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDTextViewController.m; sourceTree = "<group>"; };
 		06C6F9CD1920F0C10028B2B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		06DBF9E019F8CFBB009ECABA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		06E783D719AEE6DE00D29B11 /* STAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAlertView.h; sourceTree = "<group>"; };
 		06E783D819AEE6DE00D29B11 /* STAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAlertView.m; sourceTree = "<group>"; };
 		F6135B7D18E0185E0074583A /* STMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuView.h; sourceTree = "<group>"; };
@@ -896,7 +898,7 @@
 				0602B4FA196974150004ACBB /* AVFoundation.framework in Frameworks */,
 				0602B4FB196974150004ACBB /* AudioToolbox.framework in Frameworks */,
 				0602B4FC196974150004ACBB /* SystemConfiguration.framework in Frameworks */,
-				069BC14F19F0EEBC005906BF /* STKit.framework in Frameworks */,
+				0619A2D119F914D3006F873A /* STKit.framework in Frameworks */,
 				0602B4FE196974150004ACBB /* QuartzCore.framework in Frameworks */,
 				0602B4FF196974150004ACBB /* MapKit.framework in Frameworks */,
 				0602B500196974150004ACBB /* CoreGraphics.framework in Frameworks */,
@@ -923,7 +925,7 @@
 				0675CFC219A85FD100AD8B32 /* MapKit.framework in Frameworks */,
 				0675CFC319A85FD100AD8B32 /* CoreGraphics.framework in Frameworks */,
 				0675CFC419A85FD100AD8B32 /* UIKit.framework in Frameworks */,
-				069BC15119F0EEBC005906BF /* STKit.framework in Frameworks */,
+				0619A2D319F914D3006F873A /* STKit.framework in Frameworks */,
 				06A4D76619EA263C007D332D /* libWXVoiceSDK.a in Frameworks */,
 				0675CFC619A85FD100AD8B32 /* Foundation.framework in Frameworks */,
 			);
@@ -943,7 +945,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				069BC15219F0EEBC005906BF /* STKit.framework in Frameworks */,
+				0619A2D419F914D3006F873A /* STKit.framework in Frameworks */,
 				06A4D3C019E6B3C7007D332D /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -952,6 +954,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DBF9E119F8CFBB009ECABA /* Social.framework in Frameworks */,
 				06A1CD3A1978DE4D00F68F35 /* CoreTelephony.framework in Frameworks */,
 				06A1CD391978DE4700F68F35 /* libstdc++.6.dylib in Frameworks */,
 				06C6F9CE1920F0C10028B2B3 /* CoreLocation.framework in Frameworks */,
@@ -963,10 +966,10 @@
 				F61DD371186ED713008D0268 /* AudioToolbox.framework in Frameworks */,
 				F61DD372186ED713008D0268 /* SystemConfiguration.framework in Frameworks */,
 				F61DD373186ED713008D0268 /* QuartzCore.framework in Frameworks */,
+				0619A2D219F914D3006F873A /* STKit.framework in Frameworks */,
 				F61DD375186ED713008D0268 /* MapKit.framework in Frameworks */,
 				F61DD376186ED713008D0268 /* CoreGraphics.framework in Frameworks */,
 				F61DD377186ED713008D0268 /* UIKit.framework in Frameworks */,
-				069BC15019F0EEBC005906BF /* STKit.framework in Frameworks */,
 				06A4D76519EA263C007D332D /* libWXVoiceSDK.a in Frameworks */,
 				F61DD378186ED713008D0268 /* Foundation.framework in Frameworks */,
 			);
@@ -1333,6 +1336,7 @@
 		F6471E781851CD7C00574E94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06DBF9E019F8CFBB009ECABA /* Social.framework */,
 				0681CCDA19D3BC9A00D897AF /* Photos.framework */,
 				0698C21C19D1CCE400D0D69A /* WebKit.framework */,
 				06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */,
@@ -1386,7 +1390,7 @@
 		F6981605186041EA004C5B64 /* STKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				069BC14E19F0EEBC005906BF /* STKit.framework */,
+				0619A2D019F914D3006F873A /* STKit.framework */,
 				06A4D59B19EA263B007D332D /* 3rdLibs */,
 				06A4E3F0197787A100E7936A /* VoiceControl */,
 				F6F7C5A518BF358500E43408 /* KitModules */,
@@ -2350,6 +2354,7 @@
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STKitDemo/STKitDemo-Prefix.pch";
@@ -2391,6 +2396,7 @@
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STKitDemo/STKitDemo-Prefix.pch";
@@ -2430,6 +2436,7 @@
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STKitDemo/STKitDemo-Prefix.pch";
@@ -2470,6 +2477,7 @@
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STKitDemo/STKitDemo-Prefix.pch";
@@ -2607,6 +2615,7 @@
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STKitDemo/STKitDemo-Prefix.pch";
@@ -2649,6 +2658,7 @@
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo/3rdLibs",
 					"$(PROJECT_DIR)/STKitDemo/STKitDemo",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/STWorkspace-geijllfmuymgingxsjgqvtuhlffp/Build/Products/Debug-iphonesimulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STKitDemo/STKitDemo-Prefix.pch";
