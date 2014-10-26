@@ -47,6 +47,10 @@
 
 @implementation STDAppDelegate
 
++ (BOOL)boxManEnabled {
+    return [[[NSUserDefaults standardUserDefaults] valueForKey:@"BoxManEnabled"] boolValue];
+}
+
 + (BOOL) sinaappCorrectionEnabled {
     return [[[NSUserDefaults standardUserDefaults] valueForKey:@"sinaappHostEnabled"] boolValue];
 }
@@ -85,10 +89,6 @@
         self.passwordController = passwordController;
     }
     return YES;
-}
-
-- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    NSLog(@"%@'s%@'s=%@", [object class], keyPath, change);
 }
 
 - (void) addLaunchView {

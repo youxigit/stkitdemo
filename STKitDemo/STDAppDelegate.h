@@ -12,7 +12,7 @@
 
 @class SCSiriWaveformView;
 @interface STDAppDelegate : UIResponder <UIApplicationDelegate>
-
++ (BOOL)boxManEnabled;
 + (BOOL) sinaappCorrectionEnabled;
 + (void) displayNotificationWith:(NSString *) name title:(NSString *) title;
 
