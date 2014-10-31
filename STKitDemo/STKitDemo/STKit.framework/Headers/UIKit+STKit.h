@@ -304,13 +304,6 @@ typedef void (^STInvokeHandler)(void);
 
 @end
 
-typedef void (^STAlertViewDismissBlock)(UIAlertView *alertView, NSUInteger dismissIndex);
-@interface UIAlertView (STKit)
-
-- (void)showWithDismissBlock:(STAlertViewDismissBlock)block;
-
-@end
-
 @interface UIActionSheet (STKit)
 
 - (instancetype)initWithTitle:(NSString *)title

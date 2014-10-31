@@ -66,7 +66,6 @@
     if ([application respondsToSelector:@selector(setStatusBarStyle:)]) {
         application.statusBarStyle = UIStatusBarStyleDefault;
     }
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     NSString * previousStyle = [[STPersistence standardPerstence] valueForKey:@"SelectedStyle"];

@@ -9,6 +9,7 @@
 #import <STKit/STDefines.h>
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <STKit/STNetworkConfiguration.h>
 
 typedef NS_ENUM(NSInteger, STNetworkErrorCode) {
     STNetworkErrorCodeUserCancelled = 11, // 用户手动取消
@@ -87,11 +88,6 @@ typedef void (^STNetworkWillStartHandler)(STNetworkOperation *operation);
 - (void)cancelAsynchronousRequestWithIdentifier:(NSInteger)identifier;
 
 + (NSThread *)standardNetworkThread;
-
-/// 是否为Https的请求方式
-@property(nonatomic, assign) BOOL allowHTTPSRequest;
-/// https 证书路径
-@property(nonatomic, copy) NSString *certificatePath;
 
 @end
 

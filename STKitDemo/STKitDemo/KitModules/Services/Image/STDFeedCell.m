@@ -124,7 +124,7 @@ const UIEdgeInsets    STDFeedCellTitleContentInset = {5,5,10,5};
         self.imageView.contentMode = UIViewContentModeScaleAspectFill;
         self.imageView.clipsToBounds = YES;
         self.imageView.userInteractionEnabled = YES;
-        self.imageView.placeholderImage = [UIImage imageNamed:@"product_default.png"];
+        self.imageView.placeholderImage = [UIImage imageNamed:@"product_default"];
         [self.backgroundImageView addSubview:self.imageView];
         
         self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, 40, 40)];

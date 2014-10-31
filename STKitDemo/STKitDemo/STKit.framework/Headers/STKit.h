@@ -46,7 +46,9 @@
 #import <STKit/STReachability.h>
 #import <STKit/STNetwork.h>
 #import <STKit/STNetworkOperation.h>
+#import <STKit/STNetworkConfiguration.h>
 #import <STKit/STHTTPNetwork.h>
+
 #import <STKit/STImageLoader.h>
 #import <STKit/UIImageView+STImageLoader.h>
 // STKit+Audio
@@ -74,3 +76,5 @@
 // Security
 #import <STKit/STAESCryptor.h>
 #import <STKit/STRSACryptor.h>
+
+#import <STKit/STCategories.h>

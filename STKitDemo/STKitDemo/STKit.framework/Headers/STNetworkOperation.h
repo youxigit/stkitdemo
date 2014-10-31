@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger, STNetworkFormEnctype) {
 
 @property(nonatomic, strong, readonly) NSURLRequest *URLRequest;
 @property(nonatomic, strong, readonly) NSHTTPURLResponse *URLResponse;
+/// default value = STNetworkConfiguration.sharedConfiguration
+@property(nonatomic, strong) STNetworkConfiguration *configuration;
 /// 表单提交是，格式化内容的方式，GET请求请忽略此项
 @property(nonatomic, assign) STNetworkFormEnctype enctype;
 /// 超时时间 default 120s

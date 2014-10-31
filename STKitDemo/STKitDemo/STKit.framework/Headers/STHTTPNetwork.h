@@ -18,11 +18,13 @@ typedef void (^STHTTPSynchronousNetworkHandler)(NSURLResponse *response, id data
 typedef NS_ENUM(NSInteger, STHTTPResponseDataType) {
     STHTTPResponseDataTypeTextHTML = 0, // 返回类型位HTML text/html
     STHTTPResponseDataTypeTextJSON = 1, // 返回类型位JSON text/json
-    STHTTPResponseDataTypeTextXML = 2   // 返回类型位XML  text/xml
+    STHTTPResponseDataTypeTextXML  = 2   // 返回类型位XML  text/xml
 };
 
 typedef NS_OPTIONS(NSInteger, STXMLParseOptions){
-    STXMLParseOptionsProcessNamespaces = 1 << 0, STXMLParseOptionsReportNamespacePrefixes = 1 << 1, STXMLParseOptionsResolveExternalEntities = 1 << 2,
+    STXMLParseOptionsProcessNamespaces = 1 << 0,
+    STXMLParseOptionsReportNamespacePrefixes = 1 << 1,
+    STXMLParseOptionsResolveExternalEntities = 1 << 2,
 };
 /// HTTP类型的网络请求
 @interface STHTTPNetwork : NSObject

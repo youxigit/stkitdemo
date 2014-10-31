@@ -10,8 +10,8 @@
 
 @interface STAlertView : UIView
 
-- (instancetype) initWithMenuTitles:(NSString *) menuTitle, ... NS_REQUIRES_NIL_TERMINATION;
+- (instancetype)initWithMenuTitles:(NSString *)menuTitle, ... NS_REQUIRES_NIL_TERMINATION;
 
-- (NSInteger) showInView:(UIView *) view animated:(BOOL) animated;
+- (NSInteger)showInView:(UIView *)view animated:(BOOL)animated;
 
 @end

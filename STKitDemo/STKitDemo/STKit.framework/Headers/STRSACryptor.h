@@ -28,6 +28,9 @@ extern SecKeyRef STSecPrivateKeyFromPEMBase64String(NSString *base64String);
 /// 目前只支持有密码的P12文件读取，如果没有密码的，iOS库本身不支持
 extern SecKeyRef STSecPrivateKeyFromP12Data(NSData *data, NSString *password);
 
+/// 比较两个key是否相同
+extern BOOL STSecKeyEqualToSecKey(SecKeyRef key1, SecKeyRef key2);
+
 @interface STRSACryptor : NSObject
 
 - (instancetype)initWithPublicSecKey:(SecKeyRef)publicSecKey privateSecKey:(SecKeyRef)privateSecKey;

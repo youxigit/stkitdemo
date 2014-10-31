@@ -44,6 +44,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"图片下载";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"弹框" target:self action:@selector(alertActionFired:)];
     
     UIView * containerView = [[UIView alloc] initWithFrame:CGRectMake(self.view.width / 2 - 120, 20, 240, 40)];
     containerView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
@@ -77,6 +78,12 @@
     self.roundProgressView.hidden = YES;
     [self.imageView addSubview:self.roundProgressView];
     
+}
+
+- (void)alertActionFired:(id)sender {
+    STAlertView * alertView = [[STAlertView alloc] initWithMenuTitles:@"First", @"Second", @"Third", nil];
+    int result = [alertView showInView:self.view animated:YES];
+    NSLog(@"============%d", result);
 }
 
 - (void) cleanCache:(id) sender {
