@@ -53,7 +53,6 @@
     self.coverImageView.autoresizingMask = backgroundImageView.autoresizingMask;
     [containerView addSubview:self.coverImageView];
     self.coverImageView.backgroundColor = [UIColor clearColor];
-//    self.coverImageView.alpha = 0.9;
     self.coverImageView.hidden = YES;
     
     MZCroppableView * croppableView = [[MZCroppableView alloc] initWithImageView:backgroundImageView];

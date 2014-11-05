@@ -28,6 +28,10 @@
 #import "ImageMaskView.h"
 #import "GesturePasswordController.h"
 
+typedef union {
+    NSInteger value;
+    Byte bytes[4];
+} STTInteger;
 
 @interface STDAppDelegate ()<STVoiceRecognizerDelegate, STNotificationWindowDelegate, ImageMaskFilledDelegate> {
     BOOL _voiceControlOpened;
@@ -87,6 +91,7 @@
         [self.window addSubview:passwordController.view];
         self.passwordController = passwordController;
     }
+    
     return YES;
 }
 
