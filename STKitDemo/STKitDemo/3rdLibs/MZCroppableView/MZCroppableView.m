@@ -126,6 +126,7 @@
     CGImageRef imageRef = CGImageCreateWithImageInRect(maskedImage.CGImage, croppedRect);
     
     maskedImage = [UIImage imageWithCGImage:imageRef];
+    CFRelease(imageRef);
     
     return maskedImage;
 }

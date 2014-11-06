@@ -14,9 +14,11 @@ static STBLevelManager * _levelManager;
 
 
 + (STBLevelManager *) standardLevelManager {
-    @synchronized(self) {
-        if (!_levelManager) {
-            _levelManager = [NSAllocateObject([self class], 0, NULL) init];
+    if (!_levelManager) {
+        @synchronized(self) {
+            if (!_levelManager) {
+                _levelManager = [NSAllocateObject([self class], 0, NULL) init];
+            }
         }
     }
     return _levelManager;
@@ -122,7 +124,8 @@ static STBLevelManager * _levelManager;
 
 
 + (id) allocWithZone:(NSZone *)zone {
-    return [[self standardLevelManager] retain];
+    STBLevelManager *manager = [self standardLevelManager];
+    return manager;
 }
 
 - (id) copyWithZone:(NSZone*)zone {

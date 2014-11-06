@@ -17,7 +17,7 @@
 @property(nonatomic, assign, getter=isInteractivePopGestureEnabled) BOOL interactivePopGestureEnabled;
 /// 以下两个方法为了兼容iOS7以下版本,所以申明这些方法
 - (void)setEdgesForExtendedLayout:(NSInteger)edgesForExtendedLayout;
-- (NSInteger)edgesForExtendedLayout;
+- (NSUInteger)edgesForExtendedLayout;
 
 - (void)setExtendedLayoutIncludesOpaqueBars:(BOOL)extendedLayoutIncludesOpaqueBars;
 - (BOOL)extendedLayoutIncludesOpaqueBars;

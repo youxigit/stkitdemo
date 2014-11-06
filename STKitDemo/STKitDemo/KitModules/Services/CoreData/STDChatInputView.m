@@ -101,7 +101,8 @@ const CGFloat STChatInputViewSendButtonWidth  = 50;
 }
 
 - (BOOL) resignFirstResponder {
-    return [self.textView resignFirstResponder];
+    BOOL resignFirstResponder = [super resignFirstResponder];
+    return [self.textView resignFirstResponder] && resignFirstResponder;
 }
 
 

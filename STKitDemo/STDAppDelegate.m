@@ -413,6 +413,7 @@ typedef union {
     paragraphStyle.lineSpacing = 4;
     [dict setValue:paragraphStyle forKey:NSParagraphStyleAttributeName];
     [[STThemeManager currentTheme] setThemeValue:dict forKey:@"BookTextAttributes" whenContainedIn:NSClassFromString(@"STRichView")];
+    
     [[STCoreDataManager defaultDataManager] setModelName:@"STDModel"];
 }
 

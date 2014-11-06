@@ -488,7 +488,7 @@
         [self.delegate boxManDidMovedWithBox:YES];
     }
     
-    BOOL finish;
+    BOOL finish = NO;
     for (NSString * string in self.boxArray) {
         SIndexPath idxp1 = SIndexPathFromNSString(string);
         BOOL contains = NO;
