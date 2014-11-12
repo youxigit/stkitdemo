@@ -48,7 +48,7 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"GIF" target:self action:@selector(GIFGeneratorActionFired:)];
     [self loadDataFromCacheWithHandler:^(NSArray *feeds, BOOL hasMore, NSError *error) {
         [self.feeds addObjectsFromArray:feeds];
     }];
@@ -79,6 +79,21 @@
     if (((timeInterval - self.previousRequestTime) > 300 || self.feeds.count == 0) && !self.refreshControl.isRefreshing && self.automaticallyFetchRemoteData) {
         [self.refreshControl beginRefreshing];
     }
+}
+
+- (void)GIFGeneratorActionFired:(id) sender {
+    NSInteger maximumCount = 5;
+    STGIFGenerator *generator = [[STGIFGenerator alloc] init];
+    [self.feeds enumerateObjectsUsingBlock:^(STDFeedItem * obj, NSUInteger idx, BOOL *stop) {
+        UIImage *image = [STImageCache cachedImageForKey:obj.thumbURLString];
+        [generator appendImage:image duration:1];
+        if (idx == maximumCount) {
+            *stop = YES;
+        }
+    }];
+    [generator startGeneratorWithPath:nil completionHandler:^(NSString *path) {
+        NSLog(@"%@", path);
+    }];
 }
 
 - (void) refreshControlActionFired:(id) sender {

@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <STKit/STHTTPNetwork.h>
+
 /// 是否是某个类的子类
 ST_EXTERN BOOL STClassIsKindOfClass(Class _class, Class parentClass);
 /// 根据基本类型+值，转换成NSValue， 不包含CGRect等等
@@ -77,7 +78,8 @@ extern NSInteger STCleanBitOffset(NSInteger value, NSInteger bit);
 /// ranges 表示正则表达式的区间。 里面为字符串，使用 NSRangeFromString可以直接解析
 - (NSArray *)componentsSeparatedByRegex:(NSString *)regex regexRanges:(NSArray **)ranges;
 - (NSArray *)componentsSeparatedByRegex:(NSString *)regex ranges:(NSArray **)ranges checkingResults:(NSArray **)ranges;
-
+- (NSString *)stringByAddingHTMLEscapes;
+- (NSString *)stringByReplacingHTMLEscapes;
 - (NSData *)UTF8EncodedData;
 /// md5 加密
 - (NSString *)md5String;

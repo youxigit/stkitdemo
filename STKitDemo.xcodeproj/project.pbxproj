@@ -389,6 +389,9 @@
 		06B6C1851A0407B600C9218E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0634101A19C9EBE3003BC34E /* LaunchScreen.xib */; };
 		06BE56D11A0404CF00FBC4C8 /* STDemoImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BE56D01A0404CF00FBC4C8 /* STDemoImages.xcassets */; };
 		06E783D919AEE6DE00D29B11 /* STAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E783D819AEE6DE00D29B11 /* STAlertView.m */; };
+		06FE37C01A0E2B0D002CF174 /* 97676901-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06FE37BD1A0E2B0D002CF174 /* 97676901-1.jpg */; };
+		06FE37C11A0E2B0D002CF174 /* 97676901-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06FE37BE1A0E2B0D002CF174 /* 97676901-2.jpg */; };
+		06FE37C21A0E2B0D002CF174 /* 97676901-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06FE37BF1A0E2B0D002CF174 /* 97676901-3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -979,6 +982,9 @@
 		06DBF9E019F8CFBB009ECABA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		06E783D719AEE6DE00D29B11 /* STAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STAlertView.h; sourceTree = "<group>"; };
 		06E783D819AEE6DE00D29B11 /* STAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STAlertView.m; sourceTree = "<group>"; };
+		06FE37BD1A0E2B0D002CF174 /* 97676901-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "97676901-1.jpg"; sourceTree = "<group>"; };
+		06FE37BE1A0E2B0D002CF174 /* 97676901-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "97676901-2.jpg"; sourceTree = "<group>"; };
+		06FE37BF1A0E2B0D002CF174 /* 97676901-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "97676901-3.jpg"; sourceTree = "<group>"; };
 		F6135B7D18E0185E0074583A /* STMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuView.h; sourceTree = "<group>"; };
 		F6135B7E18E0185E0074583A /* STMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMenuView.m; sourceTree = "<group>"; };
 		F61DD284186D2B75008D0268 /* STDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDTableViewController.h; sourceTree = "<group>"; };
@@ -1974,6 +1980,16 @@
 			path = VoiceControl;
 			sourceTree = "<group>";
 		};
+		06FE37BC1A0E2B0D002CF174 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				06FE37BD1A0E2B0D002CF174 /* 97676901-1.jpg */,
+				06FE37BE1A0E2B0D002CF174 /* 97676901-2.jpg */,
+				06FE37BF1A0E2B0D002CF174 /* 97676901-3.jpg */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
 		F6471E6D1851CD7C00574E94 = {
 			isa = PBXGroup;
 			children = (
@@ -2152,6 +2168,7 @@
 		F6A1ABE418CAFBA700669C97 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				06FE37BC1A0E2B0D002CF174 /* templates */,
 				0672CD5119D664890055189C /* STDSwitchViewController.h */,
 				0672CD5219D664890055189C /* STDSwitchViewController.m */,
 				065E74AC19A3A7D200A74DE4 /* frame */,
@@ -2425,6 +2442,7 @@
 				06A1139E19FA4ABD001CE1A4 /* start.wav in Resources */,
 				06A1139219FA4ABD001CE1A4 /* background_4.wav in Resources */,
 				06A1136B19FA4ABD001CE1A4 /* reset.png in Resources */,
+				06FE37C01A0E2B0D002CF174 /* 97676901-1.jpg in Resources */,
 				0602B50B196974150004ACBB /* chat_image_5.jpg in Resources */,
 				06A112BA19FA4ABD001CE1A4 /* man_baby_left@2x.png in Resources */,
 				06A112E119FA4ABD001CE1A4 /* level_bkg.png in Resources */,
@@ -2470,6 +2488,7 @@
 				06A1134419FA4ABD001CE1A4 /* red_wall@2x.png in Resources */,
 				06A112E719FA4ABD001CE1A4 /* level_border.png in Resources */,
 				06A1132319FA4ABD001CE1A4 /* pool_down.png in Resources */,
+				06FE37C21A0E2B0D002CF174 /* 97676901-3.jpg in Resources */,
 				06A112C619FA4ABD001CE1A4 /* man_baby_up@2x.png in Resources */,
 				06A1137119FA4ABD001CE1A4 /* start.png in Resources */,
 				06A1133519FA4ABD001CE1A4 /* pool_up.png in Resources */,
@@ -2497,6 +2516,7 @@
 				06A112AB19FA4ABD001CE1A4 /* man_baby.png in Resources */,
 				06A1139519FA4ABD001CE1A4 /* background_5.wav in Resources */,
 				06A111D819FA4A59001CE1A4 /* CMakeLists.txt in Resources */,
+				06FE37C11A0E2B0D002CF174 /* 97676901-2.jpg in Resources */,
 				06A113A119FA4ABD001CE1A4 /* win.wav in Resources */,
 				06A1136E19FA4ABD001CE1A4 /* reset@2x.png in Resources */,
 				06A1131A19FA4ABD001CE1A4 /* house_red@2x.png in Resources */,
@@ -2846,8 +2866,8 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jianbin Gong (MH8Q662G73)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jianbin Gong (MH8Q662G73)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/STKitDemo",
@@ -2876,7 +2896,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = STKitDemo;
-				PROVISIONING_PROFILE = "027fda4f-5df9-4d5a-8449-fd286e12f96b";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -2889,9 +2909,9 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Jianbin Gong (UE64J7G4XG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jianbin Gong (MH8Q662G73)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/STKitDemo",
@@ -2920,7 +2940,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = STKitDemo;
-				PROVISIONING_PROFILE = "027fda4f-5df9-4d5a-8449-fd286e12f96b";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -3041,6 +3061,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -3080,7 +3101,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

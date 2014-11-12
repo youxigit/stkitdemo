@@ -11,7 +11,7 @@
 @implementation STDFeedItem
 
 + (NSDictionary *) relationship {
-    return @{@"title":@"title", @"thumbURLString":@"thumb", @"imageURLString":@"photo"};
+    return @{@"thumbURLString":@"thumb", @"imageURLString":@"photo"};
 }
 
 - (STImageItem *) imageItem {

@@ -30,6 +30,19 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <Foundation/Foundation.h>
 
+#ifndef DEBUG
+#ifdef STLog
+#undef STLog(format, ...)
+#define STLog(format, ...)
+#else
+#define STLog(format, ...)
+#endif
+#else
+#ifndef STLog
+#define STLog(format, ...) NSLog((@"%s [Line %d] " format), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#endif
+#endif
+
 /// 定义一种结构体，用来表示区间。表示一个 从 几到几 的概念
 typedef struct _STRange {
     NSInteger start;
@@ -42,7 +55,7 @@ ST_INLINE CGFloat STDistanceBetweenPoints(CGPoint point1, CGPoint point2) {
 }
 
 /**
- * @brief 创建结构体 SRange，结构体中保存start，end
+ * @brief 创建结构体 STRange，结构体中保存start，end
  * @param start 范围开始
  * @param end   范围结束
  * @return 返回 该范围

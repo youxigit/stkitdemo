@@ -21,9 +21,10 @@
 #import <STKit/STScrollDirector.h>
 #import <STkit/STStringTokenizer.h>
 
+#import <STKit/STImage.h>
 #import <STKit/STImageScrollView.h>
 #import <STKit/STRoundProgressView.h>
-
+#import <STKit/STGIFGenerator.h>
 #import <STKit/STImagePresent.h>
 #import <STKit/STImageCollectionView.h>
 #import <STKit/STControlDefines.h>

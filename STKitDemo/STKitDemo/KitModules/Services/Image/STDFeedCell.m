@@ -38,59 +38,6 @@
 
 @end
 
-const CGSize STDFeedCoverViewDefaultSize = {20, 20};
-
-@interface STDFeedCoverView : UIView
-@property (nonatomic, strong) UIImageView * leftView;
-@property (nonatomic, strong) UIImageView * rightView;
-@property (nonatomic, strong) UIImageView * topView;
-@property (nonatomic, strong) UIImageView * bottomView;
-@end
-
-@implementation STDFeedCoverView
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (frame.size.width < STDFeedCoverViewDefaultSize.width) {
-        frame.size.width = STDFeedCoverViewDefaultSize.width;
-    }
-    if (frame.size.height < STDFeedCoverViewDefaultSize.height) {
-        frame.size.height = STDFeedCoverViewDefaultSize.height;
-    }
-    self = [super initWithFrame:frame];
-    if (self) {
-        CGFloat width = CGRectGetWidth(frame);
-        CGFloat height = CGRectGetHeight(frame);
-        
-        self.leftView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 4, height)];
-        self.leftView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-        self.leftView.image = [[UIImage imageNamed:@"feed_cell_left"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 2, 2, 10) resizingMode:UIImageResizingModeStretch];
-        [self addSubview:self.leftView];
-        
-        self.leftView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 4, height)];
-        self.leftView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-        self.leftView.image = [[UIImage imageNamed:@"feed_cell_left"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 2, 2, 10) resizingMode:UIImageResizingModeStretch];
-        [self addSubview:self.leftView];
-        
-        self.rightView = [[UIImageView alloc] initWithFrame:CGRectMake(width - 4, 0, 4, height)];
-        self.rightView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
-        self.rightView.image = [[UIImage imageNamed:@"feed_cell_right"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 2, 2, 10) resizingMode:UIImageResizingModeStretch];
-        [self addSubview:self.rightView];
-        
-        self.topView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, 3)];
-        self.topView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        self.topView.image = [[UIImage imageNamed:@"feed_cell_top"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 15, 1, 15) resizingMode:UIImageResizingModeStretch];
-        [self addSubview:self.topView];
-        
-        self.bottomView = [[UIImageView alloc] initWithFrame:CGRectMake(0, height - 3, width, 3)];
-        self.bottomView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
-        self.bottomView.image = [[UIImage imageNamed:@"feed_cell_bottom"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 15, 2, 15) resizingMode:UIImageResizingModeStretch];
-        [self addSubview:self.bottomView];
-        
-    }
-    return self;
-}
-@end
-
 const CGSize STDFeedCellDefaultSize = {50, 70};
 const CGFloat    STDFeedCellAccessoryHeight = 30;
 const UIEdgeInsets    STDFeedCellTitleContentInset = {5,5,10,5};
@@ -152,8 +99,9 @@ const UIEdgeInsets    STDFeedCellTitleContentInset = {5,5,10,5};
         self.hotView = [[STDFeedHotView alloc] initWithFrame:CGRectMake(5, 2, 60, STDFeedCellAccessoryHeight)];
         [self.accessoryView addSubview:self.hotView];
         
-        STDFeedCoverView * coverView = [[STDFeedCoverView alloc] initWithFrame:CGRectMake(0, 0, 40, 60)];
+        UIImageView * coverView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 60)];
         coverView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        coverView.image = [[UIImage imageNamed:@"feed_border"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 15, 15, 15) resizingMode:UIImageResizingModeStretch];
         coverView.userInteractionEnabled = NO;
         [self.backgroundImageView addSubview:coverView];
     }

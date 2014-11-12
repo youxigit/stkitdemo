@@ -18,7 +18,7 @@ typedef void (^STHTTPSynchronousNetworkHandler)(NSURLResponse *response, id data
 typedef NS_ENUM(NSInteger, STHTTPResponseDataType) {
     STHTTPResponseDataTypeTextHTML = 0, // 返回类型位HTML text/html
     STHTTPResponseDataTypeTextJSON = 1, // 返回类型位JSON text/json
-    STHTTPResponseDataTypeTextXML  = 2   // 返回类型位XML  text/xml
+    STHTTPResponseDataTypeTextXML  = 2  // 返回类型位XML  text/xml
 };
 
 typedef NS_OPTIONS(NSInteger, STXMLParseOptions){

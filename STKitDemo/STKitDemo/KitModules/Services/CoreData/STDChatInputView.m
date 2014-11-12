@@ -137,7 +137,6 @@ const CGFloat STChatInputViewSendButtonWidth  = 50;
         [notificationUserInfo setValue:@([self isFirstResponder]) forKey:STDChatInputViewKeyboardHiddenUserInfoKey];
         [notificationUserInfo setValue:[NSValue valueWithCGRect:frame] forKey:STDChatInputViewFrameUserInfoKey];
         [[NSNotificationCenter defaultCenter] postNotificationName:STDChatInputViewDidChangeNotification object:self userInfo:notificationUserInfo];
-        
     }
     
 }

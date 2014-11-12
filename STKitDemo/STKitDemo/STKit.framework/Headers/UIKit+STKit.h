@@ -322,6 +322,8 @@ typedef void (^STInvokeHandler)(void);
 
 - (UIImage *)imageWithTransform:(CGAffineTransform)transform;
 
+- (UIImage *)imageConstrainedToSize:(CGSize)size contentMode:(UIViewContentMode)contentMode;
+
 @end
 
 typedef enum STBarButtonCustomItem {

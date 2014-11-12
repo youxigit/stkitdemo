@@ -16,11 +16,28 @@ typedef enum STImageViewState {
 } STImageViewState;
 
 @class STRoundProgressView;
+/// 支持GIF播放
 @interface STImageView : UIImageView
 
 @property(nonatomic, readonly) STRoundProgressView *progressView;
 
 @property(nonatomic, copy) NSString *URLString;
 @property(nonatomic, assign) BOOL showProgressWhenLoading;
+
+@end
+
+/// 支持GIF播放的ImageView
+@interface STImageView (STGIFImage)
+/// GIF是否循环播放
+@property (nonatomic, assign) BOOL  repeats;
+/// 是否正在播放GIF
+@property (nonatomic, assign, readonly, getter=isPlaying) BOOL  playing;
+@property (nonatomic, assign) BOOL  automaticallyPlay;
+
+- (void)play;
+- (void)pause;
+- (void)stop;
+
+- (void)replay;
 
 @end

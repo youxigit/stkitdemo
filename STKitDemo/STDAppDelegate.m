@@ -36,20 +36,26 @@ typedef union {
 @interface STDAppDelegate ()<STVoiceRecognizerDelegate, STNotificationWindowDelegate, ImageMaskFilledDelegate> {
     BOOL _voiceControlOpened;
     BOOL _FLEXEnabled;
-    AVAudioRecorder * _audioRecorder;
-    NSDate          * _previousEnterBackgroundTime;
-    BOOL              _needRemovePasswordView;
+    AVAudioRecorder *_audioRecorder;
+    NSDate          *_previousEnterBackgroundTime;
+    BOOL            _needRemovePasswordView;
 }
+@property (nonatomic, strong) STDWXVoiceRecognizer *voiceRecognizer;
+@property (nonatomic, strong) STNotificationWindow *notificationWindow;
+@property (nonatomic, strong) GesturePasswordController *passwordController;
 
-@property (nonatomic, strong) NSArray              * appids;
+//处理崩溃日志
+void uncaughtExceptionHandler(NSException *exception);
 
-@property (nonatomic, strong) STDWXVoiceRecognizer * voiceRecognizer;
-
-@property (nonatomic, strong) STNotificationWindow * notificationWindow;
-@property (nonatomic, strong) GesturePasswordController * passwordController;
 @end
 
 @implementation STDAppDelegate
+void uncaughtExceptionHandler(NSException *exception) {
+    NSString *crashLog = [NSString stringWithFormat:@"%@%@\n callStackReturnAddresses = %@;\ncallStackSymbols = %@",[exception name], [exception reason],[exception callStackReturnAddresses],[exception callStackSymbols]];
+    [[STPersistence standardPerstence] setValue:crashLog forKey:@"crash_log"];
+    [STPersistence persistValue:crashLog intoDirectory:STPersistenceDirectoryDocument forKey:[NSString stringWithFormat:@"%lf-crash", [[NSDate date] timeIntervalSince1970]]];
+}
+
 
 + (BOOL)boxManEnabled {
     return [[[NSUserDefaults standardUserDefaults] valueForKey:@"BoxManEnabled"] boolValue];
@@ -59,14 +65,15 @@ typedef union {
     return [[[NSUserDefaults standardUserDefaults] valueForKey:@"sinaappHostEnabled"] boolValue];
 }
 
-+ (void) displayNotificationWith:(NSString *) name title:(NSString *) title {
++ (void) displayNotificationWithName:(NSString *) name title:(NSString *) title {
     STDAppDelegate * delegate = (STDAppDelegate *)[UIApplication sharedApplication].delegate;
     if ([delegate isKindOfClass:[STDAppDelegate class]]) {
-        [delegate displayNotificationWith:name title:title];
+        [delegate displayNotificationWithName:name title:title];
     }
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *) launchOptions {
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     if ([application respondsToSelector:@selector(setStatusBarStyle:)]) {
         application.statusBarStyle = UIStatusBarStyleDefault;
     }
@@ -91,10 +98,8 @@ typedef union {
         [self.window addSubview:passwordController.view];
         self.passwordController = passwordController;
     }
-    
     return YES;
 }
-
 - (void) addLaunchView {
     UIImage * launchImage = [UIImage imageNamed:@"LaunchImage"];
     UIImageView * launchView = [[UIImageView alloc] initWithFrame:self.window.bounds];
@@ -314,7 +319,7 @@ typedef union {
     return _voiceWindow;
 }
 
-- (void) displayNotificationWith:(NSString *) name title:(NSString *) title {
+- (void) displayNotificationWithName:(NSString *) name title:(NSString *) title {
     STNotificationView * notificationView = [[STNotificationView alloc] init];
     notificationView.textLabel.text = name;
     notificationView.detailLabel.text = title;
@@ -331,7 +336,7 @@ typedef union {
     } else {
         if (text.length > 0) {
             if (_voiceControlOpened) {
-                [self displayNotificationWith:@"语音识别结果" title:text];
+                [self displayNotificationWithName:@"语音识别结果" title:text];
             }
             NSNotification * notification = [NSNotification notificationWithName:STDVoiceRecognizerNotification object:nil userInfo: @{@"text":text}];
             [[NSNotificationCenter defaultCenter] postNotification:notification];

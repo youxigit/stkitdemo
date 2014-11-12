@@ -46,6 +46,7 @@
         STDTableViewCellItem * item11 = [[STDTableViewCellItem alloc] initWithTitle:@"图片加载" target:self action:@selector(imageCardActionFired)];
         STDTableViewCellItem * item12 = [[STDTableViewCellItem alloc] initWithTitle:@"图片选择" target:self action:@selector(imagePickerActionFired)];
         STDTableViewCellItem * item13 = [[STDTableViewCellItem alloc] initWithTitle:@"图片打码" target:self action:@selector(imageBlurActionFired)];
+        
         STDTableViewSectionItem * section1 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"以下为一些对图片封装, 包含图片的网络下载，本地缓存，查看大图，从相册选取多张图片等。" items:@[item10, item11, item12, item13]];
         [dataSource addObject:section1];
         

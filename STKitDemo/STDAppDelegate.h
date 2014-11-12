@@ -13,8 +13,8 @@
 @class SCSiriWaveformView;
 @interface STDAppDelegate : UIResponder <UIApplicationDelegate>
 + (BOOL)boxManEnabled;
-+ (BOOL) sinaappCorrectionEnabled;
-+ (void) displayNotificationWith:(NSString *) name title:(NSString *) title;
++ (BOOL)sinaappCorrectionEnabled;
++ (void)displayNotificationWithName:(NSString *) name title:(NSString *) title;
 
 @property (strong, nonatomic) UIWindow        * window;
 
@@ -27,7 +27,7 @@
 - (void) replaceRootViewController:(UIViewController *)newViewController
                   animationOptions:(UIViewAnimationOptions) options;
 
-- (void) displayNotificationWith:(NSString *) name title:(NSString *) title;
+- (void)displayNotificationWithName:(NSString *) name title:(NSString *) title;
 
 @end
 
