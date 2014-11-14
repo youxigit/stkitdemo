@@ -250,6 +250,12 @@ void uncaughtExceptionHandler(NSException *exception) {
     imageView.image = image;
     [self.passwordController.view addSubview:imageView];
     [self.window addSubview:self.passwordController.view];
+    
+    __block UIBackgroundTaskIdentifier identifier = [application beginBackgroundTaskWithExpirationHandler:^{
+        [self.window endEditing:YES];
+        [application endBackgroundTask:identifier];
+        identifier = UIBackgroundTaskInvalid;
+    }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -277,6 +283,7 @@ void uncaughtExceptionHandler(NSException *exception) {
     [imageView removeFromSuperview];
     NSTimeInterval timeInterval = [[NSDate date] timeIntervalSinceDate:_previousEnterBackgroundTime];
     if (timeInterval > 0) {
+        [self.window.findFirstResponder resignFirstResponder];
         if (!self.passwordController.view.superview) {
             [self.window addSubview:self.passwordController.view];
         }

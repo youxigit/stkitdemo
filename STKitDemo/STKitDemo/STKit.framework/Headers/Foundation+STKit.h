@@ -195,10 +195,6 @@ typedef enum STBookSeekDirection {
 
 @end
 
-@interface NSMutableArray (STSecure)
-
-@end
-
 @interface NSArray (STClass)
 
 - (BOOL)containsClass:(Class) class;

@@ -48,7 +48,6 @@
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"GIF" target:self action:@selector(GIFGeneratorActionFired:)];
     [self loadDataFromCacheWithHandler:^(NSArray *feeds, BOOL hasMore, NSError *error) {
         [self.feeds addObjectsFromArray:feeds];
     }];

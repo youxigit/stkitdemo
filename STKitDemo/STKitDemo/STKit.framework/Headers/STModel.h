@@ -27,6 +27,10 @@ typedef enum STModelDataSourceType {
 - (void)modelDidFailedLoadData:(STModel *)model;
 /// 如果正在加载更多，但是又触发了下拉刷新，则取消加载更多
 - (void)modelDidCancelLoadData:(STModel *)model;
+@optional
+- (void)model:(STModel *)model didInsertItemAtIndexPaths:(NSArray *)indexPaths;
+// if indexPaths == nil, preferred to reloadData
+- (void)model:(STModel *)model didReloadItemAtIndexPaths:(NSArray *)indexPaths;
 
 @end
 
