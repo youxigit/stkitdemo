@@ -27,8 +27,8 @@
 
 typedef NS_ENUM(NSInteger, STSSLPinningMode) {
     STSSLPinningModeNone = 1,
-    STSSLPinningModePublicKey = 2, // 只验证public是否正确
-    STSSLPinningModeCertificate = 3
+    STSSLPinningModePublicKey = 2,   // 只验证public是否正确
+    STSSLPinningModeCertificate = 3  // 验证Public是否正确，以及证书是否有效
 };
 
 @interface STNetworkConfiguration : NSObject

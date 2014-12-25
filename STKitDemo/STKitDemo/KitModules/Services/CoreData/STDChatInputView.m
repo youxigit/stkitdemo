@@ -44,6 +44,7 @@ const CGFloat STChatInputViewSendButtonWidth  = 50;
         self.textView.scrollsToTop = NO;
         self.textView.showsVerticalScrollIndicator = NO;
         self.textView.keyboardType = UIKeyboardTypeDefault;
+        self.textView.returnKeyType = UIReturnKeyNext;
         [self addSubview:self.textView];
         
         self.sendButton = [UIButton buttonWithType:UIButtonTypeCustom];

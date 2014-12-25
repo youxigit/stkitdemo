@@ -10,9 +10,10 @@
 #import <STKit/STDefines.h>
 #import "Foundation+STKit.h"
 
-#define STLogPoint(point) NSLog(@"Point (%f, %f)", point.x, point.y);
-#define STLogRect(rect) NSLog(@"Rect (%f,%f,%f,%f)", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
-#define STLogEdgeInsets(insets) NSLog(@"EdgeInsets (%f,%f,%f,%f)", insets.top, insets.left, insets.bottom, insets.right);
+#define STLogPoint(point) STLog(@"Point (%f, %f)", point.x, point.y);
+#define STLogSize(size) STLog(@"Size (%f, %f)", size.width, size.height);
+#define STLogRect(rect) STLog(@"Rect (%f,%f,%f,%f)", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
+#define STLogEdgeInsets(insets) STLog(@"EdgeInsets (%f,%f,%f,%f)", insets.top, insets.left, insets.bottom, insets.right);
 
 extern CGFloat STOnePixel();
 extern CGFloat STGetScreenWidth();
@@ -102,13 +103,11 @@ extern NSString *STGetSystemVersionString();
  * @abstract removeAllSubviews
  */
 - (void)removeAllSubviews;
+
 /**
  * @abstract view's viewController if the view has one
  */
 - (UIViewController *)viewController;
-
-/// 查找firstResponder
-- (UIResponder *)findFirstResponder;
 
 /**
  * @abstract 递归查找view的nextResponder，直到找到类型为class的Responder
@@ -117,6 +116,9 @@ extern NSString *STGetSystemVersionString();
  * @return       第一个满足类型为class的UIResponder
  */
 - (UIResponder *)nextResponderWithClass:(Class) class;
+
+/// 查找firstResponder
+- (UIResponder *)findFirstResponder;
 
 /**
  * @abstract view的superview中，是否包含某一类的view
@@ -184,8 +186,16 @@ extern NSString *STGetSystemVersionString();
 
 @end
 
-typedef UIView * (^STHitTestViewBlock)(CGPoint point, UIEvent *event, UIView *defaultView);
-typedef BOOL (^STPointInsideBlock)(CGPoint point, UIEvent *event, BOOL defaultInside);
+/**
+ * @abstract hitTestBlock
+ *
+ * @param 其余参数 参考UIView hitTest:withEvent:
+ * @param returnSuper 是否返回Super的值。如果*returnSuper=YES,则代表会返回 super hitTest:withEvent:, 否则则按照block的返回值(即使是nil)
+ * 
+ * @discussion 切记，千万不要在这个block中调用self hitTest:withPoint,否则则会造成递归调用。这个方法就是hitTest:withEvent的一个代替。
+ */
+typedef UIView * (^STHitTestViewBlock)(CGPoint point, UIEvent *event, BOOL *returnSuper);
+typedef BOOL (^STPointInsideBlock)(CGPoint point, UIEvent *event, BOOL *returnSuper);
 
 @interface UIView (STHitTest)
 /// althought this is strong ,but i deal it with copy

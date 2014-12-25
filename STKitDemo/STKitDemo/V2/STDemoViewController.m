@@ -8,7 +8,7 @@
 
 #import "STDemoViewController.h"
 #import "STDTextViewController.h"
-#import "STDAboutViewController.h"
+#import "STDLinkViewController.h"
 #import "STDNavigationTestViewController.h"
 #import "STDownloadViewController.h"
 #import <STKit/STNotificationWindow.h>
@@ -50,7 +50,7 @@
         STDTableViewSectionItem * section1 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"以下为一些对图片封装, 包含图片的网络下载，本地缓存，查看大图，从相册选取多张图片等。" items:@[item10, item11, item12, item13]];
         [dataSource addObject:section1];
         
-        STDTableViewCellItem * item20 = [[STDTableViewCellItem alloc] initWithTitle:@"Label样式" target:self action:@selector(aboutActionFired)];
+        STDTableViewCellItem * item20 = [[STDTableViewCellItem alloc] initWithTitle:@"Label样式" target:self action:@selector(linkActionFired)];
         STDTableViewCellItem * item21 = [[STDTableViewCellItem alloc] initWithTitle:@"超链接文本" target:self action:@selector(textActionFired)];
         STDTableViewSectionItem * section2 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"包含UILabel的各种对齐方式" items:@[item20, item21]];
         [dataSource addObject:section2];
@@ -134,10 +134,10 @@
     [self.customNavigationController pushViewController:textViewController animated:YES];
 }
 
-- (void) aboutActionFired {
-    STDAboutViewController * textViewController = STDAboutViewController.new;
-    textViewController.hidesBottomBarWhenPushed = YES;
-    [self.customNavigationController pushViewController:textViewController animated:YES];
+- (void) linkActionFired {
+    STDLinkViewController *linkViewController = STDLinkViewController.new;
+    linkViewController.hidesBottomBarWhenPushed = YES;
+    [self.customNavigationController pushViewController:linkViewController animated:YES];
 }
 
 - (void) notificationActionFired {

@@ -34,6 +34,8 @@ typedef enum STImageViewState {
 @property (nonatomic, assign, readonly, getter=isPlaying) BOOL  playing;
 @property (nonatomic, assign) BOOL  automaticallyPlay;
 @property (nonatomic, strong) void (^completionHandler)(BOOL finished);
+/// Default NSRunLoopCommonModes
+@property (nonatomic, strong) NSString   *playInMode;
 
 - (void)play;
 - (void)pause;

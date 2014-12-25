@@ -41,9 +41,10 @@
     [self.presentationView addGestureRecognizer:panGestureRecognizer];
     
     __weak STDViewController * weakSelf = self;
-    self.presentationView.hitTestBlock = ^(CGPoint point, UIEvent * event, UIView * defaultView){
+    self.presentationView.hitTestBlock = ^(CGPoint point, UIEvent * event, BOOL *returnSuper){
         if (ABS(CGRectGetWidth(weakSelf.view.frame) - point.x) < 20) {
-            return defaultView;
+            *returnSuper = YES;
+            return (UIView *)nil;
         }
         return (UIView *)nil;
     };

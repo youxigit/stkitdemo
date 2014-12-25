@@ -27,9 +27,6 @@ typedef enum STIndicatorType { STIndicatorTypeCustom, STIndicatorTypeWaiting, ST
  */
 @interface STIndicatorView : UIView
 
-+ (void)setBlurEffectStyle:(STBlurEffectStyle)effectStyle;
-+ (STBlurEffectStyle)blurEffectStyle;
-
 /**
  * @abstract 显示指示器，指示器会被添加到view上,如果view = nil， 则添加到 keywindow上。
  *

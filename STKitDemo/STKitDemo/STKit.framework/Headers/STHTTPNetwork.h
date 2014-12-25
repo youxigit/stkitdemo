@@ -27,7 +27,7 @@ typedef NS_OPTIONS(NSInteger, STXMLParseOptions){
     STXMLParseOptionsResolveExternalEntities = 1 << 2,
 };
 /// HTTP类型的网络请求
-@interface STHTTPNetwork : NSObject
+@interface STHTTPNetwork : STNetwork
 
 @property(nonatomic, copy) NSString *HTTPMethod;
 /// 基本参数，最后请求时，会带上这些基本参数，如果key重复，则以后面的为准

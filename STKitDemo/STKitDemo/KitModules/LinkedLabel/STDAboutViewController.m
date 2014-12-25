@@ -28,8 +28,8 @@
         // Custom initialization
         self.hidesBottomBarWhenPushed = YES;
         
-        self.verticalString = @"\n大家好，我是<link value=\"技术哥赞一个|赞一个\">@技术哥</link>，欢迎使用STKit。\n\n\tSTKit目前仍然在建设中，未来还需要大量的测试和验证以及各位亲们的帮助，我也开通了自己的博客，以后会坚持分享我的知识。\n\n我的邮箱:lovesunstar@sina.com\n我的博客:http://suenblog.duapp.com \n\n欢迎大家关注，我会努力贡献的。\n\n再这里先鄙视下我的坑爹队友:<link value=\"鄙视王磊|鄙视\">@王磊</link>，说好的一起写呢，迄今为止没有贡献过任何代码，强烈鄙视，强烈谴责。<link value=\"测试捐钱\" href=\"stkit://pay?title=给技术哥捐钱，有钱的捧个钱场，没钱的捧个人场。&price=10000&amount=10000&count=1\">测试捐钱</link>\n\nCopyright @2013-2014";
-        self.horizontalString = @"大家好，我是<link value=\"技术哥赞一个|赞一个\">@技术哥</link>\ue415\ue415，欢迎使用STKit。\n\tSTKit目前仍然在建设中，未来还需要大量的测试和验证以及各位亲们的帮助，我也开通了自己的博客，以后会坚持分享我的知识。\n我的邮箱:lovesunstar@sina.com\n我的博客:http://suenblog.duapp.com\n欢迎大家关注，我会努力贡献的。\n再这里先鄙视下我的坑爹队友:<link value=\"鄙视王磊|鄙视\">@王磊</link>，说好的一起写呢，迄今为止没有贡献过任何代码，强烈鄙视，强烈谴责。\nCopyright @2013-2014";
+        self.verticalString = @"\n大家好，我是<link color=\"ff7300\" highlightedColor=\"ffffff\" highlightBackgroundColor=\"aaffff\" value=\"技术哥赞一个|赞一个\">@技术哥\ue415\ue415</link>，欢迎使用STKit。\n\n\tSTKit目前仍然在建设中，未来还需要大量的测试和验证以及各位亲们的帮助，我也开通了自己的博客，以后会坚持分享我的知识。\n\n我的邮箱:lovesunstar@sina.com\n我的博客:http://suenblog.duapp.com \n\n欢迎大家关注，我会努力贡献的。\n\n再这里先鄙视下我的坑爹队友:<link value=\"鄙视王磊|鄙视\">@王磊²</link>，说好的一起写呢，迄今为止没有贡献过任何代码，强烈鄙视，强烈谴责。<link value=\"测试捐钱\" href=\"stkit://pay?title=给技术哥捐钱，有钱的捧个钱场，没钱的捧个人场。&price=10000&amount=10000&count=1\">测试捐钱</link>\n\nCopyright @2013-2014";
+        self.horizontalString = @"大家好，我是<link value=\"技术哥赞一个|赞一个\">@技术哥</link>，欢迎使用STKit。\n\tSTKit目前仍然在建设中，未来还需要大量的测试和验证以及各位亲们的帮助，我也开通了自己的博客，以后会坚持分享我的知识。\n我的邮箱:lovesunstar@sina.com\n我的博客:http://suenblog.duapp.com\n欢迎大家关注，我会努力贡献的。\n再这里先鄙视下我的坑爹队友:<link value=\"鄙视王磊|鄙视\">@王磊</link>，说好的一起写呢，迄今为止没有贡献过任何代码，强烈鄙视，强烈谴责。\nCopyright @2013-2014";
     }
     return self;
 }

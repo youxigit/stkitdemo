@@ -98,6 +98,7 @@ static u_int64_t STTextCheckingTypeCustomLink = (1ULL << 33);
 @property(nonatomic, strong) UIColor *highlightedLinkColor;
 /// 超链接高亮时的背景颜色，默认gray
 @property(nonatomic, strong) UIColor *linkBackgroundColor;
+@property(nonatomic, assign) BOOL     continueTouchEvent;
 
 @property(nonatomic, assign, getter=isHighlighted) BOOL highlighted; // default is  NO
 
@@ -107,7 +108,9 @@ static u_int64_t STTextCheckingTypeCustomLink = (1ULL << 33);
 
 @property(nonatomic, assign) CGFloat verticalTouchAreaFactor; // default is 1.0
 
-+ (NSString *)displayTextWithTextCheckingType:(NSTextCheckingType)textCheckingTypes text:(NSString *)text;
++ (CGSize)sizeWithText:(NSString *)linkText font:(UIFont *)font constrainedToSize:(CGSize)constrainedSize paragraphStyle:(NSParagraphStyle *)paragraphStyle;
+
++ (CGSize)sizeWithText:(NSString *)linkText textCheckingTypes:(NSTextCheckingTypes)checkingTypes font:(UIFont *)font constrainedToSize:(CGSize)constrainedSize paragraphStyle:(NSParagraphStyle *)paragraphStyle;
 
 @end
 

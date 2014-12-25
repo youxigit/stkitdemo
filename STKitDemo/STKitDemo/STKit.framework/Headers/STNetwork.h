@@ -56,6 +56,7 @@ typedef void (^STNetworkWillStartHandler)(STNetworkOperation *operation);
 /// 是否把同样的请求merge在一起
 @property(nonatomic, assign) BOOL automaticallyMergeRequest;
 @property(nonatomic, assign) NSTimeInterval timeoutInterval;
+@property(nonatomic, assign) NSInteger  maxConcurrentRequestCount;
 
 /**
  * @abstract 发送异步网络请求

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 SunJiangting. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef long long STIdentifier;
 

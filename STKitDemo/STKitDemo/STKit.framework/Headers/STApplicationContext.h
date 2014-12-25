@@ -32,6 +32,7 @@
 - (BOOL)openURL:(NSURL *)URL;
 - (BOOL)canOpenURL:(NSURL *)URL;
 
-- (BOOL)registerClass:(Class) class forURLString:(NSString *)URLString;
+/// when openURL, the context will enumerate all URLs to find the appropriate class.
+- (BOOL)registerClass:(Class)class forURLString:(NSString *)URLString;
 
 @end

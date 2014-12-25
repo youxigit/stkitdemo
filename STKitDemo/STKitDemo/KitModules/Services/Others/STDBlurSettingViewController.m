@@ -60,12 +60,6 @@
     NSString * title;
     title = [[self.dataSource objectAtIndex:indexPath.row] valueForKey:@"title"];
     cell.textLabel.text = title;
-    STBlurEffectStyle style = [[[self.dataSource objectAtIndex:indexPath.row] valueForKey:@"value"] intValue];
-    if (style == [STIndicatorView blurEffectStyle]) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
     return cell;
 }
 
@@ -73,9 +67,9 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     STBlurEffectStyle style = [[[self.dataSource objectAtIndex:indexPath.row] valueForKey:@"value"] intValue];
-    [STIndicatorView setBlurEffectStyle:style];
     [self.tableView reloadData];
     STIndicatorView * indicatorView = [STIndicatorView showInView:self.view animated:YES];
+    indicatorView.blurEffectStyle = style;
     [indicatorView hideAnimated:YES afterDelay:1.0];
 }
 

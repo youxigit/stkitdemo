@@ -29,6 +29,7 @@ typedef NS_ENUM(NSInteger, STNetworkFormEnctype) {
 
 @property(nonatomic, strong, readonly) NSURLRequest *URLRequest;
 @property(nonatomic, strong, readonly) NSHTTPURLResponse *URLResponse;
+@property(nonatomic, assign) NSURLRequestCachePolicy     cachePolicy;
 /// default value = STNetworkConfiguration.sharedConfiguration
 @property(nonatomic, strong) STNetworkConfiguration *configuration;
 /// 表单提交是，格式化内容的方式，GET请求请忽略此项
