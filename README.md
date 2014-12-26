@@ -1,7 +1,7 @@
 stkitdemo
 =========
 
-An demo of STKit. STKit hasn't public yet, it has some network verification, app without authorize will be denied.
+A demo of STKit. STKit hasn't public yet, it has some network verification, app without authorize will be denied.
 
 STKit is a collection of useful classes for iOS Developer,it can help you to simplify the approach to develop your iOS applications saving time and more efficiently.
 
