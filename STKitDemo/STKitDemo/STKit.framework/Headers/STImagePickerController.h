@@ -27,7 +27,7 @@
 @property(nonatomic, assign) BOOL allowsMultipleSelection;
 @property(nonatomic, assign) NSInteger maximumNumberOfSelection; // default 20
 
-@property(nonatomic, weak) id<UINavigationControllerDelegate, STImagePickerControllerDelegate> delegate;
+@property(nonatomic, weak) id<STNavigationControllerDelegate, STImagePickerControllerDelegate> delegate;
 
 @end
 

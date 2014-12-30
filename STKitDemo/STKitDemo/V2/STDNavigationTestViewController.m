@@ -8,7 +8,7 @@
 
 #import "STDNavigationTestViewController.h"
 
-@interface STDNavigationTestViewController ()
+@interface STDNavigationTestViewController () <STNavigationControllerDelegate>
 
 @property (nonatomic, strong) NSArray * dataSource;
 
@@ -29,7 +29,48 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"测试导航";
+    if (![self.customNavigationController.delegate isKindOfClass:[self class]]) {
+         self.customNavigationController.delegate = self;   
+    }
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];
+}
+
+
+
+- (void)navigationController:(STNavigationController *)navigationController willBeginTransitionContext:(STNavigationControllerTransitionContext *)transitionContext {
+    UIView *transitionView;
+    CGFloat originAngle;
+    if (transitionContext.transitionType == STViewControllerTransitionTypePop) {
+        transitionView = transitionContext.fromTransitionView;
+        originAngle = 0;
+    } else {
+        transitionView = transitionContext.toTransitionView;
+        originAngle = M_PI_2;
+    }
+    transitionView.anchorPoint = CGPointMake(0.0, 1.0);
+    transitionView.layer.transform = CATransform3DMakeRotation(originAngle, 0.0, .0, 1.0);
+}
+
+- (void)navigationController:(STNavigationController *)navigationController transitingWithContext:(STNavigationControllerTransitionContext *)transitionContext {
+    CGFloat completion = transitionContext.completion;
+    UIView *transitionView;
+    if (transitionContext.transitionType == STViewControllerTransitionTypePop) {
+        transitionView = transitionContext.fromTransitionView;
+    } else {
+        transitionView = transitionContext.toTransitionView;
+        completion = (1.0 - completion);
+    }
+    transitionView.layer.transform = CATransform3DMakeRotation(M_PI_2 * completion, 0.0, .0, 1.0);
+}
+
+- (void)navigationController:(STNavigationController *)navigationController didEndTransitionContext:(STNavigationControllerTransitionContext *)transitionContext {
+    UIView *fromView = transitionContext.fromTransitionView;
+    fromView.anchorPoint = CGPointMake(0.5, 0.5);
+    fromView.layer.transform = CATransform3DIdentity;
+    
+    UIView *toView = transitionContext.toTransitionView;
+    toView.anchorPoint = CGPointMake(0.5, 0.5);
+    toView.layer.transform = CATransform3DIdentity;
 }
 
 - (void)didReceiveMemoryWarning {

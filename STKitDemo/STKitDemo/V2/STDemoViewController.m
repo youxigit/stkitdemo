@@ -19,7 +19,7 @@
 #import "STBWindow.h"
 #import "STDAppDelegate.h"
 
-@interface STDemoViewController () <STImagePickerControllerDelegate, UINavigationControllerDelegate, STNotificationWindowDelegate, UIGestureRecognizerDelegate>
+@interface STDemoViewController () <STImagePickerControllerDelegate, STNotificationWindowDelegate, UIGestureRecognizerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray * dataSource;
 
@@ -79,8 +79,6 @@
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"基本组件";
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];
     self.tableView.delaysContentTouches = YES;
     if (self.sideBarController) {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];

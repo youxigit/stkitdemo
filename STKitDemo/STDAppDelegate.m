@@ -143,7 +143,6 @@ void uncaughtExceptionHandler(NSException *exception) {
         application.statusBarStyle = UIStatusBarStyleDefault;
     }
 
-
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
@@ -167,6 +166,7 @@ void uncaughtExceptionHandler(NSException *exception) {
         self.passwordController = passwordController;
     }
 //    [self testNotificationActionWithApplication:application];
+    STDLogRemoteWithDebugString(@"application:didFinishLaunchingWithOptions:");
     return YES;
 }
 
@@ -427,6 +427,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    STDLogRemoteWithDebugString(@"applicationWillTerminate:");
 }
 
 - (SCSiriWaveformView *)wavefromView {

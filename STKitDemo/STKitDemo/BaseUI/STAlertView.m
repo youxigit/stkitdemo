@@ -62,6 +62,8 @@ const CGFloat _STAlertViewCellHeight = 45;
 @property(nonatomic, weak) UIView *backgroundView;
 @property(nonatomic, weak) UIView *contentView;
 
+@property(nonatomic, strong) UIView *hitTestView;
+
 @end
 
 @implementation STAlertView
@@ -119,11 +121,27 @@ const CGFloat _STAlertViewCellHeight = 45;
         } else {
             tableView.scrollEnabled = NO;
         }
+        
+        __weak STAlertView *weakSelf = self;
+        self.hitTestView = [[UIView alloc] init];
+        self.hitTestView.hitTestBlock = ^(CGPoint point, UIEvent *event, BOOL *returnSuper) {
+           *returnSuper = NO;
+            CGRect contentRect = [weakSelf.superview convertRect:weakSelf.frame toView:nil];
+            if (CGPointInRect(point, contentRect)){
+                return (UIView *)nil;
+            }
+            [weakSelf dismissAnimated:YES];
+            return (UIView *)nil;
+        };
+        self.hitTestView.userInteractionEnabled = NO;
+        self.hitTestView.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
 
 - (NSInteger)showInView:(UIView *)view animated:(BOOL)animated {
+    self.hitTestView.frame = [UIScreen mainScreen].bounds;
+    [[UIApplication sharedApplication].delegate.window addSubview:self.hitTestView];
     //
     {
         self.tableView.contentInset = UIEdgeInsetsZero;
@@ -196,6 +214,7 @@ const CGFloat _STAlertViewCellHeight = 45;
 }
 
 - (void)_dismissAnimated:(BOOL)animated completion:(void (^)(BOOL))_completion {
+    [self.hitTestView removeFromSuperview];
     self.backgroundView.alpha = 0.5;
     CGRect fromRect = self.contentView.frame, targetRect = self.contentView.frame;
     self.contentView.frame = fromRect;

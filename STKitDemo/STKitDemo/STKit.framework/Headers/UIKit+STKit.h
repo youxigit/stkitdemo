@@ -184,6 +184,8 @@ extern NSString *STGetSystemVersionString();
  */
 - (CGPoint)offsetFromView:(UIView *)otherView;
 
+@property(nonatomic) CGPoint    anchorPoint;
+
 @end
 
 /**

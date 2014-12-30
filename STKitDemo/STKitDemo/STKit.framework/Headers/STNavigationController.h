@@ -10,13 +10,29 @@
 #import <STKit/STViewController.h>
 
 typedef enum STViewControllerTransitionType {
-    STViewControllerTransitionTypeNone,
     STViewControllerTransitionTypePush,
     STViewControllerTransitionTypePop,
 } STViewControllerTransitionType;
 
+@interface STNavigationControllerTransitionContext : NSObject
+
+@property (nonatomic, readonly) UIViewController    *fromViewController;
+@property (nonatomic, readonly) UIViewController    *toViewController;
+
+// fromTransitionView 不一定是fromViewController.view。但是动画一定要在fromTransitionView上做.
+@property (nonatomic, readonly) UIView              *fromTransitionView;
+@property (nonatomic, readonly) UIView              *toTransitionView;
+// 动画完成的比例
+@property (nonatomic, readonly) CGFloat              completion;
+@property (nonatomic, readonly) STViewControllerTransitionType transitionType;
+
+//@property (nonatomic, readonly) BOOL                 transitionWithInteraction;
+
+@end
+
 /// UINavigationController
 @class STNavigationBar;
+@protocol STNavigationControllerDelegate;
 @interface STNavigationController : STViewController
 
 - (id)initWithRootViewController:(UIViewController *)rootViewController; // Convenience method pushes the root view controller without animation.
@@ -36,9 +52,10 @@ typedef enum STViewControllerTransitionType {
 @property(nonatomic, readonly) STNavigationBar *navigationBar; // The navigation bar managed by the controller. Pushing, popping or setting navigation
                                                                // items on a managed navigation bar is not supported.
 
-@property(nonatomic, weak) id<UINavigationControllerDelegate> delegate;
+@property(nonatomic, weak) id<STNavigationControllerDelegate> delegate;
 ///
 @property(nonatomic, readonly) UIGestureRecognizer *interactivePopGestureRecognizer;
+
 @end
 
 /// NavigationController Push/Pop时间
@@ -64,3 +81,13 @@ extern CGFloat const STTransitionViewControllerAnimationDuration;
 extern CGFloat const STMaximumInteractivePopEdgeDistance;
 /// 80pt
 extern CGFloat const STInteractivePopTransitionOffset;
+
+@protocol STNavigationControllerDelegate <UINavigationControllerDelegate>
+
+@optional
+- (void)navigationController:(STNavigationController *)navigationController willBeginTransitionContext:(STNavigationControllerTransitionContext *)transitionContext;
+
+- (void)navigationController:(STNavigationController *)navigationController transitingWithContext:(STNavigationControllerTransitionContext *)transitionContext;
+
+- (void)navigationController:(STNavigationController *)navigationController didEndTransitionContext:(STNavigationControllerTransitionContext *)transitionContext;
+@end

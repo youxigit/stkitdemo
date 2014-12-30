@@ -45,9 +45,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.tableView.delaysContentTouches = YES;
-    self.tableView.canCancelContentTouches = YES;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];
 }
 
 - (void)didReceiveMemoryWarning {
