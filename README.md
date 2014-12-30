@@ -4,9 +4,9 @@ STKit is a collection of useful classes for iOS Developer,it can help you to sim
 
 UIKit
 
-```STNavigationController``` () 
+```STNavigationController``` (Based on UIViewController) 
 
-```STTabBarController``` ()
+```STTabBarController``` (Based on UIViewController)
 
 ```STSideBarController``` (A container controller) 
 
@@ -26,7 +26,7 @@ Foundation
 
 ```STNetwork``` (a network engine based urlconnection and operation queue) 
 
-```STImageDownloader``` 
+```STImageDownloader``` (Download and cache image)
 
 ```STAESCryptor``` (Crypto using AES)
 
@@ -35,5 +35,9 @@ Foundation
 ```Foundation+STKit``` (Categories )
 
 and so on
+
+There are many other tools, you can checkout and find them.
+
+I will always update stkit.
 
 Some knowledge can be found in my blogs. [技术哥的博客](http://suenblog.duapp.com)
