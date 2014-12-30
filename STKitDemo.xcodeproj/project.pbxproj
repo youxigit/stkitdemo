@@ -11,7 +11,7 @@
 		0601649B1A04001C00B7B790 /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060164971A03FFE700B7B790 /* STKit.framework */; };
 		0602B495196974150004ACBB /* STDRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A1AC3518CAFBA700669C97 /* STDRecordViewController.m */; };
 		0602B498196974150004ACBB /* STRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A1ABC018CAFBA700669C97 /* STRichView.m */; };
-		0602B499196974150004ACBB /* STDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6471E891851CD7C00574E94 /* STDAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0602B499196974150004ACBB /* STDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6471E891851CD7C00574E94 /* STDAppDelegate.m */; };
 		0602B49B196974150004ACBB /* STDTextChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A1ABDA18CAFBA700669C97 /* STDTextChatCell.m */; };
 		0602B49C196974150004ACBB /* STDBaseChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A1ABCE18CAFBA700669C97 /* STDBaseChatCell.m */; };
 		0602B49D196974150004ACBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6471E851851CD7C00574E94 /* main.m */; };
