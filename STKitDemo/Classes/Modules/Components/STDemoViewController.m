@@ -19,7 +19,7 @@
 #import "STBWindow.h"
 #import "STDAppDelegate.h"
 
-@interface STDemoViewController () <STImagePickerControllerDelegate, STNotificationWindowDelegate, UIGestureRecognizerDelegate, UINavigationControllerDelegate>
+@interface STDemoViewController () <STImagePickerControllerDelegate, STNotificationWindowDelegate, UIGestureRecognizerDelegate, STNavigationControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray * dataSource;
 
