@@ -125,15 +125,13 @@ const CGFloat _STAlertViewCellHeight = 45;
         __weak STAlertView *weakSelf = self;
         self.hitTestView = [[UIView alloc] init];
         self.hitTestView.hitTestBlock = ^(CGPoint point, UIEvent *event, BOOL *returnSuper) {
-           *returnSuper = NO;
             CGRect contentRect = [weakSelf.superview convertRect:weakSelf.frame toView:nil];
-            if (CGPointInRect(point, contentRect)){
-                return (UIView *)nil;
+            if (!CGPointInRect(point, contentRect)){
+                [weakSelf dismissActionFired:nil];
+               *returnSuper = YES;
             }
-            [weakSelf dismissAnimated:YES];
             return (UIView *)nil;
         };
-        self.hitTestView.userInteractionEnabled = NO;
         self.hitTestView.backgroundColor = [UIColor clearColor];
     }
     return self;
@@ -147,12 +145,9 @@ const CGFloat _STAlertViewCellHeight = 45;
         self.tableView.contentInset = UIEdgeInsetsZero;
         if (!view) {
             view = [UIApplication sharedApplication].keyWindow;
-            [view addSubview:self];
-        } else {
-            self.frame = view.bounds;
-            [view addSubview:self];
         }
-
+        [view addSubview:self];
+        self.frame = view.bounds;
         CGRect frame = self.contentView.frame;
         frame.size.width = CGRectGetWidth(view.bounds);
         
@@ -214,7 +209,6 @@ const CGFloat _STAlertViewCellHeight = 45;
 }
 
 - (void)_dismissAnimated:(BOOL)animated completion:(void (^)(BOOL))_completion {
-    [self.hitTestView removeFromSuperview];
     self.backgroundView.alpha = 0.5;
     CGRect fromRect = self.contentView.frame, targetRect = self.contentView.frame;
     self.contentView.frame = fromRect;
@@ -230,6 +224,7 @@ const CGFloat _STAlertViewCellHeight = 45;
             _completion(finished);
         }
         [self removeFromSuperview];
+        [self.hitTestView removeFromSuperview];
     };
     if (animated) {
         [UIView animateWithDuration:0.35 animations:animation completion:completion];
