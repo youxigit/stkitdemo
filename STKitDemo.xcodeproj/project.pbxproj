@@ -194,7 +194,6 @@
 		06CB65271A59523F00ABD7D3 /* GesturePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB63471A59523F00ABD7D3 /* GesturePasswordController.m */; };
 		06CB65281A59523F00ABD7D3 /* GesturePasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB63491A59523F00ABD7D3 /* GesturePasswordView.m */; };
 		06CB65291A59523F00ABD7D3 /* TentacleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB634B1A59523F00ABD7D3 /* TentacleView.m */; };
-		06CB652A1A59523F00ABD7D3 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB634C1A59523F00ABD7D3 /* iflyMSC.framework */; };
 		06CB652B1A59523F00ABD7D3 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB634D1A59523F00ABD7D3 /* libMobClickLibrary.a */; };
 		06CB652C1A59523F00ABD7D3 /* libMobClickLibrary_armv6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB634E1A59523F00ABD7D3 /* libMobClickLibrary_armv6.a */; };
 		06CB652D1A59523F00ABD7D3 /* ImageMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB63511A59523F00ABD7D3 /* ImageMaskView.m */; };
@@ -795,7 +794,6 @@
 		06CB63491A59523F00ABD7D3 /* GesturePasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePasswordView.m; sourceTree = "<group>"; };
 		06CB634A1A59523F00ABD7D3 /* TentacleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TentacleView.h; sourceTree = "<group>"; };
 		06CB634B1A59523F00ABD7D3 /* TentacleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TentacleView.m; sourceTree = "<group>"; };
-		06CB634C1A59523F00ABD7D3 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		06CB634D1A59523F00ABD7D3 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		06CB634E1A59523F00ABD7D3 /* libMobClickLibrary_armv6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary_armv6.a; sourceTree = "<group>"; };
 		06CB63501A59523F00ABD7D3 /* ImageMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMaskView.h; sourceTree = "<group>"; };
@@ -1107,7 +1105,6 @@
 				06A1CD341978DE0700F68F35 /* CoreTelephony.framework in Frameworks */,
 				06CB652C1A59523F00ABD7D3 /* libMobClickLibrary_armv6.a in Frameworks */,
 				06CB652B1A59523F00ABD7D3 /* libMobClickLibrary.a in Frameworks */,
-				06CB652A1A59523F00ABD7D3 /* iflyMSC.framework in Frameworks */,
 				0602B4F6196974150004ACBB /* CoreLocation.framework in Frameworks */,
 				0602B4F7196974150004ACBB /* libxml2.dylib in Frameworks */,
 				06CB65EE1A59524000ABD7D3 /* STKit.framework in Frameworks */,
@@ -1212,7 +1209,6 @@
 				06CB61E91A59523F00ABD7D3 /* Cocos2d */,
 				06CB62DD1A59523F00ABD7D3 /* Flex */,
 				06CB63431A59523F00ABD7D3 /* GesturePassword */,
-				06CB634C1A59523F00ABD7D3 /* iflyMSC.framework */,
 				06CB634D1A59523F00ABD7D3 /* libMobClickLibrary.a */,
 				06CB634E1A59523F00ABD7D3 /* libMobClickLibrary_armv6.a */,
 				06CB634F1A59523F00ABD7D3 /* MaskImageView */,
