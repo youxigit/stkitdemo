@@ -101,7 +101,7 @@ const UIEdgeInsets    STDFeedCellTitleContentInset = {5,5,10,5};
         
         UIImageView * coverView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 60)];
         coverView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        coverView.image = [[UIImage imageNamed:@"feed_border"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 15, 15, 15) resizingMode:UIImageResizingModeStretch];
+        coverView.image = [[UIImage imageNamed:@"feed_cell_border"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 15, 15, 15) resizingMode:UIImageResizingModeStretch];
         coverView.userInteractionEnabled = NO;
         [self.backgroundImageView addSubview:coverView];
     }
