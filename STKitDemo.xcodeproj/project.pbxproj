@@ -460,7 +460,6 @@
 		06C6F9CD1920F0C10028B2B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		06CB5FFF1A594F9900ABD7D3 /* shangxin_292182.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shangxin_292182.jpg; sourceTree = "<group>"; };
 		06CB60001A594F9900ABD7D3 /* shangxin_292182@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shangxin_292182@2x.jpg"; sourceTree = "<group>"; };
-		06CB61E81A59523F00ABD7D3 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		06CB61EB1A59523F00ABD7D3 /* CCAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAction.h; sourceTree = "<group>"; };
 		06CB61EC1A59523F00ABD7D3 /* CCAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAction.m; sourceTree = "<group>"; };
 		06CB61ED1A59523F00ABD7D3 /* CCActionCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionCamera.h; sourceTree = "<group>"; };
@@ -1205,7 +1204,6 @@
 		06CB61E61A59523F00ABD7D3 /* 3rdLibs */ = {
 			isa = PBXGroup;
 			children = (
-				06CB61E71A59523F00ABD7D3 /* CocoaHTTPServer */,
 				06CB61E91A59523F00ABD7D3 /* Cocos2d */,
 				06CB62DD1A59523F00ABD7D3 /* Flex */,
 				06CB63431A59523F00ABD7D3 /* GesturePassword */,
@@ -1220,14 +1218,6 @@
 				06CB63631A59523F00ABD7D3 /* WXVoiceSDK */,
 			);
 			path = 3rdLibs;
-			sourceTree = "<group>";
-		};
-		06CB61E71A59523F00ABD7D3 /* CocoaHTTPServer */ = {
-			isa = PBXGroup;
-			children = (
-				06CB61E81A59523F00ABD7D3 /* README.markdown */,
-			);
-			path = CocoaHTTPServer;
 			sourceTree = "<group>";
 		};
 		06CB61E91A59523F00ABD7D3 /* Cocos2d */ = {
