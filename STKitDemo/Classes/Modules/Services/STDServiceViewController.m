@@ -19,8 +19,6 @@
 
 @property (nonatomic, strong) NSArray    * dataSource;
 
-@property (nonatomic, strong) UISearchDisplayController * strongDisplayController;
-
 @end
 
 @implementation STDServiceViewController

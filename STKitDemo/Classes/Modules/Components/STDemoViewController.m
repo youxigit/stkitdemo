@@ -14,9 +14,7 @@
 #import <STKit/STNotificationWindow.h>
 #import "STDCardViewController.h"
 #import "STDImageBlurViewController.h"
-
 #import "STMenuView.h"
-#import "STBWindow.h"
 #import "STDAppDelegate.h"
 
 @interface STDemoViewController () <STImagePickerControllerDelegate, STNotificationWindowDelegate, UIGestureRecognizerDelegate, STNavigationControllerDelegate>
@@ -62,12 +60,6 @@
         STDTableViewCellItem * item40 = [[STDTableViewCellItem alloc] initWithTitle:@"内嵌网页" target:self action:@selector(webViewActionFired)];
         STDTableViewSectionItem * section4 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"目前只提供了导航的功能，稍后会加入与Native交互的功能" items:@[item40]];
         [dataSource addObject:section4];
-        
-        if ([STDAppDelegate boxManEnabled]) {
-            STDTableViewCellItem * item50 = [[STDTableViewCellItem alloc] initWithTitle:@"推箱子游戏" target:self action:@selector(boxmanGameActionFired)];
-            STDTableViewSectionItem * section5 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"使用Cocos2d做的简单的小游戏。大家可以参考参考～～～～" items:@[item50]];
-            [dataSource addObject:section5];
-        }
         
         self.dataSource = dataSource;
     }
@@ -149,10 +141,6 @@
 - (void) webViewActionFired {
     STWebViewController * webViewController = [[STWebViewController alloc] initWithURLString:@"http://xstore.duapp.com"];
     [self.customNavigationController pushViewController:webViewController animated:YES];
-}
-
-- (void)boxmanGameActionFired {
-    [[STBLoader defaultLoader] loadBoxManAnimated:YES];
 }
 
 - (void) imagePickerController:(STImagePickerController *)picker didFinishPickingImageWithInfo:(NSDictionary *)info {

@@ -32,10 +32,6 @@
         self.hidesBottomBarWhenPushed = YES;
         self.thumbURL = @"http://lovecard-photo.stor.sinaapp.com/D294D8DFA381405970FA52E579E8A7B2.jpg";
         self.imageURL = @"http://lovecard-photo.stor.sinaapp.com/735F748E2F2482591C1DFE1351E622E9.jpg";
-        if ([STDAppDelegate sinaappCorrectionEnabled]) {
-            self.thumbURL = [self.thumbURL stringByReplacingOccurrencesOfString:@"sinaapp" withString:@"vipsinaapp"];
-            self.imageURL = [self.imageURL stringByReplacingOccurrencesOfString:@"sinaapp" withString:@"vipsinaapp"];
-        }
     }
     return self;
 }

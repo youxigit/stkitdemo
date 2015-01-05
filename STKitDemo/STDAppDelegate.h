@@ -8,18 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "STDVoiceWindow.h"
-
 @class SCSiriWaveformView;
 @interface STDAppDelegate : UIResponder <UIApplicationDelegate>
-+ (BOOL)boxManEnabled;
-+ (BOOL)sinaappCorrectionEnabled;
-+ (void)displayNotificationWithName:(NSString *) name title:(NSString *) title;
 
 @property (strong, nonatomic) UIWindow        * window;
-
-@property (nonatomic, strong) SCSiriWaveformView    * wavefromView;
-@property (nonatomic, strong) STDVoiceWindow  * voiceWindow;
 
 - (UIViewController *) startViewController;
 - (UIViewController *) tabBarController;
@@ -27,8 +19,4 @@
 - (void) replaceRootViewController:(UIViewController *)newViewController
                   animationOptions:(UIViewAnimationOptions) options;
 
-- (void)displayNotificationWithName:(NSString *) name title:(NSString *) title;
-
 @end
-
-extern NSString * const STDVoiceRecognizerNotification;

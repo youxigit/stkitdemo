@@ -20,7 +20,7 @@
 - (instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSString * URLString = [STDAppDelegate sinaappCorrectionEnabled] ? @"http://www.lovecard.vipsinaapp.com" : @"http://www.lovecard.sinaapp.com";
+        NSString * URLString = @"http://www.lovecard.sinaapp.com";
         self.network = [[STHTTPNetwork alloc] initWithHost:URLString path:@"open"];
     }
     return self;
