@@ -196,13 +196,6 @@
 		06CB635E1A59523F00ABD7D3 /* PFGoldenSectionSpiral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFGoldenSectionSpiral.m; sourceTree = "<group>"; };
 		06CB635F1A59523F00ABD7D3 /* ZYQSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQSphereView.h; sourceTree = "<group>"; };
 		06CB63601A59523F00ABD7D3 /* ZYQSphereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQSphereView.m; sourceTree = "<group>"; };
-		06CB63641A59523F00ABD7D3 /* libWXVoiceSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWXVoiceSDK.a; sourceTree = "<group>"; };
-		06CB63651A59523F00ABD7D3 /* WXResourceBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WXResourceBundle.bundle; sourceTree = "<group>"; };
-		06CB63661A59523F00ABD7D3 /* WXSpeechRecognizerWithUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSpeechRecognizerWithUI.h; sourceTree = "<group>"; };
-		06CB63671A59523F00ABD7D3 /* WXSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSpeechSynthesizer.h; sourceTree = "<group>"; };
-		06CB63681A59523F00ABD7D3 /* WXVoiceSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVoiceSDK.h; sourceTree = "<group>"; };
-		06CB636A1A59523F00ABD7D3 /* STLocalServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STLocalServer.h; sourceTree = "<group>"; };
-		06CB636B1A59523F00ABD7D3 /* STLocalServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLocalServer.m; sourceTree = "<group>"; };
 		06CB636E1A59523F00ABD7D3 /* STDLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDLeftViewController.h; sourceTree = "<group>"; };
 		06CB636F1A59523F00ABD7D3 /* STDLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDLeftViewController.m; sourceTree = "<group>"; };
 		06CB63701A59523F00ABD7D3 /* STDSideBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSideBarController.h; sourceTree = "<group>"; };
@@ -454,7 +447,6 @@
 			isa = PBXGroup;
 			children = (
 				06CB61E61A59523F00ABD7D3 /* 3rdLibs */,
-				06CB63691A59523F00ABD7D3 /* Base */,
 				06CB636C1A59523F00ABD7D3 /* BaseUI */,
 				06CB63801A59523F00ABD7D3 /* Modules */,
 				06CB648C1A59523F00ABD7D3 /* STKit.framework */,
@@ -467,7 +459,6 @@
 			children = (
 				06CB63571A59523F00ABD7D3 /* MZCroppableView */,
 				06CB635C1A59523F00ABD7D3 /* SphereView */,
-				06CB63631A59523F00ABD7D3 /* WXVoiceSDK */,
 			);
 			path = 3rdLibs;
 			sourceTree = "<group>";
@@ -492,27 +483,6 @@
 				06CB63601A59523F00ABD7D3 /* ZYQSphereView.m */,
 			);
 			path = SphereView;
-			sourceTree = "<group>";
-		};
-		06CB63631A59523F00ABD7D3 /* WXVoiceSDK */ = {
-			isa = PBXGroup;
-			children = (
-				06CB63641A59523F00ABD7D3 /* libWXVoiceSDK.a */,
-				06CB63651A59523F00ABD7D3 /* WXResourceBundle.bundle */,
-				06CB63661A59523F00ABD7D3 /* WXSpeechRecognizerWithUI.h */,
-				06CB63671A59523F00ABD7D3 /* WXSpeechSynthesizer.h */,
-				06CB63681A59523F00ABD7D3 /* WXVoiceSDK.h */,
-			);
-			path = WXVoiceSDK;
-			sourceTree = "<group>";
-		};
-		06CB63691A59523F00ABD7D3 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				06CB636A1A59523F00ABD7D3 /* STLocalServer.h */,
-				06CB636B1A59523F00ABD7D3 /* STLocalServer.m */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		06CB636C1A59523F00ABD7D3 /* BaseUI */ = {

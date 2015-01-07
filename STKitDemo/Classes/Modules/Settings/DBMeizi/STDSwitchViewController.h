@@ -10,6 +10,6 @@
 
 @interface STDSwitchViewController : STDViewController
 
-@property (nonatomic, copy) NSArray        * viewControllers;
+@property(nonatomic, copy) NSArray *viewControllers;
 
 @end

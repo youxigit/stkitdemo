@@ -23,7 +23,7 @@
 @implementation STDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
     if ([application respondsToSelector:@selector(setStatusBarStyle:)]) {
         application.statusBarStyle = UIStatusBarStyleDefault;
     }
@@ -32,6 +32,7 @@
     self.window.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
     NSString *previousStyle = [[STPersistence standardPerstence] valueForKey:@"SelectedStyle"];
+    
     if ([previousStyle isEqualToString:@"TabBar"]) {
         self.window.rootViewController = [self tabBarController];
     } else if ([previousStyle isEqualToString:@"SideBar"]) {
@@ -39,6 +40,7 @@
     } else {
         self.window.rootViewController = [self startViewController];
     }
+    
     [self.window makeKeyAndVisible];
     [self initializeCustomUserSetting];
     return YES;
@@ -80,7 +82,11 @@
         applicationFrame.origin.y = 20;
         applicationFrame.size.height -= 20;
     }
-    void (^animations)(void) = ^{ newViewController.view.frame = applicationFrame; };
+    
+    void (^animations)(void) = ^{
+        newViewController.view.frame = applicationFrame;
+    };
+    
     void (^completion)(BOOL) = ^(BOOL finished) {
         self.window.rootViewController = newViewController;
         newViewController.view.frame = applicationFrame;

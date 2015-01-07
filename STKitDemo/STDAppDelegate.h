@@ -11,12 +11,11 @@
 @class SCSiriWaveformView;
 @interface STDAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow        * window;
+@property(strong, nonatomic) UIWindow *window;
 
-- (UIViewController *) startViewController;
-- (UIViewController *) tabBarController;
-- (UIViewController *) sideBarController;
-- (void) replaceRootViewController:(UIViewController *)newViewController
-                  animationOptions:(UIViewAnimationOptions) options;
-
+- (UIViewController *)startViewController;
+- (UIViewController *)tabBarController;
+- (UIViewController *)sideBarController;
+- (void)replaceRootViewController:(UIViewController *)newViewController
+                 animationOptions:(UIViewAnimationOptions)options;
 @end
