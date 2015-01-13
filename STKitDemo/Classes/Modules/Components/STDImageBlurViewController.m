@@ -109,7 +109,7 @@
     CGContextSetStrokeColorWithColor(context,[UIColor colorWithRed:0 green:0 blue:0 alpha:0].CGColor);
     CGContextAddPath(context, aPath.CGPath);
     CGContextFillPath(context);
-	CGImageRef cgImage = CGBitmapContextCreateImage(context);;
+	CGImageRef cgImage = CGBitmapContextCreateImage(context);
     UIGraphicsEndImageContext();
     UIGraphicsPopContext();
     

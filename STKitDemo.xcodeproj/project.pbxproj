@@ -25,7 +25,6 @@
 		0681CCDB19D3BC9A00D897AF /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0681CCDA19D3BC9A00D897AF /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		06A1CD341978DE0700F68F35 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD331978DE0700F68F35 /* CoreTelephony.framework */; };
 		06A1CD381978DE3500F68F35 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */; };
-		06A3072719B3392200B53144 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A3072619B3392200B53144 /* XCTest.framework */; };
 		06A3072819B3392200B53144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E791851CD7C00574E94 /* Foundation.framework */; };
 		06A3072919B3392200B53144 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E7D1851CD7C00574E94 /* UIKit.framework */; };
 		06A3072F19B3392200B53144 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A3072D19B3392200B53144 /* InfoPlist.strings */; };
@@ -172,7 +171,6 @@
 		06A1CD351978DE1400F68F35 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		06A3072519B3392200B53144 /* STKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06A3072619B3392200B53144 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		06A3072C19B3392200B53144 /* STKitDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "STKitDemoTests-Info.plist"; sourceTree = "<group>"; };
 		06A3072E19B3392200B53144 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		06A3073019B3392200B53144 /* STKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STKitDemoTests.m; sourceTree = "<group>"; };
@@ -333,6 +331,7 @@
 		06CB647E1A59523F00ABD7D3 /* STDStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDStartViewController.h; sourceTree = "<group>"; };
 		06CB647F1A59523F00ABD7D3 /* STDStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDStartViewController.m; sourceTree = "<group>"; };
 		06CB648C1A59523F00ABD7D3 /* STKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STKit.framework; sourceTree = "<group>"; };
+		06CFCB9C1A63973C003DDC93 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		06DBF9E019F8CFBB009ECABA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F6471E791851CD7C00574E94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6471E7B1851CD7C00574E94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -378,7 +377,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06A3072719B3392200B53144 /* XCTest.framework in Frameworks */,
 				06A3072919B3392200B53144 /* UIKit.framework in Frameworks */,
 				06A3072819B3392200B53144 /* Foundation.framework in Frameworks */,
 			);
@@ -795,6 +793,7 @@
 		F6471E781851CD7C00574E94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06CFCB9C1A63973C003DDC93 /* SpriteKit.framework */,
 				06DBF9E019F8CFBB009ECABA /* Social.framework */,
 				0681CCDA19D3BC9A00D897AF /* Photos.framework */,
 				0698C21C19D1CCE400D0D69A /* WebKit.framework */,
@@ -812,7 +811,6 @@
 				F6471E791851CD7C00574E94 /* Foundation.framework */,
 				F6471E7B1851CD7C00574E94 /* CoreGraphics.framework */,
 				F6471E7D1851CD7C00574E94 /* UIKit.framework */,
-				06A3072619B3392200B53144 /* XCTest.framework */,
 				06A4D3BF19E6B3C7007D332D /* NotificationCenter.framework */,
 			);
 			name = Frameworks;

@@ -23,7 +23,7 @@
 @implementation STDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    [self initializeCustomUserSetting];
     if ([application respondsToSelector:@selector(setStatusBarStyle:)]) {
         application.statusBarStyle = UIStatusBarStyleDefault;
     }
@@ -42,7 +42,7 @@
     }
     
     [self.window makeKeyAndVisible];
-    [self initializeCustomUserSetting];
+    
     return YES;
 }
 
