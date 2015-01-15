@@ -32,7 +32,6 @@
     self.window.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
     NSString *previousStyle = [[STPersistence standardPerstence] valueForKey:@"SelectedStyle"];
-    
     if ([previousStyle isEqualToString:@"TabBar"]) {
         self.window.rootViewController = [self tabBarController];
     } else if ([previousStyle isEqualToString:@"SideBar"]) {
@@ -40,9 +39,7 @@
     } else {
         self.window.rootViewController = [self startViewController];
     }
-    
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

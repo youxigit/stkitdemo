@@ -21,7 +21,6 @@
 		0602B501196974150004ACBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E7D1851CD7C00574E94 /* UIKit.framework */; };
 		0602B503196974150004ACBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E791851CD7C00574E94 /* Foundation.framework */; };
 		0602B512196974150004ACBB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6471E821851CD7C00574E94 /* InfoPlist.strings */; };
-		0643F6EB198659C8007FE304 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0643F6EA198659C8007FE304 /* Settings.bundle */; };
 		0681CCDB19D3BC9A00D897AF /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0681CCDA19D3BC9A00D897AF /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		06A1CD341978DE0700F68F35 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD331978DE0700F68F35 /* CoreTelephony.framework */; };
 		06A1CD381978DE3500F68F35 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */; };
@@ -120,6 +119,7 @@
 		06CB65EF1A59527E00ABD7D3 /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB648C1A59523F00ABD7D3 /* STKit.framework */; };
 		06CB65F01A5952B700ABD7D3 /* STDBNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64701A59523F00ABD7D3 /* STDBNetwork.m */; };
 		06CB65F11A5952C700ABD7D3 /* STDFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64071A59523F00ABD7D3 /* STDFeedItem.m */; };
+		06CFCBBF1A676F39003DDC93 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0698C21C19D1CCE400D0D69A /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,7 +164,6 @@
 		0602B51B196974150004ACBB /* STKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06291AE4191F314700EDBD35 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0634101A19C9EBE3003BC34E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		0643F6EA198659C8007FE304 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0681CCDA19D3BC9A00D897AF /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		0698C21C19D1CCE400D0D69A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		06A1CD331978DE0700F68F35 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -355,6 +354,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CFCBBF1A676F39003DDC93 /* WebKit.framework in Frameworks */,
 				0681CCDB19D3BC9A00D897AF /* Photos.framework in Frameworks */,
 				06A1CD381978DE3500F68F35 /* libstdc++.6.dylib in Frameworks */,
 				06A1CD341978DE0700F68F35 /* CoreTelephony.framework in Frameworks */,
@@ -838,7 +838,6 @@
 				F6471E821851CD7C00574E94 /* InfoPlist.strings */,
 				F6471E851851CD7C00574E94 /* main.m */,
 				F6471E871851CD7C00574E94 /* STKitDemo-Prefix.pch */,
-				0643F6EA198659C8007FE304 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -969,7 +968,6 @@
 				06CB65D31A59524000ABD7D3 /* chat_image_8.jpg in Resources */,
 				06CB65DA1A59524000ABD7D3 /* icon_rightarrow@2x.png in Resources */,
 				06CB65CE1A59524000ABD7D3 /* chat_image_3.jpg in Resources */,
-				0643F6EB198659C8007FE304 /* Settings.bundle in Resources */,
 				06CB65E61A59524000ABD7D3 /* STDMapViewController.xib in Resources */,
 				06CB65BC1A59523F00ABD7D3 /* book.txt in Resources */,
 				06CB65CD1A59524000ABD7D3 /* chat_image_2.jpg in Resources */,

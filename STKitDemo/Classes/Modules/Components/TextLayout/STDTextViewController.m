@@ -11,7 +11,7 @@
 
 @interface STDTextViewController ()
 
-@property (nonatomic, strong) STLabel * linkLabel;
+@property (nonatomic, strong) STLabel *linkLabel;
 
 @end
 

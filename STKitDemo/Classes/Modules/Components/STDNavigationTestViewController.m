@@ -10,7 +10,7 @@
 
 @interface STDNavigationTestViewController () <STNavigationControllerDelegate>
 
-@property (nonatomic, strong) NSArray * dataSource;
+@property (nonatomic, strong) NSArray *dataSource;
 
 @end
 
