@@ -19,13 +19,13 @@ typedef enum STViewControllerTransitionType {
 @property (nonatomic, readonly) UIViewController    *fromViewController;
 @property (nonatomic, readonly) UIViewController    *toViewController;
 
-// fromTransitionView 不一定是fromViewController.view。但是动画一定要在fromTransitionView上做.
-@property (nonatomic, readonly) UIView              *fromTransitionView;
-@property (nonatomic, readonly) UIView              *toTransitionView;
+// fromTransitionView 不一定是fromViewController.view。动画一定要在fromTransitionView上做.
+@property (nonatomic, readonly) UIView              *fromView;
+@property (nonatomic, readonly) UIView              *toView;
 // 动画完成的比例
 @property (nonatomic, readonly) CGFloat              completion;
 @property (nonatomic, readonly) STViewControllerTransitionType transitionType;
-
+@property (nonatomic, readonly) UIView              *transitionView;
 //@property (nonatomic, readonly) BOOL                 transitionWithInteraction;
 
 @end

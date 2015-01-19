@@ -33,3 +33,6 @@
 
 extern NSString *const STImagePickerControllerOriginalImagePath; // an path of image in temp
 extern NSString *const STImagePickerControllerThumbImage;
+extern NSString *const STImagePickerControllerOriginalImageAssetPath;
+
+extern UIImage *STExactImageWithPath();

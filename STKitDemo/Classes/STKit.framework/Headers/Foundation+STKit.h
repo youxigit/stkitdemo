@@ -138,8 +138,23 @@ typedef enum STBookSeekDirection {
 
 @end
 
-#pragma mark - NSDateComponents
+/**
+ * @abstract timer fired时候的回调
+ *
+ * @param    timer 所创建的timer
+ * @param    invalidate  是否invalidate当前的timer
+ */
+typedef void(^STTimerFiredHandler) (NSTimer * timer, BOOL *invalidate);
+/// 使用block的形式，简化timer的使用
+@interface NSTimer (STBlock)
++ (NSTimer *)timerWithTimeInterval:(NSTimeInterval)timeInterval firedHandler:(STTimerFiredHandler)handler;
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)timeInterval firedHandler:(STTimerFiredHandler)handler;
+- (instancetype)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)interval  firedHandler:(STTimerFiredHandler)handler;
 
+@end
+
+
+#pragma mark - NSDateComponents
 @interface NSDate (STKit)
 
 @property(readonly) NSInteger year;

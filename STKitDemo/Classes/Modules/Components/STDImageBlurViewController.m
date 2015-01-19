@@ -89,7 +89,6 @@
     CGSize imageSize = self.backgroundImageView.image.size;
     NSArray *points = [self.croppableView.croppingPath points];
     UIBezierPath *aPath = [UIBezierPath bezierPath];
-    ;
     {
         // Set the starting point of the shape.
         CGPoint p1 = [MZCroppableView convertCGPoint:[points[0] CGPointValue] fromRect1:imageViewSize toRect2:imageSize];
