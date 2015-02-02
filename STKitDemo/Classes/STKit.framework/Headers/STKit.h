@@ -16,6 +16,7 @@
 #import <STKit/STSearchBar.h>
 #import <STKit/STLinkLabel.h>
 #import <STKit/STImageView.h>
+#import <STKit/UIView+STConstraint.h>
 #import <STKit/STPopoverView.h>
 #import <STKit/STIndicatorView.h>
 #import <STKit/STScrollDirector.h>
@@ -70,6 +71,7 @@
 // STKit+MVC
 #import <STKit/STModel.h>
 #import <STKit/STTableView.h>
+#import <STKit/STTableViewCell.h>
 #import <STKit/STTableViewController.h>
 // appcontext
 #import <STKit/STApplicationContext.h>

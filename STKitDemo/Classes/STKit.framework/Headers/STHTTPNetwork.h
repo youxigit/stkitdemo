@@ -74,8 +74,7 @@ typedef NS_OPTIONS(NSInteger, STXMLParseOptions){
  * @param    parameters 请求的参数，如果有文件资源，请参考 @see STPostDataItem
  * @param    handler    请求结束时的回掉
  *
- * @attention  同步请求会阻塞当前线程，请谨慎使用.@see
- *sendAsynchronousRequestWithURLString:
+ * @attention  同步请求会阻塞当前线程，请谨慎使用.@see sendAsynchronousRequestWithURLString:
  */
 - (void)sendSynchronousRequestWithMethod:(NSString *)method parameters:(NSDictionary *)params handler:(STHTTPSynchronousNetworkHandler)handler;
 

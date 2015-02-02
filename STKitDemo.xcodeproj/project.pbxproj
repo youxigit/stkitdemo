@@ -31,9 +31,10 @@
 		06A4D3C019E6B3C7007D332D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4D3BF19E6B3C7007D332D /* NotificationCenter.framework */; };
 		06A4D3C619E6B3C7007D332D /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D3C519E6B3C7007D332D /* TodayViewController.m */; };
 		06A4D3C819E6B3C7007D332D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A4D3C719E6B3C7007D332D /* MainInterface.storyboard */; };
-		06A4D3CB19E6B3C7007D332D /* STKitWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06A4D3BE19E6B3C7007D332D /* STKitWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06B6C1851A0407B600C9218E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0634101A19C9EBE3003BC34E /* LaunchScreen.xib */; };
 		06BE56D11A0404CF00FBC4C8 /* STDemoImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BE56D01A0404CF00FBC4C8 /* STDemoImages.xcassets */; };
+		06C841681A7E2641008BB97F /* STKitWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 06A4D3BE19E6B3C7007D332D /* STKitWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06C841711A7E3395008BB97F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F69CFE261873032B00327D8A /* libz.dylib */; };
 		06CB60011A594F9900ABD7D3 /* shangxin_292182.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06CB5FFF1A594F9900ABD7D3 /* shangxin_292182.jpg */; };
 		06CB60021A594F9900ABD7D3 /* shangxin_292182@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06CB60001A594F9900ABD7D3 /* shangxin_292182@2x.jpg */; };
 		06CB652F1A59523F00ABD7D3 /* MZCroppableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB63591A59523F00ABD7D3 /* MZCroppableView.m */; };
@@ -130,13 +131,6 @@
 			remoteGlobalIDString = 0602B48E196974150004ACBB;
 			remoteInfo = STKitDemo;
 		};
-		06A4D3C919E6B3C7007D332D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6471E6E1851CD7C00574E94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 06A4D3BD19E6B3C7007D332D;
-			remoteInfo = STKitWidget;
-		};
 		06A4D3CC19E6B3C7007D332D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F6471E6E1851CD7C00574E94 /* Project object */;
@@ -147,13 +141,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		06A4D3D119E6B3C7007D332D /* Embed App Extensions */ = {
+		06C841691A7E2641008BB97F /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				06A4D3CB19E6B3C7007D332D /* STKitWidget.appex in Embed App Extensions */,
+				06C841681A7E2641008BB97F /* STKitWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +382,7 @@
 			files = (
 				06CB65EF1A59527E00ABD7D3 /* STKit.framework in Frameworks */,
 				06A4D3C019E6B3C7007D332D /* NotificationCenter.framework in Frameworks */,
+				06C841711A7E3395008BB97F /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,12 +847,11 @@
 				0602B48F196974150004ACBB /* Sources */,
 				0602B4F5196974150004ACBB /* Frameworks */,
 				0602B504196974150004ACBB /* Resources */,
-				06A4D3D119E6B3C7007D332D /* Embed App Extensions */,
+				06C841691A7E2641008BB97F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				06A4D3CA19E6B3C7007D332D /* PBXTargetDependency */,
 				06A4D3CD19E6B3C7007D332D /* PBXTargetDependency */,
 			);
 			name = STKitDemo;
@@ -1096,11 +1090,6 @@
 			target = 0602B48E196974150004ACBB /* STKitDemo */;
 			targetProxy = 06A3073319B3392200B53144 /* PBXContainerItemProxy */;
 		};
-		06A4D3CA19E6B3C7007D332D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 06A4D3BD19E6B3C7007D332D /* STKitWidget */;
-			targetProxy = 06A4D3C919E6B3C7007D332D /* PBXContainerItemProxy */;
-		};
 		06A4D3CD19E6B3C7007D332D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 06A4D3BD19E6B3C7007D332D /* STKitWidget */;
@@ -1254,6 +1243,7 @@
 		06A4D3CF19E6B3C7007D332D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1284,8 +1274,9 @@
 		06A4D3D019E6B3C7007D332D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

@@ -85,6 +85,10 @@ extern CGFloat const STInteractivePopTransitionOffset;
 @protocol STNavigationControllerDelegate <UINavigationControllerDelegate>
 
 @optional
+/// 是否可以使用自定义的transition切换,如果返回False，则使用默认动画
+- (BOOL)navigationController:(STNavigationController *)navigationController
+shouldBeginTransitionContext:(STNavigationControllerTransitionContext *)transitionContext;
+
 - (void)navigationController:(STNavigationController *)navigationController willBeginTransitionContext:(STNavigationControllerTransitionContext *)transitionContext;
 
 - (void)navigationController:(STNavigationController *)navigationController transitingWithContext:(STNavigationControllerTransitionContext *)transitionContext;

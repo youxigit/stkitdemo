@@ -26,10 +26,18 @@
 @end
 
 typedef NS_ENUM(NSInteger, STSSLPinningMode) {
-    STSSLPinningModeNone = 1,
-    STSSLPinningModePublicKey = 2,   // 只验证public是否正确
-    STSSLPinningModeCertificate = 3  // 验证Public是否正确，以及证书是否有效
+    STSSLPinningModeNone        = 1 << 0,
+    STSSLPinningModePublicKey   = 1 << 1,   // 只验证public是否正确
+    STSSLPinningModeCertificate = 1 << 2  // 验证Public是否正确，以及证书是否有效
 };
+
+
+typedef NS_ENUM(NSInteger, STCompressionOptions) {
+    STCompressionOptionsNone             = 1 << 0,     // 不接受任何压缩
+    STCompressionOptionsRequestAllowed   = 1 << 1,     // 请求时压缩request-body
+    STCompressionOptionsResponseAccepted = 1 << 2      // 允许服务器传输压缩的数据
+};
+
 
 @interface STNetworkConfiguration : NSObject
 
@@ -45,5 +53,7 @@ typedef NS_ENUM(NSInteger, STSSLPinningMode) {
 
 @property(nonatomic, strong) NSURLCredential *HTTPBasicCredential;
 @property(nonatomic, strong) NSURLCredential *clientCertificateCredential;
+
+@property(nonatomic) STCompressionOptions   compressionOptions;
 
 @end

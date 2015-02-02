@@ -15,8 +15,8 @@
 @property(nonatomic, strong) UIView           *titleView;
 @property(nonatomic, strong) UIView           *rightBarView;
 
-@property(nonatomic, strong, readonly) UIView *backgroundView;
 @property(nonatomic, strong, readonly) UIView *transitionView;
+@property(nonatomic, strong) UIImage          *backgroundImage;
 
 @property(nonatomic, strong, readonly) UIView *separatorView;
 

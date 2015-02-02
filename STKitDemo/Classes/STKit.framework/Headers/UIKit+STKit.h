@@ -22,6 +22,8 @@ extern CGFloat STGetScreenHeight();
 extern CGFloat STGetSystemVersion();
 extern NSString *STGetSystemVersionString();
 
+extern CGPoint STConvertPointBetweenSize(CGPoint point, CGSize fromSize, CGSize toSize);
+
 #pragma mark - UIColor Extension
 /// 给UIColor增加rgb的构造方法
 @interface UIColor (STExtension)
@@ -311,6 +313,13 @@ typedef enum STBlurEffectStyle {
 typedef void (^STInvokeHandler)(void);
 
 @interface UICollectionView (STReloadData)
+@property(nonatomic, strong) STInvokeHandler willReloadData;
+@property(nonatomic, strong) STInvokeHandler didReloadData;
+
+@end
+
+
+@interface UITableView (STReloadData)
 @property(nonatomic, strong) STInvokeHandler willReloadData;
 @property(nonatomic, strong) STInvokeHandler didReloadData;
 

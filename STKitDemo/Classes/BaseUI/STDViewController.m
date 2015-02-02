@@ -50,10 +50,7 @@
     };
     
     if (STGetSystemVersion() < 7) {
-        UIImageView * backgroundImageView = [[UIImageView alloc] initWithFrame:self.customNavigationBar.bounds];
-        backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        backgroundImageView.image = [UIImage imageNamed:@"header_bkg"];
-        [self.customNavigationBar.backgroundView addSubview:backgroundImageView];
+        self.customNavigationBar.backgroundImage = [UIImage imageNamed:@"header_bkg"];
     }
     
     CGFloat value = [[[NSUserDefaults standardUserDefaults] valueForKey:@"STDNavigationDefaultEdgeOffset"] floatValue];
