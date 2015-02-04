@@ -21,6 +21,12 @@
 		0602B501196974150004ACBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E7D1851CD7C00574E94 /* UIKit.framework */; };
 		0602B503196974150004ACBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E791851CD7C00574E94 /* Foundation.framework */; };
 		0602B512196974150004ACBB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6471E821851CD7C00574E94 /* InfoPlist.strings */; };
+		065D787C1A80C0BD0083D058 /* STDSimpleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D787B1A80C0BD0083D058 /* STDSimpleFactory.m */; };
+		065D78821A80C6840083D058 /* STDFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78811A80C6840083D058 /* STDFactory.m */; };
+		065D78881A80C8A80083D058 /* STDFactoryPatterns.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78871A80C8A80083D058 /* STDFactoryPatterns.m */; };
+		065D788B1A80CF1E0083D058 /* STDSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D788A1A80CF1E0083D058 /* STDSingleton.m */; };
+		065D788E1A80D2150083D058 /* STDBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D788D1A80D2150083D058 /* STDBuilder.m */; };
+		065D78911A80E1710083D058 /* STDPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78901A80E1710083D058 /* STDPrototype.m */; };
 		0681CCDB19D3BC9A00D897AF /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0681CCDA19D3BC9A00D897AF /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		06A1CD341978DE0700F68F35 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD331978DE0700F68F35 /* CoreTelephony.framework */; };
 		06A1CD381978DE3500F68F35 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */; };
@@ -80,7 +86,6 @@
 		06CB65C11A59523F00ABD7D3 /* STDMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB643A1A59523F00ABD7D3 /* STDMessage.m */; };
 		06CB65C21A59523F00ABD7D3 /* STDSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB643C1A59523F00ABD7D3 /* STDSession.m */; };
 		06CB65C31A59523F00ABD7D3 /* STDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB643E1A59523F00ABD7D3 /* STDUser.m */; };
-		06CB65C41A59523F00ABD7D3 /* STChatImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CB643F1A59523F00ABD7D3 /* STChatImages.xcassets */; };
 		06CB65C51A59523F00ABD7D3 /* STDBaseChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64411A59523F00ABD7D3 /* STDBaseChatCell.m */; };
 		06CB65C61A59523F00ABD7D3 /* STDChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64431A59523F00ABD7D3 /* STDChat.m */; };
 		06CB65C71A59523F00ABD7D3 /* STDChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64451A59523F00ABD7D3 /* STDChatInputView.m */; };
@@ -158,6 +163,19 @@
 		0602B51B196974150004ACBB /* STKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06291AE4191F314700EDBD35 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0634101A19C9EBE3003BC34E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		065D787A1A80C0BD0083D058 /* STDSimpleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSimpleFactory.h; sourceTree = "<group>"; };
+		065D787B1A80C0BD0083D058 /* STDSimpleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSimpleFactory.m; sourceTree = "<group>"; };
+		065D787D1A80C3BB0083D058 /* STDesignPatterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDesignPatterns.h; sourceTree = "<group>"; };
+		065D78801A80C6840083D058 /* STDFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDFactory.h; sourceTree = "<group>"; };
+		065D78811A80C6840083D058 /* STDFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDFactory.m; sourceTree = "<group>"; };
+		065D78861A80C8A80083D058 /* STDFactoryPatterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDFactoryPatterns.h; sourceTree = "<group>"; };
+		065D78871A80C8A80083D058 /* STDFactoryPatterns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDFactoryPatterns.m; sourceTree = "<group>"; };
+		065D78891A80CF1E0083D058 /* STDSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSingleton.h; sourceTree = "<group>"; };
+		065D788A1A80CF1E0083D058 /* STDSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSingleton.m; sourceTree = "<group>"; };
+		065D788C1A80D2150083D058 /* STDBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBuilder.h; sourceTree = "<group>"; };
+		065D788D1A80D2150083D058 /* STDBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBuilder.m; sourceTree = "<group>"; };
+		065D788F1A80E1710083D058 /* STDPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPrototype.h; sourceTree = "<group>"; };
+		065D78901A80E1710083D058 /* STDPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPrototype.m; sourceTree = "<group>"; };
 		0681CCDA19D3BC9A00D897AF /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		0698C21C19D1CCE400D0D69A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		06A1CD331978DE0700F68F35 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -266,7 +284,6 @@
 		06CB643C1A59523F00ABD7D3 /* STDSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSession.m; sourceTree = "<group>"; };
 		06CB643D1A59523F00ABD7D3 /* STDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDUser.h; sourceTree = "<group>"; };
 		06CB643E1A59523F00ABD7D3 /* STDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDUser.m; sourceTree = "<group>"; };
-		06CB643F1A59523F00ABD7D3 /* STChatImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = STChatImages.xcassets; sourceTree = "<group>"; };
 		06CB64401A59523F00ABD7D3 /* STDBaseChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBaseChatCell.h; sourceTree = "<group>"; };
 		06CB64411A59523F00ABD7D3 /* STDBaseChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBaseChatCell.m; sourceTree = "<group>"; };
 		06CB64421A59523F00ABD7D3 /* STDChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDChat.h; sourceTree = "<group>"; };
@@ -389,6 +406,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		065D78791A80C0AC0083D058 /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				065D787D1A80C3BB0083D058 /* STDesignPatterns.h */,
+				065D78861A80C8A80083D058 /* STDFactoryPatterns.h */,
+				065D78871A80C8A80083D058 /* STDFactoryPatterns.m */,
+				065D78801A80C6840083D058 /* STDFactory.h */,
+				065D78811A80C6840083D058 /* STDFactory.m */,
+				065D787A1A80C0BD0083D058 /* STDSimpleFactory.h */,
+				065D787B1A80C0BD0083D058 /* STDSimpleFactory.m */,
+				065D78891A80CF1E0083D058 /* STDSingleton.h */,
+				065D788A1A80CF1E0083D058 /* STDSingleton.m */,
+				065D788C1A80D2150083D058 /* STDBuilder.h */,
+				065D788D1A80D2150083D058 /* STDBuilder.m */,
+				065D788F1A80E1710083D058 /* STDPrototype.h */,
+				065D78901A80E1710083D058 /* STDPrototype.m */,
+			);
+			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
 		06A3072A19B3392200B53144 /* STKitDemoTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +551,7 @@
 		06CB63801A59523F00ABD7D3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				065D78791A80C0AC0083D058 /* DesignPatterns */,
 				06CB63811A59523F00ABD7D3 /* Components */,
 				06CB64191A59523F00ABD7D3 /* Services */,
 				06CB64621A59523F00ABD7D3 /* Settings */,
@@ -638,7 +676,6 @@
 			isa = PBXGroup;
 			children = (
 				06CB64351A59523F00ABD7D3 /* Entity */,
-				06CB643F1A59523F00ABD7D3 /* STChatImages.xcassets */,
 				06CB64401A59523F00ABD7D3 /* STDBaseChatCell.h */,
 				06CB64411A59523F00ABD7D3 /* STDBaseChatCell.m */,
 				06CB64421A59523F00ABD7D3 /* STDChat.h */,
@@ -958,7 +995,6 @@
 				06CB65D11A59524000ABD7D3 /* chat_image_6.jpg in Resources */,
 				06CB65CC1A59524000ABD7D3 /* chat_image_1.jpg in Resources */,
 				0602B512196974150004ACBB /* InfoPlist.strings in Resources */,
-				06CB65C41A59523F00ABD7D3 /* STChatImages.xcassets in Resources */,
 				06CB65D31A59524000ABD7D3 /* chat_image_8.jpg in Resources */,
 				06CB65DA1A59524000ABD7D3 /* icon_rightarrow@2x.png in Resources */,
 				06CB65CE1A59524000ABD7D3 /* chat_image_3.jpg in Resources */,
@@ -996,6 +1032,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06CB65371A59523F00ABD7D3 /* STDLeftViewController.m in Sources */,
+				065D78881A80C8A80083D058 /* STDFactoryPatterns.m in Sources */,
 				06CB65E01A59524000ABD7D3 /* STDSwitchViewController.m in Sources */,
 				06CB65E21A59524000ABD7D3 /* STDMoreViewController.m in Sources */,
 				06CB65C21A59523F00ABD7D3 /* STDSession.m in Sources */,
@@ -1023,6 +1060,7 @@
 				06CB65B01A59523F00ABD7D3 /* STDNavigationTestViewController.m in Sources */,
 				06CB65B11A59523F00ABD7D3 /* STDAboutViewController.m in Sources */,
 				06CB65E71A59524000ABD7D3 /* STDStartViewController.m in Sources */,
+				065D788B1A80CF1E0083D058 /* STDSingleton.m in Sources */,
 				06CB65C61A59523F00ABD7D3 /* STDChat.m in Sources */,
 				06CB652F1A59523F00ABD7D3 /* MZCroppableView.m in Sources */,
 				06CB65BD1A59523F00ABD7D3 /* STDBookViewController.m in Sources */,
@@ -1035,6 +1073,7 @@
 				06CB65BF1A59523F00ABD7D3 /* STRichView.m in Sources */,
 				06CB653E1A59523F00ABD7D3 /* STDViewController.m in Sources */,
 				06CB65AF1A59523F00ABD7D3 /* STDImageBlurViewController.m in Sources */,
+				065D78911A80E1710083D058 /* STDPrototype.m in Sources */,
 				06CB65B91A59523F00ABD7D3 /* STASortOperation.m in Sources */,
 				06CB653C1A59523F00ABD7D3 /* STDTableViewController.m in Sources */,
 				06CB65311A59523F00ABD7D3 /* PFGoldenSectionSpiral.m in Sources */,
@@ -1043,8 +1082,10 @@
 				06CB65DE1A59524000ABD7D3 /* STDBigViewController.m in Sources */,
 				06CB65A61A59523F00ABD7D3 /* STDWaterStreamViewCell.m in Sources */,
 				06CB65AD1A59523F00ABD7D3 /* STDownloadViewController.m in Sources */,
+				065D787C1A80C0BD0083D058 /* STDSimpleFactory.m in Sources */,
 				06CB65B41A59523F00ABD7D3 /* STACodeViewController.m in Sources */,
 				06CB65A81A59523F00ABD7D3 /* STDCardViewController.m in Sources */,
+				065D78821A80C6840083D058 /* STDFactory.m in Sources */,
 				06CB65D51A59524000ABD7D3 /* STDAboutAudioViewController.m in Sources */,
 				06CB65C81A59523F00ABD7D3 /* STDChatViewController.m in Sources */,
 				06CB65AC1A59523F00ABD7D3 /* STDFeedViewController.m in Sources */,
@@ -1055,6 +1096,7 @@
 				06CB65BA1A59523F00ABD7D3 /* STASortView.m in Sources */,
 				06CB65E31A59524000ABD7D3 /* STDNavigationSettingViewController.m in Sources */,
 				06CB65A71A59523F00ABD7D3 /* STWaterStreamView.m in Sources */,
+				065D788E1A80D2150083D058 /* STDBuilder.m in Sources */,
 				06CB65A91A59523F00ABD7D3 /* STDFeedCell.m in Sources */,
 				06CB653F1A59523F00ABD7D3 /* STMenuView.m in Sources */,
 				06CB65CB1A59524000ABD7D3 /* STDTextChatCell.m in Sources */,
