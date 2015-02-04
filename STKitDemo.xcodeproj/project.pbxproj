@@ -30,10 +30,6 @@
 		0681CCDB19D3BC9A00D897AF /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0681CCDA19D3BC9A00D897AF /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		06A1CD341978DE0700F68F35 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD331978DE0700F68F35 /* CoreTelephony.framework */; };
 		06A1CD381978DE3500F68F35 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */; };
-		06A3072819B3392200B53144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E791851CD7C00574E94 /* Foundation.framework */; };
-		06A3072919B3392200B53144 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E7D1851CD7C00574E94 /* UIKit.framework */; };
-		06A3072F19B3392200B53144 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06A3072D19B3392200B53144 /* InfoPlist.strings */; };
-		06A3073119B3392200B53144 /* STKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A3073019B3392200B53144 /* STKitDemoTests.m */; };
 		06A4D3C019E6B3C7007D332D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4D3BF19E6B3C7007D332D /* NotificationCenter.framework */; };
 		06A4D3C619E6B3C7007D332D /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A4D3C519E6B3C7007D332D /* TodayViewController.m */; };
 		06A4D3C819E6B3C7007D332D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A4D3C719E6B3C7007D332D /* MainInterface.storyboard */; };
@@ -129,13 +125,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		06A3073319B3392200B53144 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6471E6E1851CD7C00574E94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0602B48E196974150004ACBB;
-			remoteInfo = STKitDemo;
-		};
 		06A4D3CC19E6B3C7007D332D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F6471E6E1851CD7C00574E94 /* Project object */;
@@ -181,11 +170,6 @@
 		06A1CD331978DE0700F68F35 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		06A1CD351978DE1400F68F35 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
-		06A3072519B3392200B53144 /* STKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06A3072C19B3392200B53144 /* STKitDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "STKitDemoTests-Info.plist"; sourceTree = "<group>"; };
-		06A3072E19B3392200B53144 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		06A3073019B3392200B53144 /* STKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STKitDemoTests.m; sourceTree = "<group>"; };
-		06A3073219B3392200B53144 /* STKitDemoTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STKitDemoTests-Prefix.pch"; sourceTree = "<group>"; };
 		06A4D3BE19E6B3C7007D332D /* STKitWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = STKitWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A4D3BF19E6B3C7007D332D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		06A4D3C319E6B3C7007D332D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -384,15 +368,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		06A3072219B3392200B53144 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				06A3072919B3392200B53144 /* UIKit.framework in Frameworks */,
-				06A3072819B3392200B53144 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		06A4D3BB19E6B3C7007D332D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,25 +399,6 @@
 				065D78901A80E1710083D058 /* STDPrototype.m */,
 			);
 			path = DesignPatterns;
-			sourceTree = "<group>";
-		};
-		06A3072A19B3392200B53144 /* STKitDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				06A3073019B3392200B53144 /* STKitDemoTests.m */,
-				06A3072B19B3392200B53144 /* Supporting Files */,
-			);
-			path = STKitDemoTests;
-			sourceTree = "<group>";
-		};
-		06A3072B19B3392200B53144 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				06A3072C19B3392200B53144 /* STKitDemoTests-Info.plist */,
-				06A3072D19B3392200B53144 /* InfoPlist.strings */,
-				06A3073219B3392200B53144 /* STKitDemoTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		06A4D3C119E6B3C7007D332D /* STKitWidget */ = {
@@ -805,7 +761,6 @@
 			isa = PBXGroup;
 			children = (
 				F6471E7F1851CD7C00574E94 /* STKitDemo */,
-				06A3072A19B3392200B53144 /* STKitDemoTests */,
 				06A4D3C119E6B3C7007D332D /* STKitWidget */,
 				F6471E781851CD7C00574E94 /* Frameworks */,
 				F6471E771851CD7C00574E94 /* Products */,
@@ -816,7 +771,6 @@
 			isa = PBXGroup;
 			children = (
 				0602B51B196974150004ACBB /* STKitDemo.app */,
-				06A3072519B3392200B53144 /* STKitDemoTests.xctest */,
 				06A4D3BE19E6B3C7007D332D /* STKitWidget.appex */,
 			);
 			name = Products;
@@ -896,24 +850,6 @@
 			productReference = 0602B51B196974150004ACBB /* STKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		06A3072419B3392200B53144 /* STKitDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 06A3073719B3392200B53144 /* Build configuration list for PBXNativeTarget "STKitDemoTests" */;
-			buildPhases = (
-				06A3072119B3392200B53144 /* Sources */,
-				06A3072219B3392200B53144 /* Frameworks */,
-				06A3072319B3392200B53144 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				06A3073419B3392200B53144 /* PBXTargetDependency */,
-			);
-			name = STKitDemoTests;
-			productName = STKitDemoTests;
-			productReference = 06A3072519B3392200B53144 /* STKitDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		06A4D3BD19E6B3C7007D332D /* STKitWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06A4D3CE19E6B3C7007D332D /* Build configuration list for PBXNativeTarget "STKitWidget" */;
@@ -952,9 +888,6 @@
 							};
 						};
 					};
-					06A3072419B3392200B53144 = {
-						TestTargetID = F61DD34A186ED713008D0268;
-					};
 					06A4D3BD19E6B3C7007D332D = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = MH8Q662G73;
@@ -975,7 +908,6 @@
 			projectRoot = "";
 			targets = (
 				0602B48E196974150004ACBB /* STKitDemo */,
-				06A3072419B3392200B53144 /* STKitDemoTests */,
 				06A4D3BD19E6B3C7007D332D /* STKitWidget */,
 			);
 		};
@@ -1005,14 +937,6 @@
 				06CB65D21A59524000ABD7D3 /* chat_image_7.jpg in Resources */,
 				06BE56D11A0404CF00FBC4C8 /* STDemoImages.xcassets in Resources */,
 				06CB65E41A59524000ABD7D3 /* STDNavigationSettingViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		06A3072319B3392200B53144 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				06A3072F19B3392200B53144 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1106,14 +1030,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		06A3072119B3392200B53144 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				06A3073119B3392200B53144 /* STKitDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		06A4D3BA19E6B3C7007D332D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1127,11 +1043,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		06A3073419B3392200B53144 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0602B48E196974150004ACBB /* STKitDemo */;
-			targetProxy = 06A3073319B3392200B53144 /* PBXContainerItemProxy */;
-		};
 		06A4D3CD19E6B3C7007D332D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 06A4D3BD19E6B3C7007D332D /* STKitWidget */;
@@ -1140,14 +1051,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		06A3072D19B3392200B53144 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06A3072E19B3392200B53144 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		F6471E821851CD7C00574E94 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1188,12 +1091,12 @@
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/Classes/3rdLibs",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = STKitDemo;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1233,52 +1136,8 @@
 				PRODUCT_NAME = STKitDemo;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 arm64";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		06A3073519B3392200B53144 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "STKitDemoTests/STKitDemoTests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "STKitDemoTests/STKitDemoTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STKitDemoInHouse.app/STKitDemoInHouse";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		06A3073619B3392200B53144 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "STKitDemoTests/STKitDemoTests-Prefix.pch";
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "STKitDemoTests/STKitDemoTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STKitDemoInHouse.app/STKitDemoInHouse";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -1376,7 +1235,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Debug;
 		};
@@ -1410,7 +1269,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 arm64";
 			};
 			name = Release;
 		};
@@ -1422,15 +1281,6 @@
 			buildConfigurations = (
 				0602B519196974150004ACBB /* Debug */,
 				0602B51A196974150004ACBB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		06A3073719B3392200B53144 /* Build configuration list for PBXNativeTarget "STKitDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				06A3073519B3392200B53144 /* Debug */,
-				06A3073619B3392200B53144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
