@@ -15,6 +15,7 @@
 #import "STDStartViewController.h"
 
 #import <STKit/STKit.h>
+#import <CFNetwork/CFNetwork.h>
 
 @interface STDAppDelegate ()
 
@@ -40,6 +41,7 @@
         self.window.rootViewController = [self startViewController];
     }
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -113,6 +115,9 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the
     // background.
+    
+    NSDictionary *proxySettings = (__bridge_transfer NSDictionary *) CFNetworkCopySystemProxySettings();
+    NSLog(@"%@", proxySettings);
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

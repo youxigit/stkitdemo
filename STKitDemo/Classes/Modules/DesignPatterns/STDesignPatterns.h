@@ -18,3 +18,11 @@
 - (void)printDisadvantages;
 
 @end
+
+/// 工厂部分
+/// 抽象产品，提供一个制造的接口
+@protocol STDAbstractProduct <NSObject>
+
+- (void)printProductName;
+
+@end

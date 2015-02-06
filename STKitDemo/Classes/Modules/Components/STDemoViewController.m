@@ -16,6 +16,7 @@
 #import "STDImageBlurViewController.h"
 #import "STMenuView.h"
 #import "STDAppDelegate.h"
+#import "STDScrollViewController.h"
 
 @interface STDemoViewController () <STImagePickerControllerDelegate, STNotificationWindowDelegate, UIGestureRecognizerDelegate,
                                     STNavigationControllerDelegate>
@@ -67,12 +68,19 @@
             [[STDTableViewSectionItem alloc] initWithSectionTitle:@"应用内的提醒, 适合即时通讯类的收到消息时提示"
                                                             items:@[ item30 ]];
         [dataSource addObject:section3];
+        
 
         STDTableViewCellItem *item40 = [[STDTableViewCellItem alloc] initWithTitle:@"内嵌网页" target:self action:@selector(webViewActionFired)];
         STDTableViewSectionItem *section4 =
             [[STDTableViewSectionItem alloc] initWithSectionTitle:@"目前只提供了导航的功能，稍后会加入与Native交互的功能"
                                                             items:@[ item40 ]];
         [dataSource addObject:section4];
+        
+//        STDTableViewCellItem *item50 = [[STDTableViewCellItem alloc] initWithTitle:@"Frame VS Bounds" target:self action:@selector(frameVSBoundsActionFired)];
+//        STDTableViewSectionItem *section5 =
+//        [[STDTableViewSectionItem alloc] initWithSectionTitle:@"测试UIView.bounds"
+//                                                        items:@[ item50 ]];
+//        [dataSource addObject:section5];
 
         self.dataSource = dataSource;
     }
@@ -155,13 +163,18 @@
     [self.customNavigationController pushViewController:webViewController animated:YES];
 }
 
+- (void)frameVSBoundsActionFired {
+    STDScrollViewController *scrollViewController = [[STDScrollViewController alloc] init];
+    [self.customNavigationController pushViewController:scrollViewController animated:YES];
+}
+
 - (void)imagePickerController:(STImagePickerController *)picker didFinishPickingImageWithInfo:(NSDictionary *)info {
     NSArray *imageArray = [info valueForKey:@"data"];
     STIndicatorView *indicatorView = [[STIndicatorView alloc] initWithView:self.view];
     indicatorView.indicatorType = STIndicatorTypeText;
     indicatorView.blurEffectStyle = STBlurEffectStyleExtraLight;
     indicatorView.textLabel.text = @"完成选择照片";
-    indicatorView.detailLabel.text = [NSString stringWithFormat:@"该次选择 %d 张照片", imageArray.count];
+    indicatorView.detailLabel.text = [NSString stringWithFormat:@"该次选择 %lld 张照片", (long long)imageArray.count];
     [indicatorView showAnimated:NO];
     [indicatorView hideAnimated:YES afterDelay:2.5];
     [picker dismissViewControllerAnimated:YES completion:nil];

@@ -21,12 +21,16 @@
 		0602B501196974150004ACBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E7D1851CD7C00574E94 /* UIKit.framework */; };
 		0602B503196974150004ACBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6471E791851CD7C00574E94 /* Foundation.framework */; };
 		0602B512196974150004ACBB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6471E821851CD7C00574E94 /* InfoPlist.strings */; };
-		065D787C1A80C0BD0083D058 /* STDSimpleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D787B1A80C0BD0083D058 /* STDSimpleFactory.m */; };
-		065D78821A80C6840083D058 /* STDFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78811A80C6840083D058 /* STDFactory.m */; };
-		065D78881A80C8A80083D058 /* STDFactoryPatterns.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78871A80C8A80083D058 /* STDFactoryPatterns.m */; };
-		065D788B1A80CF1E0083D058 /* STDSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D788A1A80CF1E0083D058 /* STDSingleton.m */; };
-		065D788E1A80D2150083D058 /* STDBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D788D1A80D2150083D058 /* STDBuilder.m */; };
-		065D78911A80E1710083D058 /* STDPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78901A80E1710083D058 /* STDPrototype.m */; };
+		065D78B81A81ECB60083D058 /* STDScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78B71A81ECB60083D058 /* STDScrollViewController.m */; };
+		065D78D21A822ECF0083D058 /* STDAbstractFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78C91A822ECF0083D058 /* STDAbstractFactory.m */; };
+		065D78D31A822ECF0083D058 /* STDBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78CB1A822ECF0083D058 /* STDBuilder.m */; };
+		065D78D41A822ECF0083D058 /* STDFactoryMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78CD1A822ECF0083D058 /* STDFactoryMethod.m */; };
+		065D78D51A822ECF0083D058 /* STDPrototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78CF1A822ECF0083D058 /* STDPrototype.m */; };
+		065D78D61A822ECF0083D058 /* STDSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78D11A822ECF0083D058 /* STDSingleton.m */; };
+		065D78DB1A8230640083D058 /* STDAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78DA1A8230640083D058 /* STDAdapter.m */; };
+		065D78DE1A8344C30083D058 /* STDFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78DD1A8344C30083D058 /* STDFacade.m */; };
+		065D78E11A834AF00083D058 /* STDProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78E01A834AF00083D058 /* STDProxy.m */; };
+		065D78E51A8382AC0083D058 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065D78E41A8382AC0083D058 /* CFNetwork.framework */; };
 		0681CCDB19D3BC9A00D897AF /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0681CCDA19D3BC9A00D897AF /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		06A1CD341978DE0700F68F35 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD331978DE0700F68F35 /* CoreTelephony.framework */; };
 		06A1CD381978DE3500F68F35 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */; };
@@ -152,19 +156,26 @@
 		0602B51B196974150004ACBB /* STKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06291AE4191F314700EDBD35 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		0634101A19C9EBE3003BC34E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		065D787A1A80C0BD0083D058 /* STDSimpleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSimpleFactory.h; sourceTree = "<group>"; };
-		065D787B1A80C0BD0083D058 /* STDSimpleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSimpleFactory.m; sourceTree = "<group>"; };
 		065D787D1A80C3BB0083D058 /* STDesignPatterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDesignPatterns.h; sourceTree = "<group>"; };
-		065D78801A80C6840083D058 /* STDFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDFactory.h; sourceTree = "<group>"; };
-		065D78811A80C6840083D058 /* STDFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDFactory.m; sourceTree = "<group>"; };
-		065D78861A80C8A80083D058 /* STDFactoryPatterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDFactoryPatterns.h; sourceTree = "<group>"; };
-		065D78871A80C8A80083D058 /* STDFactoryPatterns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDFactoryPatterns.m; sourceTree = "<group>"; };
-		065D78891A80CF1E0083D058 /* STDSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSingleton.h; sourceTree = "<group>"; };
-		065D788A1A80CF1E0083D058 /* STDSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSingleton.m; sourceTree = "<group>"; };
-		065D788C1A80D2150083D058 /* STDBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBuilder.h; sourceTree = "<group>"; };
-		065D788D1A80D2150083D058 /* STDBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBuilder.m; sourceTree = "<group>"; };
-		065D788F1A80E1710083D058 /* STDPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPrototype.h; sourceTree = "<group>"; };
-		065D78901A80E1710083D058 /* STDPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPrototype.m; sourceTree = "<group>"; };
+		065D78B61A81ECB60083D058 /* STDScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDScrollViewController.h; sourceTree = "<group>"; };
+		065D78B71A81ECB60083D058 /* STDScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDScrollViewController.m; sourceTree = "<group>"; };
+		065D78C81A822ECF0083D058 /* STDAbstractFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDAbstractFactory.h; sourceTree = "<group>"; };
+		065D78C91A822ECF0083D058 /* STDAbstractFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDAbstractFactory.m; sourceTree = "<group>"; };
+		065D78CA1A822ECF0083D058 /* STDBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBuilder.h; sourceTree = "<group>"; };
+		065D78CB1A822ECF0083D058 /* STDBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBuilder.m; sourceTree = "<group>"; };
+		065D78CC1A822ECF0083D058 /* STDFactoryMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDFactoryMethod.h; sourceTree = "<group>"; };
+		065D78CD1A822ECF0083D058 /* STDFactoryMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDFactoryMethod.m; sourceTree = "<group>"; };
+		065D78CE1A822ECF0083D058 /* STDPrototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDPrototype.h; sourceTree = "<group>"; };
+		065D78CF1A822ECF0083D058 /* STDPrototype.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDPrototype.m; sourceTree = "<group>"; };
+		065D78D01A822ECF0083D058 /* STDSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSingleton.h; sourceTree = "<group>"; };
+		065D78D11A822ECF0083D058 /* STDSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSingleton.m; sourceTree = "<group>"; };
+		065D78D91A8230640083D058 /* STDAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDAdapter.h; sourceTree = "<group>"; };
+		065D78DA1A8230640083D058 /* STDAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDAdapter.m; sourceTree = "<group>"; };
+		065D78DC1A8344C30083D058 /* STDFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDFacade.h; sourceTree = "<group>"; };
+		065D78DD1A8344C30083D058 /* STDFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDFacade.m; sourceTree = "<group>"; };
+		065D78DF1A834AF00083D058 /* STDProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDProxy.h; sourceTree = "<group>"; };
+		065D78E01A834AF00083D058 /* STDProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDProxy.m; sourceTree = "<group>"; };
+		065D78E41A8382AC0083D058 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0681CCDA19D3BC9A00D897AF /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		0698C21C19D1CCE400D0D69A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		06A1CD331978DE0700F68F35 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -349,6 +360,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065D78E51A8382AC0083D058 /* CFNetwork.framework in Frameworks */,
 				06CFCBBF1A676F39003DDC93 /* WebKit.framework in Frameworks */,
 				0681CCDB19D3BC9A00D897AF /* Photos.framework in Frameworks */,
 				06A1CD381978DE3500F68F35 /* libstdc++.6.dylib in Frameworks */,
@@ -385,20 +397,48 @@
 			isa = PBXGroup;
 			children = (
 				065D787D1A80C3BB0083D058 /* STDesignPatterns.h */,
-				065D78861A80C8A80083D058 /* STDFactoryPatterns.h */,
-				065D78871A80C8A80083D058 /* STDFactoryPatterns.m */,
-				065D78801A80C6840083D058 /* STDFactory.h */,
-				065D78811A80C6840083D058 /* STDFactory.m */,
-				065D787A1A80C0BD0083D058 /* STDSimpleFactory.h */,
-				065D787B1A80C0BD0083D058 /* STDSimpleFactory.m */,
-				065D78891A80CF1E0083D058 /* STDSingleton.h */,
-				065D788A1A80CF1E0083D058 /* STDSingleton.m */,
-				065D788C1A80D2150083D058 /* STDBuilder.h */,
-				065D788D1A80D2150083D058 /* STDBuilder.m */,
-				065D788F1A80E1710083D058 /* STDPrototype.h */,
-				065D78901A80E1710083D058 /* STDPrototype.m */,
+				065D78C71A822ECF0083D058 /* Creational */,
+				065D78D71A822FA50083D058 /* Structural */,
+				065D78D81A822FEC0083D058 /* Behavioral */,
 			);
 			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
+		065D78C71A822ECF0083D058 /* Creational */ = {
+			isa = PBXGroup;
+			children = (
+				065D78CC1A822ECF0083D058 /* STDFactoryMethod.h */,
+				065D78CD1A822ECF0083D058 /* STDFactoryMethod.m */,
+				065D78C81A822ECF0083D058 /* STDAbstractFactory.h */,
+				065D78C91A822ECF0083D058 /* STDAbstractFactory.m */,
+				065D78CA1A822ECF0083D058 /* STDBuilder.h */,
+				065D78CB1A822ECF0083D058 /* STDBuilder.m */,
+				065D78CE1A822ECF0083D058 /* STDPrototype.h */,
+				065D78CF1A822ECF0083D058 /* STDPrototype.m */,
+				065D78D01A822ECF0083D058 /* STDSingleton.h */,
+				065D78D11A822ECF0083D058 /* STDSingleton.m */,
+			);
+			path = Creational;
+			sourceTree = "<group>";
+		};
+		065D78D71A822FA50083D058 /* Structural */ = {
+			isa = PBXGroup;
+			children = (
+				065D78D91A8230640083D058 /* STDAdapter.h */,
+				065D78DA1A8230640083D058 /* STDAdapter.m */,
+				065D78DC1A8344C30083D058 /* STDFacade.h */,
+				065D78DD1A8344C30083D058 /* STDFacade.m */,
+				065D78DF1A834AF00083D058 /* STDProxy.h */,
+				065D78E01A834AF00083D058 /* STDProxy.m */,
+			);
+			path = Structural;
+			sourceTree = "<group>";
+		};
+		065D78D81A822FEC0083D058 /* Behavioral */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Behavioral;
 			sourceTree = "<group>";
 		};
 		06A4D3C119E6B3C7007D332D /* STKitWidget */ = {
@@ -529,6 +569,8 @@
 				06CB64101A59523F00ABD7D3 /* STDNavigationTestViewController.h */,
 				06CB64111A59523F00ABD7D3 /* STDNavigationTestViewController.m */,
 				06CB64121A59523F00ABD7D3 /* TextLayout */,
+				065D78B61A81ECB60083D058 /* STDScrollViewController.h */,
+				065D78B71A81ECB60083D058 /* STDScrollViewController.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -779,6 +821,7 @@
 		F6471E781851CD7C00574E94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				065D78E41A8382AC0083D058 /* CFNetwork.framework */,
 				06CFCB9C1A63973C003DDC93 /* SpriteKit.framework */,
 				06DBF9E019F8CFBB009ECABA /* Social.framework */,
 				0681CCDA19D3BC9A00D897AF /* Photos.framework */,
@@ -956,7 +999,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06CB65371A59523F00ABD7D3 /* STDLeftViewController.m in Sources */,
-				065D78881A80C8A80083D058 /* STDFactoryPatterns.m in Sources */,
 				06CB65E01A59524000ABD7D3 /* STDSwitchViewController.m in Sources */,
 				06CB65E21A59524000ABD7D3 /* STDMoreViewController.m in Sources */,
 				06CB65C21A59523F00ABD7D3 /* STDSession.m in Sources */,
@@ -970,13 +1012,16 @@
 				06CB65C51A59523F00ABD7D3 /* STDBaseChatCell.m in Sources */,
 				06CB65301A59523F00ABD7D3 /* UIBezierPath-Points.m in Sources */,
 				06CB65C01A59523F00ABD7D3 /* STDImage.m in Sources */,
+				065D78D21A822ECF0083D058 /* STDAbstractFactory.m in Sources */,
 				06CB65391A59523F00ABD7D3 /* STAlertView.m in Sources */,
 				06CB65B61A59523F00ABD7D3 /* STAHanoiView.m in Sources */,
+				065D78DB1A8230640083D058 /* STDAdapter.m in Sources */,
 				06CB65D81A59524000ABD7D3 /* STDServiceViewController.m in Sources */,
 				06CB65CA1A59524000ABD7D3 /* STDModel.xcdatamodeld in Sources */,
 				06CB65B21A59523F00ABD7D3 /* STDLinkViewController.m in Sources */,
 				06CB65D41A59524000ABD7D3 /* SCSiriWaveformView.m in Sources */,
 				06CB65DF1A59524000ABD7D3 /* STDBNetwork.m in Sources */,
+				065D78E11A834AF00083D058 /* STDProxy.m in Sources */,
 				0602B49D196974150004ACBB /* main.m in Sources */,
 				06CB65381A59523F00ABD7D3 /* STDSideBarController.m in Sources */,
 				06CB65BE1A59523F00ABD7D3 /* STDReaderViewController.m in Sources */,
@@ -984,7 +1029,7 @@
 				06CB65B01A59523F00ABD7D3 /* STDNavigationTestViewController.m in Sources */,
 				06CB65B11A59523F00ABD7D3 /* STDAboutViewController.m in Sources */,
 				06CB65E71A59524000ABD7D3 /* STDStartViewController.m in Sources */,
-				065D788B1A80CF1E0083D058 /* STDSingleton.m in Sources */,
+				065D78D51A822ECF0083D058 /* STDPrototype.m in Sources */,
 				06CB65C61A59523F00ABD7D3 /* STDChat.m in Sources */,
 				06CB652F1A59523F00ABD7D3 /* MZCroppableView.m in Sources */,
 				06CB65BD1A59523F00ABD7D3 /* STDBookViewController.m in Sources */,
@@ -997,36 +1042,37 @@
 				06CB65BF1A59523F00ABD7D3 /* STRichView.m in Sources */,
 				06CB653E1A59523F00ABD7D3 /* STDViewController.m in Sources */,
 				06CB65AF1A59523F00ABD7D3 /* STDImageBlurViewController.m in Sources */,
-				065D78911A80E1710083D058 /* STDPrototype.m in Sources */,
 				06CB65B91A59523F00ABD7D3 /* STASortOperation.m in Sources */,
 				06CB653C1A59523F00ABD7D3 /* STDTableViewController.m in Sources */,
 				06CB65311A59523F00ABD7D3 /* PFGoldenSectionSpiral.m in Sources */,
 				06CB653B1A59523F00ABD7D3 /* STDTabBarController.m in Sources */,
+				065D78D31A822ECF0083D058 /* STDBuilder.m in Sources */,
 				06CB65DC1A59524000ABD7D3 /* SUNSlideSwitchView.m in Sources */,
 				06CB65DE1A59524000ABD7D3 /* STDBigViewController.m in Sources */,
 				06CB65A61A59523F00ABD7D3 /* STDWaterStreamViewCell.m in Sources */,
 				06CB65AD1A59523F00ABD7D3 /* STDownloadViewController.m in Sources */,
-				065D787C1A80C0BD0083D058 /* STDSimpleFactory.m in Sources */,
 				06CB65B41A59523F00ABD7D3 /* STACodeViewController.m in Sources */,
 				06CB65A81A59523F00ABD7D3 /* STDCardViewController.m in Sources */,
-				065D78821A80C6840083D058 /* STDFactory.m in Sources */,
 				06CB65D51A59524000ABD7D3 /* STDAboutAudioViewController.m in Sources */,
 				06CB65C81A59523F00ABD7D3 /* STDChatViewController.m in Sources */,
+				065D78D61A822ECF0083D058 /* STDSingleton.m in Sources */,
 				06CB65AC1A59523F00ABD7D3 /* STDFeedViewController.m in Sources */,
 				06CB65B71A59523F00ABD7D3 /* STAHanoiViewController.m in Sources */,
+				065D78DE1A8344C30083D058 /* STDFacade.m in Sources */,
 				06CB65C31A59523F00ABD7D3 /* STDUser.m in Sources */,
 				06CB65B31A59523F00ABD7D3 /* STDTextViewController.m in Sources */,
 				06CB65AB1A59523F00ABD7D3 /* STDFeedItem.m in Sources */,
+				065D78D41A822ECF0083D058 /* STDFactoryMethod.m in Sources */,
 				06CB65BA1A59523F00ABD7D3 /* STASortView.m in Sources */,
 				06CB65E31A59524000ABD7D3 /* STDNavigationSettingViewController.m in Sources */,
 				06CB65A71A59523F00ABD7D3 /* STWaterStreamView.m in Sources */,
-				065D788E1A80D2150083D058 /* STDBuilder.m in Sources */,
 				06CB65A91A59523F00ABD7D3 /* STDFeedCell.m in Sources */,
 				06CB653F1A59523F00ABD7D3 /* STMenuView.m in Sources */,
 				06CB65CB1A59524000ABD7D3 /* STDTextChatCell.m in Sources */,
 				06CB65E11A59524000ABD7D3 /* STDBlurSettingViewController.m in Sources */,
 				06CB65AA1A59523F00ABD7D3 /* STDFeedImageView.m in Sources */,
 				06CB65B51A59523F00ABD7D3 /* STAHanoiOperation.m in Sources */,
+				065D78B81A81ECB60083D058 /* STDScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
