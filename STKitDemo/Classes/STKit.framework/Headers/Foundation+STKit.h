@@ -221,3 +221,18 @@ typedef void(^STTimerFiredHandler) (NSTimer * timer, BOOL *invalidate);
 - (id)lastObjectOfClass:(Class) class;
 
 @end
+
+@interface NSDictionary (STURLQuery)
+/// connector is between key and value, separator are between each record
+/// eg. @{@"name":@"suen", @"age":@(24)} will be convert to name=suen&age=24 (connector=,separator&)
+- (NSString *)st_compontentsJoinedByConnector:(NSString *)connector separator:(NSString *)separator;
+/// URL
+- (NSString *)st_compontentsJoinedUsingURLStyle;
+
+@end
+
+@interface NSString (STNetwork)
+- (NSString *)st_stringByURLEncoded;
+- (NSString *)st_stringByURLDecoded;
+@end
+

@@ -82,6 +82,7 @@ extern NSString *NSStringFromPFMatrix(PFMatrix matrix);
 
 extern PFPoint PFPointMake(CGFloat x, CGFloat y, CGFloat z);
 extern PFPoint PFPointMakeFromMatrix(PFMatrix matrix);
+extern PFPoint PFPointFromString(NSString *string);
 extern NSString *NSStringFromPFPoint(PFPoint point);
 extern CGPoint CGPointMakeNormalizedPoint(CGPoint point, CGFloat distance);
 

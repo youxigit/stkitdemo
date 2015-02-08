@@ -13,7 +13,7 @@
 #import "STDAppDelegate.h"
 @interface STDStartViewController ()
 
-@property (nonatomic, strong) ZYQSphereView * sphereView;
+@property (nonatomic, strong) UIView *sphereView;
 
 @end
 
@@ -47,24 +47,10 @@
     
     NSArray *tags = @[@"导航", @"侧滑", @"标签", @"主题", @"列表", @"瀑布", @"图片", @"大图", @"链接", @"排版", @"菊花", @"音频", @"录音", @"音谱", @"存储", @"算法", @"相册", @"缓存", @"扩展", @"网络", @"下载", @"iOS7", @"手势", @"MVC"];
     
-    [self.view removeConstraints:self.view.constraints];
-    
-    self.sphereView = [[ZYQSphereView alloc] init];
+    self.sphereView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
     self.sphereView.translatesAutoresizingMaskIntoConstraints = NO;
     
-	NSMutableArray * items = [[NSMutableArray alloc] init];
-    [tags enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        UIButton *subV = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
-		subV.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100. green:arc4random_uniform(100)/100. blue:arc4random_uniform(100)/100. alpha:1];
-        [subV setTitle:obj forState:UIControlStateNormal];
-        subV.layer.masksToBounds=YES;
-        subV.layer.cornerRadius=3;
-        [subV addTarget:self action:@selector(tagButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-        [items addObject:subV];
-	}];
-	[self.sphereView setItems:items];
 	[self.view addSubview:self.sphereView];
-    [self.sphereView timerStart];
     
     UIImage * image = [UIImage imageNamed:@"aero_button"];
     UIButton * tabBarButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -114,18 +100,18 @@
 }
 
 -(void)tagButtonAction:(UIButton*)sender{
-    BOOL isStart=[self.sphereView isTimerStart];
-    [self.sphereView timerStop];
-    [UIView animateWithDuration:0.3 animations:^{
-        sender.transform=CGAffineTransformMakeScale(1.5, 1.5);
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.2 animations:^{
-            sender.transform=CGAffineTransformMakeScale(1, 1);
-            if (isStart) {
-                [self.sphereView timerStart];
-            }
-        }];
-    }];
+//    BOOL isStart=[self.sphereView isTimerStart];
+//    [self.sphereView timerStop];
+//    [UIView animateWithDuration:0.3 animations:^{
+//        sender.transform=CGAffineTransformMakeScale(1.5, 1.5);
+//    } completion:^(BOOL finished) {
+//        [UIView animateWithDuration:0.2 animations:^{
+//            sender.transform=CGAffineTransformMakeScale(1, 1);
+//            if (isStart) {
+//                [self.sphereView timerStart];
+//            }
+//        }];
+//    }];
 }
 
 - (void) voiceDidRecognizerText:(NSNotification *) notification {
@@ -138,13 +124,13 @@
 }
 
 - (void) enterTabBarControllerAction:(id) sender {
-    [self.sphereView timerStop];
+//    [self.sphereView timerStop];
     STDAppDelegate * appDelegate = (STDAppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate replaceRootViewController:[appDelegate tabBarController] animationOptions:UIViewAnimationOptionTransitionFlipFromLeft];
 }
 
 - (void) enterSideBarControllerAction:(id) sender {
-    [self.sphereView timerStop];
+//    [self.sphereView timerStop];
     STDAppDelegate * appDelegate = (STDAppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate replaceRootViewController:[appDelegate sideBarController] animationOptions:UIViewAnimationOptionTransitionFlipFromLeft];
 }

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <STKit/STRSACryptor.h>
+#import "STHTTPConfiguration.h"
 
 /// 以下内容仅有一项就可以了
 @interface STCertificateItem : NSObject
@@ -32,14 +33,7 @@ typedef NS_ENUM(NSInteger, STSSLPinningMode) {
 };
 
 
-typedef NS_ENUM(NSInteger, STCompressionOptions) {
-    STCompressionOptionsNone             = 1 << 0,     // 不接受任何压缩
-    STCompressionOptionsRequestAllowed   = 1 << 1,     // 请求时压缩request-body
-    STCompressionOptionsResponseAccepted = 1 << 2      // 允许服务器传输压缩的数据
-};
-
-
-@interface STNetworkConfiguration : NSObject
+@interface STNetworkConfiguration : NSObject <NSCopying>
 
 + (instancetype)sharedConfiguration;
 /// 是否允许未经过验证的证书，默认允许。如果允许，则忽略SSLPinningMode。default yes
@@ -54,6 +48,6 @@ typedef NS_ENUM(NSInteger, STCompressionOptions) {
 @property(nonatomic, strong) NSURLCredential *HTTPBasicCredential;
 @property(nonatomic, strong) NSURLCredential *clientCertificateCredential;
 
-@property(nonatomic) STCompressionOptions   compressionOptions;
+@property(nonatomic, strong) STHTTPConfiguration    *HTTPConfiguration;
 
 @end

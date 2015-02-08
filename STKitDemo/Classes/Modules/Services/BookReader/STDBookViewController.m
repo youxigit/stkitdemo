@@ -42,7 +42,7 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.font = [UIFont systemFontOfSize:14.];
     titleLabel.textColor = [UIColor colorWithRGB:0xFF7300];
-    titleLabel.text =[NSString stringWithFormat:@"第%d页 共%d页", self.page + 1, self.total];
+    titleLabel.text =[NSString stringWithFormat:@"第%ld页 共%ld页", (long)(self.page + 1), (long)self.total];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     self.navigationItem.titleView = titleLabel;
     

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <STKit/STNetwork.h>
+#import "STHTTPOperation.h"
 
 /**
  * 数据加载的来源，包括从本地Cache加载，下拉刷新，分页获取更多等
@@ -42,7 +42,7 @@ typedef enum STModelDataSourceType {
 
 @property(nonatomic, strong) NSError *error;
 /// 注意。 当pagination的时候去操作下拉刷新，会取消当前的pagination操作。每一次加载更多，需要生成一个新的Operation
-@property(nonatomic, weak) STNetworkOperation *paginationOperation;
+@property(nonatomic, weak) STHTTPOperation *paginationOperation;
 
 /// 每次加载完毕后，会调用此方法，判断是否需要显示空数据
 - (NSInteger)numberOfDataItems;

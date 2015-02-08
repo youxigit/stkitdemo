@@ -55,13 +55,11 @@ typedef NS_ENUM(NSInteger, STImageDownloadOrder) {
  * @param   finishedHandler 图片下载完成的回调,会返回图片/错误 @see STImageLoaderHandler
  */
 /// 以下两个方法为去服务端下载图片。
-- (NSInteger)loadImageWithURLString:(NSString *)URLString finishedHandler:(STImageLoaderHandler)finishedHandler;
+- (void)loadImageWithURLString:(NSString *)URLString finishedHandler:(STImageLoaderHandler)finishedHandler;
 
-- (NSInteger)loadImageWithURLString:(NSString *)URLString
-                    progressHandler:(STImageProgressHandler)progressHandler
-                    finishedHandler:(STImageLoaderHandler)finishedHandler;
+- (void)loadImageWithURLString:(NSString *)URLString
+               progressHandler:(STImageProgressHandler)progressHandler
+               finishedHandler:(STImageLoaderHandler)finishedHandler;
 
 - (void)cancelLoadImageWithURLString:(NSString *)URLString;
-/// 每个request都会有唯一的identifier，可以根据id去获取operation
-- (void)cancelLoadImageRequestWithIdentifier:(NSInteger)identifier;
 @end

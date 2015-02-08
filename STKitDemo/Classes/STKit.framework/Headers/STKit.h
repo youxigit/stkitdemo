@@ -46,8 +46,6 @@
 #import <STKit/STSearchDisplayController.h>
 // STKit+Network
 #import <STKit/STReachability.h>
-#import <STKit/STNetwork.h>
-#import <STKit/STNetworkOperation.h>
 #import <STKit/STNetworkConfiguration.h>
 #import <STKit/STHTTPNetwork.h>
 

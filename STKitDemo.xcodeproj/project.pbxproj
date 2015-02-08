@@ -56,8 +56,6 @@
 		06CB653D1A59523F00ABD7D3 /* STDTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB637B1A59523F00ABD7D3 /* STDTextTableViewController.m */; };
 		06CB653E1A59523F00ABD7D3 /* STDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB637D1A59523F00ABD7D3 /* STDViewController.m */; };
 		06CB653F1A59523F00ABD7D3 /* STMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB637F1A59523F00ABD7D3 /* STMenuView.m */; };
-		06CB65A61A59523F00ABD7D3 /* STDWaterStreamViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB63FD1A59523F00ABD7D3 /* STDWaterStreamViewCell.m */; };
-		06CB65A71A59523F00ABD7D3 /* STWaterStreamView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB63FF1A59523F00ABD7D3 /* STWaterStreamView.m */; };
 		06CB65A81A59523F00ABD7D3 /* STDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64011A59523F00ABD7D3 /* STDCardViewController.m */; };
 		06CB65A91A59523F00ABD7D3 /* STDFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64031A59523F00ABD7D3 /* STDFeedCell.m */; };
 		06CB65AA1A59523F00ABD7D3 /* STDFeedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64051A59523F00ABD7D3 /* STDFeedImageView.m */; };
@@ -218,10 +216,6 @@
 		06CB637D1A59523F00ABD7D3 /* STDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDViewController.m; sourceTree = "<group>"; };
 		06CB637E1A59523F00ABD7D3 /* STMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMenuView.h; sourceTree = "<group>"; };
 		06CB637F1A59523F00ABD7D3 /* STMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMenuView.m; sourceTree = "<group>"; };
-		06CB63FC1A59523F00ABD7D3 /* STDWaterStreamViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDWaterStreamViewCell.h; sourceTree = "<group>"; };
-		06CB63FD1A59523F00ABD7D3 /* STDWaterStreamViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDWaterStreamViewCell.m; sourceTree = "<group>"; };
-		06CB63FE1A59523F00ABD7D3 /* STWaterStreamView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STWaterStreamView.h; sourceTree = "<group>"; };
-		06CB63FF1A59523F00ABD7D3 /* STWaterStreamView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STWaterStreamView.m; sourceTree = "<group>"; };
 		06CB64001A59523F00ABD7D3 /* STDCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDCardViewController.h; sourceTree = "<group>"; };
 		06CB64011A59523F00ABD7D3 /* STDCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDCardViewController.m; sourceTree = "<group>"; };
 		06CB64021A59523F00ABD7D3 /* STDFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDFeedCell.h; sourceTree = "<group>"; };
@@ -578,7 +572,6 @@
 		06CB63FA1A59523F00ABD7D3 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				06CB63FB1A59523F00ABD7D3 /* Deprecated */,
 				06CB64001A59523F00ABD7D3 /* STDCardViewController.h */,
 				06CB64011A59523F00ABD7D3 /* STDCardViewController.m */,
 				06CB64021A59523F00ABD7D3 /* STDFeedCell.h */,
@@ -593,17 +586,6 @@
 				06CB640B1A59523F00ABD7D3 /* STDownloadViewController.m */,
 			);
 			path = Image;
-			sourceTree = "<group>";
-		};
-		06CB63FB1A59523F00ABD7D3 /* Deprecated */ = {
-			isa = PBXGroup;
-			children = (
-				06CB63FC1A59523F00ABD7D3 /* STDWaterStreamViewCell.h */,
-				06CB63FD1A59523F00ABD7D3 /* STDWaterStreamViewCell.m */,
-				06CB63FE1A59523F00ABD7D3 /* STWaterStreamView.h */,
-				06CB63FF1A59523F00ABD7D3 /* STWaterStreamView.m */,
-			);
-			path = Deprecated;
 			sourceTree = "<group>";
 		};
 		06CB64121A59523F00ABD7D3 /* TextLayout */ = {
@@ -1049,7 +1031,6 @@
 				065D78D31A822ECF0083D058 /* STDBuilder.m in Sources */,
 				06CB65DC1A59524000ABD7D3 /* SUNSlideSwitchView.m in Sources */,
 				06CB65DE1A59524000ABD7D3 /* STDBigViewController.m in Sources */,
-				06CB65A61A59523F00ABD7D3 /* STDWaterStreamViewCell.m in Sources */,
 				06CB65AD1A59523F00ABD7D3 /* STDownloadViewController.m in Sources */,
 				06CB65B41A59523F00ABD7D3 /* STACodeViewController.m in Sources */,
 				06CB65A81A59523F00ABD7D3 /* STDCardViewController.m in Sources */,
@@ -1065,7 +1046,6 @@
 				065D78D41A822ECF0083D058 /* STDFactoryMethod.m in Sources */,
 				06CB65BA1A59523F00ABD7D3 /* STASortView.m in Sources */,
 				06CB65E31A59524000ABD7D3 /* STDNavigationSettingViewController.m in Sources */,
-				06CB65A71A59523F00ABD7D3 /* STWaterStreamView.m in Sources */,
 				06CB65A91A59523F00ABD7D3 /* STDFeedCell.m in Sources */,
 				06CB653F1A59523F00ABD7D3 /* STMenuView.m in Sources */,
 				06CB65CB1A59524000ABD7D3 /* STDTextChatCell.m in Sources */,
@@ -1137,7 +1117,7 @@
 					"$(PROJECT_DIR)/STKitDemo",
 					"$(PROJECT_DIR)/STKitDemo/Classes/3rdLibs",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = STKitDemo;
 				PROVISIONING_PROFILE = "";

@@ -29,8 +29,12 @@ static STDBNetwork * _sharedNetwork;
 - (instancetype) init {
     self = [super init];
     if (self) {
-        self.network = [[STHTTPNetwork alloc] initWithHost:@"http://www.dbmeizi.com/" path:nil];
-        self.network.dataType = STHTTPResponseDataTypeTextHTML;
+        STNetworkConfiguration *configuration = [[STNetworkConfiguration sharedConfiguration] copy];
+        STHTTPConfiguration *HTTPconfiguration = [[STHTTPConfiguration alloc] init];
+        HTTPconfiguration.dataEncoding = NSUTF8StringEncoding;
+        HTTPconfiguration.dataType = STHTTPResponseDataTypeTextHTML;
+        configuration.HTTPConfiguration = HTTPconfiguration;
+        self.network = [[STHTTPNetwork alloc] initWithConfiguration:configuration];
     }
     return self;
 }
@@ -39,7 +43,10 @@ static STDBNetwork * _sharedNetwork;
 - (void) fetchDBFeedWithMethod:(NSString *) method
                     parameters:(NSDictionary *) parameters
              completionHandler:(STDBNetworkHandler) completionHandler {
-    [self.network sendAsynchronousRequestWithMethod:method parameters:parameters handler:^(STNetworkOperation *operation, id response, NSError *error) {
+    NSMutableString *URLString = [@"http://www.dbmeizi.com/" mutableCopy];
+    [URLString appendString:method];
+    STHTTPOperation *operation = [STHTTPOperation operationWithURLString:URLString parameters:parameters];
+    [self.network sendHTTPOperation:operation completionHandler:^(STHTTPOperation *operation, id response, NSError *error) {
         if (error) {
             completionHandler(nil, NO, error);
         } else {
@@ -48,7 +55,7 @@ static STDBNetwork * _sharedNetwork;
                 NSArray * result = [self parseHTMLToImageArray:response hasMore:&hasMore];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (completionHandler) {
-                         completionHandler(result, hasMore, nil);
+                        completionHandler(result, hasMore, nil);
                     }
                 });
             });

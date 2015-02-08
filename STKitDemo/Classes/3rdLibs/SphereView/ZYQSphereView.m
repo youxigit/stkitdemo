@@ -18,8 +18,8 @@
 @end
 
 @interface ZYQSphereView (){
-    float intervalX;
-    float intervalY;
+    CGFloat intervalX;
+    CGFloat intervalY;
 }
 
 @property(nonatomic,strong)NSTimer *timer;
@@ -73,17 +73,16 @@
 	pointMap = [[NSMutableDictionary alloc] init];
 	
 	NSArray *spherePoints = [PFGoldenSectionSpiral sphere:items.count];
-	for (int i=0; i<items.count; i++) {
-		PFPoint point;
-		NSValue *pointRep = [spherePoints objectAtIndex:i];
-		[pointRep getValue:&point];
-		
-		UIView *view = [items objectAtIndex:i];
+	for (NSInteger i=0; i<items.count; i++) {
+
+		NSString *pointRep = [spherePoints objectAtIndex:i];
+        PFPoint point = PFPointFromString(pointRep);
+		UIView *view = items[i];
 		view.tag = i;
 		[self layoutView:view withPoint:point];
 		[self addSubview:view];
 				
-		[pointMap setObject:pointRep forKey:[NSNumber numberWithInt:i]];
+		[pointMap setObject:pointRep forKey:@(i)];
 	}
 	
 	[self rotateSphereByAngle:1 fromPoint:CGPointMake(0, 0) toPoint:CGPointMake(0, 1)];
@@ -203,10 +202,7 @@
 		
 		NSNumber *key = [NSNumber numberWithInt:i];
 		
-		PFPoint point;
-		
-		NSValue *pointRep = [pointMap objectForKey:key];
-		[pointRep getValue:&point];
+		PFPoint point = PFPointFromString([pointMap objectForKey:key]);
 		
 		PFPoint aroundPoint = PFPointMake(0, 0, 0);
 		PFMatrix coordinate = PFMatrixTransform3DMakeFromPFPoint(point);
@@ -215,8 +211,8 @@
 		
 		point = PFPointMakeFromMatrix(PFMatrixMultiply(coordinate, transform)); 
 		
-		[pointMap setObject:[NSValue value:&point withObjCType:@encode(PFPoint)] forKey:key];
-		
+        [pointMap setObject:NSStringFromPFPoint(point) forKey:key];
+        NSLog(@"%@", NSStringFromPFPoint(point));
 		[self layoutView:view withPoint:point];
 	}
 	
@@ -243,10 +239,7 @@
 		
 		NSNumber *key = [NSNumber numberWithInt:i];
 		
-		PFPoint point;
-		
-		NSValue *pointRep = [pointMap objectForKey:key];
-		[pointRep getValue:&point];
+        PFPoint point = PFPointFromString([pointMap objectForKey:key]);
 		
 		PFPoint aroundPoint = PFPointMake(0, 0, 0);
 		PFMatrix coordinate = PFMatrixTransform3DMakeFromPFPoint(point);
@@ -262,10 +255,8 @@
 			transform = PFMatrixMultiply(transform, PFMatrixTransform3DMakeXRotationOnPoint(aroundPoint,yAxisDirection * angle));
 		}
 		
-		point = PFPointMakeFromMatrix(PFMatrixMultiply(coordinate, transform)); 
-		
-		[pointMap setObject:[NSValue value:&point withObjCType:@encode(PFPoint)] forKey:key];
-		
+		point = PFPointMakeFromMatrix(PFMatrixMultiply(coordinate, transform));
+        [pointMap setObject:NSStringFromPFPoint(point) forKey:key];
 		[self layoutView:view withPoint:point];
 	}
 }
@@ -302,10 +293,7 @@
 		
 		NSNumber *key = [NSNumber numberWithInt:i];
 		
-		PFPoint point;
-		
-		NSValue *pointRep = [pointMap objectForKey:key];
-		[pointRep getValue:&point];
+        PFPoint point = PFPointFromString([pointMap objectForKey:key]);
 		
 		[self layoutView:view withPoint:point];
 	}		

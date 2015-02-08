@@ -34,6 +34,7 @@
 - (void)refreshControlDidChangedToState:(STRefreshControlState)refreshControlState;
 
 @property(nonatomic, assign) NSTimeInterval animationDuration;
+
 @end
 
 @interface STDefaultRefreshControl : STRefreshControl

@@ -20,8 +20,7 @@
 - (instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSString * URLString = @"http://www.lovecard.sinaapp.com";
-        self.network = [[STHTTPNetwork alloc] initWithHost:URLString path:@"open"];
+        self.network = [[STHTTPNetwork alloc] init];
     }
     return self;
 }
@@ -33,7 +32,9 @@
 
 - (void) loadDataWithPage:(NSInteger)page size:(NSInteger)size completionHandler:(STDFeedLoadHandler)completionHandler {
     NSDictionary * parameters = @{@"page":@(page), @"size":@(size)};
-    [self.network sendAsynchronousRequestWithMethod:@"photo/list/" parameters:parameters handler:^(STNetworkOperation * operation, id response, NSError *error) {
+    NSString *URLString = @"http://www.lovecard.sinaapp.com/open/photo/list/";
+    STHTTPOperation *operation = [STHTTPOperation operationWithURLString:URLString parameters:parameters];
+    [self.network sendHTTPOperation:operation completionHandler:^(STHTTPOperation *operation, id response, NSError *error) {
         if (!error) {
             NSMutableArray * result = [NSMutableArray arrayWithCapacity:2];
             NSArray * array = [response objectForKey:@"photos"];

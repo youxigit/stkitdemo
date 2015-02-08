@@ -121,7 +121,7 @@
 
 - (void) updateNumberOfDisks:(NSInteger) numberOfDisks {
     self.numberOfDisks = numberOfDisks;
-    self.numberOfHanoiDiskLabel.text = [NSString stringWithFormat:@"%d", numberOfDisks];
+    self.numberOfHanoiDiskLabel.text = [NSString stringWithFormat:@"%ld", (long)numberOfDisks];
     [[NSUserDefaults standardUserDefaults] setValue:@(numberOfDisks) forKey:@"STNumberOfHanoiDisks"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }

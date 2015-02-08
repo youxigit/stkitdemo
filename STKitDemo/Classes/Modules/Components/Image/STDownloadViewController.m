@@ -78,8 +78,8 @@
 
 - (void)alertActionFired:(id)sender {
     STAlertView * alertView = [[STAlertView alloc] initWithMenuTitles:@"First", @"Second", @"Third", nil];
-    int result = [alertView showInView:self.view animated:YES];
-    NSLog(@"============%d", result);
+    NSInteger result = [alertView showInView:self.view animated:YES];
+    NSLog(@"============%ld", (long)result);
 }
 
 - (void) cleanCache:(id) sender {

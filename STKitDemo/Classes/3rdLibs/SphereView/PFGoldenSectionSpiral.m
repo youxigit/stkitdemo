@@ -27,13 +27,8 @@
         CGFloat y = k * off - 1 + (off / 2);
         CGFloat r = sqrt(1 - y*y);
         CGFloat phi = k * inc;
-		
-		
 		PFPoint point = PFPointMake(cos(phi)*r, y, sin(phi)*r);
-		
-		NSValue *v = [NSValue value:&point withObjCType:@encode(PFPoint)];
-		
-        [result addObject:v];
+        [result addObject:NSStringFromPFPoint(point)];
 	}
 	
 	return result;
@@ -171,7 +166,7 @@ extern PFMatrix PFMatrixMakeIdentity(NSInteger m, NSInteger n) {
     PFMatrix matrix = PFMatrixMake(m, n);
     
     for(NSInteger i=0; i<m; i++){
-        matrix.data[i][i] = 1;
+        matrix.data[i][i] = 1.0f;
     }
     
     return matrix;
@@ -183,7 +178,7 @@ extern PFMatrix PFMatrixMultiply(PFMatrix A, PFMatrix B) {
     for(NSInteger i=0; i<A.m; i++){
         for(NSInteger j=0; j<B.n; j++){
             for(NSInteger k=0; k < A.n; k++){
-                R.data[i][j] += A.data[i][k] * B.data[k][j];
+                R.data[i][j] += (A.data[i][k] * B.data[k][j]);
             }
         }
     }
@@ -229,8 +224,24 @@ extern PFPoint PFPointMakeFromMatrix(PFMatrix matrix) {
     return PFPointMake(matrix.data[0][0], matrix.data[0][1], matrix.data[0][2]);
 }
 
+extern PFPoint PFPointFromString(NSString *string) {
+    PFPoint p;
+    NSArray *temp = [string componentsSeparatedByString:@","];
+    if (temp.count > 0) {
+        p.x = [temp[0] floatValue];
+    }
+    if (temp.count > 1) {
+        p.y = [temp[1] floatValue];
+    }
+    if (temp.count > 2) {
+        p.z = [temp[2] floatValue];
+    }
+    return p;
+}
+
+
 extern NSString *NSStringFromPFPoint(PFPoint point) {
-    NSString *str = [NSString stringWithFormat:@"(%f,%f,%f)", point.x, point.y, point.z];
+    NSString *str = [NSString stringWithFormat:@"%@,%@,%@", @(point.x), @(point.y), @(point.z)];
     
     return str;
 }
@@ -240,7 +251,7 @@ extern NSString *NSStringFromPFPoint(PFPoint point) {
 #pragma mark CGPoint methods
 
 extern CGPoint CGPointMakeNormalizedPoint(CGPoint point, CGFloat distance) {
-    CGPoint nPoint = CGPointMake(point.x * 1/distance, point.y * 1/distance);
+    CGPoint nPoint = CGPointMake(point.x * 1.0/distance, point.y * 1.0/distance);
     
     return nPoint;
 }
