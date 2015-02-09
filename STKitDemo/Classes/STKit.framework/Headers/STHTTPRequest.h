@@ -23,8 +23,6 @@
 
 @interface STHTTPRequest : NSObject
 
-@property(readonly) NSInteger identifier;
-
 @property(nonatomic, copy)STHTTPConfiguration   *HTTPConfiguration;
 
 - (instancetype)initWithURLString:(NSString *)URLString

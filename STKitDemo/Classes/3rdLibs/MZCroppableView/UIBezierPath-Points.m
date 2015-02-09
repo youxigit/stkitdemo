@@ -7,8 +7,8 @@
 #import "UIBezierPath-Points.h"
 
 #define POINTSTRING(_CGPOINT_) (NSStringFromCGPoint(_CGPOINT_))
-#define VALUE(_INDEX_) [NSValue valueWithCGPoint:points[_INDEX_]]
-#define POINT(_INDEX_) [(NSValue *)[points objectAtIndex:_INDEX_] CGPointValue]
+#define VALUE(_INDEX_) NSStringFromCGPoint(points[_INDEX_])
+#define POINT(_INDEX_) CGPointFromString(points[_INDEX_])
 
 // Return distance between two points
 static float distance (CGPoint p1, CGPoint p2)
@@ -22,6 +22,7 @@ static float distance (CGPoint p1, CGPoint p2)
 @implementation UIBezierPath (Points)
 void getPointsFromBezier(void *info, const CGPathElement *element)
 {
+
     NSMutableArray *bezierPoints = (__bridge NSMutableArray *)info;
     CGPathElementType type = element->type;
     CGPoint *points = element->points;

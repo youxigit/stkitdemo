@@ -123,6 +123,7 @@
 		06CB65EF1A59527E00ABD7D3 /* STKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CB648C1A59523F00ABD7D3 /* STKit.framework */; };
 		06CB65F01A5952B700ABD7D3 /* STDBNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64701A59523F00ABD7D3 /* STDBNetwork.m */; };
 		06CB65F11A5952C700ABD7D3 /* STDFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64071A59523F00ABD7D3 /* STDFeedItem.m */; };
+		06CB88A61A88C8C40082DACA /* STDBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB88A51A88C8C40082DACA /* STDBridge.m */; };
 		06CFCBBF1A676F39003DDC93 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0698C21C19D1CCE400D0D69A /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -330,6 +331,8 @@
 		06CB647E1A59523F00ABD7D3 /* STDStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDStartViewController.h; sourceTree = "<group>"; };
 		06CB647F1A59523F00ABD7D3 /* STDStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDStartViewController.m; sourceTree = "<group>"; };
 		06CB648C1A59523F00ABD7D3 /* STKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STKit.framework; sourceTree = "<group>"; };
+		06CB88A41A88C8C40082DACA /* STDBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBridge.h; sourceTree = "<group>"; };
+		06CB88A51A88C8C40082DACA /* STDBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBridge.m; sourceTree = "<group>"; };
 		06CFCB9C1A63973C003DDC93 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		06DBF9E019F8CFBB009ECABA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F6471E791851CD7C00574E94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -424,6 +427,8 @@
 				065D78DD1A8344C30083D058 /* STDFacade.m */,
 				065D78DF1A834AF00083D058 /* STDProxy.h */,
 				065D78E01A834AF00083D058 /* STDProxy.m */,
+				06CB88A41A88C8C40082DACA /* STDBridge.h */,
+				06CB88A51A88C8C40082DACA /* STDBridge.m */,
 			);
 			path = Structural;
 			sourceTree = "<group>";
@@ -1042,6 +1047,7 @@
 				065D78DE1A8344C30083D058 /* STDFacade.m in Sources */,
 				06CB65C31A59523F00ABD7D3 /* STDUser.m in Sources */,
 				06CB65B31A59523F00ABD7D3 /* STDTextViewController.m in Sources */,
+				06CB88A61A88C8C40082DACA /* STDBridge.m in Sources */,
 				06CB65AB1A59523F00ABD7D3 /* STDFeedItem.m in Sources */,
 				065D78D41A822ECF0083D058 /* STDFactoryMethod.m in Sources */,
 				06CB65BA1A59523F00ABD7D3 /* STASortView.m in Sources */,

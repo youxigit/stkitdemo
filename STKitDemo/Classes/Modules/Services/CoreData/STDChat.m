@@ -18,8 +18,8 @@
 
 #import "STDUser.h"
 
-const CGSize STDChatConstraintSize = {229, CGFLOAT_MAX};
-const CGSize STDChatActivitySize   = {266, CGFLOAT_MAX};
+const CGSize STDChatConstraintSize = {229, 9999999.0f};
+const CGSize STDChatActivitySize   = {266, 9999999.0f};
 
 const CGFloat STDImageMaxWidth     = 244;
 const CGFloat STDImageMinWidth     = 60;

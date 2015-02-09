@@ -31,7 +31,7 @@ typedef void (^STHTTPRequestProgressHandler)(STHTTPOperation *operation, CGFloat
  *
  * @param response 包含网络返回的数据
  */
-typedef void (^STHTTPResponseHandler)(STHTTPOperation *operation, id response, NSError *error);
+typedef void (^STHTTPResponseHandler)(STHTTPOperation *operation, id response);
 
 // 请求时时相应，下载资源等
 /**
@@ -55,6 +55,8 @@ typedef void (^STHTTPFinishedHandler)(STHTTPOperation *operation, NSData *data, 
 + (NSThread *)standardNetworkThread;
 
 - (instancetype)initWithHTTPRequest:(STHTTPRequest *)request;
+
+@property(atomic, readonly) NSInteger identifier;
 
 @property(nonatomic, strong) STNetworkConfiguration      *configuration;
 @property(nonatomic, strong, readonly) STHTTPRequest     *request;
