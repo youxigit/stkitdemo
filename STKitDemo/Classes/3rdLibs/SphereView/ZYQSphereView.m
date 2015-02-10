@@ -212,7 +212,6 @@
 		point = PFPointMakeFromMatrix(PFMatrixMultiply(coordinate, transform)); 
 		
         [pointMap setObject:NSStringFromPFPoint(point) forKey:key];
-        NSLog(@"%@", NSStringFromPFPoint(point));
 		[self layoutView:view withPoint:point];
 	}
 	

@@ -11,10 +11,10 @@
 #define POINT(_INDEX_) CGPointFromString(points[_INDEX_])
 
 // Return distance between two points
-static float distance (CGPoint p1, CGPoint p2)
+static CGFloat distance (CGPoint p1, CGPoint p2)
 {
-	float dx = p2.x - p1.x;
-	float dy = p2.y - p1.y;
+	CGFloat dx = p2.x - p1.x;
+	CGFloat dy = p2.y - p1.y;
 	
 	return sqrt(dx*dx + dy*dy);
 }
@@ -75,7 +75,7 @@ void getPointsFromBezier(void *info, const CGPathElement *element)
     CGFloat distanceTravelled = 0.0f;
     
 	NSMutableArray *pointPercentArray = [NSMutableArray array];
-	[pointPercentArray addObject:@(0.0)];
+	[pointPercentArray addObject:@(0.0f)];
     
 	for (int i = 1; i < pointCount; i++)
 	{
@@ -84,7 +84,7 @@ void getPointsFromBezier(void *info, const CGPathElement *element)
 	}
 	
 	// Add a final item just to stop with. Probably not needed.
-	[pointPercentArray addObject:[NSNumber numberWithFloat:1.1f]]; // 110%
+	[pointPercentArray addObject:@1.1f]; // 110%
     
     return pointPercentArray;
 }
@@ -115,12 +115,12 @@ void getPointsFromBezier(void *info, const CGPathElement *element)
     CGPoint point1 = POINT(index -1);
     CGPoint point2 = POINT(index);
     
-    float percent1 = [[percentArray objectAtIndex:index - 1] floatValue];
-    float percent2 = [[percentArray objectAtIndex:index] floatValue];
-    float percentOffset = (percent - percent1) / (percent2 - percent1);
+    CGFloat percent1 = [[percentArray objectAtIndex:index - 1] floatValue];
+    CGFloat percent2 = [[percentArray objectAtIndex:index] floatValue];
+    CGFloat percentOffset = (percent - percent1) / (percent2 - percent1);
     
-    float dx = point2.x - point1.x;
-    float dy = point2.y - point1.y;
+    CGFloat dx = point2.x - point1.x;
+    CGFloat dy = point2.y - point1.y;
     
     // Store dy, dx for retrieving arctan
     if (slope) *slope = CGPointMake(dx, dy);
