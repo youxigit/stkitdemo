@@ -45,6 +45,9 @@ const CGFloat STChatInputViewSendButtonWidth  = 50;
         self.textView.showsVerticalScrollIndicator = NO;
         self.textView.keyboardType = UIKeyboardTypeDefault;
         self.textView.returnKeyType = UIReturnKeyNext;
+        if ([self.textView respondsToSelector:@selector(layoutManager)]) {
+            self.textView.layoutManager.allowsNonContiguousLayout = NO;
+        }
         [self addSubview:self.textView];
         
         self.sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -72,6 +75,11 @@ const CGFloat STChatInputViewSendButtonWidth  = 50;
 - (void) setText:(NSString *)text {
     self.textView.text = text;
     [self sizeToFit];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.textView.contentInset = UIEdgeInsetsZero;
 }
 
 - (void) sizeToFit {

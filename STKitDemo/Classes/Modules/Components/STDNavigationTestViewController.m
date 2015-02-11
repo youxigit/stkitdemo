@@ -57,10 +57,10 @@
 
 - (void)navigationController:(STNavigationController *)navigationController transitingWithContext:(STNavigationControllerTransitionContext *)transitionContext {
     CGFloat completion = transitionContext.completion;
-    UIView *fromView = transitionContext.fromView, *toView = transitionContext.toView, *transitionView = transitionContext.transitionView;
+    UIView *fromView = transitionContext.fromView, *toView = transitionContext.toView;
     STViewControllerTransitionType transitionType = transitionContext.transitionType;
     UIView *targetView;
-    if (transitionContext.transitionType == STViewControllerTransitionTypePop) {
+    if (transitionType == STViewControllerTransitionTypePop) {
         targetView = fromView;
     } else {
         targetView = toView;
@@ -68,7 +68,8 @@
     }
     targetView.layer.transform = CATransform3DMakeRotation(M_PI_2 * completion, 0.0, .0, 1.0);
     return;
-    
+
+    UIView *transitionView = transitionContext.transitionView;
     CATransform3D transform = CATransform3DIdentity;
     transform.m34 = perspective;
     

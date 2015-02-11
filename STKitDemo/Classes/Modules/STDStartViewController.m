@@ -45,7 +45,7 @@
     topLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:topLabel];
     
-    NSArray *tags = @[@"导航", @"侧滑", @"标签", @"主题", @"列表", @"瀑布", @"图片", @"大图", @"链接", @"排版", @"菊花", @"音频", @"录音", @"音谱", @"存储", @"算法", @"相册", @"缓存", @"扩展", @"网络", @"下载", @"iOS7", @"手势", @"MVC"];
+//    NSArray *tags = @[@"导航", @"侧滑", @"标签", @"主题", @"列表", @"瀑布", @"图片", @"大图", @"链接", @"排版", @"菊花", @"音频", @"录音", @"音谱", @"存储", @"算法", @"相册", @"缓存", @"扩展", @"网络", @"下载", @"iOS7", @"手势", @"MVC"];
     
     self.sphereView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
     self.sphereView.translatesAutoresizingMaskIntoConstraints = NO;

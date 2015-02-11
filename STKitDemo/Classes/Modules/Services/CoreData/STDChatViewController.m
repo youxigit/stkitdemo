@@ -9,6 +9,7 @@
 #import "STDChatViewController.h"
 
 #import <STKit/STKit.h>
+#import <STKit/STAlbumManager.h>
 
 #import "STDChat.h"
 #import "STDBaseChatCell.h"
@@ -308,11 +309,6 @@ static NSString * STSystemDefaultID = @"97676900";
 
 - (void) shotMessageView:(id) sender {
     
-    STDChatViewController * viewController = [[STDChatViewController alloc] initWithPageInfo:nil];
-    [self.customNavigationController pushViewController:viewController animated:YES];
-    return;
-    
-    
     UIButton * rightBarButton = (UIButton *)self.navigationItem.rightBarButtonItem.customView;
     if ([self.tableView numberOfRowsInSection:0] == 0) {
         if (self.tableView.isEditing) {
@@ -376,7 +372,10 @@ static NSString * STSystemDefaultID = @"97676900";
     UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);  //保存到相册中
+    //保存到相册中
+    __weak STDChatViewController *weakSelf = self;
+    STImageWriteToPhotosAlbum(image, @"STKitDemo",
+                              ^(UIImage *image, NSError *error) { [weakSelf image:image didFinishSavingWithError:error contextInfo:NULL]; });
     [shotView removeFromSuperview];
     [STIndicatorView hideInView:self.view animated:YES];
     
@@ -384,7 +383,17 @@ static NSString * STSystemDefaultID = @"97676900";
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    
+    if (!error) {
+        STIndicatorView *indicatorView = [STIndicatorView showInView:self.view.window animated:YES];
+        indicatorView.blurEffectStyle = STBlurEffectStyleDark;
+        indicatorView.indicatorType = STIndicatorTypeText;
+        indicatorView.textLabel.text = @"保存成功";
+        indicatorView.cornerRadius = 2;
+        indicatorView.textLabel.font = [UIFont systemFontOfSize:18];
+        indicatorView.minimumSize = CGSizeMake(130, 80);
+        indicatorView.forceSquare = NO;
+        [indicatorView hideAnimated:YES afterDelay:1.5];
+    }
 }
 
 

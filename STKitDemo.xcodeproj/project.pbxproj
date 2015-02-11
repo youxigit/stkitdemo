@@ -89,7 +89,6 @@
 		06CB65C71A59523F00ABD7D3 /* STDChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64451A59523F00ABD7D3 /* STDChatInputView.m */; };
 		06CB65C81A59523F00ABD7D3 /* STDChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64471A59523F00ABD7D3 /* STDChatViewController.m */; };
 		06CB65C91A59523F00ABD7D3 /* STDImageChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64491A59523F00ABD7D3 /* STDImageChatCell.m */; };
-		06CB65CA1A59524000ABD7D3 /* STDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06CB644A1A59523F00ABD7D3 /* STDModel.xcdatamodeld */; };
 		06CB65CB1A59524000ABD7D3 /* STDTextChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB644D1A59523F00ABD7D3 /* STDTextChatCell.m */; };
 		06CB65CC1A59524000ABD7D3 /* chat_image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06CB644F1A59523F00ABD7D3 /* chat_image_1.jpg */; };
 		06CB65CD1A59524000ABD7D3 /* chat_image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06CB64501A59523F00ABD7D3 /* chat_image_2.jpg */; };
@@ -124,6 +123,12 @@
 		06CB65F01A5952B700ABD7D3 /* STDBNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64701A59523F00ABD7D3 /* STDBNetwork.m */; };
 		06CB65F11A5952C700ABD7D3 /* STDFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64071A59523F00ABD7D3 /* STDFeedItem.m */; };
 		06CB88A61A88C8C40082DACA /* STDBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB88A51A88C8C40082DACA /* STDBridge.m */; };
+		06CF9BC71A8BC697000037EF /* STDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06CF9BC51A8BC697000037EF /* STDModel.xcdatamodeld */; };
+		06CF9BD21A8BD2A3000037EF /* STDAbstractFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF9BCC1A8BD2A3000037EF /* STDAbstractFactoryTests.m */; };
+		06CF9BD31A8BD2A3000037EF /* STDFactoryMethodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF9BCD1A8BD2A3000037EF /* STDFactoryMethodTests.m */; };
+		06CF9BD41A8BD2A3000037EF /* STDSingletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF9BCE1A8BD2A3000037EF /* STDSingletonTests.m */; };
+		06CF9BD51A8BD2A3000037EF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06CF9BD01A8BD2A3000037EF /* Info.plist */; };
+		06CF9BD61A8BD2A3000037EF /* STKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF9BD11A8BD2A3000037EF /* STKitDemoTests.m */; };
 		06CFCBBF1A676F39003DDC93 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0698C21C19D1CCE400D0D69A /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +139,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 06A4D3BD19E6B3C7007D332D;
 			remoteInfo = STKitWidget;
+		};
+		06CF9BB21A8BB802000037EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6471E6E1851CD7C00574E94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0602B48E196974150004ACBB;
+			remoteInfo = STKitDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -284,7 +296,6 @@
 		06CB64471A59523F00ABD7D3 /* STDChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDChatViewController.m; sourceTree = "<group>"; };
 		06CB64481A59523F00ABD7D3 /* STDImageChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDImageChatCell.h; sourceTree = "<group>"; };
 		06CB64491A59523F00ABD7D3 /* STDImageChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDImageChatCell.m; sourceTree = "<group>"; };
-		06CB644B1A59523F00ABD7D3 /* STDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STDModel.xcdatamodel; sourceTree = "<group>"; };
 		06CB644C1A59523F00ABD7D3 /* STDTextChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDTextChatCell.h; sourceTree = "<group>"; };
 		06CB644D1A59523F00ABD7D3 /* STDTextChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDTextChatCell.m; sourceTree = "<group>"; };
 		06CB644F1A59523F00ABD7D3 /* chat_image_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chat_image_1.jpg; sourceTree = "<group>"; };
@@ -333,6 +344,14 @@
 		06CB648C1A59523F00ABD7D3 /* STKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STKit.framework; sourceTree = "<group>"; };
 		06CB88A41A88C8C40082DACA /* STDBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBridge.h; sourceTree = "<group>"; };
 		06CB88A51A88C8C40082DACA /* STDBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBridge.m; sourceTree = "<group>"; };
+		06CF9BAC1A8BB802000037EF /* STKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CF9BC61A8BC697000037EF /* STDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STDModel.xcdatamodel; sourceTree = "<group>"; };
+		06CF9BC81A8BC6B0000037EF /* STDModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "STDModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		06CF9BCC1A8BD2A3000037EF /* STDAbstractFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDAbstractFactoryTests.m; sourceTree = "<group>"; };
+		06CF9BCD1A8BD2A3000037EF /* STDFactoryMethodTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDFactoryMethodTests.m; sourceTree = "<group>"; };
+		06CF9BCE1A8BD2A3000037EF /* STDSingletonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSingletonTests.m; sourceTree = "<group>"; };
+		06CF9BD01A8BD2A3000037EF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CF9BD11A8BD2A3000037EF /* STKitDemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKitDemoTests.m; sourceTree = "<group>"; };
 		06CFCB9C1A63973C003DDC93 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		06DBF9E019F8CFBB009ECABA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F6471E791851CD7C00574E94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -384,6 +403,13 @@
 				06CB65EF1A59527E00ABD7D3 /* STKit.framework in Frameworks */,
 				06A4D3C019E6B3C7007D332D /* NotificationCenter.framework in Frameworks */,
 				06C841711A7E3395008BB97F /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CF9BA91A8BB802000037EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +686,7 @@
 		06CB64341A59523F00ABD7D3 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				06CF9BC51A8BC697000037EF /* STDModel.xcdatamodeld */,
 				06CB64351A59523F00ABD7D3 /* Entity */,
 				06CB64401A59523F00ABD7D3 /* STDBaseChatCell.h */,
 				06CB64411A59523F00ABD7D3 /* STDBaseChatCell.m */,
@@ -671,7 +698,6 @@
 				06CB64471A59523F00ABD7D3 /* STDChatViewController.m */,
 				06CB64481A59523F00ABD7D3 /* STDImageChatCell.h */,
 				06CB64491A59523F00ABD7D3 /* STDImageChatCell.m */,
-				06CB644A1A59523F00ABD7D3 /* STDModel.xcdatamodeld */,
 				06CB644C1A59523F00ABD7D3 /* STDTextChatCell.h */,
 				06CB644D1A59523F00ABD7D3 /* STDTextChatCell.m */,
 				06CB644E1A59523F00ABD7D3 /* TestChat */,
@@ -786,11 +812,48 @@
 			path = STDSideBar;
 			sourceTree = "<group>";
 		};
+		06CF9BC91A8BD2A3000037EF /* STKitDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				06CF9BCA1A8BD2A3000037EF /* DesignPatterns */,
+				06CF9BD01A8BD2A3000037EF /* Info.plist */,
+				06CF9BD11A8BD2A3000037EF /* STKitDemoTests.m */,
+			);
+			path = STKitDemoTests;
+			sourceTree = "<group>";
+		};
+		06CF9BCA1A8BD2A3000037EF /* DesignPatterns */ = {
+			isa = PBXGroup;
+			children = (
+				06CF9BCB1A8BD2A3000037EF /* Creational */,
+				06CF9BCF1A8BD2A3000037EF /* Structural */,
+			);
+			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
+		06CF9BCB1A8BD2A3000037EF /* Creational */ = {
+			isa = PBXGroup;
+			children = (
+				06CF9BCC1A8BD2A3000037EF /* STDAbstractFactoryTests.m */,
+				06CF9BCD1A8BD2A3000037EF /* STDFactoryMethodTests.m */,
+				06CF9BCE1A8BD2A3000037EF /* STDSingletonTests.m */,
+			);
+			path = Creational;
+			sourceTree = "<group>";
+		};
+		06CF9BCF1A8BD2A3000037EF /* Structural */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Structural;
+			sourceTree = "<group>";
+		};
 		F6471E6D1851CD7C00574E94 = {
 			isa = PBXGroup;
 			children = (
 				F6471E7F1851CD7C00574E94 /* STKitDemo */,
 				06A4D3C119E6B3C7007D332D /* STKitWidget */,
+				06CF9BC91A8BD2A3000037EF /* STKitDemoTests */,
 				F6471E781851CD7C00574E94 /* Frameworks */,
 				F6471E771851CD7C00574E94 /* Products */,
 			);
@@ -801,6 +864,7 @@
 			children = (
 				0602B51B196974150004ACBB /* STKitDemo.app */,
 				06A4D3BE19E6B3C7007D332D /* STKitWidget.appex */,
+				06CF9BAC1A8BB802000037EF /* STKitDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -897,6 +961,24 @@
 			productReference = 06A4D3BE19E6B3C7007D332D /* STKitWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		06CF9BAB1A8BB802000037EF /* STKitDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CF9BB41A8BB802000037EF /* Build configuration list for PBXNativeTarget "STKitDemoTests" */;
+			buildPhases = (
+				06CF9BA81A8BB802000037EF /* Sources */,
+				06CF9BA91A8BB802000037EF /* Frameworks */,
+				06CF9BAA1A8BB802000037EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06CF9BB31A8BB802000037EF /* PBXTargetDependency */,
+			);
+			name = STKitDemoTests;
+			productName = STKitDemoTests;
+			productReference = 06CF9BAC1A8BB802000037EF /* STKitDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -922,6 +1004,10 @@
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = MH8Q662G73;
 					};
+					06CF9BAB1A8BB802000037EF = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 0602B48E196974150004ACBB;
+					};
 				};
 			};
 			buildConfigurationList = F6471E711851CD7C00574E94 /* Build configuration list for PBXProject "STKitDemo" */;
@@ -939,6 +1025,7 @@
 			targets = (
 				0602B48E196974150004ACBB /* STKitDemo */,
 				06A4D3BD19E6B3C7007D332D /* STKitWidget */,
+				06CF9BAB1A8BB802000037EF /* STKitDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -978,6 +1065,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06CF9BAA1A8BB802000037EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CF9BD51A8BD2A3000037EF /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1004,7 +1099,7 @@
 				06CB65B61A59523F00ABD7D3 /* STAHanoiView.m in Sources */,
 				065D78DB1A8230640083D058 /* STDAdapter.m in Sources */,
 				06CB65D81A59524000ABD7D3 /* STDServiceViewController.m in Sources */,
-				06CB65CA1A59524000ABD7D3 /* STDModel.xcdatamodeld in Sources */,
+				06CF9BC71A8BC697000037EF /* STDModel.xcdatamodeld in Sources */,
 				06CB65B21A59523F00ABD7D3 /* STDLinkViewController.m in Sources */,
 				06CB65D41A59524000ABD7D3 /* SCSiriWaveformView.m in Sources */,
 				06CB65DF1A59524000ABD7D3 /* STDBNetwork.m in Sources */,
@@ -1072,6 +1167,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06CF9BA81A8BB802000037EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CF9BD21A8BD2A3000037EF /* STDAbstractFactoryTests.m in Sources */,
+				06CF9BD31A8BD2A3000037EF /* STDFactoryMethodTests.m in Sources */,
+				06CF9BD61A8BD2A3000037EF /* STKitDemoTests.m in Sources */,
+				06CF9BD41A8BD2A3000037EF /* STDSingletonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1079,6 +1185,11 @@
 			isa = PBXTargetDependency;
 			target = 06A4D3BD19E6B3C7007D332D /* STKitWidget */;
 			targetProxy = 06A4D3CC19E6B3C7007D332D /* PBXContainerItemProxy */;
+		};
+		06CF9BB31A8BB802000037EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0602B48E196974150004ACBB /* STKitDemo */;
+			targetProxy = 06CF9BB21A8BB802000037EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1231,6 +1342,50 @@
 			};
 			name = Release;
 		};
+		06CF9BB51A8BB802000037EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = STKitDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STKitDemo.app/STKitDemo";
+			};
+			name = Debug;
+		};
+		06CF9BB61A8BB802000037EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = STKitDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STKitDemo.app/STKitDemo";
+			};
+			name = Release;
+		};
 		F6471EA61851CD7C00574E94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1326,6 +1481,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		06CF9BB41A8BB802000037EF /* Build configuration list for PBXNativeTarget "STKitDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CF9BB51A8BB802000037EF /* Debug */,
+				06CF9BB61A8BB802000037EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F6471E711851CD7C00574E94 /* Build configuration list for PBXProject "STKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1338,12 +1501,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		06CB644A1A59523F00ABD7D3 /* STDModel.xcdatamodeld */ = {
+		06CF9BC51A8BC697000037EF /* STDModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				06CB644B1A59523F00ABD7D3 /* STDModel.xcdatamodel */,
+				06CF9BC81A8BC6B0000037EF /* STDModel 2.xcdatamodel */,
+				06CF9BC61A8BC697000037EF /* STDModel.xcdatamodel */,
 			);
-			currentVersion = 06CB644B1A59523F00ABD7D3 /* STDModel.xcdatamodel */;
+			currentVersion = 06CF9BC81A8BC6B0000037EF /* STDModel 2.xcdatamodel */;
 			path = STDModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

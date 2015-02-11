@@ -10,4 +10,8 @@
 
 @implementation STDBridge
 
++ (void)test {
+    
+}
+
 @end
