@@ -44,7 +44,7 @@
 		UIRotationGestureRecognizer *rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotationGesture:)];
 		[self addGestureRecognizer:rotationRecognizer];
         
-        intervalX=1;
+        intervalX = 1.0f;
     }
     return self;
 }
@@ -53,7 +53,7 @@
     CGPoint normalPoint=self.frame.origin;
     CGPoint movePoint=CGPointMake(self.frame.origin.x+intervalX, self.frame.origin.y+intervalY);
     
-    [self rotateSphereByAngle:1 fromPoint:normalPoint toPoint:movePoint];
+    [self rotateSphereByAngle:1.0f fromPoint:normalPoint toPoint:movePoint];
 }
 
 -(void)timerStart{
@@ -85,12 +85,11 @@
 		[pointMap setObject:pointRep forKey:@(i)];
 	}
 	
-	[self rotateSphereByAngle:1 fromPoint:CGPointMake(0, 0) toPoint:CGPointMake(0, 1)];
+	[self rotateSphereByAngle:1.0f fromPoint:CGPointMake(0.f, 0.f) toPoint:CGPointMake(0.f, 1.0f)];
 }
 
 - (void)setFrame:(CGRect)pFrame {
 	[super setFrame:pFrame];
-	
 	originalSphereViewBounds = self.bounds;
 }
 
@@ -123,17 +122,16 @@
 			PFAxisDirection yAxisDirection = PFDirectionMakeYAxisSensitive(normalizedPreviousTouchPoint, normalizedTouchPoint);
 			if (yAxisDirection != lastYAxisDirection && yAxisDirection != PFAxisDirectionNone) {
 				lastYAxisDirection = yAxisDirection;
-				
 				originalLocationInView = CGPointMake(previousLocationInView.x, touchPoint.y);
 			}
 			
 			previousLocationInView = touchPoint;
 			
-            intervalX=normalizedTouchPoint.x<normalizedOriginalTouchPoint.x?-1:1;
-            intervalY=normalizedTouchPoint.y<normalizedOriginalTouchPoint.y?-1:1;
+            intervalX=normalizedTouchPoint.x < normalizedOriginalTouchPoint.x ? -1.0f : 1.f;
+            intervalY=normalizedTouchPoint.y < normalizedOriginalTouchPoint.y ? -1.0f : 1.f;
 
 			// Sphere rotation
-			[self rotateSphereByAngle:1 fromPoint:normalizedOriginalTouchPoint toPoint:normalizedTouchPoint];
+			[self rotateSphereByAngle:1.0f fromPoint:normalizedOriginalTouchPoint toPoint:normalizedTouchPoint];
 		}
 			
 			break;
@@ -197,14 +195,14 @@
 	rotation = fabs(rotation) * rotationDirection;
 	
 	NSArray *subviews = self.subviews;
-	for (int i=0; i<subviews.count; i++) {
+	for (NSInteger i = 0; i<subviews.count; i++) {
 		UIView *view = [subviews objectAtIndex:i];
 		
-		NSNumber *key = [NSNumber numberWithInt:i];
+		NSNumber *key = @(i);
 		
 		PFPoint point = PFPointFromString([pointMap objectForKey:key]);
 		
-		PFPoint aroundPoint = PFPointMake(0, 0, 0);
+		PFPoint aroundPoint = PFPointMake(0.0f, 0.0f, 0.0f);
 		PFMatrix coordinate = PFMatrixTransform3DMakeFromPFPoint(point);
 
 		PFMatrix transform = PFMatrixTransform3DMakeZRotationOnPoint(aroundPoint, rotation);
@@ -221,8 +219,7 @@
 - (void)handleTapGesture:(UITapGestureRecognizer *)tapRecognizer {
     if ([self isTimerStart]) {
         [self timerStop];
-    }
-    else{
+    } else{
         [self timerStart];
     }
 }
@@ -233,25 +230,23 @@
 
 - (void)rotateSphereByAngle:(CGFloat)angle fromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint {
 	NSArray *subviews = self.subviews;
-	for (int i=0; i<subviews.count; i++) {
+	for (NSInteger i = 0; i < subviews.count; i++) {
 		UIView *view = [subviews objectAtIndex:i];
-		
-		NSNumber *key = [NSNumber numberWithInt:i];
-		
+		NSNumber *key = @(i);
         PFPoint point = PFPointFromString([pointMap objectForKey:key]);
 		
-		PFPoint aroundPoint = PFPointMake(0, 0, 0);
+		PFPoint aroundPoint = PFPointMake(0.0f, 0.0f, 0.0f);
 		PFMatrix coordinate = PFMatrixTransform3DMakeFromPFPoint(point);
 		
-		PFMatrix transform = PFMatrixMakeIdentity(4,4);
+		PFMatrix transform = PFMatrixMakeIdentity(4, 4);
 		PFAxisDirection xAxisDirection = PFDirectionMakeXAxis(fromPoint, toPoint);
 		if (xAxisDirection != PFAxisDirectionNone) {
-			transform = PFMatrixMultiply(transform, PFMatrixTransform3DMakeYRotationOnPoint(aroundPoint,xAxisDirection * -angle));
+			transform = PFMatrixMultiply(transform, PFMatrixTransform3DMakeYRotationOnPoint(aroundPoint, xAxisDirection * -angle));
 		}
 		
 		PFAxisDirection yAxisDirection = PFDirectionMakeYAxis(fromPoint, toPoint);
 		if (yAxisDirection != PFAxisDirectionNone) {
-			transform = PFMatrixMultiply(transform, PFMatrixTransform3DMakeXRotationOnPoint(aroundPoint,yAxisDirection * angle));
+			transform = PFMatrixMultiply(transform, PFMatrixTransform3DMakeXRotationOnPoint(aroundPoint, yAxisDirection * angle));
 		}
 		
 		point = PFPointMakeFromMatrix(PFMatrixMultiply(coordinate, transform));
@@ -272,14 +267,13 @@
 }
 
 - (void)layoutView:(UIView *)view withPoint:(PFPoint)point {
-	CGFloat viewSize = view.frame.size.width;
-	
-	CGFloat width = self.frame.size.width - viewSize*2;
+	CGFloat viewSize = CGRectGetWidth(view.frame);
+	CGFloat width = CGRectGetWidth(self.frame) - viewSize * 2.0f;
 	CGFloat x = [self coordinateForNormalizedValue:point.x withinRangeOffset:width];
 	CGFloat y = [self coordinateForNormalizedValue:point.y withinRangeOffset:width];
 	view.center = CGPointMake(x + viewSize, y + viewSize);
 	
-	CGFloat z = [self coordinateForNormalizedValue:point.z withinRangeOffset:1];
+	CGFloat z = [self coordinateForNormalizedValue:point.z withinRangeOffset:1.0f];
 	
 	view.transform = CGAffineTransformScale(CGAffineTransformIdentity, z, z);
 	view.layer.zPosition = z;
@@ -287,13 +281,10 @@
 
 - (void)layoutViews {
 	NSArray *subviews = self.subviews;
-	for (int i=0; i<subviews.count; i++) {
+	for (NSInteger i = 0; i < subviews.count; i ++) {
 		UIView *view = [subviews objectAtIndex:i];
-		
-		NSNumber *key = [NSNumber numberWithInt:i];
-		
+		NSNumber *key = @(i);
         PFPoint point = PFPointFromString([pointMap objectForKey:key]);
-		
 		[self layoutView:view withPoint:point];
 	}		
 }

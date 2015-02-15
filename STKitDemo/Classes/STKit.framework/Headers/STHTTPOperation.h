@@ -79,8 +79,8 @@ typedef void (^STHTTPFinishedHandler)(STHTTPOperation *operation, NSData *data, 
 
 @interface STHTTPOperation (STHTTPRequest)
 
-+ (instancetype) operationWithURLString:(NSString *)URLString parameters:(NSDictionary *)parameters;
-+ (instancetype) operationWithURLString:(NSString *)URLString HTTPMethod:(NSString *)method parameters:(NSDictionary *)parameters;
++ (instancetype)operationWithURLString:(NSString *)URLString parameters:(NSDictionary *)parameters;
++ (instancetype)operationWithURLString:(NSString *)URLString HTTPMethod:(NSString *)method parameters:(NSDictionary *)parameters;
 
 
 /*!

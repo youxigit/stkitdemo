@@ -24,20 +24,21 @@ typedef enum {
     STSideInteractiveAreaAll           = (STSideInteractiveAreaNavigationBar | STSideInteractiveAreaContentView)
 } STSideInteractiveArea;
 
-@interface STSideBarController : UIViewController {
+@interface STSideBarController : STViewController {
 }
+
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController;
 
 /// sideBar 的最大宽度
-@property (nonatomic, assign) CGFloat maxSideWidth;
+@property (nonatomic) CGFloat maxSideWidth;
 @property (nonatomic, copy)   NSArray *viewControllers;
 - (void)setViewControllers:(NSArray *)sideViewControllers animated:(BOOL)animated;
 
 /// 当前选中的ViewController
-@property (nonatomic, readonly, weak) UIViewController *selectedViewController;
-@property (nonatomic, assign)         NSUInteger       selectedIndex;
+@property(nonatomic, readonly, weak) UIViewController *selectedViewController;
+@property(nonatomic) NSUInteger       selectedIndex;
 /// sidebar 是否在可见区域,当侧边栏出现时sideAppeared = YES
-@property (nonatomic, assign) BOOL sideAppeared;
+@property(nonatomic) BOOL sideAppeared;
 /// 滑动手势
 @property(nonatomic, strong, readonly) UIPanGestureRecognizer *panGestureRecognizer;
 

@@ -31,6 +31,8 @@
 		065D78DE1A8344C30083D058 /* STDFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78DD1A8344C30083D058 /* STDFacade.m */; };
 		065D78E11A834AF00083D058 /* STDProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 065D78E01A834AF00083D058 /* STDProxy.m */; };
 		065D78E51A8382AC0083D058 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065D78E41A8382AC0083D058 /* CFNetwork.framework */; };
+		066494FA1A90AE930026D498 /* licenses.html in Resources */ = {isa = PBXBuildFile; fileRef = 066494F91A90AE930026D498 /* licenses.html */; };
+		0664952F1A90C6020026D498 /* STDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0664952E1A90C6020026D498 /* STDSettingViewController.m */; };
 		0681CCDB19D3BC9A00D897AF /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0681CCDA19D3BC9A00D897AF /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		06A1CD341978DE0700F68F35 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD331978DE0700F68F35 /* CoreTelephony.framework */; };
 		06A1CD381978DE3500F68F35 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A1CD371978DE3500F68F35 /* libstdc++.6.dylib */; };
@@ -111,7 +113,6 @@
 		06CB65DE1A59524000ABD7D3 /* STDBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB646E1A59523F00ABD7D3 /* STDBigViewController.m */; };
 		06CB65DF1A59524000ABD7D3 /* STDBNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64701A59523F00ABD7D3 /* STDBNetwork.m */; };
 		06CB65E01A59524000ABD7D3 /* STDSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64721A59523F00ABD7D3 /* STDSwitchViewController.m */; };
-		06CB65E11A59524000ABD7D3 /* STDBlurSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64741A59523F00ABD7D3 /* STDBlurSettingViewController.m */; };
 		06CB65E21A59524000ABD7D3 /* STDMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64761A59523F00ABD7D3 /* STDMoreViewController.m */; };
 		06CB65E31A59524000ABD7D3 /* STDNavigationSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CB64781A59523F00ABD7D3 /* STDNavigationSettingViewController.m */; };
 		06CB65E41A59524000ABD7D3 /* STDNavigationSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06CB64791A59523F00ABD7D3 /* STDNavigationSettingViewController.xib */; };
@@ -187,6 +188,9 @@
 		065D78DF1A834AF00083D058 /* STDProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDProxy.h; sourceTree = "<group>"; };
 		065D78E01A834AF00083D058 /* STDProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDProxy.m; sourceTree = "<group>"; };
 		065D78E41A8382AC0083D058 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		066494F91A90AE930026D498 /* licenses.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = licenses.html; sourceTree = "<group>"; };
+		0664952D1A90C6020026D498 /* STDSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSettingViewController.h; sourceTree = "<group>"; };
+		0664952E1A90C6020026D498 /* STDSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSettingViewController.m; sourceTree = "<group>"; };
 		0681CCDA19D3BC9A00D897AF /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		0698C21C19D1CCE400D0D69A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		06A1CD331978DE0700F68F35 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -329,8 +333,6 @@
 		06CB64701A59523F00ABD7D3 /* STDBNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBNetwork.m; sourceTree = "<group>"; };
 		06CB64711A59523F00ABD7D3 /* STDSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDSwitchViewController.h; sourceTree = "<group>"; };
 		06CB64721A59523F00ABD7D3 /* STDSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDSwitchViewController.m; sourceTree = "<group>"; };
-		06CB64731A59523F00ABD7D3 /* STDBlurSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBlurSettingViewController.h; sourceTree = "<group>"; };
-		06CB64741A59523F00ABD7D3 /* STDBlurSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBlurSettingViewController.m; sourceTree = "<group>"; };
 		06CB64751A59523F00ABD7D3 /* STDMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDMoreViewController.h; sourceTree = "<group>"; };
 		06CB64761A59523F00ABD7D3 /* STDMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDMoreViewController.m; sourceTree = "<group>"; };
 		06CB64771A59523F00ABD7D3 /* STDNavigationSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDNavigationSettingViewController.h; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 		06CB5FFE1A594F9900ABD7D3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				066494F91A90AE930026D498 /* licenses.html */,
 				06CB5FFF1A594F9900ABD7D3 /* shangxin_292182.jpg */,
 				06CB60001A594F9900ABD7D3 /* shangxin_292182@2x.jpg */,
 			);
@@ -755,10 +758,10 @@
 			isa = PBXGroup;
 			children = (
 				06CB64631A59523F00ABD7D3 /* DBMeizi */,
-				06CB64731A59523F00ABD7D3 /* STDBlurSettingViewController.h */,
-				06CB64741A59523F00ABD7D3 /* STDBlurSettingViewController.m */,
 				06CB64751A59523F00ABD7D3 /* STDMoreViewController.h */,
 				06CB64761A59523F00ABD7D3 /* STDMoreViewController.m */,
+				0664952D1A90C6020026D498 /* STDSettingViewController.h */,
+				0664952E1A90C6020026D498 /* STDSettingViewController.m */,
 				06CB64771A59523F00ABD7D3 /* STDNavigationSettingViewController.h */,
 				06CB64781A59523F00ABD7D3 /* STDNavigationSettingViewController.m */,
 				06CB64791A59523F00ABD7D3 /* STDNavigationSettingViewController.xib */,
@@ -901,11 +904,11 @@
 			children = (
 				06CB61E51A59523F00ABD7D3 /* Classes */,
 				06CB5FFE1A594F9900ABD7D3 /* Resources */,
+				F6471E881851CD7C00574E94 /* STDAppDelegate.h */,
+				F6471E891851CD7C00574E94 /* STDAppDelegate.m */,
 				06BE56D01A0404CF00FBC4C8 /* STDemoImages.xcassets */,
 				06A4D46719E80498007D332D /* STKitDemo.entitlements */,
 				0634101A19C9EBE3003BC34E /* LaunchScreen.xib */,
-				F6471E881851CD7C00574E94 /* STDAppDelegate.h */,
-				F6471E891851CD7C00574E94 /* STDAppDelegate.m */,
 				F6471E801851CD7C00574E94 /* Supporting Files */,
 			);
 			path = STKitDemo;
@@ -1041,6 +1044,7 @@
 				06CB60021A594F9900ABD7D3 /* shangxin_292182@2x.jpg in Resources */,
 				06CB65DB1A59524000ABD7D3 /* red_line_and_shadow@2x.png in Resources */,
 				06CB65D01A59524000ABD7D3 /* chat_image_5.jpg in Resources */,
+				066494FA1A90AE930026D498 /* licenses.html in Resources */,
 				06CB65D11A59524000ABD7D3 /* chat_image_6.jpg in Resources */,
 				06CB65CC1A59524000ABD7D3 /* chat_image_1.jpg in Resources */,
 				0602B512196974150004ACBB /* InfoPlist.strings in Resources */,
@@ -1143,6 +1147,7 @@
 				06CB65C31A59523F00ABD7D3 /* STDUser.m in Sources */,
 				06CB65B31A59523F00ABD7D3 /* STDTextViewController.m in Sources */,
 				06CB88A61A88C8C40082DACA /* STDBridge.m in Sources */,
+				0664952F1A90C6020026D498 /* STDSettingViewController.m in Sources */,
 				06CB65AB1A59523F00ABD7D3 /* STDFeedItem.m in Sources */,
 				065D78D41A822ECF0083D058 /* STDFactoryMethod.m in Sources */,
 				06CB65BA1A59523F00ABD7D3 /* STASortView.m in Sources */,
@@ -1150,7 +1155,6 @@
 				06CB65A91A59523F00ABD7D3 /* STDFeedCell.m in Sources */,
 				06CB653F1A59523F00ABD7D3 /* STMenuView.m in Sources */,
 				06CB65CB1A59524000ABD7D3 /* STDTextChatCell.m in Sources */,
-				06CB65E11A59524000ABD7D3 /* STDBlurSettingViewController.m in Sources */,
 				06CB65AA1A59523F00ABD7D3 /* STDFeedImageView.m in Sources */,
 				06CB65B51A59523F00ABD7D3 /* STAHanoiOperation.m in Sources */,
 				065D78B81A81ECB60083D058 /* STDScrollViewController.m in Sources */,
@@ -1488,6 +1492,7 @@
 				06CF9BB61A8BB802000037EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6471E711851CD7C00574E94 /* Build configuration list for PBXProject "STKitDemo" */ = {
 			isa = XCConfigurationList;

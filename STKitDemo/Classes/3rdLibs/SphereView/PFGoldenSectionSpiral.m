@@ -15,18 +15,19 @@
 
 #import "PFGoldenSectionSpiral.h"
 
+PFMatrix const PFMatrixZero = {0,0,{{0,0,0,0}, {0,0,0,0}, {0,0,0,0}, {0,0,0,0}}};
+
 @implementation PFGoldenSectionSpiral
 
 + (NSArray *)sphere:(NSInteger)n {
 	NSMutableArray* result = [NSMutableArray arrayWithCapacity:n];
-	
-	CGFloat N = n;
-	CGFloat inc = M_PI * (3 - sqrt(5));
-    CGFloat off = 2 / N;
-	for (NSInteger k=0; k<N; k++) {
-        CGFloat y = k * off - 1 + (off / 2);
-        CGFloat r = sqrt(1 - y*y);
-        CGFloat phi = k * inc;
+	STFloat32 N = n;
+	STFloat32 inc = M_PI * (3.0f - sqrt(5.0f));
+    STFloat32 off = 2.0f / N;
+	for (NSInteger k = 0; k < N; k ++) {
+        STFloat32 y = k * off - 1.0f + (off / 2.0f);
+        STFloat32 r = sqrt(1.0f - y*y);
+        STFloat32 phi = k * inc;
 		PFPoint point = PFPointMake(cos(phi)*r, y, sin(phi)*r);
         [result addObject:NSStringFromPFPoint(point)];
 	}
@@ -37,24 +38,24 @@
 @end
 
 
-extern PFRadian PFRadianMake(CGFloat grades) {
-    return (M_PI * grades / 180.0);
+extern PFRadian PFRadianMake(STFloat32 grades) {
+    return ((STFloat32)(M_PI * grades) / 180.0f);
 }
 
 extern PFMatrix PFMatrixTransform3DMakeFromPFPoint(PFPoint point) {
-    CGFloat pointRef[1][4] = {{point.x, point.y, point.z, 1}};
+    STFloat32 pointRef[1][4] = {{point.x, point.y, point.z, 1.0f}};
     
-    PFMatrix matrix = PFMatrixMakeFromArray(1, 4, *pointRef);
+    PFMatrix matrix = PFMatrixMakeFromArray(1, 4, * pointRef);
     
     return matrix;
 }
 
 extern PFMatrix PFMatrixTransform3DMakeTranslation(PFPoint point) {
-    CGFloat T[4][4] = {
-        {1, 0, 0, 0},
-        {0, 1, 0, 0},
-        {0, 0, 1, 0},
-        {point.x, point.y, point.z, 1}
+    STFloat32 T[4][4] = {
+        {1.0f, 0.f, 0.f, 0.f},
+        {0.f, 1.f, 0.f, 0.f},
+        {0.f, 0.f, 1.f, 0.f},
+        {point.x, point.y, point.z, 1.0f}
     };
     
     PFMatrix matrix = PFMatrixMakeFromArray(4, 4, *T);
@@ -62,14 +63,14 @@ extern PFMatrix PFMatrixTransform3DMakeTranslation(PFPoint point) {
 }
 
 extern PFMatrix PFMatrixTransform3DMakeXRotation(PFRadian angle) {
-    CGFloat c = cos(PFRadianMake(angle));
-    CGFloat s = sin(PFRadianMake(angle));
+    STFloat32 c = cos(PFRadianMake(angle));
+    STFloat32 s = sin(PFRadianMake(angle));
     
-    CGFloat T[4][4] = {
-        {1, 0, 0, 0},
-        {0, c, s, 0},
-        {0, -s, c, 0},
-        {0, 0, 0, 1}
+    STFloat32 T[4][4] = {
+        {1.f, 0.f, 0.f, 0.f},
+        {0.f, c, s, 0.f},
+        {0.f, -s, c, 0.f},
+        {0.f, 0.f, 0.f, 1.f}
     };
     
     PFMatrix matrix = PFMatrixMakeFromArray(4, 4, *T);
@@ -86,10 +87,10 @@ extern PFMatrix PFMatrixTransform3DMakeXRotationOnPoint(PFPoint point, PFRadian 
 }
 
 extern PFMatrix PFMatrixTransform3DMakeYRotation(PFRadian angle) {
-    CGFloat c = cos(PFRadianMake(angle));
-    CGFloat s = sin(PFRadianMake(angle));
+    STFloat32 c = cos(PFRadianMake(angle));
+    STFloat32 s = sin(PFRadianMake(angle));
     
-    CGFloat T[4][4] = {
+    STFloat32 T[4][4] = {
         {c, 0, -s, 0},
         {0, 1, 0, 0},
         {s, 0, c, 0},
@@ -110,14 +111,14 @@ extern PFMatrix PFMatrixTransform3DMakeYRotationOnPoint(PFPoint point, PFRadian 
 }
 
 extern PFMatrix PFMatrixTransform3DMakeZRotation(PFRadian angle) {
-    CGFloat c = cos(PFRadianMake(angle));
-    CGFloat s = sin(PFRadianMake(angle));
+    STFloat32 c = cos(PFRadianMake(angle));
+    STFloat32 s = sin(PFRadianMake(angle));
     
-    CGFloat T[4][4] = {
-        {c, s, 0, 0},
-        {-s, c, 0, 0},
-        {0, 0, 1, 0},
-        {0, 0, 0, 1}
+    STFloat32 T[4][4] = {
+        {c,  s, 0.0f, 0.0f},
+        {-s, c, 0.0f, 0.0f},
+        {0,0.0f,0.0f, 0.0f},
+        {0.0f, 0.0f, 0.0f, 1.0f}
     };
     
     PFMatrix matrix = PFMatrixMakeFromArray(4, 4, *T);
@@ -136,25 +137,22 @@ extern PFMatrix PFMatrixTransform3DMakeZRotationOnPoint(PFPoint point, PFRadian 
 
 
 extern PFMatrix PFMatrixMake(NSInteger m, NSInteger n) {
-    PFMatrix matrix;
+    PFMatrix matrix = PFMatrixZero;
     matrix.m = m;
     matrix.n = n;
-    
-    for(NSInteger i=0; i<m; i++){
-        for(NSInteger j=0; j<n; j++){
-            matrix.data[i][j] = 0;
+    for (NSInteger i = 0; i < m; i ++){
+        for(NSInteger j = 0; j < n; j ++){
+            matrix.data[i][j] = (STFloat32)0.0f;
         }
     }
-    
     return matrix;
 }
 
-extern PFMatrix PFMatrixMakeFromArray(NSInteger m, NSInteger n, CGFloat *data) {
+extern PFMatrix PFMatrixMakeFromArray(NSInteger m, NSInteger n, STFloat32 *data) {
     PFMatrix matrix = PFMatrixMake(m, n);
-    
-    for (int i=0; i<m; i++) {
-        CGFloat *t = data+(i*sizeof(CGFloat));
-        for (int j=0; j<n; j++) {
+    for (NSInteger i = 0; i < m; i ++) {
+        STFloat32 *t = data+(i*sizeof(STFloat32));
+        for(NSInteger j = 0; j < n; j++) {
             matrix.data[i][j] = *(t+j);
         }
     }
@@ -164,8 +162,7 @@ extern PFMatrix PFMatrixMakeFromArray(NSInteger m, NSInteger n, CGFloat *data) {
 
 extern PFMatrix PFMatrixMakeIdentity(NSInteger m, NSInteger n) {
     PFMatrix matrix = PFMatrixMake(m, n);
-    
-    for(NSInteger i=0; i<m; i++){
+    for (NSInteger i = 0; i < m; i++){
         matrix.data[i][i] = 1.0f;
     }
     
@@ -174,10 +171,9 @@ extern PFMatrix PFMatrixMakeIdentity(NSInteger m, NSInteger n) {
 
 extern PFMatrix PFMatrixMultiply(PFMatrix A, PFMatrix B) {
     PFMatrix R = PFMatrixMake(A.m, B.n);
-    
-    for(NSInteger i=0; i<A.m; i++){
-        for(NSInteger j=0; j<B.n; j++){
-            for(NSInteger k=0; k < A.n; k++){
+    for(NSInteger i = 0; i < A.m; i++){
+        for(NSInteger j = 0; j < B.n; j++){
+            for(NSInteger k = 0; k < A.n; k++){
                 R.data[i][j] += (A.data[i][k] * B.data[k][j]);
             }
         }
@@ -211,12 +207,11 @@ extern NSString *NSStringFromPFMatrix(PFMatrix matrix) {
 }
 
 
-extern PFPoint PFPointMake(CGFloat x, CGFloat y, CGFloat z) {
+extern PFPoint PFPointMake(STFloat32 x, STFloat32 y, STFloat32 z) {
     PFPoint p;
     p.x = x;
     p.y = y;
     p.z = z;
-    
     return p;
 }
 
@@ -241,27 +236,23 @@ extern PFPoint PFPointFromString(NSString *string) {
 
 
 extern NSString *NSStringFromPFPoint(PFPoint point) {
-    NSString *str = [NSString stringWithFormat:@"%@,%@,%@", @(point.x), @(point.y), @(point.z)];
-    
-    return str;
+    return [NSString stringWithFormat:@"%@,%@,%@", @(point.x), @(point.y), @(point.z)];
 }
 
 
 #pragma mark -
 #pragma mark CGPoint methods
 
-extern CGPoint CGPointMakeNormalizedPoint(CGPoint point, CGFloat distance) {
-    CGPoint nPoint = CGPointMake(point.x * 1.0/distance, point.y * 1.0/distance);
-    
-    return nPoint;
+extern CGPoint CGPointMakeNormalizedPoint(CGPoint point, STFloat32 distance) {
+    return CGPointMake(point.x * 1.0f / distance, point.y * 1.0f / distance);
 }
 
 
 
-extern PFAxisDirection PFAxisDirectionMake(CGFloat fromCoordinate, CGFloat toCoordinate, BOOL sensitive) {
+extern PFAxisDirection PFAxisDirectionMake(STFloat32 fromCoordinate, STFloat32 toCoordinate, BOOL sensitive) {
     PFAxisDirection direction = PFAxisDirectionNone;
     
-    CGFloat distance = fabs(fromCoordinate - toCoordinate);
+    STFloat32 distance = fabs(fromCoordinate - toCoordinate);
 				
     if (distance > PFAxisDirectionMinimumDistance || sensitive) {
         if (fromCoordinate > toCoordinate) {

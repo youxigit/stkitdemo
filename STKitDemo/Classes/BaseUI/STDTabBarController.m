@@ -11,6 +11,7 @@
 #import "STDMoreViewController.h"
 #import "STDemoViewController.h"
 #import "STDServiceViewController.h"
+#import "STDSettingViewController.h"
 
 @interface STDTabBarController ()
 
@@ -39,7 +40,7 @@
         self.viewControllers = @[controlsNavigationController, serviceNavigationController, moreNavigationController];
         
         self.sideInteractionArea = STSideInteractiveAreaNone;
-        self.animatedWhenTransition = YES;
+        self.animatedWhenTransition = ![STDSettingViewController reduceTransitionAnimation];
     }
     return self;
 }

@@ -70,30 +70,13 @@
     if (formerViewController == newViewController) {
         return;
     }
-    CGRect applicationFrame = [UIScreen mainScreen].bounds;
-    CGFloat statusBarHeight = CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
-    if (statusBarHeight > 20) {
-        applicationFrame.origin.y += 20;
-        applicationFrame.size.height -= 20;
-    }
-    if (STGetSystemVersion() < 7) {
-        applicationFrame.origin.y = 20;
-        applicationFrame.size.height -= 20;
-    }
-    
-    void (^animations)(void) = ^{
-        newViewController.view.frame = applicationFrame;
-    };
-    
     void (^completion)(BOOL) = ^(BOOL finished) {
         self.window.rootViewController = newViewController;
-        newViewController.view.frame = applicationFrame;
     };
     // options 为 0 表示木有动画
     if (options == 0) {
         completion(YES);
     } else {
-        animations();
         [UIView transitionFromView:formerViewController.view toView:newViewController.view duration:0.65 options:options completion:completion];
     }
 }

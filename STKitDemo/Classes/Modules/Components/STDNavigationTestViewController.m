@@ -7,6 +7,7 @@
 //
 
 #import "STDNavigationTestViewController.h"
+#import "STDSettingViewController.h"
 
 @interface STDNavigationTestViewController () <STNavigationControllerDelegate>
 
@@ -29,7 +30,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"测试导航";
-    if (![self.customNavigationController.delegate isKindOfClass:[self class]]) {
+    if (![self.customNavigationController.delegate isKindOfClass:[self class]] && [STDSettingViewController allowsCustomNavigationTransition]) {
          self.customNavigationController.delegate = self;   
     }
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];

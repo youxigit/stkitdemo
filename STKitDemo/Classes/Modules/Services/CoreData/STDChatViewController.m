@@ -21,6 +21,7 @@
 #import "STDEntityDefines.h"
 #import "STDUser.h"
 #import "STDChatInputView.h"
+#import "STDSettingViewController.h"
 
 @interface STDChatViewController () <NSFetchedResultsControllerDelegate, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate>
 
@@ -189,8 +190,11 @@ static NSString * STSystemDefaultID = @"97676900";
         STDUser * user = [self createUserIfNotExistWithID:STSystemDefaultID inManageObjectContext:managedObjectContext];
         STDMessage * message = (STDMessage *)[managedObjectContext entityClassFromString:@"STDMessage" name:@"STDMessage"];
         message.target = user;
-        int type = arc4random() % 2;
-        if (type) {
+        BOOL textType = arc4random() % 2;
+        if (![STDSettingViewController chatReceiveImage]) {
+            textType = YES;
+        }
+        if (textType) {
             message.type = STDMessageTypeText;
             int contentIdx = (arc4random() % self.textContent.count);
             message.content = [self.textContent objectAtIndex:contentIdx];
@@ -342,7 +346,7 @@ static NSString * STSystemDefaultID = @"97676900";
     NSArray * messages = [self.selectedManagedObjects sortedArrayUsingComparator:^NSComparisonResult(STDMessage * obj1, STDMessage * obj2) {
         return obj1.time < obj2.time ? NSOrderedAscending:NSOrderedDescending;
     }];
-    __block NSInteger top = 0;
+    __block CGFloat height = 0.0f;
     CGFloat width = CGRectGetWidth(self.tableView.frame);
     [messages enumerateObjectsUsingBlock:^(STDMessage * message, NSUInteger idx, BOOL *stop) {
         UIView * messageCell;
@@ -356,14 +360,38 @@ static NSString * STSystemDefaultID = @"97676900";
             default:
                 break;
         }
-        messageCell.frame = CGRectMake(0, top, width, message.height + 5);
+        CGFloat tempHeight = message.height + 5;
+        if (height < tempHeight) {
+            height = tempHeight;
+        }
+        messageCell.frame = CGRectMake(0, 0, width, tempHeight);
         [messageCell setValue:message forKey:@"message"];
-        top += message.height + 5;
         [shotView addSubview:messageCell];
     }];
+    BOOL horizontal = NO;
+    __block CGFloat left = 0, top = 0, shotWidth = 0, shotHeight = 0;
+    [shotView.subviews enumerateObjectsUsingBlock:^(STDBaseChatCell *subview, NSUInteger idx, BOOL *stop) {
+        if ([subview isKindOfClass:[STDBaseChatCell class]]) {
+            CGRect frame = subview.frame;
+            // 如果是横向的
+            if (horizontal) {
+                frame.origin.y = (height - subview.height) / 2;
+                frame.origin.x = left;
+                left += subview.width;
+                shotWidth = left;
+                shotHeight = height;
+            } else {
+                frame.origin.y = top;
+                top += subview.height;
+                shotWidth = subview.width;
+                shotHeight = top;
+            }
+            subview.frame = frame;
+        }
+    }];
     CGRect shotFrame = shotView.frame;
-    shotFrame.size.height = top;
-    shotFrame.size.width = CGRectGetWidth(self.tableView.frame);
+    shotFrame.size.width = shotWidth;
+    shotFrame.size.height = shotHeight;
     shotView.frame = shotFrame;
     
     UIGraphicsBeginImageContextWithOptions(shotView.frame.size, false, [UIScreen mainScreen].scale);
@@ -388,10 +416,9 @@ static NSString * STSystemDefaultID = @"97676900";
         indicatorView.blurEffectStyle = STBlurEffectStyleDark;
         indicatorView.indicatorType = STIndicatorTypeText;
         indicatorView.textLabel.text = @"保存成功";
-        indicatorView.cornerRadius = 2;
+        indicatorView.cornerRadius = 1;
         indicatorView.textLabel.font = [UIFont systemFontOfSize:18];
         indicatorView.minimumSize = CGSizeMake(130, 80);
-        indicatorView.forceSquare = NO;
         [indicatorView hideAnimated:YES afterDelay:1.5];
     }
 }

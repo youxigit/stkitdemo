@@ -9,11 +9,11 @@
 #import "STDStartViewController.h"
 
 #import "ZYQSphereView.h"
-
 #import "STDAppDelegate.h"
+
 @interface STDStartViewController ()
 
-@property (nonatomic, strong) UIView *sphereView;
+@property (nonatomic, strong) ZYQSphereView *sphereView;
 
 @end
 
@@ -45,11 +45,22 @@
     topLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:topLabel];
     
-//    NSArray *tags = @[@"导航", @"侧滑", @"标签", @"主题", @"列表", @"瀑布", @"图片", @"大图", @"链接", @"排版", @"菊花", @"音频", @"录音", @"音谱", @"存储", @"算法", @"相册", @"缓存", @"扩展", @"网络", @"下载", @"iOS7", @"手势", @"MVC"];
+    NSArray *tags = @[@"导航", @"侧滑", @"标签", @"主题", @"列表", @"瀑布", @"图片", @"大图", @"链接", @"排版", @"菊花", @"音频", @"录音", @"音谱", @"存储", @"算法", @"相册", @"缓存", @"扩展", @"网络", @"下载", @"iOS7", @"手势", @"MVC"];
     
-    self.sphereView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
+    self.sphereView = [[ZYQSphereView alloc] initWithFrame:CGRectMake(self.view.width * 0.5 - 150, self.view.height * 0.5 - 150, 300, 300)];
     self.sphereView.translatesAutoresizingMaskIntoConstraints = NO;
-    
+
+    NSMutableArray * items = [[NSMutableArray alloc] init];
+    [tags enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        UIButton *tagView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        tagView.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100. green:arc4random_uniform(100)/100. blue:arc4random_uniform(100)/100. alpha:1];
+        [tagView setTitle:obj forState:UIControlStateNormal];
+        tagView.layer.masksToBounds=YES;
+        tagView.layer.cornerRadius=3;
+        [tagView addTarget:self action:@selector(_tagButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [items addObject:tagView];
+    }];
+    [self.sphereView setItems:items];
 	[self.view addSubview:self.sphereView];
     
     UIImage * image = [UIImage imageNamed:@"aero_button"];
@@ -81,6 +92,8 @@
     
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.sphereView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.sphereView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+    
+    [self.sphereView timerStart];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -99,38 +112,29 @@
     }
 }
 
--(void)tagButtonAction:(UIButton*)sender{
-//    BOOL isStart=[self.sphereView isTimerStart];
-//    [self.sphereView timerStop];
-//    [UIView animateWithDuration:0.3 animations:^{
-//        sender.transform=CGAffineTransformMakeScale(1.5, 1.5);
-//    } completion:^(BOOL finished) {
-//        [UIView animateWithDuration:0.2 animations:^{
-//            sender.transform=CGAffineTransformMakeScale(1, 1);
-//            if (isStart) {
-//                [self.sphereView timerStart];
-//            }
-//        }];
-//    }];
-}
-
-- (void) voiceDidRecognizerText:(NSNotification *) notification {
-    NSString * text = [notification.userInfo valueForKey:@"text"];
-    if ([text contains:@"左边按钮"]) {
-        [self enterTabBarControllerAction:nil];
-    } else if ([text contains:@"右边按钮"]) {
-        [self enterSideBarControllerAction:nil];
-    }
+-(void)_tagButtonAction:(UIButton*)sender{
+    BOOL isStart=[self.sphereView isTimerStart];
+    [self.sphereView timerStop];
+    [UIView animateWithDuration:0.3 animations:^{
+        sender.transform=CGAffineTransformMakeScale(1.5, 1.5);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2 animations:^{
+            sender.transform=CGAffineTransformMakeScale(1, 1);
+            if (isStart) {
+                [self.sphereView timerStart];
+            }
+        }];
+    }];
 }
 
 - (void) enterTabBarControllerAction:(id) sender {
-//    [self.sphereView timerStop];
+    [self.sphereView timerStop];
     STDAppDelegate * appDelegate = (STDAppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate replaceRootViewController:[appDelegate tabBarController] animationOptions:UIViewAnimationOptionTransitionFlipFromLeft];
 }
 
 - (void) enterSideBarControllerAction:(id) sender {
-//    [self.sphereView timerStop];
+    [self.sphereView timerStop];
     STDAppDelegate * appDelegate = (STDAppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate replaceRootViewController:[appDelegate sideBarController] animationOptions:UIViewAnimationOptionTransitionFlipFromLeft];
 }

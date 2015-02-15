@@ -126,8 +126,8 @@
 	glClear(GL_COLOR_BUFFER_BIT);
     glColor4f(0.0f, 1.0f, 0.0f, 0.7f);
     CGFloat width = CGRectGetWidth(self.bounds);
-    CGFloat barWidth = width * 0.75 * _scaleFactor / (float)(_frequency.count - 1);
-    CGFloat barMargin =width * 0.25 * _scaleFactor / (float)(_frequency.count - 1);;
+    CGFloat barWidth = width * 0.75 * _scaleFactor / (CGFloat)(_frequency.count - 1);
+    CGFloat barMargin =width * 0.25 * _scaleFactor / (CGFloat)(_frequency.count - 1);;
     [self.heightArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         CGFloat barHeight = [obj floatValue] * _scaleFactor;
         CGFloat barLeft = idx * (barMargin + barWidth);

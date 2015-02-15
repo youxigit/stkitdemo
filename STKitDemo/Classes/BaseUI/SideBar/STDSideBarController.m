@@ -67,26 +67,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void) voiceDidRecognizerText:(NSNotification *) notification {
-    NSString * text = [notification.userInfo valueForKey:@"text"];
-    BOOL responds = YES;
-    if ([self.selectedViewController respondsToSelector:@selector(viewControllers)]) {
-        responds = ((STNavigationController *) self.selectedViewController).viewControllers.count == 1;
-    }
-    if (responds) {
-        if ([text contains:@"侧边"] || [text contains:@"窗帘"]) {
-            if ([text contains:@"打开"]) {
-                if (!self.sideAppeared) {
-                    [self revealSideViewControllerAnimated:YES];
-                }
-            } else if ([text contains:@"关闭"]) {
-                if (self.sideAppeared) {
-                    [self concealSideViewControllerAnimated:YES];
-                }
-            }
-        }
-    }
-}
-
 @end

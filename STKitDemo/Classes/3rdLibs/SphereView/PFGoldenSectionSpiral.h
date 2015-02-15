@@ -17,11 +17,12 @@
 
 #define PFMatrixMaxSize 4
 
+typedef Float32 STFloat32;
 struct PFMatrix {
     NSInteger m;
     NSInteger n;
     
-    CGFloat data[PFMatrixMaxSize][PFMatrixMaxSize];
+    STFloat32 data[PFMatrixMaxSize][PFMatrixMaxSize];
 };
 typedef struct PFMatrix PFMatrix;
 
@@ -32,13 +33,13 @@ typedef enum {
     PFAxisDirectionNegative = -1
 } PFAxisDirection;
 
-static CGFloat PFAxisDirectionMinimumDistance = 0.033f;
+static STFloat32 PFAxisDirectionMinimumDistance = 0.033f;
 
 
 struct PFPoint {
-    CGFloat x;
-    CGFloat y;
-    CGFloat z;
+    STFloat32 x;
+    STFloat32 y;
+    STFloat32 z;
 };
 typedef struct PFPoint PFPoint;
 
@@ -51,9 +52,9 @@ typedef struct PFPoint PFPoint;
 
 @end
 
-typedef CGFloat PFRadian;
+typedef STFloat32 PFRadian;
 
-extern PFRadian PFRadianMake(CGFloat grades);
+extern PFRadian PFRadianMake(STFloat32 grades);
 
 
 
@@ -74,20 +75,20 @@ extern PFMatrix PFMatrixTransform3DMakeZRotationOnPoint(PFPoint point, PFRadian 
 
 
 extern PFMatrix PFMatrixMake(NSInteger m, NSInteger n);
-extern PFMatrix PFMatrixMakeFromArray(NSInteger m, NSInteger n, CGFloat *data);
+extern PFMatrix PFMatrixMakeFromArray(NSInteger m, NSInteger n, STFloat32 *data);
 extern PFMatrix PFMatrixMakeIdentity(NSInteger m, NSInteger n);
 extern PFMatrix PFMatrixMultiply(PFMatrix A, PFMatrix B);
 extern NSString *NSStringFromPFMatrix(PFMatrix matrix);
 
 
-extern PFPoint PFPointMake(CGFloat x, CGFloat y, CGFloat z);
+extern PFPoint PFPointMake(STFloat32 x, STFloat32 y, STFloat32 z);
 extern PFPoint PFPointMakeFromMatrix(PFMatrix matrix);
 extern PFPoint PFPointFromString(NSString *string);
 extern NSString *NSStringFromPFPoint(PFPoint point);
-extern CGPoint CGPointMakeNormalizedPoint(CGPoint point, CGFloat distance);
+extern CGPoint CGPointMakeNormalizedPoint(CGPoint point, STFloat32 distance);
 
 
-extern PFAxisDirection PFAxisDirectionMake(CGFloat fromCoordinate, CGFloat toCoordinate, BOOL sensitive);
+extern PFAxisDirection PFAxisDirectionMake(STFloat32 fromCoordinate, STFloat32 toCoordinate, BOOL sensitive);
 extern PFAxisDirection PFDirectionMakeXAxis(CGPoint fromPoint, CGPoint toPoint);
 extern PFAxisDirection PFDirectionMakeYAxis(CGPoint fromPoint, CGPoint toPoint);
 extern PFAxisDirection PFDirectionMakeXAxisSensitive(CGPoint fromPoint, CGPoint toPoint);

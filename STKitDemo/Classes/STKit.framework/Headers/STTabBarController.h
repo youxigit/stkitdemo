@@ -37,6 +37,8 @@
 - (void)setBadgeValue:(NSString *)badgeValue forIndex:(NSInteger)index;
 - (NSString *)badgeValueForIndex:(NSInteger)index;
 
+//- (void)setTabBarHidden:(BOOL)hidden animated:(BOOL)animated;
+
 @end
 
 @interface UIViewController (STTabBarControllerItem)

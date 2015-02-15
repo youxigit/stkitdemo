@@ -31,7 +31,7 @@
 
 @end
 
-extern NSString *const STImagePickerControllerOriginalImagePath; // an path of image in temp
+extern NSString *const STImagePickerControllerOriginalImagePath; // a path of image in temp
 extern NSString *const STImagePickerControllerThumbImage;
 extern NSString *const STImagePickerControllerOriginalImageAssetPath;
 

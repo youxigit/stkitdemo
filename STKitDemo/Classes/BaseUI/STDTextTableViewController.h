@@ -20,6 +20,9 @@
 
 @property(nonatomic, strong) id contextInfo;
 
+@property(nonatomic) BOOL switchStyle;
+@property(nonatomic) BOOL checked;
+
 @end
 
 @interface STDTableViewSectionItem : STObject

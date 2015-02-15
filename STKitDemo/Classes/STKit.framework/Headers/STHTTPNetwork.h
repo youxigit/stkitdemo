@@ -36,4 +36,8 @@ typedef void (^STHTTPSynchronousNetworkHandler)(NSURLResponse *response, id data
 - (void)sendHTTPOperation:(STHTTPOperation *)operation
         completionHandler:(STHTTPNetworkHandler)completionHandler;
 
+- (STHTTPOperation *)sendRequestWithURLString:(NSString *)URLString
+                                   parameters:(NSDictionary *)parameters
+                            completionHandler:(STHTTPNetworkHandler)completionHandler;
+
 @end
