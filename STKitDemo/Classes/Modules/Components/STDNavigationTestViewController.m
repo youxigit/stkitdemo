@@ -17,6 +17,10 @@
 
 @implementation STDNavigationTestViewController
 
+- (void)dealloc {
+    
+}
+
 - (instancetype) initWithStyle:(UITableViewStyle)tableViewStyle {
     self = [super initWithStyle:tableViewStyle];
     if (self) {
@@ -32,6 +36,9 @@
     self.navigationItem.title = @"测试导航";
     if (![self.customNavigationController.delegate isKindOfClass:[self class]] && [STDSettingViewController allowsCustomNavigationTransition]) {
          self.customNavigationController.delegate = self;   
+    }
+    if (![STDSettingViewController allowsCustomNavigationTransition]) {
+        self.customNavigationController.delegate = nil;
     }
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Identifier"];
 }
