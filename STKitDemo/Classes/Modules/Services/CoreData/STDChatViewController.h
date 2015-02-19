@@ -10,6 +10,10 @@
 
 #import <STKit/STKit.h>
 #import <STDTableViewController.h>
+
+extern NSString *const STDChatUserDefaultID;
+extern NSString *const STDChatSystemDefaultID;
+
 @interface STDChatViewController : STDTableViewController
 
 - (id)initWithPageInfo:(NSDictionary *)pageInfo;

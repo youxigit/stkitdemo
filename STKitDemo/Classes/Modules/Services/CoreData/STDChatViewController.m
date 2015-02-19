@@ -38,8 +38,8 @@
 @property (nonatomic, strong) NSMutableArray   * selectedManagedObjects;
 @end
 
-static NSString * STUserDefaultID = @"97676901";
-static NSString * STSystemDefaultID = @"97676900";
+NSString *const STDChatUserDefaultID = @"97676901";
+NSString *const STDChatSystemDefaultID = @"97676900";
 
 @implementation STDChatViewController
 
@@ -91,12 +91,10 @@ static NSString * STSystemDefaultID = @"97676900";
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"聊天模板";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonCustomItem:STBarButtonCustomItemBack target:self action:@selector(_backViewControllerActionFired:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" target:self action:@selector(_rightBarButtonActionFired:)];
+    self.navigationItem.rightBarButtonItem.enabled = (self.fetchedResultsController.fetchedObjects.count > 0);
     
-    UIButton * rightView = [UIButton buttonWithType:UIButtonTypeCustom];
-    [rightView setTitle:@"截屏" forState:UIControlStateNormal];
-    [rightView setTitleColor:[UIColor colorWithRGB:0xFF7300] forState:UIControlStateNormal];
-    [rightView addTarget:self action:@selector(shotMessageView:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightView];
     
     self.customNavigationController.sideInteractionArea = STSideInteractiveAreaNavigationBar;
     self.tableView.backgroundView = nil;
@@ -147,7 +145,6 @@ static NSString * STSystemDefaultID = @"97676900";
 }
 
 #pragma mark - Notification
-
 - (void) chatInputViewDidChanged:(NSNotification *) notification {
     NSTimeInterval duration = [[notification.userInfo valueForKey:STDChatInputViewAnimationDurationUserInfoKey] doubleValue];
     CGRect chatViewFrame = [[notification.userInfo valueForKey:STDChatInputViewFrameUserInfoKey] CGRectValue];
@@ -170,24 +167,23 @@ static NSString * STSystemDefaultID = @"97676900";
     if (text.length == 0) {
         return;
     }
-    [[STCoreDataManager defaultDataManager] performBlockInBackground:^(NSManagedObjectContext * managedObjectContext) {
-        STDUser * user = [self createUserIfNotExistWithID:STUserDefaultID inManageObjectContext:managedObjectContext];
-        STDMessage * message = (STDMessage *)[managedObjectContext entityClassFromString:@"STDMessage" name:@"STDMessage"];
-        message.from = user;
-        message.type = STDMessageTypeText;
-        message.content = text;
-        message.time = [[NSDate date] timeIntervalSince1970];
-        NSString * identifier;
-        CGRect chatViewRect;
-        CGFloat height = [STDChat heightForMessageWithEntity:message identifier:&identifier chatViewRect:&chatViewRect];
-        message.height = height;
-        message.identifier = identifier;
-        message.chatViewRect = NSStringFromCGRect(chatViewRect);
-        [managedObjectContext save:nil];
-    } waitUntilDone:NO];
     
     [[STCoreDataManager defaultDataManager] performBlockInBackground:^(NSManagedObjectContext * managedObjectContext) {
-        STDUser * user = [self createUserIfNotExistWithID:STSystemDefaultID inManageObjectContext:managedObjectContext];
+        {
+            STDUser * user = [self createUserIfNotExistWithID:STDChatUserDefaultID inManageObjectContext:managedObjectContext];
+            STDMessage * message = (STDMessage *)[managedObjectContext entityClassFromString:@"STDMessage" name:@"STDMessage"];
+            message.from = user;
+            message.type = STDMessageTypeText;
+            message.content = text;
+            message.time = [[NSDate date] timeIntervalSince1970];
+            NSString * identifier;
+            CGRect chatViewRect;
+            CGFloat height = [STDChat heightForMessageWithEntity:message identifier:&identifier chatViewRect:&chatViewRect];
+            message.height = height;
+            message.identifier = identifier;
+            message.chatViewRect = NSStringFromCGRect(chatViewRect);
+        }
+        STDUser * user = [self createUserIfNotExistWithID:STDChatSystemDefaultID inManageObjectContext:managedObjectContext];
         STDMessage * message = (STDMessage *)[managedObjectContext entityClassFromString:@"STDMessage" name:@"STDMessage"];
         message.target = user;
         BOOL textType = arc4random() % 2;
@@ -218,7 +214,7 @@ static NSString * STSystemDefaultID = @"97676900";
         message.identifier = identifier;
         message.chatViewRect = NSStringFromCGRect(chatViewRect);
         [[STCoreDataManager defaultDataManager] saveManagedObjectContext:managedObjectContext error:nil];
-    } waitUntilDone:NO];
+    } waitUntilDone:YES];
 }
 
 
@@ -251,11 +247,13 @@ static NSString * STSystemDefaultID = @"97676900";
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     STDMessage * message = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self.selectedManagedObjects addObject:message];
+    [self _selectedObjectChanged];
 }
 
 - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     STDMessage * message = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self.selectedManagedObjects removeObject:message];
+    [self _selectedObjectChanged];
 }
 
 #pragma mark - NSFetchedResultsDelegate
@@ -308,106 +306,152 @@ static NSString * STSystemDefaultID = @"97676900";
             [self.tableView scrollToBottomAnimated:YES];
         });
     }
+    self.navigationItem.rightBarButtonItem.enabled = (self.fetchedResultsController.fetchedObjects.count > 0);
     self.needScrollBottom = NO;
 }
 
-- (void) shotMessageView:(id) sender {
-    
-    UIButton * rightBarButton = (UIButton *)self.navigationItem.rightBarButtonItem.customView;
-    if ([self.tableView numberOfRowsInSection:0] == 0) {
+- (void)_selectedObjectChanged {
+    if (!self.tableView.isEditing) {
+        return;
+    }
+    UIButton *rightBarButton = (UIButton *)self.navigationItem.rightBarButtonItem.customView;
+    if (self.selectedManagedObjects.count == 0) {
+        [rightBarButton setTitle:@"取消" forState:UIControlStateNormal];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonCustomItem:STBarButtonCustomItemBack target:self action:@selector(_backViewControllerActionFired:)];
+        
+    } else {
+        [rightBarButton setTitle:@"截取" forState:UIControlStateNormal];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"删除" target:self action:@selector(_deleteViewControllerActionFired:)];
+    }
+}
+
+- (void)_rightBarButtonActionFired:(UIButton *)rightBarButton {
+    NSString *title = [rightBarButton titleForState:UIControlStateNormal];
+    if ([title isEqualToString:@"取消"]) {
+        [self _resetNavigationItems];
         if (self.tableView.isEditing) {
-            [self.tableView setEditing:NO animated:NO];
+            [self.tableView setEditing:NO animated:YES];
         }
+        [rightBarButton setTitle:@"编辑" forState:UIControlStateNormal];
+        self.tableViewEditing = NO;
+    } else if ([title isEqualToString:@"编辑"]) {
+        [rightBarButton setTitle:@"取消" forState:UIControlStateNormal];
+        [self.tableView setEditing:YES animated:YES];
         [self.selectedManagedObjects removeAllObjects];
         self.tableViewEditing = NO;
-        [rightBarButton setTitle:@"截屏" forState:UIControlStateNormal];
-        return;
-    }
-    if (!self.tableViewEditing) {
-        [self.selectedManagedObjects removeAllObjects];
-        [self.tableView setEditing:YES animated:YES];
+    } else if ([title isEqualToString:@"截取"]) {
+        if (self.tableViewEditing) {
+            return;
+        }
+        [STIndicatorView showInView:self.view animated:NO];
         self.tableViewEditing = YES;
-        [rightBarButton setTitle:@"保存" forState:UIControlStateNormal];
-        return;
+        [self _snapshotMessageViewCellsCompletion:^{
+            [self.selectedManagedObjects removeAllObjects];
+            [self _resetNavigationItems];
+            [self.tableView setEditing:NO animated:YES];
+            [STIndicatorView hideInView:self.view animated:YES];
+            self.tableViewEditing = NO;
+        }];
     }
-    [self.tableView setEditing:NO animated:NO];
+}
+
+- (void)_resetNavigationItems {
+    UIButton *rightBarButton = (UIButton *)self.navigationItem.rightBarButtonItem.customView;
+    [rightBarButton setTitle:@"编辑" forState:UIControlStateNormal];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonCustomItem:STBarButtonCustomItemBack target:self action:@selector(_backViewControllerActionFired:)];
+}
+
+- (void)_backViewControllerActionFired:(id)sender {
+    [self.customNavigationController popViewControllerAnimated:YES];
+}
+
+- (void)_deleteViewControllerActionFired:(id)sender {
+    self.tableViewEditing = YES;
+    [[STCoreDataManager defaultDataManager] performBlockOnMainThread:^(NSManagedObjectContext * context) {
+        [self.selectedManagedObjects enumerateObjectsUsingBlock:^(STDMessage * obj, NSUInteger idx, BOOL *stop) {
+            [context deleteObject:obj];
+        }];
+        [[STCoreDataManager defaultDataManager] saveManagedObjectContext:context error:nil];
+    } waitUntilDone:YES];
+    [self.selectedManagedObjects removeAllObjects];
     self.tableViewEditing = NO;
-    if (self.selectedManagedObjects.count == 0) {
-        [rightBarButton setTitle:@"截屏" forState:UIControlStateNormal];
-        return;
+    if (self.tableView.isEditing) {
+        [self.tableView setEditing:NO animated:YES];
     }
-    [STIndicatorView showInView:self.view animated:NO];
-    
-    
-    UIView * shotView = [[UIView alloc] initWithFrame:CGRectZero];
-    shotView.backgroundColor = self.tableView.backgroundColor;
-    [self.view addSubview:shotView];
-    
-    NSArray * messages = [self.selectedManagedObjects sortedArrayUsingComparator:^NSComparisonResult(STDMessage * obj1, STDMessage * obj2) {
-        return obj1.time < obj2.time ? NSOrderedAscending:NSOrderedDescending;
-    }];
-    __block CGFloat height = 0.0f;
-    CGFloat width = CGRectGetWidth(self.tableView.frame);
-    [messages enumerateObjectsUsingBlock:^(STDMessage * message, NSUInteger idx, BOOL *stop) {
-        UIView * messageCell;
-        switch (message.type) {
-            case STDMessageTypeText:
-                messageCell = [[STDTextChatCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:message.identifier];
-                break;
-            case STDMessageTypeImage:
-                messageCell = [[STDImageChatCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:message.identifier];
-                break;
-            default:
-                break;
-        }
-        CGFloat tempHeight = message.height + 5;
-        if (height < tempHeight) {
-            height = tempHeight;
-        }
-        messageCell.frame = CGRectMake(0, 0, width, tempHeight);
-        [messageCell setValue:message forKey:@"message"];
-        [shotView addSubview:messageCell];
-    }];
-    BOOL horizontal = NO;
-    __block CGFloat left = 0, top = 0, shotWidth = 0, shotHeight = 0;
-    [shotView.subviews enumerateObjectsUsingBlock:^(STDBaseChatCell *subview, NSUInteger idx, BOOL *stop) {
-        if ([subview isKindOfClass:[STDBaseChatCell class]]) {
-            CGRect frame = subview.frame;
-            // 如果是横向的
-            if (horizontal) {
-                frame.origin.y = (height - subview.height) / 2;
-                frame.origin.x = left;
-                left += subview.width;
-                shotWidth = left;
-                shotHeight = height;
-            } else {
-                frame.origin.y = top;
-                top += subview.height;
-                shotWidth = subview.width;
-                shotHeight = top;
+    [self _resetNavigationItems];
+}
+
+- (void)_snapshotMessageViewCellsCompletion:(void(^)(void))completionHandler {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView * shotView = [[UIView alloc] initWithFrame:CGRectZero];
+        shotView.backgroundColor = self.tableView.backgroundColor;
+        [self.view addSubview:shotView];
+        
+        NSArray * messages = [self.selectedManagedObjects sortedArrayUsingComparator:^NSComparisonResult(STDMessage * obj1, STDMessage * obj2) {
+            return obj1.time < obj2.time ? NSOrderedAscending:NSOrderedDescending;
+        }];
+        __block CGFloat height = 0.0f;
+        CGFloat width = CGRectGetWidth(self.tableView.frame);
+        [messages enumerateObjectsUsingBlock:^(STDMessage * message, NSUInteger idx, BOOL *stop) {
+            UIView * messageCell;
+            switch (message.type) {
+                case STDMessageTypeText:
+                    messageCell = [[STDTextChatCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:message.identifier];
+                    break;
+                case STDMessageTypeImage:
+                    messageCell = [[STDImageChatCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:message.identifier];
+                    break;
+                default:
+                    break;
             }
-            subview.frame = frame;
+            CGFloat tempHeight = message.height + 5;
+            if (height < tempHeight) {
+                height = tempHeight;
+            }
+            messageCell.frame = CGRectMake(0, 0, width, tempHeight);
+            [messageCell setValue:message forKey:@"message"];
+            [shotView addSubview:messageCell];
+        }];
+        BOOL horizontal = NO;
+        __block CGFloat left = 0, top = 0, shotWidth = 0, shotHeight = 0;
+        [shotView.subviews enumerateObjectsUsingBlock:^(STDBaseChatCell *subview, NSUInteger idx, BOOL *stop) {
+            if ([subview isKindOfClass:[STDBaseChatCell class]]) {
+                CGRect frame = subview.frame;
+                // 如果是横向的
+                if (horizontal) {
+                    frame.origin.y = (height - subview.height) / 2;
+                    frame.origin.x = left;
+                    left += subview.width;
+                    shotWidth = left;
+                    shotHeight = height;
+                } else {
+                    frame.origin.y = top;
+                    top += subview.height;
+                    shotWidth = subview.width;
+                    shotHeight = top;
+                }
+                subview.frame = frame;
+            }
+        }];
+        CGRect shotFrame = shotView.frame;
+        shotFrame.size.width = shotWidth;
+        shotFrame.size.height = shotHeight;
+        shotView.frame = shotFrame;
+        
+        UIGraphicsBeginImageContextWithOptions(shotView.frame.size, false, [UIScreen mainScreen].scale);
+        CGContextRef context =  UIGraphicsGetCurrentContext();
+        [shotView.layer renderInContext:context];
+        UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        //保存到相册中
+        __weak STDChatViewController *weakSelf = self;
+        STImageWriteToPhotosAlbum(image, @"STKitDemo",
+                                  ^(UIImage *image, NSError *error) { [weakSelf image:image didFinishSavingWithError:error contextInfo:NULL]; });
+        [shotView removeFromSuperview];
+        if (completionHandler) {
+            completionHandler();
         }
-    }];
-    CGRect shotFrame = shotView.frame;
-    shotFrame.size.width = shotWidth;
-    shotFrame.size.height = shotHeight;
-    shotView.frame = shotFrame;
-    
-    UIGraphicsBeginImageContextWithOptions(shotView.frame.size, false, [UIScreen mainScreen].scale);
-    CGContextRef context =  UIGraphicsGetCurrentContext();
-    [shotView.layer renderInContext:context];
-    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    //保存到相册中
-    __weak STDChatViewController *weakSelf = self;
-    STImageWriteToPhotosAlbum(image, @"STKitDemo",
-                              ^(UIImage *image, NSError *error) { [weakSelf image:image didFinishSavingWithError:error contextInfo:NULL]; });
-    [shotView removeFromSuperview];
-    [STIndicatorView hideInView:self.view animated:YES];
-    
-    [rightBarButton setTitle:@"截屏" forState:UIControlStateNormal];
+    });
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {

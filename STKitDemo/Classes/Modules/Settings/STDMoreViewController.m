@@ -40,11 +40,11 @@
 //        STDTableViewSectionItem * section1 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"" items:@[item10]];
 //        [dataSource addObject:section1];
 //
-        
-        STDTableViewCellItem *item20 = [[STDTableViewCellItem alloc] initWithTitle:@"清空缓存" target:self action:@selector(_cleanActionFired)];
-//        STDTableViewCellItem * item21 = [[STDTableViewCellItem alloc] initWithTitle:@"糗事百科" target:self action:@selector(qiubaiActionFired)];
-        STDTableViewSectionItem *section2 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"" items:@[item20]];
-        [dataSource addObject:section2];
+//        
+//        STDTableViewCellItem *item20 = [[STDTableViewCellItem alloc] initWithTitle:@"清空缓存" target:self action:@selector(_cleanActionFired)];
+////        STDTableViewCellItem * item21 = [[STDTableViewCellItem alloc] initWithTitle:@"糗事百科" target:self action:@selector(qiubaiActionFired)];
+//        STDTableViewSectionItem *section2 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"" items:@[item20]];
+//        [dataSource addObject:section2];
         
         
         STDTableViewCellItem *item30 = [[STDTableViewCellItem alloc] initWithTitle:@"开源组件许可" target:self action:@selector(_openSourceLicenseActionFired)];
@@ -99,22 +99,6 @@
     STDSettingViewController *settingViewController = [[STDSettingViewController alloc] initWithStyle:UITableViewStyleGrouped];
     settingViewController.hidesBottomBarWhenPushed = YES;
     [self.customNavigationController pushViewController:settingViewController animated:YES];
-}
-
-- (void)_cleanActionFired {
-    NSFileManager * manager = [NSFileManager defaultManager];
-    NSString * imagePath = STImageCacheDirectory();
-    if ([manager fileExistsAtPath:imagePath isDirectory:NULL]) {
-        CGFloat size = [[[manager attributesOfItemAtPath:imagePath error:nil] valueForKey:NSFileSize] floatValue];
-        [manager removeItemAtPath:imagePath error:nil];
-        STIndicatorView * indicatorView = [STIndicatorView showInView:self.view animated:YES];
-        indicatorView.forceSquare = YES;
-        indicatorView.indicatorType = STIndicatorTypeText;
-        indicatorView.textLabel.text = @"清理完毕";
-        indicatorView.detailLabel.text = [NSString stringWithFormat:@"释放了%.2fM", size / 1024.f];
-        [indicatorView hideAnimated:YES afterDelay:0.5];
-        indicatorView.blurEffectStyle = STBlurEffectStyleDark;
-    }
 }
 
 - (void)_dbMeiziActionFired {

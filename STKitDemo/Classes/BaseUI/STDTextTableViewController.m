@@ -35,7 +35,7 @@
 }
 
 - (void)_switchActionFired:(UISwitch *)uiswitch {
-    [self.cellItem.target performSelector:_cellItem.action withObjects:uiswitch, nil];
+    [self.cellItem.target st_performSelector:_cellItem.action withObjects:uiswitch, nil];
     self.cellItem.checked = uiswitch.on;
 }
 

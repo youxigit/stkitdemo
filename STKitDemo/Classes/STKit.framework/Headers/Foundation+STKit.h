@@ -61,6 +61,7 @@ extern NSInteger STCleanBitOffset(NSInteger value, NSInteger bit);
 /// 注明： 如果返回值为基本类型，struct除外，其余都转换为NSNumber。 如果返回值是struct。则转为NSValue,
 /// 如果selector不存在，则直接返回nil, 如果参数不足，则nil填充
 - (id)performSelector:(SEL)aSelector withObjects:(id)object, ... __attribute__((sentinel(0, 1)));
+- (id)st_performSelector:(SEL)aSelector withObjects:(id)object, ... __attribute__((sentinel(0, 1)));
 
 @end
 
