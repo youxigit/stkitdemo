@@ -9,12 +9,12 @@
 #import <STKit/STKit.h>
 #import "STDViewController.h"
 
-@interface STDTableViewController : STDViewController  <UITableViewDataSource, UITableViewDelegate>
+@interface STDTableViewController : STModelViewController  <UITableViewDataSource, UITableViewDelegate>
 
-- (instancetype) initWithStyle:(UITableViewStyle) tableViewStyle;
+- (instancetype)initWithStyle:(UITableViewStyle) tableViewStyle;
 
-@property (nonatomic, readonly, strong) UITableView       * tableView;
+@property(nonatomic, readonly, strong) UITableView       *tableView;
+@property(nonatomic, assign) BOOL clearsSelectionOnViewWillAppear;
 
-@property (nonatomic, assign) BOOL clearsSelectionOnViewWillAppear;
-
+@property(nonatomic, strong, readonly) STScrollDirector *scrollDirector;
 @end

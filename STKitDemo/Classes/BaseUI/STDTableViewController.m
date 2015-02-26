@@ -10,8 +10,9 @@
 
 @interface STDTableViewController ()
 
-@property (nonatomic, strong) UITableView       * tableView;
-@property (nonatomic, assign) UITableViewStyle    tableViewStyle;
+@property(nonatomic, strong) UITableView       *tableView;
+@property(nonatomic, assign) UITableViewStyle   tableViewStyle;
+@property(nonatomic, strong) STScrollDirector  *scrollDirector;
 
 @end
 
@@ -22,6 +23,16 @@
     if (self) {
         self.tableViewStyle = tableViewStyle;
         self.clearsSelectionOnViewWillAppear = YES;
+        
+        self.scrollDirector = [[STScrollDirector alloc] init];
+        [self.scrollDirector setTitle:@"下拉可以刷新" forState:STScrollDirectorStateRefreshNormal];
+        [self.scrollDirector setTitle:@"松手开始刷新" forState:STScrollDirectorStateRefreshReachedThreshold];
+        [self.scrollDirector setTitle:@"正在刷新..." forState:STScrollDirectorStateRefreshLoading];
+        
+        [self.scrollDirector setTitle:@"加载更多" forState:STScrollDirectorStatePaginationNormal];
+        [self.scrollDirector setTitle:@"正在加载更多" forState:STScrollDirectorStatePaginationLoading];
+        [self.scrollDirector setTitle:@"重新加载" forState:STScrollDirectorStatePaginationFailed];
+        [self.scrollDirector setTitle:@"没有更多了" forState:STScrollDirectorStatePaginationReachedEnd];
     }
     return self;
 }
@@ -30,7 +41,7 @@
     return [self initWithStyle:UITableViewStylePlain];
 }
 
-- (void) loadView {
+- (void)loadView {
     [super loadView];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -44,7 +55,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.scrollDirector.scrollView = self.tableView;
+    [self.scrollDirector.refreshControl addTarget:self action:@selector(_refreshControlActionFired:) forControlEvents:UIControlEventValueChanged];
+    [self.scrollDirector.paginationControl addTarget:self action:@selector(_paginationControlActionFired:) forControlEvents:UIControlEventValueChanged];
 }
+
+- (void)_refreshControlActionFired:(STRefreshControl *)refreshControl {
+    [self.model loadDataFromRemote];
+}
+
+- (void)_paginationControlActionFired:(id) sender {
+    [self.model loadDataFromPagination];
+}
+
+- (void)modelDidFinishLoadData:(STModel *)model {
+    [super modelDidFinishLoadData:model];
+    if (model.sourceType == STModelDataSourceTypeRemote) {
+        [self.scrollDirector.refreshControl endRefreshing];
+    }
+    [self _reloadTableFooterView];
+    [self.tableView reloadData];
+}
+
+- (void)modelDidFailedLoadData:(STModel *)model {
+    [super modelDidFailedLoadData:model];
+    if (model.sourceType == STModelDataSourceTypeRemote) {
+        [self.scrollDirector.refreshControl endRefreshing];
+    } else {
+        if (model.sourceType == STModelDataSourceTypePagination) {
+            self.scrollDirector.paginationControl.paginationState = STPaginationControlStateFailed;
+            self.tableView.tableFooterView = self.scrollDirector.paginationControl;
+        }
+    }
+    [self.tableView reloadData];
+}
+
+- (void)_reloadTableFooterView {
+    if (self.model.hasNextPage) {
+        self.scrollDirector.paginationControl.paginationState = STPaginationControlStateNormal;
+    } else {
+        self.scrollDirector.paginationControl.paginationState = STPaginationControlStateReachedEnd;
+    }
+    self.tableView.tableFooterView = self.scrollDirector.paginationControl;
+}
+
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

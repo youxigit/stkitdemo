@@ -23,16 +23,26 @@
 
 @implementation STDReaderViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (instancetype)initWithContentsOfFile:(NSString *)path {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        path = [[NSBundle mainBundle] pathForResource:@"book" ofType:@"txt"];;
+    }
+    NSString *book = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    return [self initWithString:book];
+}
+
+- (instancetype)initWithString:(NSString *)string {
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        // Custom initialization
-        NSString * bookPath = [[NSBundle mainBundle] pathForResource:@"book" ofType:@"txt"];
-        self.book = [NSString stringWithContentsOfFile:bookPath encoding:NSUTF8StringEncoding error:nil];
+        self.book = string;
         self.navigationBarHidden = YES;
         self.hidesBottomBarWhenPushed = YES;
     }
     return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    return [self initWithContentsOfFile:nil];
 }
 
 - (void)viewDidLoad {

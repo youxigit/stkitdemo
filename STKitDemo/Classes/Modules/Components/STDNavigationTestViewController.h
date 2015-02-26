@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 SunJiangting. All rights reserved.
 //
 
-#import "STDTableViewController.h"
+#import "STDTextTableViewController.h"
 
-@interface STDNavigationTestViewController : STDTableViewController
+@interface STDNavigationTestViewController : STDTextTableViewController
 
 @end

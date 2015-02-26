@@ -10,13 +10,13 @@
 
 @interface STDFeedItem : STObject
 
-@property (nonatomic, copy)     NSString   * title;
-@property (nonatomic, copy)     NSString   * thumbURLString;
-@property (nonatomic, copy)     NSString   * imageURLString;
+@property (nonatomic, copy)     NSString   *title;
+@property (nonatomic, copy)     NSString   *thumbURLString;
+@property (nonatomic, copy)     NSString   *imageURLString;
 @property (nonatomic, assign)   CGFloat      width;
 @property (nonatomic, assign)   CGFloat      height;
 // 评分
-@property (nonatomic, assign)   CGFloat    rate;
+@property (nonatomic, assign)   CGFloat      rate;
 
 - (STImageItem *) imageItem;
 @end

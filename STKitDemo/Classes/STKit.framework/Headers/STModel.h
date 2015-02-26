@@ -46,6 +46,7 @@ typedef enum STModelDataSourceType {
 
 /// 每次加载完毕后，会调用此方法，判断是否需要显示空数据
 - (NSInteger)numberOfDataItems;
+- (id)objectAtIndexPath:(NSIndexPath *)indexPath;
 /// 从Cache加载
 - (void)loadDataFromCache;
 

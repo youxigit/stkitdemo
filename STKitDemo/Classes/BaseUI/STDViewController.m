@@ -89,19 +89,10 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(voiceDidRecognizerText:) name:@"STDVoiceRecognizerNotification" object:nil];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"STDVoiceRecognizerNotification" object:nil];
-}
-
-- (void) voiceDidRecognizerText:(NSNotification *) notification {
-    NSString * text = [notification.userInfo valueForKey:@"text"];
-    if ([text contains:@"返回"] && self.customNavigationController.viewControllers.count > 1) {
-        [self.customNavigationController popViewControllerAnimated:YES];
-    }
 }
 
 - (void)didReceiveMemoryWarning {

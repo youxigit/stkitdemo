@@ -77,6 +77,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.scrollDirector.refreshControl.enabled = NO;
+    self.tableView.backgroundColor = [UIColor colorWithRGB:0xF5F5F5];
     [self.tableView registerClass:[STDTextStyleCell class] forCellReuseIdentifier:@"Identifier"];
 }
 

@@ -52,13 +52,11 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(voiceDidRecognizerText:) name:@"STDVoiceRecognizerNotification" object:nil];
 }
 
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"STDVoiceRecognizerNotification" object:nil];
 }
 
 

@@ -52,19 +52,17 @@
         self.actualTabBarHeight = 42;
         self.tabBar.backgroundImage = [[UIImage imageNamed:@"tab_bkg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 2, 10, 2) resizingMode:UIImageResizingModeStretch];
     }
-    if (![[[STPersistence standardPerstence] valueForKey:@"STHasEnteredAboutViewController"] boolValue]) {
+    if (![[[STPersistence standardPersistence] valueForKey:@"STHasEnteredAboutViewController"] boolValue]) {
         [self setBadgeValue:@"New" forIndex:2];
     }
 }
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(voiceDidRecognizerText:) name:@"STDVoiceRecognizerNotification" object:nil];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"STDVoiceRecognizerNotification" object:nil];
 }
 
 - (void) voiceDidRecognizerText:(NSNotification *) notification {

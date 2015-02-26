@@ -32,20 +32,8 @@
         NSMutableArray * dataSource = [NSMutableArray arrayWithCapacity:5];
 
         STDTableViewCellItem *item00 = [[STDTableViewCellItem alloc] initWithTitle:@"豆瓣妹子" target:self action:@selector(_dbMeiziActionFired)];
-//        STDTableViewCellItem * item01 = [[STDTableViewCellItem alloc] initWithTitle:@"还原设置" target:self action:@selector(_resetSettingActionFired)];
         STDTableViewSectionItem *section0 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"" items:@[item00]];
         [dataSource addObject:section0];
-        
-//        STDTableViewCellItem *item10 = [[STDTableViewCellItem alloc] initWithTitle:@"导航设置" target:self action:@selector(_navigationSettingActionFired)];
-//        STDTableViewSectionItem * section1 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"" items:@[item10]];
-//        [dataSource addObject:section1];
-//
-//        
-//        STDTableViewCellItem *item20 = [[STDTableViewCellItem alloc] initWithTitle:@"清空缓存" target:self action:@selector(_cleanActionFired)];
-////        STDTableViewCellItem * item21 = [[STDTableViewCellItem alloc] initWithTitle:@"糗事百科" target:self action:@selector(qiubaiActionFired)];
-//        STDTableViewSectionItem *section2 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"" items:@[item20]];
-//        [dataSource addObject:section2];
-        
         
         STDTableViewCellItem *item30 = [[STDTableViewCellItem alloc] initWithTitle:@"开源组件许可" target:self action:@selector(_openSourceLicenseActionFired)];
         STDTableViewCellItem *item31 = [[STDTableViewCellItem alloc] initWithTitle:@"关于STKit" target:self action:@selector(_aboutActionFired)];
@@ -66,7 +54,7 @@
 	// Do any additional setup after loading the view.
     self.navigationItem.title = @"更多介绍";
     
-    [[STPersistence standardPerstence] setValue:@(YES) forKey:@"STHasEnteredAboutViewController"];
+    [[STPersistence standardPersistence] setValue:@(YES) forKey:@"STHasEnteredAboutViewController"];
     
     if (self.customTabBarController) {
         [self.customTabBarController setBadgeValue:nil forIndex:2];
@@ -87,7 +75,6 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,24 +91,6 @@
 - (void)_dbMeiziActionFired {
     STDBigViewController * viewController = [[STDBigViewController alloc] init];
     [self.customNavigationController pushViewController:viewController animated:YES];
-}
-
-- (void)_qiubaiActionFired {
-    NSString * qiubaiLibiary = [[NSBundle mainBundle] pathForResource:@"STQiuBai" ofType:@"framework"];
-    NSFileManager * fileManager = [NSFileManager defaultManager];
-//    NSString * path = [[fileManager containerURLForSecurityApplicationGroupIdentifier:@"group.suen.plugin"].path stringByAppendingPathComponent:@"/Library/STQiuBai.framework"];
-    NSString * path = [STDocumentDirectory() stringByAppendingPathComponent:@"/STQiuBai.framework"];
-    if ([fileManager fileExistsAtPath:path]) {
-        [fileManager removeItemAtPath:path error:nil];
-    }
-    [fileManager copyItemAtPath:qiubaiLibiary toPath:path error:nil];
-    NSBundle * bundle = [[NSBundle alloc] initWithPath:qiubaiLibiary];
-    NSError * error;
-    if ([bundle loadAndReturnError:&error] && !error) {
-        Class vc = NSClassFromString(@"STQBViewController");
-        STViewController * viewController = [[vc alloc] initWithNibName:nil bundle:nil];
-        [self.customNavigationController pushViewController:viewController animated:YES];
-    }
 }
 
 - (void)_aboutActionFired {
@@ -148,7 +117,7 @@
     [appDelegate replaceRootViewController:[appDelegate startViewController] animationOptions:UIViewAnimationOptionTransitionFlipFromRight];
 }
 
-- (void)_leftBarButtonItemAction:(id) sender {
+- (void)_leftBarButtonItemAction:(id)sender {
     if (self.sideBarController.sideAppeared) {
         [self.sideBarController concealSideViewControllerAnimated:YES];
     } else {

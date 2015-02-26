@@ -32,21 +32,18 @@
         
         NSMutableArray * dataSource = [NSMutableArray arrayWithCapacity:2];
         
-        NSMutableArray * section0 = [NSMutableArray arrayWithCapacity:2];
-        [section0 addObject:@{@"type":@(STArraySortTypeBubbleSort), @"title":@"冒泡排序"}];
-        [section0 addObject:@{@"type":@(STArraySortTypeSelectSort), @"title":@"选择排序"}];
-        [section0 addObject:@{@"type":@(STArraySortTypeInsertSort), @"title":@"插入排序"}];
-        [section0 addObject:@{@"type":@(STArraySortTypeQuickSort), @"title":@"快速排序"}];
+        STDTableViewCellItem *item00 = [[STDTableViewCellItem alloc] initWithTitle:@"冒泡排序" target:self action:@selector(_bubbleSortActionFired)];
+        STDTableViewCellItem *item01 = [[STDTableViewCellItem alloc] initWithTitle:@"选择排序" target:self action:@selector(_selectSortActionFired)];
+        STDTableViewCellItem *item02 = [[STDTableViewCellItem alloc] initWithTitle:@"插入排序" target:self action:@selector(_insertSortActionFired)];
+        STDTableViewCellItem *item03 = [[STDTableViewCellItem alloc] initWithTitle:@"快速排序" target:self action:@selector(_quickSortActionFired)];
         NSString * section0Title = [NSString stringWithFormat:@"几种常用的排序算法, 排序数据源\n%@", [self.sortArray componentsJoinedByString:@","]];
-        NSDictionary * section0Dict = @{@"sectionHeaderTitle":section0Title, @"section":section0};
-        [dataSource addObject:section0Dict];
+        STDTableViewSectionItem *section0 = [[STDTableViewSectionItem alloc] initWithSectionTitle:section0Title items:@[item00, item01, item02, item03]];
+        [dataSource addObject:section0];
         
-        NSMutableArray * section1 = [NSMutableArray arrayWithCapacity:2];
-        [section1 addObject:@{@"type":@(STArraySortTypeBubbleSort), @"title":@"汉诺塔算法"}];
-        NSString * section1Title = [NSString stringWithFormat:@"经典的几种递归算法\n"];
-        NSDictionary * section1Dict = @{@"sectionHeaderTitle":section1Title, @"section":section1};
-        [dataSource addObject:section1Dict];
         
+        STDTableViewCellItem *item10 = [[STDTableViewCellItem alloc] initWithTitle:@"汉诺塔算法" target:self action:@selector(_hanoiActionFired)];
+        STDTableViewSectionItem *section1 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"经典的几种递归算法\n" items:@[item10]];
+        [dataSource addObject:section1];
         self.dataSource = dataSource;
     }
     return self;
@@ -113,7 +110,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) speedChanged:(UISlider *) slider {
+- (void)speedChanged:(UISlider *) slider {
     NSUserDefaults * userDefault = [NSUserDefaults standardUserDefaults];
     [userDefault setValue:@(slider.value) forKey:@"STMoveAnimationDuration"];
     [userDefault synchronize];
@@ -130,58 +127,41 @@
     [self updateNumberOfDisks:sender.value];
 }
 
-#pragma mark - Table view data source
-
-- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSDictionary * sectionInfo = [self.dataSource objectAtIndex:section];
-    return [sectionInfo valueForKey:@"sectionHeaderTitle"];
+- (void)_bubbleSortActionFired {
+    STASortViewController * viewController = [[STASortViewController alloc] init];
+    viewController.sortArray = self.sortArray;
+    viewController.arraySortType = STArraySortTypeBubbleSort;
+    [self.customNavigationController pushViewController:viewController animated:YES];
 }
 
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-   // Return the number of sections.
-    return self.dataSource.count;
+- (void)_selectSortActionFired {
+    STASortViewController * viewController = [[STASortViewController alloc] init];
+    viewController.sortArray = self.sortArray;
+    viewController.arraySortType = STArraySortTypeSelectSort;
+    [self.customNavigationController pushViewController:viewController animated:YES];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    NSDictionary * sectionInfo = [self.dataSource objectAtIndex:section];
-    return [[sectionInfo valueForKey:@"section"] count];
+- (void)_insertSortActionFired {
+    STASortViewController * viewController = [[STASortViewController alloc] init];
+    viewController.sortArray = self.sortArray;
+    viewController.arraySortType = STArraySortTypeInsertSort;
+    [self.customNavigationController pushViewController:viewController animated:YES];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell * tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"Identifier"];
-    if (!tableViewCell) {
-        tableViewCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                               reuseIdentifier:@"Identifier"];
-    }
-    // Configure the cell...
-    NSDictionary * sectionInfo = [self.dataSource objectAtIndex:indexPath.section];
-    NSArray * rowInfo = [[sectionInfo valueForKey:@"section"] objectAtIndex:indexPath.row];
-    tableViewCell.textLabel.text = [rowInfo valueForKey:@"title"];
-    return tableViewCell;
+- (void)_quickSortActionFired {
+    STASortViewController * viewController = [[STASortViewController alloc] init];
+    viewController.sortArray = self.sortArray;
+    viewController.arraySortType = STArraySortTypeQuickSort;
+    [self.customNavigationController pushViewController:viewController animated:YES];
 }
 
-
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    NSDictionary * sectionInfo = [self.dataSource objectAtIndex:indexPath.section];
-    NSArray * rowInfo = [[sectionInfo valueForKey:@"section"] objectAtIndex:indexPath.row];
-    if (indexPath.section == 0) {
-        STASortViewController * viewController = [[STASortViewController alloc] init];
-        viewController.sortArray = self.sortArray;
-        viewController.arraySortType = [[rowInfo valueForKey:@"type"] intValue];
-        [self.customNavigationController pushViewController:viewController animated:YES];
-    } else if (indexPath.section == 1) {
-        if (indexPath.row == 0) {
-            STAHanoiViewController * viewController = [[STAHanoiViewController alloc] init];
-            viewController.numberOfHanois = self.numberOfDisks;
-            [self.customNavigationController pushViewController:viewController animated:YES];
-        }
-    }
+- (void)_hanoiActionFired {
+    STAHanoiViewController * viewController = [[STAHanoiViewController alloc] init];
+    viewController.numberOfHanois = self.numberOfDisks;
+    [self.customNavigationController pushViewController:viewController animated:YES];
 }
 
-- (void) leftBarButtonItemAction:(id) sender {
+- (void)leftBarButtonItemAction:(id) sender {
     if (self.sideBarController.sideAppeared) {
         [self.sideBarController concealSideViewControllerAnimated:YES];
     } else {

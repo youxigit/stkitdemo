@@ -10,6 +10,8 @@
 
 @interface STDReaderViewController : STDViewController
 
-@property (nonatomic, strong) UIPageViewController * pageViewController;
+- (instancetype)initWithContentsOfFile:(NSString *)path;
+- (instancetype)initWithString:(NSString *)string;
+@property (nonatomic, strong) UIPageViewController *pageViewController;
 
 @end

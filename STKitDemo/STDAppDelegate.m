@@ -15,7 +15,6 @@
 #import "STDStartViewController.h"
 
 #import <STKit/STKit.h>
-#import <CFNetwork/CFNetwork.h>
 
 @interface STDAppDelegate ()
 
@@ -32,7 +31,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-    NSString *previousStyle = [[STPersistence standardPerstence] valueForKey:@"SelectedStyle"];
+    NSString *previousStyle = [[STPersistence standardPersistence] valueForKey:@"SelectedStyle"];
     if ([previousStyle isEqualToString:@"TabBar"]) {
         self.window.rootViewController = [self tabBarController];
     } else if ([previousStyle isEqualToString:@"SideBar"]) {
@@ -45,18 +44,18 @@
 }
 
 - (UIViewController *)startViewController {
-    [[STPersistence standardPerstence] setValue:@"Start" forKey:@"SelectedStyle"];
+    [[STPersistence standardPersistence] setValue:@"Start" forKey:@"SelectedStyle"];
     return STDStartViewController.new;
 }
 
 - (UIViewController *)tabBarController {
-    [[STPersistence standardPerstence] setValue:@"TabBar" forKey:@"SelectedStyle"];
+    [[STPersistence standardPersistence] setValue:@"TabBar" forKey:@"SelectedStyle"];
     STDTabBarController *tabBarController = [[STDTabBarController alloc] init];
     return tabBarController;
 }
 
 - (UIViewController *)sideBarController {
-    [[STPersistence standardPerstence] setValue:@"SideBar" forKey:@"SelectedStyle"];
+    [[STPersistence standardPersistence] setValue:@"SideBar" forKey:@"SelectedStyle"];
     STDLeftViewController *leftViewController = [[STDLeftViewController alloc] init];
     STDSideBarController *sideBarController = [[STDSideBarController alloc] initWithRootViewController:leftViewController];
     sideBarController.navigationBarHidden = YES;

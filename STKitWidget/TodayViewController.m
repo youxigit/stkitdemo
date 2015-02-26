@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     NSString * cacheKey = [NSString stringWithFormat:@"%@-LastRequest", self.class].md5String;
-    self.previousRequestTime = [[[STPersistence standardPerstence] valueForKey:cacheKey] doubleValue];
+    self.previousRequestTime = [[[STPersistence standardPersistence] valueForKey:cacheKey] doubleValue];
     
     self.edgeInsets = UIEdgeInsetsZero;
 
@@ -86,14 +86,14 @@
             self.selectedIndex = 0;
             self.previousRequestTime = [[NSDate date] timeIntervalSince1970];
             NSString * cacheKey = [NSString stringWithFormat:@"%@-LastRequest", self.class].md5String;
-            [[STPersistence standardPerstence] setValue:@(weakSelf.previousRequestTime) forKey:cacheKey];
+            [[STPersistence standardPersistence] setValue:@(weakSelf.previousRequestTime) forKey:cacheKey];
             
             NSMutableArray * result = [NSMutableArray arrayWithCapacity:5];
             [feeds enumerateObjectsUsingBlock:^(STDFeedItem * obj, NSUInteger idx, BOOL *stop) {
                 [result addObject:[obj toDictionary]];
             }];
             NSString * cacheFeedsKey = [NSString stringWithFormat:@"%@-CachedData", self.class].md5String;
-            [STPersistence persistValue:result intoDirectory:STPersistenceDirectoryDocument forKey:cacheFeedsKey];
+            [[STPersistence documentPersistence] setValue:result forKey:cacheFeedsKey];
         }];
     }
 }
@@ -101,14 +101,14 @@
 - (void) loadDataFromCache {
     NSMutableArray * result = [NSMutableArray arrayWithCapacity:5];
     NSString * cacheKey = [NSString stringWithFormat:@"%@-CachedData", self.class].md5String;
-    NSArray * cachedFeeds = [STPersistence valueForPersistKey:cacheKey inDirectory:STPersistenceDirectoryDocument];
+    NSArray * cachedFeeds = [[STPersistence documentPersistence] valueForKey:cacheKey];
     if ([cachedFeeds isKindOfClass:[NSArray class]]) {
         [cachedFeeds enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             STDFeedItem * feedItem = [[STDFeedItem alloc] initWithDictinoary:obj];
             [result addObject:feedItem];
         }];
         self.feeds = result;
-        NSInteger selectedIndex = [[[STPersistence standardPerstence] valueForKey:@"CachedSelectedIndex"] integerValue];
+        NSInteger selectedIndex = [[[STPersistence standardPersistence] valueForKey:@"CachedSelectedIndex"] integerValue];
         self.selectedIndex = selectedIndex;
     }
 }
@@ -131,7 +131,7 @@
     self.prevButton.hidden = !(selectedIndex > 0);
     self.nextButton.hidden = !(selectedIndex < (self.feeds.count - 1));
     _selectedIndex = selectedIndex;
-    [[STPersistence standardPerstence] setValue:@(selectedIndex) forKey:@"CachedSelectedIndex"];
+    [[STPersistence standardPersistence] setValue:@(selectedIndex) forKey:@"CachedSelectedIndex"];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "STASortDefines.h"
-#import "STDTableViewController.h"
+#import "STDTextTableViewController.h"
 
-@interface STARootViewController : STDTableViewController
+@interface STARootViewController : STDTextTableViewController
 
 @end

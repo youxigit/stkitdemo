@@ -12,6 +12,5 @@
 @interface STDViewController : STViewController
 
 @property (nonatomic, assign) BOOL customizeEdgeOffset;
-- (void) voiceDidRecognizerText:(NSNotification *) notification;
 
 @end

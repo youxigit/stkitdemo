@@ -12,28 +12,41 @@
 typedef enum {
     STPersistenceDirectoryDocument,  // document 目录
     STPersistenceDirectoryLibiary,   // Libiary  目录
+    STPersistenceDirectoryCache,     // Cache 目录
     STPersistenceDirectoryTemporary, // 临时目录
 } STPersistenceDirectory;
 
 extern NSString *STPersistDocumentDirectory();
 extern NSString *STPersistLibiaryDirectory();
+extern NSString *STPersistCacheDirectory();
 extern NSString *STPersistTemporyDirectory();
 
 @interface STPersistence : NSObject
 
-+ (BOOL)persistValue:(id)value intoDirectory:(STPersistenceDirectory)directory forKey:(NSString *)key;
++ (instancetype)standardPersistence;
++ (void)resetStandardPersistence;
 
-+ (id)valueForPersistKey:(NSString *)key inDirectory:(STPersistenceDirectory)directory;
++ (instancetype)persistenceNamed:(NSString *)name;
++ (void)resetPersistenceNamed:(NSString *)name;
+
+- (instancetype)initWithDirectory:(STPersistenceDirectory)directory
+                          subpath:(NSString *)subpath;
+
+- (void)setValue:(id)value forKey:(NSString *)key;
+- (id)valueForKey:(NSString *)key;
 
 @end
 
-/// 调用 setValue:forKey 就可以 存储了, valueForKey可以取
-@interface STPersistence (STUserDefault)
+@interface STPersistence (STPersistCreation)
 
-+ (instancetype)standardPerstence;
++ (instancetype)documentPersistence;
++ (instancetype)libiaryPersistence;
++ (instancetype)tempoaryPersistence;
++ (instancetype)cachePersistence;
 
-+ (void)resetStandardPerstence;
-/// 删除key
-- (id)removeValueForKey:(NSString *)key;
++ (instancetype)documentPersistenceWithSubpath:(NSString *)subpath;
++ (instancetype)libiaryPersistenceWithSubpath:(NSString *)subpath;
++ (instancetype)cachePersistenceWithSubpath:(NSString *)subpath;
++ (instancetype)tempoaryPersistenceWithSubpath:(NSString *)subpath;
 
 @end

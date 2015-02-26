@@ -106,7 +106,7 @@
             [weakSelf reloadCollectionFooterView];
             weakSelf.previousRequestTime = [[NSDate date] timeIntervalSince1970];
             NSString * cacheKey = [NSString stringWithFormat:@"%@-LastRequest", [self cacheIdentifier]].md5String;
-            [[STPersistence standardPerstence] setValue:@(weakSelf.previousRequestTime) forKey:cacheKey];
+            [[STPersistence standardPersistence] setValue:@(weakSelf.previousRequestTime) forKey:cacheKey];
             [weakSelf.collectionView reloadData];
             [weakSelf saveDataToCache:feeds];
         }
@@ -120,7 +120,7 @@
         [result addObject:[obj toDictionary]];
     }];
     NSString * cacheKey = [NSString stringWithFormat:@"%@-CachedData", [self cacheIdentifier]].md5String;
-    [STPersistence persistValue:result intoDirectory:STPersistenceDirectoryDocument forKey:cacheKey];
+    [[STPersistence cachePersistenceWithSubpath:@"FeedCache"] setValue:result forKey:cacheKey];
 }
 
 - (void) reloadCollectionFooterView {
@@ -148,7 +148,7 @@
 - (void) loadDataFromCacheWithHandler:(STDFeedLoadHandler) completionHandler {
     NSMutableArray * result = [NSMutableArray arrayWithCapacity:5];
     NSString * cacheKey = [NSString stringWithFormat:@"%@-CachedData", [self cacheIdentifier]].md5String;
-    NSArray * cachedData = [STPersistence valueForPersistKey:cacheKey inDirectory:STPersistenceDirectoryDocument];
+    NSArray * cachedData = [[STPersistence cachePersistenceWithSubpath:@"FeedCache"] valueForKey:cacheKey];
     if ([cachedData isKindOfClass:[NSArray class]]) {
         [cachedData enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             STDFeedItem * feedItem = [[STDFeedItem alloc] initWithDictinoary:obj];
@@ -237,7 +237,7 @@
 }
 
 
-- (NSInteger) preferredNumberOfColumnsWithWidth:(CGFloat) width {
+- (NSInteger)preferredNumberOfColumnsWithWidth:(CGFloat) width {
     if (width == 320) {
         return 2;
     }
@@ -247,14 +247,14 @@
     return width / 160;
 }
 
-- (NSString *) cacheIdentifier {
+- (NSString *)cacheIdentifier {
     return NSStringFromClass([self class]);
 }
 
-- (NSTimeInterval) previousRequestTime {
+- (NSTimeInterval)previousRequestTime {
     if (_previousRequestTime == 0) {
         NSString * cacheKey = [NSString stringWithFormat:@"%@-LastRequest", [self cacheIdentifier]].md5String;
-        _previousRequestTime = [[[STPersistence standardPerstence] valueForKey:cacheKey] doubleValue];
+        _previousRequestTime = [[[STPersistence standardPersistence] valueForKey:cacheKey] doubleValue];
     }
     return _previousRequestTime;
 }
