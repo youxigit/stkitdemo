@@ -120,6 +120,7 @@ NSString *const STDChatSystemDefaultID = @"97676900";
     
     self.tableView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.view.bounds.size.height - CGRectGetHeight(chatInputView.bounds));
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.scrollDirector.refreshControl.enabled = NO;
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
