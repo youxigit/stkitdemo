@@ -131,6 +131,7 @@
 		06CF9BD51A8BD2A3000037EF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06CF9BD01A8BD2A3000037EF /* Info.plist */; };
 		06CF9BD61A8BD2A3000037EF /* STKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CF9BD11A8BD2A3000037EF /* STKitDemoTests.m */; };
 		06CFCBBF1A676F39003DDC93 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0698C21C19D1CCE400D0D69A /* WebKit.framework */; };
+		06E5DF581AA0476900BDEAD8 /* STDLocationPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E5DF571AA0476900BDEAD8 /* STDLocationPickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -356,6 +357,8 @@
 		06CF9BD11A8BD2A3000037EF /* STKitDemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKitDemoTests.m; sourceTree = "<group>"; };
 		06CFCB9C1A63973C003DDC93 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		06DBF9E019F8CFBB009ECABA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		06E5DF561AA0476900BDEAD8 /* STDLocationPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDLocationPickerController.h; sourceTree = "<group>"; };
+		06E5DF571AA0476900BDEAD8 /* STDLocationPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDLocationPickerController.m; sourceTree = "<group>"; };
 		F6471E791851CD7C00574E94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6471E7B1851CD7C00574E94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F6471E7D1851CD7C00574E94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -765,6 +768,8 @@
 				06CB64771A59523F00ABD7D3 /* STDNavigationSettingViewController.h */,
 				06CB64781A59523F00ABD7D3 /* STDNavigationSettingViewController.m */,
 				06CB64791A59523F00ABD7D3 /* STDNavigationSettingViewController.xib */,
+				06E5DF561AA0476900BDEAD8 /* STDLocationPickerController.h */,
+				06E5DF571AA0476900BDEAD8 /* STDLocationPickerController.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1117,6 +1122,7 @@
 				06CB65E71A59524000ABD7D3 /* STDStartViewController.m in Sources */,
 				065D78D51A822ECF0083D058 /* STDPrototype.m in Sources */,
 				06CB65C61A59523F00ABD7D3 /* STDChat.m in Sources */,
+				06E5DF581AA0476900BDEAD8 /* STDLocationPickerController.m in Sources */,
 				06CB652F1A59523F00ABD7D3 /* MZCroppableView.m in Sources */,
 				06CB65BD1A59523F00ABD7D3 /* STDBookViewController.m in Sources */,
 				06CB65C11A59523F00ABD7D3 /* STDMessage.m in Sources */,

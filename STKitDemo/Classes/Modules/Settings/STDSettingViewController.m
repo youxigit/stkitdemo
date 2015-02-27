@@ -10,6 +10,7 @@
 #import "STDNavigationSettingViewController.h"
 #import "STDChatViewController.h"
 #import "STDMessage.h"
+#import "STDLocationPickerController.h"
 
 @interface STDSettingViewController ()
 @property(nonatomic, weak) STDTableViewCellItem *item20;
@@ -37,7 +38,8 @@
     if (self) {
         NSMutableArray * dataSource = [NSMutableArray arrayWithCapacity:5];
         STDTableViewCellItem * item00 = [[STDTableViewCellItem alloc] initWithTitle:@"还原设置" target:self action:@selector(_resetSettingActionFired)];
-        STDTableViewSectionItem *section0 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"" items:@[item00]];
+        STDTableViewCellItem * item01 = [[STDTableViewCellItem alloc] initWithTitle:@"模拟位置" target:self action:@selector(_fakeSettingActionFired)];
+        STDTableViewSectionItem *section0 = [[STDTableViewSectionItem alloc] initWithSectionTitle:@"" items:@[item00, item01]];
         [dataSource addObject:section0];
         
         STDTableViewCellItem *item10 = [[STDTableViewCellItem alloc] initWithTitle:@"导航设置" target:self action:@selector(_navigationSettingActionFired)];
@@ -88,6 +90,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)_fakeSettingActionFired {
+    STDLocationPickerController *pickerController = [[STDLocationPickerController alloc] init];
+    pickerController.hidesBottomBarWhenPushed = YES;
+    [self.customNavigationController pushViewController:pickerController animated:YES];
 }
 
 - (void)_navigationSettingActionFired:(UISwitch *)uiswitch {
